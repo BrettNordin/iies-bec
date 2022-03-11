@@ -27,16 +27,7 @@ RUN apt-get remove -y xfce4-panel
 
 
 ######### Install POL & BECS ###########
-RUN dpkg --add-architecture i386
-RUN apt-get install -y software-properties-common && add-apt-repository -y ppa:ubuntu-wine/ppa
-RUN apt-get update -y
-RUN apt-get install -qy wine1.7 winetricks wget libcanberra-gtk-module gettext
-RUN wget -q "http://deb.playonlinux.com/public.gpg" -O- | sudo apt-key add -
-RUN wget http://deb.playonlinux.com/playonlinux_trusty.list -O /etc/apt/sources.list.d/playonlinux.list
-RUN apt-get update -y
-RUN apt-get install -y playonlinux
-RUN sed -i 's/encoding = \"ascii\"/encoding = \"utf-8\"/g' /usr/lib/python2.7/site.py
-
+RUN apt install wine32
 
 RUN chown 1000:0 $HOME
 RUN $STARTUPDIR/set_user_permission.sh $HOME
