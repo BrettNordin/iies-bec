@@ -27,7 +27,7 @@ RUN apt-get remove -y xfce4-panel
 
 
 ######### Install POL & BECS ###########
-RUN apt install wine32
+RUN apt install wine
 
 RUN chown 1000:0 $HOME
 RUN $STARTUPDIR/set_user_permission.sh $HOME
