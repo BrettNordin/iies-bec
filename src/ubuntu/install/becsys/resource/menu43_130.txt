@@ -1,0 +1,1108 @@
+MENU	"System Info"	    true
+    LEAF	"Site Information"	NO_CODE       	    true		NULL    OMIT_VALUE
+    LEAF	"================"	NO_CODE       	    true		NULL    OMIT_VALUE
+    LEAF	""	                PC_CDATE		    true		value_in
+    LEAF	""	                PC_CTIME		    true		value_in
+    LEAF	""	                PC_TIME_ZONE	    true		select
+    LEAF	""	                PC_USE_DST			true		select
+    LEAF	""	                PC_RTC_TIME_CORRECTION	factory	value_in
+    LEAF	" "	                NO_CODE		        true		NULL    OMIT_VALUE
+	LEAF	""					PC_SYSTEM_ID		true		NULL
+    LEAF	""	                PC_PROG_VER		    true		NULL
+    LEAF	""                  PC_RESET_DT			factory		NULL
+    LEAF	""                  PC_RESET_HM			factory		NULL
+    LEAF	" "	                NO_CODE		        true		NULL    OMIT_VALUE
+    LEAF	""	                PC_CUSTNAME		    true		value_in
+    LEAF	""	                PC_LOCATION_1       true		value_in
+    LEAF	""	                PC_LOCATION_2       true		value_in
+    LEAF	" "	                NO_CODE		        true		NULL    OMIT_VALUE
+    LEAF	"Network Master Parameters"	NO_CODE   	true		NULL    OMIT_VALUE
+    LEAF	"=========================="	NO_CODE true		NULL    OMIT_VALUE
+    LEAF	""                  PC_NUMBER_RINGS	    true		value_in
+    LEAF	""					PC_USBDL_DAYSPAN	true    	value_in
+    LEAF	""	                PC_DATE_FORMAT      false        select
+    LEAF	""					PC_OP_CODE			operator   	value_in
+    LEAF	""					PC_INSTALLER_CODE	installer   value_in
+	LEAF	""					PC_REP_CODE			factory   	NULL
+ENDMENU
+MENU	"Installation"			true	MENU_CLOSED
+  MENU	"Notification Setup"	true
+	MENU	"License Information"	true
+    	LEAF	""					PC_IS_LICENSE_CURRENT	true		NULL
+    	LEAF	""					PC_LICENSE_EXP_DATE		rep			NULL
+    	LEAF	""					PC_STOP_CALLOUT_DATE	true		NULL
+    	LEAF	""					PC_NUM_FREE_MANUAL_SR	true   		NULL
+    	LEAF	""					PC_CC_STORE_VALUE		installer	NULL
+	ENDMENU
+	MENU	"Recipients"	true
+		LEAF    ""  PC_CALLOUT_EN  		true   				select
+		LEAF    ""  PC_NOTIFY_TYPE 		true   				NULL
+		LEAF	" "	NO_CODE				true				NULL	OMIT_VALUE
+TEMPLATE	1	16
+		LEAF	""	PC_CALLOUT_TYPE$02u	true				select
+		LEAF	""	PC_PHONE$02u			calloutemail$02u		NULL	OMIT_LINE
+		LEAF	""	PC_PAGER$02u			calloutemail$02u		NULL	OMIT_LINE
+		LEAF	""	PC_PHONE$02u			calloutph$02u			value_in
+		LEAF	""	PC_PAGER$02u			calloutpg$02u			value_in
+		LEAF	""	PC_EMAIL$02u			calloutemail$02u		email_in_BECS7
+   	    LEAF	""	PC_CALLOUT$02u_OPTS1_EN	callout$02u		alm_select
+		LEAF	" "	NO_CODE				true				NULL	OMIT_VALUE
+ENDTEMPLATE
+	ENDMENU
+    MENU	"Notification Setup"	true
+	    LEAF	"Notification Info:"		NO_CODE         true	NULL		OMIT_VALUE
+	    LEAF	"================="		NO_CODE         true	NULL		OMIT_VALUE
+		LEAF    ""  PC_NOTIFY_TYPE 						true   	NULL
+   	    LEAF	""	PC_STATFAX_START					true	select
+   	    LEAF	" "	NO_CODE         					true	NULL		OMIT_VALUE
+    	LEAF	"Network Master Parameters"		NO_CODE true		NULL    OMIT_VALUE
+    	LEAF	"=========================="	NO_CODE true		NULL    OMIT_VALUE
+    	LEAF	""	PC_HISTCALCS_TIME					true    value_in
+   	    LEAF	""	PC_STAT_REPORT_CALL_TIME			rep		value_in
+   	    LEAF	""	PC_STATFAX_DAY						true	select_DOWs
+   	    LEAF	""	PC_STATFAX_TIME						true	value_in
+   	    LEAF	" "	NO_CODE         					true	NULL		OMIT_VALUE
+   	    LEAF	""	PC_DVTN_REPORT_DAY					true	select_DOWs
+   	    LEAF	""	PC_DVTN_REPORT_TIME					true	value_in
+   	    LEAF	" "	NO_CODE         					true	NULL		OMIT_VALUE
+   	    LEAF	""	PC_MAXED_OUT_NTFCTN_TIME			rep		value_in
+   	    LEAF	" "	NO_CODE         					true	NULL		OMIT_VALUE
+   	    LEAF	""  PC_NWCOFF_LIMIT_TIME				true	value_in
+   	    LEAF	""  PC_NWCOFF_MAX_NTFCTNS				true	value_in
+   	    LEAF	" "	NO_CODE         					true	NULL		OMIT_VALUE
+	    LEAF	"FBW Parameters:"		NO_CODE         true	NULL		OMIT_VALUE
+	    LEAF	"================="		NO_CODE         true	NULL		OMIT_VALUE
+    	LEAF	""	PC_FBW_UNITS      					true    select
+   	    LEAF	""	PC_LOWFEED_DEFAULT					true	value_in
+   	    LEAF	""	PC_EMPTYBIN_WEIGHT_DFLT				true	value_in
+   	    LEAF	""	PC_LOWFEED_MAX_NTFCTNS				true	value_in
+   	    LEAF	""	PC_EMPTYBIN_MAX_NTFCTNS				true	value_in
+   	    LEAF	""	PC_FA_MAX_NTFCTNS					true	value_in
+   	    LEAF	""	PC_MIN_FA_WEIGHT					true	value_in
+   	    LEAF	""	PC_FA_NOTIFY_DELAY					true    value_in
+   	    LEAF	""	PC_CNSMPTN_PRD_TARGET			true    value_in
+   	    LEAF	""	PC_CNSMPTN_DVTN_LOW_SP			true    value_in
+   	    LEAF	""	PC_CNSMPTN_DVTN_HIGH_SP			true    value_in
+   	    LEAF	""	PC_CREATE_EAFILE					true    select
+   	    LEAF	" "	NO_CODE         					true	NULL		OMIT_VALUE
+	    LEAF	"Water Parameters:"		NO_CODE         true	NULL		OMIT_VALUE
+	    LEAF	"================="		NO_CODE         true	NULL		OMIT_VALUE
+   	    LEAF	""	PC_WC_PRD_TARGET					true    value_in
+   	    LEAF	""	PC_WC_DVTN_LOW_SP				true    value_in
+   	    LEAF	""	PC_WC_DVTN_HIGH_SP				true    value_in
+   	    LEAF	" "	NO_CODE         					true	NULL		OMIT_VALUE
+	    LEAF	"SmartFlex Parameters:"	NO_CODE         true	NULL		OMIT_VALUE
+	    LEAF	"================="		NO_CODE         true	NULL		OMIT_VALUE
+   	    LEAF	""	PC_RUNTIME_PRD_TARGET			true    value_in
+   	    LEAF	""	PC_RUNTIME_DVTN_LOW_SP			true    value_in
+   	    LEAF	""	PC_RUNTIME_DVTN_HIGH_SP			true    value_in
+   	    LEAF	""	PC_MRT_RENOTIFY_TIME			true    timeHM
+   	    LEAF	""	PC_MRT_MAX_NTFCTNS				true    value_in
+   	    LEAF	""	PC_MIT_RENOTIFY_TIME			true    timeHM
+   	    LEAF	""	PC_MIT_MAX_NTFCTNS				true    value_in
+   	    LEAF	""	PC_PS_RENOTIFY_TIME				true    timeHM
+   	    LEAF	""	PC_PS_MAX_NTFCTNS				true    value_in
+   	    LEAF	" "	NO_CODE         					true	NULL		OMIT_VALUE
+	    LEAF	"Temperature Parameters:"	NO_CODE     true	NULL		OMIT_VALUE
+	    LEAF	"======================="	NO_CODE     true	NULL		OMIT_VALUE
+   	    LEAF	""	PC_OUTSIDE_TEMP_OFFSET				true    value_in
+   	    LEAF	""	PC_TEMP_RENOTIFY_TIME				true    timeHM
+   	    LEAF	""	PC_TWTEMPALM_MAX_NTFCTNS			true    value_in
+   	    LEAF	" "	NO_CODE         					true	NULL		OMIT_VALUE
+	    LEAF	"Pit Level Sensor Parameters:"		NO_CODE     true	NULL		OMIT_VALUE
+	    LEAF	"==============================="	NO_CODE     true	NULL		OMIT_VALUE
+   	    LEAF	""	PC_PLH_RENOTIFY_TIME			true    timeHM
+   	    LEAF	""	PC_PLSPLH_MAX_NTFCTNS			true    value_in
+   	    LEAF	" "	NO_CODE         					true	NULL		OMIT_VALUE
+    ENDMENU
+	MENU	"FeedLink Call Center Setup"		installer
+		LEAF	""	PC_CC_CONNECTION_TYPE	true			select
+		LEAF	""	PC_FLCC_PNUM			useCCModem		value_in
+		LEAF	""	PC_FLCC_WEB_ADDR		useCCEthernet	value_in
+		LEAF	""	PC_FLCC_PORT			useCCEthernet	value_in
+    	LEAF	""  PC_CO_CC_TRIES	   		true			value_in
+	ENDMENU
+	MENU	"FAX Setup"		true
+		LEAF	""	PC_FAX_ORIGIN_PNUM		true		value_in
+    	LEAF	""  PC_CO_FAX_TRIES	    	true		value_in
+	ENDMENU
+	MENU	"Ethernet Setup"		installer
+    	LEAF	""	PC_MY_IP            useDHCPServer		NULL
+    	LEAF	""	PC_MY_IP            useStaticIPAddr		ip_address_in
+    	LEAF	""	PC_USE_DHCP         true     			select
+    	LEAF	""	PC_MY_NETMASK       useStaticIPAddr		ip_address_in
+    	LEAF	""	PC_MY_NETMASK       useDHCPServer		NULL
+    	LEAF	""	PC_MY_GATEWAY       useStaticIPAddr		ip_address_in
+    	LEAF	""	PC_MY_GATEWAY       useDHCPServer		NULL
+		LEAF	""	PC_DNS_ADDR1		useStaticIPAddr		ip_address_in
+		LEAF	""	PC_DNS_ADDR1		useDHCPServer		NULL
+		LEAF	""	PC_DNS_ADDR2		useStaticIPAddr		ip_address_in
+		LEAF	""	PC_DNS_ADDR2		useDHCPServer		NULL
+	ENDMENU
+ENDMENU
+MENU	"Network Configuration"	installer
+	MENU	"FBW Display Units 1-50"	true
+   	    MENU	"FBW Nodes 1-10"	true
+TEMPLATE	1	10
+    	    LEAF	""	T2_FBW_INSTALLED_$02u	true	    select
+    	    LEAF	""	PC_DU_NAME_$02u         true	    value_in
+	   		LEAF	""	T2_GROUP_NUM_$02u	        true    value_in
+	        LEAF	""	T2_LC_ENABLED_$02u			true	alm_select
+	        LEAF	""	T2_NOTIFICATION_OPTS_$02u	true	alm_select
+	        LEAF	""	T2_EMPTY_BIN_WEIGHT_$02u    true	value_in
+	        LEAF	""	T2_LOWFEED_MAN_$02u			true	value_in
+	        LEAF	""	T0_INSTRUCTIONS_OVRDWGHT	true	ovrdwght_instructions   NO_POLL OMIT_VALUE
+    	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE
+ENDTEMPLATE
+   	    ENDMENU
+   	    MENU	"FBW Nodes 11-20"	true
+TEMPLATE	11	20
+    	    LEAF	""	T2_FBW_INSTALLED_$02u		true	select
+    	    LEAF	""	PC_DU_NAME_$02u         	true	value_in
+	   		LEAF	""	T2_GROUP_NUM_$02u	        true    value_in
+	        LEAF	""	T2_LC_ENABLED_$02u			true	alm_select
+	        LEAF	""	T2_NOTIFICATION_OPTS_$02u	true	alm_select
+	        LEAF	""	T2_EMPTY_BIN_WEIGHT_$02u    true	value_in
+	        LEAF	""	T2_LOWFEED_MAN_$02u			true	value_in
+	        LEAF	""	T0_INSTRUCTIONS_OVRDWGHT	true	ovrdwght_instructions   NO_POLL OMIT_VALUE
+    	    LEAF	" "	NO_CODE	                	true	NULL        OMIT_VALUE
+ENDTEMPLATE
+   	    ENDMENU
+   	    MENU	"FBW Nodes 21-30"	true
+TEMPLATE	21	30
+    	    LEAF	""	T2_FBW_INSTALLED_$02u	true	    select
+    	    LEAF	""	PC_DU_NAME_$02u         true	    value_in
+	   		LEAF	""	T2_GROUP_NUM_$02u	        true    value_in
+	        LEAF	""	T2_LC_ENABLED_$02u			true	alm_select
+	        LEAF	""	T2_NOTIFICATION_OPTS_$02u	true	alm_select
+	        LEAF	""	T2_EMPTY_BIN_WEIGHT_$02u    true	value_in
+	        LEAF	""	T2_LOWFEED_MAN_$02u			true	value_in
+	        LEAF	""	T0_INSTRUCTIONS_OVRDWGHT	true	ovrdwght_instructions   NO_POLL OMIT_VALUE
+    	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE
+ENDTEMPLATE
+   	    ENDMENU
+   	    MENU	"FBW Nodes 31-40"	true
+TEMPLATE	31	40
+    	    LEAF	""	T2_FBW_INSTALLED_$02u	true	    select
+    	    LEAF	""	PC_DU_NAME_$02u         true	    value_in
+	   		LEAF	""	T2_GROUP_NUM_$02u	        true    value_in
+	        LEAF	""	T2_LC_ENABLED_$02u			true	alm_select
+	        LEAF	""	T2_NOTIFICATION_OPTS_$02u	true	alm_select
+	        LEAF	""	T2_EMPTY_BIN_WEIGHT_$02u    true	value_in
+	        LEAF	""	T2_LOWFEED_MAN_$02u			true	value_in
+	        LEAF	""	T0_INSTRUCTIONS_OVRDWGHT	true	ovrdwght_instructions   NO_POLL OMIT_VALUE
+    	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE
+ENDTEMPLATE
+   	    ENDMENU
+   	    MENU	"FBW Nodes 41-50"	true
+TEMPLATE	41	50
+    	    LEAF	""	T2_FBW_INSTALLED_$02u	true	    select
+    	    LEAF	""	PC_DU_NAME_$02u         true	    value_in
+	   		LEAF	""	T2_GROUP_NUM_$02u	        true    value_in
+	        LEAF	""	T2_LC_ENABLED_$02u			true	alm_select
+	        LEAF	""	T2_NOTIFICATION_OPTS_$02u	true	alm_select
+	        LEAF	""	T2_EMPTY_BIN_WEIGHT_$02u    true	value_in
+	        LEAF	""	T2_LOWFEED_MAN_$02u			true	value_in
+	        LEAF	""	T0_INSTRUCTIONS_OVRDWGHT	true	ovrdwght_instructions   NO_POLL OMIT_VALUE
+    	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE
+ENDTEMPLATE
+   	    ENDMENU
+    ENDMENU
+	MENU	"SmartFlexes Nodes 51-75"	    true
+   	    MENU	"SmartFlex Nodes 51-55"	true
+TEMPLATE	51	55
+    	    LEAF	""	T4_SF_INSTALLED_$02u		true	    select
+    	    LEAF	""	PC_SF_NAME_$02u         	true	    value_in
+	   		LEAF	""	T4_GROUP_NUM_$02u			true    	value_in
+	        LEAF	""	T4_NOTIFICATION_OPTS_$02u	true		alm_select
+			LEAF	""	T4_DELAY_TIME_$02u			true		value_in
+			LEAF	""	T4_MAX_RUN_TIME_$02u		true		value_in
+			LEAF	""	T4_MAX_IDLE_TIME_$02u		true		value_in
+    	    LEAF	" "	NO_CODE	                	true	    NULL        OMIT_VALUE
+ENDTEMPLATE
+	    ENDMENU
+   	    MENU	"SmartFlex Nodes 56-60"	true
+TEMPLATE	56	60
+    	    LEAF	""	T4_SF_INSTALLED_$02u		true	    select
+    	    LEAF	""	PC_SF_NAME_$02u         	true	    value_in
+	   		LEAF	""	T4_GROUP_NUM_$02u			true    	value_in
+	        LEAF	""	T4_NOTIFICATION_OPTS_$02u	true		alm_select
+			LEAF	""	T4_DELAY_TIME_$02u			true		value_in
+			LEAF	""	T4_MAX_RUN_TIME_$02u		true		value_in
+			LEAF	""	T4_MAX_IDLE_TIME_$02u		true		value_in
+    	    LEAF	" "	NO_CODE	                	true	    NULL        OMIT_VALUE
+ENDTEMPLATE
+	    ENDMENU
+   	    MENU	"SmartFlex Nodes 61-65"	true
+TEMPLATE	61	65
+    	    LEAF	""	T4_SF_INSTALLED_$02u		true	    select
+    	    LEAF	""	PC_SF_NAME_$02u         	true	    value_in
+	   		LEAF	""	T4_GROUP_NUM_$02u			true    	value_in
+	        LEAF	""	T4_NOTIFICATION_OPTS_$02u	true		alm_select
+			LEAF	""	T4_DELAY_TIME_$02u			true		value_in
+			LEAF	""	T4_MAX_RUN_TIME_$02u		true		value_in
+			LEAF	""	T4_MAX_IDLE_TIME_$02u		true		value_in
+    	    LEAF	" "	NO_CODE	                	true	    NULL        OMIT_VALUE
+ENDTEMPLATE
+	    ENDMENU
+   	    MENU	"SmartFlex Nodes 66-70"	true
+TEMPLATE	66	70
+    	    LEAF	""	T4_SF_INSTALLED_$02u		true	    select
+    	    LEAF	""	PC_SF_NAME_$02u         	true	    value_in
+	   		LEAF	""	T4_GROUP_NUM_$02u			true    	value_in
+	        LEAF	""	T4_NOTIFICATION_OPTS_$02u	true		alm_select
+			LEAF	""	T4_DELAY_TIME_$02u			true		value_in
+			LEAF	""	T4_MAX_RUN_TIME_$02u		true		value_in
+			LEAF	""	T4_MAX_IDLE_TIME_$02u		true		value_in
+    	    LEAF	" "	NO_CODE	                	true	    NULL        OMIT_VALUE
+ENDTEMPLATE
+	    ENDMENU
+   	    MENU	"SmartFlex Nodes 71-75"	true
+TEMPLATE	71	75
+    	    LEAF	""	T4_SF_INSTALLED_$02u		true	    select
+    	    LEAF	""	PC_SF_NAME_$02u         	true	    value_in
+	   		LEAF	""	T4_GROUP_NUM_$02u			true    	value_in
+	        LEAF	""	T4_NOTIFICATION_OPTS_$02u	true		alm_select
+			LEAF	""	T4_DELAY_TIME_$02u			true		value_in
+			LEAF	""	T4_MAX_RUN_TIME_$02u		true		value_in
+			LEAF	""	T4_MAX_IDLE_TIME_$02u		true		value_in
+    	    LEAF	" "	NO_CODE	                	true	    NULL        OMIT_VALUE
+ENDTEMPLATE
+	    ENDMENU
+    ENDMENU
+	MENU	"Pit Level Sensors 76-99"	    true
+   	    MENU	"PLS Nodes 76-85"	true
+TEMPLATE	76	85
+    	    LEAF	""	T5_PLS_INSTALLED_$02u		true	    select
+	        LEAF	""	PC_PLS_NAME_$02u        	true        value_in
+	   		LEAF	""	T5_GROUP_NUM_$02u			true    	value_in
+	        LEAF	""	T5_NOTIFICATION_OPTS_$02u	true		alm_select
+		    LEAF	""	T5_UNITS_$02u             	true		select
+		    LEAF	""	T5_PIT_LENGTH_$02u        	true		value_in
+		    LEAF	""	T5_PIT_WIDTH_$02u         	true		value_in
+		    LEAF	""	T5_PIT_DEPTH_$02u         	true		value_in
+		    LEAF	""	T5_MAX_WASTE_LEVEL_$02u   	true		value_in
+		    LEAF	""	T5_BASE_ALARM_HT_$02u     	true		value_in
+		    LEAF	""	T5_ALARM_SNOOZE_HT_$02u   	true		value_in
+    	    LEAF	" "	NO_CODE	                	true	    NULL        OMIT_VALUE
+ENDTEMPLATE
+	    ENDMENU
+   	    MENU	"PLS Nodes 86-95"	true
+TEMPLATE	86	95
+    	    LEAF	""	T5_PLS_INSTALLED_$02u		true	    select
+	        LEAF	""	PC_PLS_NAME_$02u        	true        value_in
+	   		LEAF	""	T5_GROUP_NUM_$02u			true    	value_in
+	        LEAF	""	T5_NOTIFICATION_OPTS_$02u	true		alm_select
+		    LEAF	""	T5_UNITS_$02u             	true    select
+		    LEAF	""	T5_PIT_LENGTH_$02u        	true    value_in
+		    LEAF	""	T5_PIT_WIDTH_$02u         	true    value_in
+		    LEAF	""	T5_PIT_DEPTH_$02u         	true    value_in
+		    LEAF	""	T5_MAX_WASTE_LEVEL_$02u   	true    value_in
+		    LEAF	""	T5_BASE_ALARM_HT_$02u     	true    value_in
+		    LEAF	""	T5_ALARM_SNOOZE_HT_$02u   	true    value_in
+    	    LEAF	" "	NO_CODE	                	true	    NULL        OMIT_VALUE
+ENDTEMPLATE
+	    ENDMENU
+   	    MENU	"PLS Nodes 96-99"	true
+TEMPLATE	96	99
+    	    LEAF	""	T5_PLS_INSTALLED_$02u		true	    select
+	        LEAF	""	PC_PLS_NAME_$02u        	true        value_in
+	   		LEAF	""	T5_GROUP_NUM_$02u			true    	value_in
+	        LEAF	""	T5_NOTIFICATION_OPTS_$02u	true		alm_select
+		    LEAF	""	T5_UNITS_$02u             	true    select
+		    LEAF	""	T5_PIT_LENGTH_$02u        	true    value_in
+		    LEAF	""	T5_PIT_WIDTH_$02u         	true    value_in
+		    LEAF	""	T5_PIT_DEPTH_$02u         	true    value_in
+		    LEAF	""	T5_MAX_WASTE_LEVEL_$02u   	true    value_in
+		    LEAF	""	T5_BASE_ALARM_HT_$02u     	true    value_in
+		    LEAF	""	T5_ALARM_SNOOZE_HT_$02u   	true    value_in
+    	    LEAF	" "	NO_CODE	                	true	    NULL        OMIT_VALUE
+ENDTEMPLATE
+	    ENDMENU
+    ENDMENU
+    MENU	"Temperature and Water Meters 101-108"	    true
+TEMPLATE	101	108
+		MENU	"T&W Node #$u"	true
+   	    	LEAF	""	T6_TW_INSTALLED_$02u	true	    select
+        	LEAF	""	PC_TW_NAME_$02u         true        value_in
+	    	LEAF	""	T6_INPUT_OPTS_ENABLE_$02u   true    			alm_select
+	    	LEAF	""	T6_NOTIFICATION_OPTS_$02u   true    			alm_select
+   	    	LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE
+    		LEAF	""	PC_TW_TEMP1_NAME_$02u   	isTWTemp1Enabled    value_in
+   			LEAF	""	T6_TEMP1_GROUP_NUM_$02u	    isTWTemp1Enabled	value_in
+	    	LEAF	""	T6_TEMP1_PROBE_TYPE_$02u    isTWTemp1Enabled	select
+	    	LEAF	""	T6_TEMP1_LALM_SETPT_$02u    isTWTemp1Enabled	value_in
+	    	LEAF	""	T6_TEMP1_HALM_SETPT_$02u    isTWTemp1Enabled	value_in
+	    	LEAF	""	T6_TEMP1_CHALM_SETPT_$02u   isTWTemp1Enabled	value_in
+	    	LEAF	""	T6_TEMP1_ALM_RCGTNTM_$02u   isTWTemp1Enabled	tw_timeHMS
+	    	LEAF	""	T6_TEMP1_ALM_RESETTM_$02u   isTWTemp1Enabled	tw_timeHMS
+        	LEAF	" "	NO_CODE                     true				NULL	OMIT_VALUE
+    		LEAF	""	PC_TW_TEMP2_NAME_$02u   	isTWTemp2Enabled    value_in
+   			LEAF	""	T6_TEMP2_GROUP_NUM_$02u	    isTWTemp2Enabled	value_in
+			LEAF	""	T6_TEMP2_PROBE_TYPE_$02u    isTWTemp2Enabled	select
+	    	LEAF	""	T6_TEMP2_LALM_SETPT_$02u    isTWTemp2Enabled	value_in
+	    	LEAF	""	T6_TEMP2_HALM_SETPT_$02u    isTWTemp2Enabled	value_in
+	    	LEAF	""	T6_TEMP2_CHALM_SETPT_$02u   isTWTemp2Enabled	value_in
+	    	LEAF	""	T6_TEMP2_ALM_RCGTNTM_$02u   isTWTemp2Enabled	tw_timeHMS
+	    	LEAF	""	T6_TEMP2_ALM_RESETTM_$02u   isTWTemp2Enabled	tw_timeHMS
+        	LEAF	" "	NO_CODE                     true				NULL	OMIT_VALUE
+    		LEAF	""	PC_TW_TEMP3_NAME_$02u   	isTWTemp3Enabled    value_in
+   			LEAF	""	T6_TEMP3_GROUP_NUM_$02u	    isTWTemp3Enabled	value_in
+	    	LEAF	""	T6_TEMP3_PROBE_TYPE_$02u    isTWTemp3Enabled	select
+	    	LEAF	""	T6_TEMP3_LALM_SETPT_$02u    isTWTemp3Enabled	value_in
+	    	LEAF	""	T6_TEMP3_HALM_SETPT_$02u    isTWTemp3Enabled	value_in
+	    	LEAF	""	T6_TEMP3_CHALM_SETPT_$02u   isTWTemp3Enabled	value_in
+	    	LEAF	""	T6_TEMP3_ALM_RCGTNTM_$02u   isTWTemp3Enabled	tw_timeHMS
+	    	LEAF	""	T6_TEMP3_ALM_RESETTM_$02u   isTWTemp3Enabled	tw_timeHMS
+        	LEAF	" "	NO_CODE                     true				NULL	OMIT_VALUE
+    		LEAF	""	PC_TW_WM1_NAME_$02u   		isTWWater1Enabled   value_in
+   			LEAF	""	T6_WATER1_GROUP_NUM_$02u	isTWWater1Enabled   value_in
+        	LEAF	" "	NO_CODE                     true				NULL	OMIT_VALUE
+    		LEAF	""	PC_TW_WM2_NAME_$02u   		isTWWater2Enabled   value_in
+   			LEAF	""	T6_WATER2_GROUP_NUM_$02u	isTWWater2Enabled   value_in
+		ENDMENU
+ENDTEMPLATE
+	ENDMENU
+	MENU	"Groups 1-50"	    true
+   	    MENU	"Groups 1-10"	true
+TEMPLATE	1	10
+    	    LEAF	""	T7_IS_ENABLED_$02u			true	select
+    	    LEAF	""	PC_GROUP_NAME_$02u      	true	value_in
+	    	LEAF	""	T7_NOTIFICATION_OPTS_$02u   true    alm_select
+    	    LEAF	" "	NO_CODE	                	true	NULL        OMIT_VALUE
+ENDTEMPLATE
+	    ENDMENU
+   	    MENU	"Groups 11-20"	true
+TEMPLATE	11	20
+    	    LEAF	""	T7_IS_ENABLED_$02u			true	select
+    	    LEAF	""	PC_GROUP_NAME_$02u      	true	value_in
+	    	LEAF	""	T7_NOTIFICATION_OPTS_$02u   true    alm_select
+    	    LEAF	" "	NO_CODE	                	true	NULL        OMIT_VALUE
+ENDTEMPLATE
+	    ENDMENU
+   	    MENU	"Groups 21-30"	true
+TEMPLATE	21	30
+    	    LEAF	""	T7_IS_ENABLED_$02u			true	select
+    	    LEAF	""	PC_GROUP_NAME_$02u      	true	value_in
+	    	LEAF	""	T7_NOTIFICATION_OPTS_$02u   true    alm_select
+    	    LEAF	" "	NO_CODE	                	true	NULL        OMIT_VALUE
+ENDTEMPLATE
+	    ENDMENU
+   	    MENU	"Groups 31-40"	true
+TEMPLATE	31	40
+    	    LEAF	""	T7_IS_ENABLED_$02u			true	select
+    	    LEAF	""	PC_GROUP_NAME_$02u      	true	value_in
+	    	LEAF	""	T7_NOTIFICATION_OPTS_$02u   true    alm_select
+    	    LEAF	" "	NO_CODE	                	true	NULL        OMIT_VALUE
+ENDTEMPLATE
+	    ENDMENU
+   	    MENU	"Groups 41-50"	true
+TEMPLATE	41	50
+    	    LEAF	""	T7_IS_ENABLED_$02u			true	select
+    	    LEAF	""	PC_GROUP_NAME_$02u      	true	value_in
+	    	LEAF	""	T7_NOTIFICATION_OPTS_$02u   true    alm_select
+    	    LEAF	" "	NO_CODE	                	true	NULL        OMIT_VALUE
+ENDTEMPLATE
+	    ENDMENU
+	ENDMENU
+  ENDMENU
+ENDMENU
+MENU	"Real-Time Data"	true
+    MENU	"Current Network Data"	true
+TEMPLATE	1	50
+	    LEAF	""	                        PC_DU_NAME_$02u         is_$02u_installed	value_in
+	    LEAF	"Weight"	                T2_WEIGHT_MEASURED_$02u is_$02u_installed	NULL
+        LEAF	"Last update (date)"	    T2_UPDATE_DATE_$02u     is_$02u_installed	NULL
+        LEAF	"Last update (time)"	    T2_UPDATE_TIME_$02u		is_$02u_installed	NULL
+        LEAF	"Last update (seconds)"	    T2_UPDATE_SECONDS_$02u	is_$02u_installed	NULL
+	    LEAF	" "	                        NO_CODE                 is_$02u_installed	NULL	OMIT_VALUE
+ENDTEMPLATE
+TEMPLATE	51	75
+	    LEAF	""	                        PC_SF_NAME_$02u         is_$02u_installed	value_in
+	    LEAF	""	                        T4_NEXT_RUN_CYCLE_$02u  is_$02u_installed	NULL
+	    LEAF	""	                        T4_RUN_TIME_$02u      	is_$02u_installed	NULL
+	    LEAF	""	                        T4_IDLE_TIME_$02u      	is_$02u_installed	NULL
+        LEAF	"Last update (date)"	    T4_UPDATE_DATE_$02u     is_$02u_installed	NULL
+        LEAF	"Last update (time)"	    T4_UPDATE_TIME_$02u		is_$02u_installed	NULL
+        LEAF	"Last update (seconds)"	    T4_UPDATE_SECONDS_$02u	is_$02u_installed	NULL
+	    LEAF	" "	                        NO_CODE	                is_$02u_installed	NULL        OMIT_VALUE
+ENDTEMPLATE
+TEMPLATE	76	99
+	    LEAF	""	                        PC_PLS_NAME_$02u        is_$02u_installed	value_in
+		LEAF	""                          T5_WASTE_HT_$02u        is_$02u_installed	NULL
+		LEAF	""                          T5_ACTIVE_ALARM_HT_$02u is_$02u_installed	NULL
+		LEAF	""                          T5_MAX_WASTE_LEVEL_$02u is_$02u_installed	NULL
+        LEAF	"Last update (date)"	    T5_UPDATE_DATE_$02u     is_$02u_installed	NULL
+        LEAF	"Last update (time)"	    T5_UPDATE_TIME_$02u		is_$02u_installed	NULL
+        LEAF	"Last update (seconds)"	    T5_UPDATE_SECONDS_$02u	is_$02u_installed	NULL
+	    LEAF	" "	                        NO_CODE	                is_$02u_installed	NULL        OMIT_VALUE
+ENDTEMPLATE
+TEMPLATE	101	108
+	    LEAF	""	                        PC_TW_NAME_$02u         is_$02u_installed	value_in
+		LEAF	""                          T6_TEMPERATURE1_$02u    isTWTemp1Enabled	NULL
+		LEAF	""                          T6_TEMPERATURE2_$02u    isTWTemp2Enabled	NULL
+		LEAF	""                          T6_TEMPERATURE3_$02u    isTWTemp3Enabled	NULL
+	    LEAF	""                      	T6_WC1_TODAY_$02u       isTWWater1Enabled	NULL
+	    LEAF	""                      	T6_WC2_TODAY_$02u       isTWWater2Enabled	NULL
+        LEAF	"Last update (date)"	    T6_UPDATE_DATE_$02u     is_$02u_installed	NULL
+        LEAF	"Last update (time)"	    T6_UPDATE_TIME_$02u		is_$02u_installed	NULL
+        LEAF	"Last update (seconds)"	    T6_UPDATE_SECONDS_$02u	is_$02u_installed	NULL
+	    LEAF	" "	                        NO_CODE	                is_$02u_installed	NULL        OMIT_VALUE
+ENDTEMPLATE
+	ENDMENU
+TEMPLATE	1	50
+    MENU	"Node ID #$u"	is_$02u_installed	MENU_CLOSED
+	    LEAF	"FBW:"	                    NO_CODE                 	true	NULL	OMIT_VALUE
+	    LEAF	"====="	                    NO_CODE                 	true	NULL	OMIT_VALUE
+	    LEAF	""	                        PC_DU_NAME_$02u           	true	value_in
+	    LEAF	"Node ID"	                T2_NETWORK_ID_$02u	    	true	NULL
+	   	LEAF	""	                        T2_GROUP_NUM_$02u	        true    value_in
+	    LEAF	""	                        T2_SW_VER_$02u            	true	NULL
+	    LEAF	"Transmitting OK?"	        T2_COMMS_OK_$02u          	true	NULL
+	    LEAF	" "	                        NO_CODE                 	true	NULL	OMIT_VALUE
+	    LEAF	"FEED DATA:"	            NO_CODE                 	true	NULL	OMIT_VALUE
+	    LEAF	"==========="               NO_CODE                 	true	NULL	OMIT_VALUE
+	    LEAF	"Weight"	                T2_WEIGHT_MEASURED_$02u   	true	NULL
+	    LEAF	" "	                        NO_CODE                 	true	NULL	OMIT_VALUE
+        LEAF    ""                          T2_CNSMPTN_RATE_1DAY_$02u 	isFBWCnsmptnOn  NULL
+        LEAF    ""                          T2_CNSMPTN_RATE_AVG_$02u  	isFBWCnsmptnOn  NULL
+        LEAF    ""                          T2_PRJCTED_EMPTY_DATE_$02u 	isFBWCnsmptnOn  NULL
+        LEAF    ""                          T2_PRJCTED_EMPTY_TIME_$02u 	isFBWCnsmptnOn  NULL
+	    LEAF	" "	                        NO_CODE                 	true	NULL	OMIT_VALUE
+	    LEAF	"WATER USAGE:"	            NO_CODE                		true	NULL	OMIT_VALUE
+	    LEAF	"==============="	        NO_CODE                 	true	NULL	OMIT_VALUE
+    	LEAF	""							PC_FBW_WM_NAME_$02u     	true	value_in
+	    LEAF	""                          T2_WATER_COUNT_$02u       	isFBWWaterOn	NULL
+        MENU	"Setup"	true
+    		LEAF	""	                        T2_DIRTY_FLAG_$02u		true    NULL
+	        LEAF	" "	                        NO_CODE                 true	NULL	OMIT_VALUE
+	    	LEAF	"Calibration:"	            NO_CODE                 	true	NULL	OMIT_VALUE
+	    	LEAF	"============="             NO_CODE                 	true	NULL	OMIT_VALUE
+	        LEAF	""							T2_LC_ENABLED_$02u			true	alm_select
+	        LEAF	"Empty Bin Weight"	        T2_WEIGHT_MINCAL_$02u	    true	NULL
+	        LEAF	""	                        T2_WEIGHT_MAXCAL_$02u	    true	NULL
+	        LEAF	" "	                        NO_CODE                 true	NULL	OMIT_VALUE
+	    	LEAF	"Inputs:"	                NO_CODE                 	true	NULL	OMIT_VALUE
+	    	LEAF	"========"                  NO_CODE                 	true	NULL	OMIT_VALUE
+	        LEAF	""	                        T2_WATERCOUNT_ENABLE_$02u	true	select
+	        LEAF	""	                        T2_CNSMPTN_ENABLE_$02u	true	select
+	        LEAF	" "	                        NO_CODE                 true	NULL	OMIT_VALUE
+	    	LEAF	"Notifications:"	        NO_CODE                 	true	NULL	OMIT_VALUE
+	    	LEAF	"==============="           NO_CODE                 	true	NULL	OMIT_VALUE
+	        LEAF	""	                        T2_EMPTY_BIN_WEIGHT_$02u    true	value_in
+	        LEAF	""	                        T2_LOWFEED_AUTO_$02u	    true	NULL
+	        LEAF	""	                        T2_LOWFEED_MAN_$02u       true	value_in
+	        LEAF	""	                        T0_INSTRUCTIONS_OVRDWGHT true   ovrdwght_instructions   NO_POLL OMIT_VALUE
+	        LEAF	" "	                        NO_CODE                 true	NULL	OMIT_VALUE
+	        LEAF	""	                        T2_NOTIFICATION_OPTS_$02u		true	alm_select
+        ENDMENU
+        MENU	"Feed Consumption Details"	isFBWCnsmptnOn	C=T2_CNSMPTN_ENABLE_$02u
+            LEAF    ""      T2_CNSMPTN_RATE_1DAY_$02u         true    NULL
+            LEAF	" "	    NO_CODE                         true	NULL	OMIT_VALUE
+        	LEAF	"Previous"		NO_CODE                 true	NULL	OMIT_VALUE
+        	LEAF	"========"		NO_CODE                	true	NULL	OMIT_VALUE
+    	    LEAF	""		PC_HISTCALCS_DATE				true    NULL
+    	    LEAF	""		PC_HISTCALCS_TIME				true    NULL
+            LEAF    ""      T2_CNSMPTN_DAYPREV1_$02u          true    NULL
+            LEAF    ""      T2_CNSMPTN_DAYPREV2_$02u          true    NULL
+            LEAF    ""      T2_CNSMPTN_DAYPREV3_$02u          true    NULL
+            LEAF	" "	    NO_CODE                         true	NULL	OMIT_VALUE
+            LEAF    ""      T2_CNSMPTN_DEVIATION_$02u     		true    NULL
+            LEAF    ""      T2_CNSMPTN_RATE_AVG_$02u          true    NULL
+            LEAF    ""      T2_CNSMPTN_RATE_PRD_$02u          true    NULL
+            LEAF    ""      T2_PRJCTED_EMPTY_DATE_$02u        true    NULL
+            LEAF    ""      T2_PRJCTED_EMPTY_TIME_$02u        true    NULL
+        ENDMENU
+        MENU	"Water Usage Details"	 	isFBWWaterOn	C=T2_WATERCOUNT_ENABLE_$02u
+	    	LEAF	""      T2_WATER_COUNT_$02u       		true	NULL
+	        LEAF	" "	    NO_CODE                         true	NULL	OMIT_VALUE
+        	LEAF	"Previous"		NO_CODE                 true	NULL	OMIT_VALUE
+        	LEAF	"========"		NO_CODE                	true	NULL	OMIT_VALUE
+    	    LEAF	""		PC_HISTCALCS_DATE				true    NULL
+    	    LEAF	""		PC_HISTCALCS_TIME				true    NULL
+            LEAF    ""      T2_WC_DAYPREV1_$02u        		true    NULL
+            LEAF    ""      T2_WC_DAYPREV2_$02u        		true    NULL
+            LEAF    ""      T2_WC_DAYPREV3_$02u        		true    NULL
+            LEAF	" "	    NO_CODE                         true	NULL	OMIT_VALUE
+            LEAF    ""      T2_WC_DEVIATION_$02u     		true    NULL
+            LEAF    ""      T2_WC_AVG_$02u          		true    NULL
+            LEAF    ""      T2_WC_PRD_$02u          		true    NULL
+        ENDMENU
+        MENU	"Communications"	installer
+            LEAF	"Last update (date)"	    T2_UPDATE_DATE_$02u       true	NULL
+            LEAF	"Last update (time)"	    T2_UPDATE_TIME_$02u		true	NULL
+            LEAF	"Last update (seconds)"	    T2_UPDATE_SECONDS_$02u	true NULL
+            LEAF	""	T2_COMMS1_HIST_$02u		true	NULL
+        ENDMENU
+    ENDMENU
+ENDTEMPLATE
+TEMPLATE	51	75
+    MENU	"Node ID #$u"	is_$02u_installed	MENU_CLOSED
+		LEAF	"SmartFlex:"	            NO_CODE                 true    NULL    OMIT_VALUE
+		LEAF	"========="	                NO_CODE                 true    NULL    OMIT_VALUE
+		LEAF	""	                        PC_SF_NAME_$02u         true    value_in
+		LEAF	"Node ID"	                T4_NETWORK_ID_$02u	   	true    NULL
+	   	LEAF	""	                        T4_GROUP_NUM_$02u	    true    value_in
+		LEAF	""	                        T4_SW_VER_$02u          true    NULL
+		LEAF	"Transmitting OK?"	        T4_COMMS_OK_$02u        true    NULL
+		LEAF	" "	                        NO_CODE                 true    NULL    OMIT_VALUE
+		LEAF	"DATA:"	                    NO_CODE                 true    NULL    OMIT_VALUE
+		LEAF	"====="	                    NO_CODE                 true    NULL    OMIT_VALUE
+		LEAF	""	                        T4_FEED_PRESENT_$02u    true    NULL
+		LEAF	""	                        T4_RELAY_STATE_$02u 	true    NULL
+		LEAF	" "	                        NO_CODE                 true    NULL    OMIT_VALUE
+		LEAF	""	                        T4_NEXT_RUN_CYCLE_$02u  true    NULL
+		LEAF	""	                        T4_RUN_TIME_$02u      	true    NULL
+		LEAF	""	                        T4_IDLE_TIME_$02u    	true    NULL
+		LEAF	" "	                        NO_CODE                 true    NULL    OMIT_VALUE
+		LEAF	"ALARMS:"	            	NO_CODE                 true    NULL    OMIT_VALUE
+		LEAF	"======="	            	NO_CODE                 true    NULL    OMIT_VALUE
+		LEAF	""	                        T4_OVFL_ALARM_$02u      true    NULL
+		LEAF	""	                        T4_MAX_RT_ALARM_$02u    true    NULL
+		LEAF	""	                        T4_CUTOFF_ALARM_$02u    true    NULL
+		LEAF	""	                        T4_IDLE_ALARM_$02u      	true    NULL
+		LEAF	" "	                        NO_CODE                 	true    NULL    OMIT_VALUE
+    	MENU	"Setup"	true
+    		LEAF	""	                        T4_DIRTY_FLAG_$02u		true    NULL
+	        LEAF	" "	                        NO_CODE                 true	NULL	OMIT_VALUE
+			LEAF	""	                        T4_DELAY_TIME_$02u      true    value_in
+			LEAF	""	                        T4_MAX_RUN_TIME_$02u    true    value_in
+			LEAF	""	                        T4_MAX_IDLE_TIME_$02u   true    value_in
+	        LEAF	" "	                        NO_CODE                 true	NULL	OMIT_VALUE
+	        LEAF	""	                        T4_NOTIFICATION_OPTS_$02u		true	alm_select
+    	ENDMENU
+    	MENU	"Sensor"	installer
+	    	LEAF	""	                        T4_SENSITIVITY_INDEX_$02u 	true    NULL
+	    	LEAF	""	                        T4_RAW_ADC_$02u 			true    NULL
+	    	LEAF	""	                        T4_ADC_SENS_THRESHOLD_$02u 	true   NULL
+    	ENDMENU
+    	MENU	"Auger On-Time Details"	true
+    		LEAF	""	    T4_RUNTIME_TODAY_$02u     		true    NULL
+        	LEAF	" "		NO_CODE                 		true	NULL	OMIT_VALUE
+        	LEAF	"Previous"		NO_CODE                 true	NULL	OMIT_VALUE
+        	LEAF	"========"		NO_CODE                 true	NULL	OMIT_VALUE
+    	    LEAF	""		PC_HISTCALCS_DATE				true    NULL
+    	    LEAF	""		PC_HISTCALCS_TIME				true    NULL
+    	    LEAF	""	    T4_RUNTIME_DAYPREV1_$02u    	true    NULL
+    	    LEAF	""	    T4_RUNTIME_DAYPREV2_$02u    	true    NULL
+    	    LEAF	""	    T4_RUNTIME_DAYPREV3_$02u    	true    NULL
+            LEAF	" "	    NO_CODE                     	true	NULL	OMIT_VALUE
+        	LEAF    ""      T4_RUNTIME_DEVIATION_$02u     	true    NULL
+            LEAF    ""      T4_RUNTIME_AVG_$02u          	true    NULL
+            LEAF    ""      T4_RUNTIME_PRD_$02u          	true    NULL
+		ENDMENU
+    	MENU	"Communications"	installer
+    	    LEAF	"Last update (date)"	    T4_UPDATE_DATE_$02u     true    NULL
+    	    LEAF	"Last update (time)"	    T4_UPDATE_TIME_$02u		true    NULL
+    	    LEAF	"Last update (seconds)"	    T4_UPDATE_SECONDS_$02u	true    NULL
+	    	LEAF	""	                        T4_COMMS1_HIST_$02u		true	NULL
+    	ENDMENU
+	ENDMENU
+ENDTEMPLATE
+TEMPLATE	76	99
+    MENU	"Node ID #$u"	is_$02u_installed	MENU_CLOSED
+	    LEAF	"PLS:"	                NO_CODE                 	true				NULL	OMIT_VALUE
+	    LEAF	"====="	                NO_CODE                 	true				NULL	OMIT_VALUE
+		LEAF	""	                    PC_PLS_NAME_$02u            true                value_in
+		LEAF	"Node ID"				T5_NETWORK_ID_$02u	    	true    			NULL
+	   	LEAF	""	                    T5_GROUP_NUM_$02u	    	true    			value_in
+		LEAF	""	        			T5_SW_VER_$02u            	true    			NULL
+		LEAF	"Transmitting OK?"	    T5_COMMS_OK_$02u            true                NULL
+		LEAF	" "	                    NO_CODE                     true                NULL    OMIT_VALUE
+		LEAF	"DATA:"	                NO_CODE                     true                NULL    OMIT_VALUE
+		LEAF	"======"	            NO_CODE                     true                NULL    OMIT_VALUE
+		LEAF	""                      T5_WASTE_STATE_$02u         isPitFull           NULL
+		LEAF	""                      T5_ALARM_STATE_$02u         true                NULL
+		LEAF	""                      T5_ALARM_ACK_$02u           isAlarmAckAvail     select
+		LEAF	" "	                    NO_CODE                     true                NULL    OMIT_VALUE
+		LEAF	""                      T5_WASTE_HT_$02u            isWasteAboveSensor  NULL
+		LEAF	"Waste Level"           T5_DEPTH_BELOW_SENSR_$02u  	isWasteBelowSensor  NULL
+		LEAF	""                      T5_ACTIVE_ALARM_HT_$02u     true                NULL
+		LEAF	""                      T5_LEVEL_TO_FULL_$02u       isPitNormal         NULL
+		LEAF	" "	                    NO_CODE                     true                NULL    OMIT_VALUE
+		LEAF	""                      T5_WASTE_VOLUME_L_$02u      true                NULL    OMIT_LINE
+		LEAF	""                      T5_WASTE_VOLUME_H_$02u      isWasteAboveSensor  NULL
+		LEAF	""                      T5_VOLUME_TO_FULL_L_$02u    true                NULL    OMIT_LINE
+		LEAF	""                      T5_VOLUME_TO_FULL_H_$02u 	isPitNormal         NULL
+		LEAF	" "	                    NO_CODE                 	true                NULL    OMIT_VALUE
+		LEAF	""                      T5_DAYS_TO_FULL_$02u       	isPitNormal         NULL
+    	MENU	"Setup"	true
+    	    LEAF	""	        T5_DIRTY_FLAG_$02u			true    NULL
+		    LEAF	" "	        NO_CODE                 	true    NULL        OMIT_VALUE
+		    LEAF	""  		T5_SENSOR_LENGTH_$02u   	true    NULL
+    		LEAF	"Serial Number"		T5_SN_LOW_$02u	    true	NULL
+		    LEAF	""          T5_UNITS_$02u             	true    select
+		    LEAF	""          T5_PIT_LENGTH_$02u        	true    value_in
+		    LEAF	""          T5_PIT_WIDTH_$02u         	true    value_in
+		    LEAF	""          T5_PIT_DEPTH_$02u         	true    value_in
+		    LEAF	""          T5_PIT_CAPACITY_L_$02u    	true    NULL        OMIT_LINE
+		    LEAF	""          T5_PIT_CAPACITY_H_$02u    	true    NULL
+		    LEAF	" "	        NO_CODE                 	true    NULL        OMIT_VALUE
+		    LEAF	""          T5_MAX_WASTE_LEVEL_$02u   	true    value_in
+		    LEAF	""          T5_BASE_ALARM_HT_$02u     	true    value_in
+		    LEAF	""          T5_ALARM_SNOOZE_HT_$02u   	true    value_in
+		    LEAF	""          T5_SENSITIVITY_$02u  		rep    value_in
+		    LEAF	" "	        NO_CODE                 	true    NULL        OMIT_VALUE
+	        LEAF	""	        T5_NOTIFICATION_OPTS_$02u	true	alm_select
+    	ENDMENU
+    	MENU	"Communications"	installer
+    	    LEAF	"Last update (date)"	    T5_UPDATE_DATE_$02u     	true    NULL
+    	    LEAF	"Last update (time)"	    T5_UPDATE_TIME_$02u			true    NULL
+    	    LEAF	"Last update (seconds)"	    T5_UPDATE_SECONDS_$02u		true    NULL
+	    	LEAF	""	                        T5_COMMS1_HIST_$02u			true	NULL
+    	ENDMENU
+	ENDMENU
+ENDTEMPLATE
+TEMPLATE	101	108
+    MENU	"Node ID #$u"	is_$02u_installed	MENU_CLOSED
+		LEAF	"COMMUNICATIONS:"	    NO_CODE                     true                NULL    OMIT_VALUE
+		LEAF	"================="	    NO_CODE                     true                NULL    OMIT_VALUE
+		LEAF	""	                    PC_TW_NAME_$02u             true                value_in
+		LEAF	"Transmitting OK?"	    T6_COMMS_OK_$02u            true                NULL
+		LEAF	" "	                    NO_CODE                     true                NULL    OMIT_VALUE
+		LEAF	"Readings:"	            NO_CODE                     true                NULL    OMIT_VALUE
+		LEAF	"==========="	        NO_CODE                     true                NULL    OMIT_VALUE
+   	    LEAF	""						PC_OUTSIDE_AVG_TEMP			true    			NULL
+		LEAF	" "	                    NO_CODE                     true                NULL    OMIT_VALUE
+	    LEAF	""						PC_TW_TEMP1_NAME_$02u   	isTWTemp1Enabled    value_in
+	    LEAF	""                      T6_TEMPERATURE1_$02u       	isTWTemp1Enabled	NULL
+		LEAF	""	        			T6_TEMP1_ALARM_$02u         isTWTemp1Enabled    NULL
+		LEAF	" "	                    NO_CODE                     true                NULL    OMIT_VALUE
+	    LEAF	""						PC_TW_TEMP2_NAME_$02u   	isTWTemp2Enabled    value_in
+	    LEAF	""                      T6_TEMPERATURE2_$02u       	isTWTemp2Enabled	NULL
+		LEAF	""	        			T6_TEMP2_ALARM_$02u         isTWTemp2Enabled    NULL
+		LEAF	" "	                    NO_CODE                     true                NULL    OMIT_VALUE
+	    LEAF	""						PC_TW_TEMP3_NAME_$02u   	isTWTemp3Enabled    value_in
+	    LEAF	""                      T6_TEMPERATURE3_$02u       	isTWTemp3Enabled	NULL
+		LEAF	""	        			T6_TEMP3_ALARM_$02u         isTWTemp3Enabled    NULL
+		LEAF	" "	                    NO_CODE                     true                NULL    OMIT_VALUE
+	    LEAF	""						PC_TW_WM1_NAME_$02u   		isTWWater1Enabled   value_in
+	    LEAF	""                      T6_WC1_TODAY_$02u       	isTWWater1Enabled	NULL
+		LEAF	" "	                    NO_CODE                     true                NULL    OMIT_VALUE
+	    LEAF	""						PC_TW_WM2_NAME_$02u   		isTWWater2Enabled   value_in
+	    LEAF	""                      T6_WC2_TODAY_$02u       	isTWWater2Enabled	NULL
+    	MENU	"Setup"	true
+		    LEAF	"Node ID"	T6_NETWORK_ID_$02u	    	true    			NULL
+		    LEAF	""	        T6_SW_VER_$02u            	true    			NULL
+	        LEAF	" "	    	NO_CODE                     true				NULL	OMIT_VALUE
+	    	LEAF	""			PC_TW_TEMP1_NAME_$02u   	isTWTemp1Enabled    value_in
+	   		LEAF	""	        T6_TEMP1_GROUP_NUM_$02u	    isTWTemp1Enabled	value_in
+		    LEAF	""	        T6_TEMP1_PROBE_TYPE_$02u    isTWTemp1Enabled	select
+		    LEAF	""	        T6_TEMP1_LALM_SETPT_$02u    isTWTemp1Enabled	value_in
+		    LEAF	""	        T6_TEMP1_HALM_SETPT_$02u    isTWTemp1Enabled	value_in
+		    LEAF	""	        T6_TEMP1_CHALM_SETPT_$02u   isTWTemp1Enabled	value_in
+		    LEAF	""	        T6_TEMP1_ALM_RCGTNTM_$02u   isTWTemp1Enabled	tw_timeHMS
+		    LEAF	""	        T6_TEMP1_ALM_RESETTM_$02u   isTWTemp1Enabled	tw_timeHMS
+	        LEAF	" "	    	NO_CODE                     true				NULL	OMIT_VALUE
+	    	LEAF	""			PC_TW_TEMP2_NAME_$02u   	isTWTemp2Enabled    value_in
+	   		LEAF	""	        T6_TEMP2_GROUP_NUM_$02u	    isTWTemp2Enabled	value_in
+			LEAF	""	        T6_TEMP2_PROBE_TYPE_$02u    isTWTemp2Enabled	select
+		    LEAF	""	        T6_TEMP2_LALM_SETPT_$02u    isTWTemp2Enabled	value_in
+		    LEAF	""	        T6_TEMP2_HALM_SETPT_$02u    isTWTemp2Enabled	value_in
+		    LEAF	""	        T6_TEMP2_CHALM_SETPT_$02u   isTWTemp2Enabled	value_in
+		    LEAF	""	        T6_TEMP2_ALM_RCGTNTM_$02u   isTWTemp2Enabled	tw_timeHMS
+		    LEAF	""	        T6_TEMP2_ALM_RESETTM_$02u   isTWTemp2Enabled	tw_timeHMS
+	        LEAF	" "	    	NO_CODE                     true				NULL	OMIT_VALUE
+	    	LEAF	""			PC_TW_TEMP3_NAME_$02u   	isTWTemp3Enabled    value_in
+	   		LEAF	""	        T6_TEMP3_GROUP_NUM_$02u	    isTWTemp3Enabled	value_in
+		    LEAF	""	        T6_TEMP3_PROBE_TYPE_$02u    isTWTemp3Enabled	select
+		    LEAF	""	        T6_TEMP3_LALM_SETPT_$02u    isTWTemp3Enabled	value_in
+		    LEAF	""	        T6_TEMP3_HALM_SETPT_$02u    isTWTemp3Enabled	value_in
+		    LEAF	""	        T6_TEMP3_CHALM_SETPT_$02u   isTWTemp3Enabled	value_in
+		    LEAF	""	        T6_TEMP3_ALM_RCGTNTM_$02u   isTWTemp3Enabled	tw_timeHMS
+		    LEAF	""	        T6_TEMP3_ALM_RESETTM_$02u   isTWTemp3Enabled	tw_timeHMS
+	        LEAF	" "	    	NO_CODE                     true				NULL	OMIT_VALUE
+	    	LEAF	""			PC_TW_WM1_NAME_$02u   		isTWWater1Enabled   value_in
+	   		LEAF	""	        T6_WATER1_GROUP_NUM_$02u	isTWWater1Enabled   value_in
+	        LEAF	" "	    	NO_CODE                     true				NULL	OMIT_VALUE
+	    	LEAF	""			PC_TW_WM2_NAME_$02u   		isTWWater2Enabled   value_in
+	   		LEAF	""	        T6_WATER2_GROUP_NUM_$02u	isTWWater2Enabled   value_in
+	        LEAF	" "	    	NO_CODE                     true				NULL	OMIT_VALUE
+		    LEAF	""	        T6_INPUT_OPTS_ENABLE_$02u   true    			alm_select
+		    LEAF	""	        T6_NOTIFICATION_OPTS_$02u   true    			alm_select
+    	ENDMENU
+        MENU	"Water 1 Usage Details"	 	isTWWater1Enabled	C=T6_INPUT_OPTS_ENABLE_$02u
+	    	LEAF	""		PC_TW_WM1_NAME_$02u   			isTWWater1Enabled   value_in
+	    	LEAF	""      T6_WC1_TODAY_$02u       		true	NULL
+	        LEAF	" "	    NO_CODE                         true	NULL	OMIT_VALUE
+        	LEAF	"Previous"		NO_CODE                 true	NULL	OMIT_VALUE
+        	LEAF	"========"		NO_CODE                	true	NULL	OMIT_VALUE
+    	    LEAF	""		PC_HISTCALCS_DATE				true    NULL
+    	    LEAF	""		PC_HISTCALCS_TIME				true    NULL
+            LEAF    ""      T6_WC1_DAYPREV1_$02u        	true    NULL
+            LEAF    ""      T6_WC1_DAYPREV2_$02u        	true    NULL
+            LEAF    ""      T6_WC1_DAYPREV3_$02u        	true    NULL
+            LEAF	" "	    NO_CODE                         true	NULL	OMIT_VALUE
+        	LEAF    ""      T6_WC1_DEVIATION_$02u     		true    NULL
+            LEAF    ""      T6_WC1_AVG_$02u          		true    NULL
+            LEAF    ""      T6_WC1_PRD_$02u          		true    NULL
+        ENDMENU
+        MENU	"Water 2 Usage Details"	 	isTWWater2Enabled	C=T6_INPUT_OPTS_ENABLE_$02u
+	    	LEAF	""		PC_TW_WM2_NAME_$02u   			isTWWater2Enabled   value_in
+	    	LEAF	""      T6_WC2_TODAY_$02u       		true	NULL
+	        LEAF	" "	    NO_CODE                         true	NULL	OMIT_VALUE
+        	LEAF	"Previous"		NO_CODE                 true	NULL	OMIT_VALUE
+        	LEAF	"========"		NO_CODE                	true	NULL	OMIT_VALUE
+    	    LEAF	""		PC_HISTCALCS_DATE				true    NULL
+    	    LEAF	""		PC_HISTCALCS_TIME				true    NULL
+            LEAF    ""      T6_WC2_DAYPREV1_$02u        	true    NULL
+            LEAF    ""      T6_WC2_DAYPREV2_$02u        	true    NULL
+            LEAF    ""      T6_WC2_DAYPREV3_$02u        	true    NULL
+            LEAF	" "	    NO_CODE                         true	NULL	OMIT_VALUE
+        	LEAF    ""      T6_WC2_DEVIATION_$02u     		true    NULL
+            LEAF    ""      T6_WC2_AVG_$02u          		true    NULL
+            LEAF    ""      T6_WC2_PRD_$02u          		true    NULL
+        ENDMENU
+        MENU	"Temperature 1 Details"	 		isTWTemp1Enabled	C=T6_INPUT_OPTS_ENABLE_$02u
+	    	LEAF	""		PC_TW_TEMP1_NAME_$02u   	isTWTemp1Enabled    value_in
+	    	LEAF	""		T6_TEMPERATURE1_$02u       	true	NULL
+	    	LEAF	""		T6_TEMP1_INTRVL_HIGH_$02u   true	NULL
+	    	LEAF	""		T6_TEMP1_INTRVL_LOW_$02u    true	NULL
+	    	LEAF	""		T6_TEMP1_DAYPRV_HIGH_$02u   true	NULL
+	    	LEAF	""		T6_TEMP1_DAYPRV_LOW_$02u    true	NULL
+		ENDMENU
+        MENU	"Temperature 2 Details"	 		isTWTemp2Enabled	C=T6_INPUT_OPTS_ENABLE_$02u
+	    	LEAF	""		PC_TW_TEMP2_NAME_$02u   	isTWTemp2Enabled    value_in
+	    	LEAF	""		T6_TEMPERATURE2_$02u       	true	NULL
+	    	LEAF	""		T6_TEMP2_INTRVL_HIGH_$02u   true	NULL
+	    	LEAF	""		T6_TEMP2_INTRVL_LOW_$02u    true	NULL
+	    	LEAF	""		T6_TEMP2_DAYPRV_HIGH_$02u   true	NULL
+	    	LEAF	""		T6_TEMP2_DAYPRV_LOW_$02u    true	NULL
+		ENDMENU
+        MENU	"Temperature 3 Details"	 		isTWTemp3Enabled	C=T6_INPUT_OPTS_ENABLE_$02u
+	    	LEAF	""		PC_TW_TEMP3_NAME_$02u   	isTWTemp3Enabled    value_in
+	    	LEAF	""		T6_TEMPERATURE3_$02u       	true	NULL
+	    	LEAF	""		T6_TEMP3_INTRVL_HIGH_$02u   true	NULL
+	    	LEAF	""		T6_TEMP3_INTRVL_LOW_$02u    true	NULL
+	    	LEAF	""		T6_TEMP3_DAYPRV_HIGH_$02u   true	NULL
+	    	LEAF	""		T6_TEMP3_DAYPRV_LOW_$02u    true	NULL
+		ENDMENU
+    	MENU	"Communications"	installer
+    	    LEAF	"Last update (date)"	    T6_UPDATE_DATE_$02u     	true    NULL
+    	    LEAF	"Last update (time)"	    T6_UPDATE_TIME_$02u			true    NULL
+    	    LEAF	"Last update (seconds)"	    T6_UPDATE_SECONDS_$02u		true    NULL
+	    	LEAF	""	                        T6_COMMS1_HIST_$02u			true	NULL
+    	ENDMENU
+	ENDMENU
+ENDTEMPLATE
+TEMPLATE	1	50
+    MENU	"Group ID #$u"	isInstalled			C=T7_IS_ENABLED_$02u	MENU_CLOSED
+	    LEAF	""	        PC_GROUP_NAME_$02u   		true    value_in
+	    LEAF	""	        T7_GROUP_NUM_$02u   		true    NULL
+	    LEAF	""	        T7_NOTIFICATION_OPTS_$02u   true    alm_select
+        LEAF	" "	    				NO_CODE         true	NULL		OMIT_VALUE
+	    LEAF	"Consumption:"			NO_CODE         true	NULL		OMIT_VALUE
+	    LEAF	"=============="		NO_CODE         true	NULL		OMIT_VALUE
+	    LEAF	""	        T7_WEIGHT_$02u   			true   	NULL
+	    LEAF	""	        T7_CNSMPTN_DAYPREV1_$02u   	true   	NULL
+	    LEAF	""	        T7_CNSMPTN_DEVIATION_$02u   true   	NULL
+	    LEAF	""	        T7_CNSMPTN_RATE_AVG_$02u  true   	NULL
+	    LEAF	""	        T7_PRJCTED_EMPTY_DATE_$02u  true   	NULL
+	    LEAF	""	        T7_PRJCTED_EMPTY_TIME_$02u  true   	NULL
+        LEAF	" "	    				NO_CODE         true	NULL		OMIT_VALUE
+	    LEAF	"Water Usage:"			NO_CODE         true	NULL		OMIT_VALUE
+	    LEAF	"================="		NO_CODE         true	NULL		OMIT_VALUE
+	    LEAF	""	       	T7_WC_DAYPREV1_$02u  		true   	NULL
+	    LEAF	""	        T7_WC_DEVIATION_$02u  		true   	NULL
+	    LEAF	""	      	T7_WC_AVG_$02u  			true   	NULL
+        LEAF	" "	    				NO_CODE         true	NULL		OMIT_VALUE
+	    LEAF	"Run Time:"				NO_CODE         true	NULL		OMIT_VALUE
+	    LEAF	"============"			NO_CODE         true	NULL		OMIT_VALUE
+	    LEAF	""	      	T7_RUNTIME_DAYPREV1_$02u  	true   	NULL
+	    LEAF	""	      	T7_RUNTIME_DEVIATION_$02u	true   	NULL
+	    LEAF	""	      	T7_RUNTIME_AVG_$02u  		true   	NULL
+       	MENU	"Setup"			true
+   	    	LEAF	""	T7_CNSMPTN_ENABLED_$02u	true		NULL
+   	    	LEAF	""	T7_WC_ENABLED_$02u		true		NULL
+   	    	LEAF	""	T7_RUNTIME_ENABLED_$02u	true		NULL
+		ENDMENU
+       	MENU	"Items"			true
+   	    	LEAF	""	T7_ITEM01_ID_$02u	true		NULL
+   	    	LEAF	""	T7_ITEM02_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM03_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM04_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM05_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM06_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM07_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM08_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM09_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM10_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM11_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM12_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM13_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM14_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM15_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM16_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM17_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM18_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM19_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM20_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM21_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM22_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM23_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM24_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM25_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM26_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM27_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM28_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM29_ID_$02u	true	    NULL
+   	    	LEAF	""	T7_ITEM30_ID_$02u	true	    NULL
+    	ENDMENU
+	ENDMENU
+ENDTEMPLATE
+ENDMENU
+MENU	"Factory Diagnostics"   installer
+	MENU	"General Diagnostics"   factory
+   	   	LEAF	""	PC_DIAGNOSTIC_1		true	    NULL
+   	   	LEAF	""	PC_DIAGNOSTIC_2		true	    NULL
+   	   	LEAF	""	PC_DIAGNOSTIC_3		true	    NULL
+   	   	LEAF	""	PC_DIAGNOSTIC_4		true	    NULL
+   	   	LEAF	""	PC_DIAGNOSTIC_5		true	    NULL
+   	   	LEAF	""	PC_DIAGNOSTIC_6		true	    NULL
+   	   	LEAF	""	PC_DIAGNOSTIC_7		true	    NULL
+   	   	LEAF	""	PC_DIAGNOSTIC_8		true	    NULL
+   	   	LEAF	""	PC_DIAGNOSTIC_9		true	    NULL
+   	   	LEAF	""	PC_DIAGNOSTIC_10		true	    NULL
+	ENDMENU
+   	MENU	"Communications"	    installer
+TEMPLATE	1	50
+    	LEAF	"Node ID"	                T2_NETWORK_ID_$02u	    is_$02u_installed	NULL
+       	LEAF	"Last update (date)"	    T2_UPDATE_DATE_$02u     is_$02u_installed	NULL
+       	LEAF	"Last update (time)"	    T2_UPDATE_TIME_$02u		is_$02u_installed	NULL
+       	LEAF	"Last update (seconds)"	    T2_UPDATE_SECONDS_$02u	is_$02u_installed	NULL
+    	LEAF	" "	                        NO_CODE                 is_$02u_installed	NULL	OMIT_VALUE
+ENDTEMPLATE
+TEMPLATE	51	75
+    	LEAF	"Node ID"	                T4_NETWORK_ID_$02u	    is_$02u_installed	NULL
+       	LEAF	"Last update (date)"	    T4_UPDATE_DATE_$02u     is_$02u_installed	NULL
+       	LEAF	"Last update (time)"	    T4_UPDATE_TIME_$02u		is_$02u_installed	NULL
+       	LEAF	"Last update (seconds)"	    T4_UPDATE_SECONDS_$02u	is_$02u_installed	NULL
+    	LEAF	" "	                        NO_CODE                 is_$02u_installed	NULL	OMIT_VALUE
+ENDTEMPLATE
+TEMPLATE	76	99
+    	LEAF	"Node ID"	                T5_NETWORK_ID_$02u	    is_$02u_installed	NULL
+       	LEAF	"Last update (date)"	    T5_UPDATE_DATE_$02u     is_$02u_installed	NULL
+       	LEAF	"Last update (time)"	    T5_UPDATE_TIME_$02u		is_$02u_installed	NULL
+       	LEAF	"Last update (seconds)"	    T5_UPDATE_SECONDS_$02u	is_$02u_installed	NULL
+    	LEAF	" "	                        NO_CODE                 is_$02u_installed	NULL	OMIT_VALUE
+ENDTEMPLATE
+	ENDMENU
+	MENU	"Calibration Data"   installer
+		MENU	"FBW Calibration Data"   installer
+TEMPLATE	1	4
+    		MENU	"Calibration Set #$u  "	true
+	    		LEAF	""	            T2_DU_DETAILS_ID_$02u 	true	value_in
+	    		LEAF	" "	                    NO_CODE         true    NULL    OMIT_VALUE
+	    		LEAF	"Calibration Dates"	    NO_CODE         true    NULL    OMIT_VALUE
+	    		LEAF	"================="	    NO_CODE         true    NULL    OMIT_VALUE
+	    		LEAF	""	            T2_MINCAL_DATE_COPY_$02u 	true	NULL
+	    		LEAF	""	            T2_MAXCAL_DATE_COPY_$02u 	true	NULL
+	    		LEAF	" "	                    NO_CODE         true    NULL    OMIT_VALUE
+	    		LEAF	"Load Cell Status"	    NO_CODE         true    NULL    OMIT_VALUE
+	    		LEAF	"================"	    NO_CODE         true    NULL    OMIT_VALUE
+	    		LEAF	"Load Cell 1"	T2_STATUS_LC1_$02u 	    true	NULL
+	    		LEAF	"Load Cell 2"	T2_STATUS_LC2_$02u 		true	NULL
+	    		LEAF	"Load Cell 3"	T2_STATUS_LC3_$02u 		true	NULL
+	    		LEAF	"Load Cell 4"	T2_STATUS_LC4_$02u 		true	NULL
+	    		LEAF	"Load Cell 5"	T2_STATUS_LC5_$02u 		true	NULL
+	    		LEAF	"Load Cell 6"	T2_STATUS_LC6_$02u 		true	NULL
+	    		LEAF	"Load Cell 7"	T2_STATUS_LC7_$02u 		true	NULL
+	    		LEAF	"Load Cell 8"	T2_STATUS_LC8_$02u 		true	NULL
+	    		LEAF	" "	                    NO_CODE         true    NULL    OMIT_VALUE
+	    		LEAF	"Raw Load Cell "	    NO_CODE         true    NULL    OMIT_VALUE
+	    		LEAF	"=============="	    NO_CODE         true    NULL    OMIT_VALUE
+	    		LEAF	"Load Cell 1"	T2_RAW_LC1_$02u			true	NULL
+	    		LEAF	"Load Cell 2"	T2_RAW_LC2_$02u			true	NULL
+	    		LEAF	"Load Cell 3"	T2_RAW_LC3_$02u			true	NULL
+	    		LEAF	"Load Cell 4"	T2_RAW_LC4_$02u			true	NULL
+	    		LEAF	"Load Cell 5"	T2_RAW_LC5_$02u			true	NULL
+	    		LEAF	"Load Cell 6"	T2_RAW_LC6_$02u			true	NULL
+	    		LEAF	"Load Cell 7"	T2_RAW_LC7_$02u			true	NULL
+	    		LEAF	"Load Cell 8"	T2_RAW_LC8_$02u			true	NULL
+	    		LEAF	" "	                    NO_CODE         true    NULL    OMIT_VALUE
+	    		LEAF	"Scale Factor"	        NO_CODE         true    NULL    OMIT_VALUE
+	    		LEAF	"============"	        NO_CODE         true    NULL    OMIT_VALUE
+	    		LEAF	"Load Cell 1"	T2_CI1_$02u			    true	NULL
+	    		LEAF	"Load Cell 2"	T2_CI2_$02u			    true	NULL
+	    		LEAF	"Load Cell 3"	T2_CI3_$02u			    true	NULL
+	    		LEAF	"Load Cell 4"	T2_CI4_$02u			    true	NULL
+	    		LEAF	"Load Cell 5"	T2_CI5_$02u			    true	NULL
+	    		LEAF	"Load Cell 6"	T2_CI6_$02u			    true	NULL
+	    		LEAF	"Load Cell 7"	T2_CI7_$02u			    true	NULL
+	    		LEAF	"Load Cell 8"	T2_CI8_$02u			    true	NULL
+	    		LEAF	" "	                    NO_CODE         true    NULL    OMIT_VALUE
+	    		LEAF	"Min Calibration"	    NO_CODE         true    NULL    OMIT_VALUE
+	    		LEAF	"==============="	    NO_CODE         true    NULL    OMIT_VALUE
+	    		LEAF	"Load Cell 1"	T2_MINI1_$02u			    true	NULL
+	    		LEAF	"Load Cell 2"	T2_MINI2_$02u			    true	NULL
+	    		LEAF	"Load Cell 3"	T2_MINI3_$02u			    true	NULL
+	    		LEAF	"Load Cell 4"	T2_MINI4_$02u			    true	NULL
+	    		LEAF	"Load Cell 5"	T2_MINI5_$02u			    true	NULL
+	    		LEAF	"Load Cell 6"	T2_MINI6_$02u			    true	NULL
+	    		LEAF	"Load Cell 7"	T2_MINI7_$02u			    true	NULL
+	    		LEAF	"Load Cell 8"	T2_MINI8_$02u			    true	NULL
+	    		LEAF	" "	                    NO_CODE         true    NULL    OMIT_VALUE
+	    		LEAF	"Max Calibration"	    NO_CODE         true    NULL    OMIT_VALUE
+	    		LEAF	"==============="	    NO_CODE         true    NULL    OMIT_VALUE
+	    		LEAF	"Load Cell 1"	T2_MAXI1_$02u			    true	NULL
+	    		LEAF	"Load Cell 2"	T2_MAXI2_$02u			    true	NULL
+	    		LEAF	"Load Cell 3"	T2_MAXI3_$02u			    true	NULL
+	    		LEAF	"Load Cell 4"	T2_MAXI4_$02u			    true	NULL
+	    		LEAF	"Load Cell 5"	T2_MAXI5_$02u			    true	NULL
+	   			LEAF	"Load Cell 6"	T2_MAXI6_$02u			    true	NULL
+	   			LEAF	"Load Cell 7"	T2_MAXI7_$02u			    true	NULL
+	   			LEAF	"Load Cell 8"	T2_MAXI8_$02u			    true	NULL
+    		ENDMENU
+ENDTEMPLATE
+		ENDMENU
+		MENU	"PLS Calibration Data"   rep
+        	MENU    "Setup"     true
+    	    	LEAF	""	            T5_DIAG_UPDATE_DATE     true    NULL
+    	    	LEAF	""	            T5_DIAG_UPDATE_TIME		true    NULL
+    	    	LEAF	""	            T5_DIAG_UPDATE_SECONDS	true    NULL
+    	    	LEAF	""	            T5_DIAG_DIRTY_FLAG		true    NULL
+    	    	LEAF	""	            T5_DIAG_FLAG		true    NULL
+    	    	LEAF	" "	            NO_CODE             true    NULL    OMIT_VALUE
+    	    	LEAF	""	            T5_DIAG_NODEID 	    true	value_in
+    	    	LEAF	""	            T5_DIAG_SEGMENTNUM 	true	value_in
+    	    	LEAF	" "	            NO_CODE             true    NULL    OMIT_VALUE
+    	    	LEAF	""	            T5_DIAG_LEVEL 	    true	NULL
+    	    	LEAF	" "	            NO_CODE             true    NULL    OMIT_VALUE
+	    	ENDMENU
+       		MENU    "Pad Data"    true
+    	    	LEAF	""	            T5_DIAG_PAD00 	    true	NULL
+   		    	LEAF	""	            T5_DIAG_PAD01 	    true	NULL
+   		    	LEAF	""	            T5_DIAG_PAD02 	    true	NULL
+   		    	LEAF	""	            T5_DIAG_PAD03 	    true	NULL
+   		    	LEAF	""	            T5_DIAG_PAD04 	    true	NULL
+   		    	LEAF	""	            T5_DIAG_PAD05 	    true	NULL
+   		    	LEAF	""	            T5_DIAG_PAD06 	    true	NULL
+   		    	LEAF	""	            T5_DIAG_PAD07 	    true	NULL
+   		    	LEAF	""	            T5_DIAG_PAD08 	    true	NULL
+   		    	LEAF	""	            T5_DIAG_PAD09 	    true	NULL
+   		    	LEAF	""	            T5_DIAG_PAD10 	    true	NULL
+   		    	LEAF	""	            T5_DIAG_PAD11 	    true	NULL
+   		    	LEAF	""	            T5_DIAG_PAD12 	    true	NULL
+	    	ENDMENU
+		ENDMENU
+	ENDMENU
+	MENU	"Real-Time Data Collection"   rep
+        MENU    "PLS"     true
+        	MENU    "Setup"     true
+    	    	LEAF	""	            T5_DIAG_UPDATE_DATE     true    NULL
+    	    	LEAF	""	            T5_DIAG_UPDATE_TIME		true    NULL
+    	    	LEAF	""	            T5_DIAG_UPDATE_SECONDS	true    NULL
+    	    	LEAF	""	            T5_DIAG_DIRTY_FLAG		true    NULL
+    	    	LEAF	""	            T5_DIAG_FLAG		true    NULL
+    	    	LEAF	" "	            NO_CODE             true    NULL    OMIT_VALUE
+    	    	LEAF	""	            T5_DIAG_NODEID 	    true	value_in
+    	    	LEAF	""	            T5_DIAG_SEGMENTNUM 	true	value_in
+    	    	LEAF	" "	            NO_CODE             true    NULL    OMIT_VALUE
+    	    	LEAF	""	            T5_DIAG_LEVEL 	    true	NULL
+    	    	LEAF	" "	            NO_CODE             true    NULL    OMIT_VALUE
+	    		LEAF	""				PC_LOGGING_STATE	true	logState_in     NO_POLL
+	    	ENDMENU
+    		MENU	"Logging Window Raw Pad Data"	true
+    	    	LEAF	""	            T5_DIAG_PAD00 	    true	NULL
+    	    	LEAF	""	            T5_DIAG_PAD01 	    true	NULL
+    	    	LEAF	""	            T5_DIAG_PAD02 	    true	NULL
+    	    	LEAF	""	            T5_DIAG_PAD03 	    true	NULL
+    	    	LEAF	""	            T5_DIAG_PAD04 	    true	NULL
+    	    	LEAF	""	            T5_DIAG_PAD05 	    true	NULL
+    	    	LEAF	""	            T5_DIAG_PAD06 	    true	NULL
+    	    	LEAF	""	            T5_DIAG_PAD07 	    true	NULL
+    	    	LEAF	""	            T5_DIAG_PAD08 	    true	NULL
+    	    	LEAF	""	            T5_DIAG_PAD09 	    true	NULL
+    	    	LEAF	""	            T5_DIAG_PAD10 	    true	NULL
+    	    	LEAF	""	            T5_DIAG_PAD11 	    true	NULL
+    	    	LEAF	""	            T5_DIAG_PAD12 	    true	NULL
+    	    	LEAF	""	            T5_DIAG_LEVEL 	    true	NULL
+	    		LEAF	"End of Logging Table"	PC_TRUE		true	NULL    OMIT_VALUE
+			ENDMENU
+		ENDMENU
+        MENU    "FBW"     true
+        	MENU    "Setup"     true
+	    		LEAF	""	            T2_DU_DETAILS_ID_01 	true	value_in
+	    		LEAF	""	            T2_DU_DETAILS_ID_02 	true	value_in
+	    		LEAF	""	            T2_DU_DETAILS_ID_03 	true	value_in
+	    		LEAF	""	            T2_DU_DETAILS_ID_04 	true	value_in
+    	    	LEAF	" "	            NO_CODE             true    NULL    OMIT_VALUE
+	    		LEAF	""				PC_LOGGING_STATE	true	logState_in     NO_POLL
+			ENDMENU
+    		MENU	"Logging Window Raw Pad Data"	true
+TEMPLATE	1	4
+	    		LEAF	""				T2_DETAILS_WEIGHT_$02u	true	NULL
+	    		LEAF	"Min 1"			T2_MINI1_$02u			true	NULL
+	    		LEAF	"Load Cell 1"	T2_RAW_LC1_$02u			true	NULL
+	    		LEAF	"Max 1"			T2_MAXI1_$02u			true	NULL
+	    		LEAF	"Min 2"			T2_MINI2_$02u			true	NULL
+	    		LEAF	"Load Cell 2"	T2_RAW_LC2_$02u			true	NULL
+	    		LEAF	"Max 2"			T2_MAXI2_$02u			true	NULL
+	    		LEAF	"Min 3"			T2_MINI3_$02u			true	NULL
+	    		LEAF	"Load Cell 3"	T2_RAW_LC3_$02u			true	NULL
+	    		LEAF	"Max 3"			T2_MAXI3_$02u			true	NULL
+	    		LEAF	"Min 4"			T2_MINI4_$02u			true	NULL
+	    		LEAF	"Load Cell 4"	T2_RAW_LC4_$02u			true	NULL
+	    		LEAF	"Max 4"			T2_MAXI4_$02u			true	NULL
+	    		LEAF	"Min 5"			T2_MINI5_$02u			true	NULL
+	    		LEAF	"Load Cell 5"	T2_RAW_LC5_$02u			true	NULL
+	    		LEAF	"Max 5"			T2_MAXI5_$02u			true	NULL
+	    		LEAF	"Min 6"			T2_MINI6_$02u			true	NULL
+	    		LEAF	"Load Cell 6"	T2_RAW_LC6_$02u			true	NULL
+	    		LEAF	"Max 6"			T2_MAXI6_$02u			true	NULL
+	    		LEAF	"Min 7"			T2_MINI7_$02u			true	NULL
+	    		LEAF	"Load Cell 7"	T2_RAW_LC7_$02u			true	NULL
+	    		LEAF	"Max Cell 7"	T2_MAXI7_$02u			true	NULL
+	    		LEAF	"Min 8"			T2_MINI8_$02u			true	NULL
+	    		LEAF	"Load Cell 8"	T2_RAW_LC8_$02u			true	NULL
+	    		LEAF	"Max 8"			T2_MAXI8_$02u			true	NULL
+	    		LEAF	"Calibration 1"	T2_CI1_$02u			    true	NULL
+	    		LEAF	"Calibration 2"	T2_CI2_$02u			    true	NULL
+	    		LEAF	"Calibration 3"	T2_CI3_$02u			    true	NULL
+	    		LEAF	"Calibration 4"	T2_CI4_$02u			    true	NULL
+	    		LEAF	"Calibration 5"	T2_CI5_$02u			    true	NULL
+	    		LEAF	"Calibration 6"	T2_CI6_$02u			    true	NULL
+	    		LEAF	"Calibration 7"	T2_CI7_$02u			    true	NULL
+	    		LEAF	"Calibration 8"	T2_CI8_$02u			    true	NULL
+	    		LEAF	" "	            NO_CODE         		true    NULL    OMIT_VALUE
+ENDTEMPLATE
+	    		LEAF	"End of Logging Table"	PC_TRUE		true	NULL    OMIT_VALUE
+			ENDMENU
+		ENDMENU
+	ENDMENU
+ENDMENU
+MENU	"QA Testing"	factory
+	MENU	"GSI T&W Test"	factory
+		LEAF	"Last update (date)"	T6_UPDATE_DATE_101     		true    NULL
+		LEAF	"Last update (time)"	T6_UPDATE_TIME_101			true    NULL
+		LEAF	"Last update (seconds)"	T6_UPDATE_SECONDS_101		true    NULL
+		LEAF	" "	                    NO_CODE						true	NULL	OMIT_VALUE
+    	LEAF	""                      T6_TEMPERATURE1_101       	true	NULL
+    	LEAF	""                      T6_TEMPERATURE2_101       	true	NULL
+    	LEAF	""                      T6_TEMPERATURE3_101       	true	NULL
+    	LEAF	""                      T6_WC1_INTRVL_101       	true	NULL
+    	LEAF	""                      T6_WC2_INTRVL_101       	true	NULL
+		LEAF	" "	                    NO_CODE						true	NULL	OMIT_VALUE
+		LEAF	"Last update (date)"	T6_UPDATE_DATE_103     		true    NULL
+		LEAF	"Last update (time)"	T6_UPDATE_TIME_103			true    NULL
+		LEAF	"Last update (seconds)"	T6_UPDATE_SECONDS_103		true    NULL
+    	LEAF	""                      T6_WC1_INTRVL_103       	true	NULL
+    	LEAF	""                      T6_WC2_INTRVL_103       	true	NULL
+	ENDMENU
+	MENU    "Network Master Test"  factory
+    	LEAF	""                  PC_QA_LED_TEST_START		    true		select
+		LEAF	" "	                NO_CODE                         true        NULL        OMIT_VALUE
+    	LEAF	""                  PC_QA_RS485_TEST_START		    true		select
+    	LEAF	""                  PC_QA_RS485_TEST_RESULTS		true		NULL
+		LEAF	" "	                NO_CODE                         true        NULL        OMIT_VALUE
+    	LEAF	""	                PC_CDATE		                true		value_in
+    	LEAF	""	                PC_CTIME		                true		value_in
+		LEAF	" "	                NO_CODE                         true        NULL        OMIT_VALUE
+    	LEAF	""                  PC_QA_FLASH_TEST_START		    true		select
+    	LEAF	""                  PC_QA_FLASH_TEST_PRGRS		    true		NULL
+    	LEAF	""                  PC_QA_FLASH_TEST_RESULTS		true		NULL
+    	MENU    "Testing"   true
+        	LEAF	""	                PC_CSECS		                true		NULL
+    	ENDMENU
+	ENDMENU
+ENDMENU

@@ -1,0 +1,545 @@
+LEAF	""	PC_CDATE		viewOnly		NULL
+LEAF	""	PC_CTIME		viewOnly		NULL
+LEAF	""	PC_CDATE		operator		value_in
+LEAF	""	PC_CTIME		operator		value_in
+MENU	"Inputs/Outputs"	true
+	LEAF	"Channel 1"		NO_CODE			channel1		NULL
+	LEAF	" HRR"			T2_HRR1			hrr1 			NULL
+	LEAF	" pH"			T2_PH1			ph1				NULL
+	LEAF	" Cl"			T2_CL1			cl1				NULL
+	LEAF	" Flow"			T2_FLOW1		flow1			NULL
+	LEAF	" Output"		T2_MCO1			mco1			NULL
+	LEAF	" Feedrate"		T2_FEEDRATE1	mco1			NULL
+	LEAF	" Dosage"		T4_DOSAGE_OUT1	dgsout1			NULL
+	LEAF	"Channel 2"		NO_CODE			channel2		NULL
+	LEAF	" HRR"			T2_HRR2			hrr2 			NULL
+	LEAF	" pH"			T2_PH2			ph2				NULL
+	LEAF	" Cl"			T2_CL2			cl2				NULL
+	LEAF	" Flow"			T2_FLOW2		flow2			NULL
+	LEAF	" Output"		T2_MCO2			mco2			NULL
+	LEAF	" Feedrate"		T2_FEEDRATE2	mco2			NULL
+	LEAF	" Dosage"		T4_DOSAGE_OUT2	dgsout2			NULL
+	LEAF	"Channel 3"		NO_CODE			channel3		NULL
+	LEAF	" HRR"			T2_HRR3			hrr3 			NULL
+	LEAF	" pH"			T2_PH3			ph3				NULL
+	LEAF	" Cl"			T2_CL3			cl3				NULL
+	LEAF	" Flow"			T2_FLOW3		flow3			NULL
+	LEAF	" Output"		T2_MCO3			mco3			NULL
+	LEAF	" Feedrate"		T2_FEEDRATE3	mco3			NULL
+	LEAF	" Dosage"		T4_DOSAGE_OUT3	dgsout3			NULL
+ENDMENU
+MENU	"Ch1 Alarms"	channel1
+	LEAF	""	T3_HRR_HIGH1		hrr1		NULL
+	LEAF	""	T3_HRR_LOW1			hrr1		NULL
+	LEAF	""	T3_HRR_BAD1			hrr1		NULL
+	LEAF	""	T3_PH_HIGH1			ph1			NULL
+	LEAF	""	T3_PH_LOW1			ph1			NULL
+	LEAF	""	T3_PH_BAD1			ph1			NULL
+	LEAF	""	T3_CL_HIGH1			cl1			NULL
+	LEAF	""	T3_CL_LOW1			cl1			NULL
+	LEAF	""	T3_CL_BAD1			cl1			NULL
+	LEAF	""	T3_CL_NO_FLOW1		cl1			NULL
+	LEAF	""	T3_CL_CELL_VOLTAGE1	cl1			NULL
+	LEAF	""	T3_FLOW_HIGH1		flow1		NULL
+	LEAF	""	T3_FLOW_LOW1		flow1		NULL
+	LEAF	""	T3_FLOW_BAD1		flow1		NULL
+	LEAF	""	T3_DSG_HIGH1		dgsout1		NULL
+	LEAF	""	T3_DSG_LOW1			dgsout1		NULL
+	LEAF	""	T3_OUTPUT_OVRD1		mco1		NULL
+	LEAF	""	T3_DSG_OVRD1		dgsout1		NULL
+	LEAF	""	T3_OUTPUT_HIGH1		mco1		NULL
+	LEAF	""	T3_OUTPUT_LOW1		mco1		NULL
+	LEAF	""	T3_ALT_INPUT_CTRL1	alt1		NULL
+	LEAF	""	T3_FLOW_DISABLED1	dgsout1		NULL
+ENDMENU
+MENU	"Ch2 Alarms"	channel2
+	LEAF	""	T3_HRR_HIGH2		hrr2		NULL
+	LEAF	""	T3_HRR_LOW2			hrr2		NULL
+	LEAF	""	T3_HRR_BAD2			hrr2		NULL
+	LEAF	""	T3_PH_HIGH2			ph2			NULL
+	LEAF	""	T3_PH_LOW2			ph2			NULL
+	LEAF	""	T3_PH_BAD2			ph2			NULL
+	LEAF	""	T3_CL_HIGH2			cl2			NULL
+	LEAF	""	T3_CL_LOW2			cl2			NULL
+	LEAF	""	T3_CL_BAD2			cl2			NULL
+	LEAF	""	T3_CL_NO_FLOW2		cl2			NULL
+	LEAF	""	T3_CL_CELL_VOLTAGE2	cl2			NULL
+	LEAF	""	T3_FLOW_HIGH2		flow2		NULL
+	LEAF	""	T3_FLOW_LOW2		flow2		NULL
+	LEAF	""	T3_FLOW_BAD2		flow2		NULL
+	LEAF	""	T3_DSG_HIGH2		dgsout2		NULL
+	LEAF	""	T3_DSG_LOW2			dgsout2		NULL
+	LEAF	""	T3_OUTPUT_OVRD2		mco2		NULL
+	LEAF	""	T3_DSG_OVRD2		dgsout2		NULL
+	LEAF	""	T3_OUTPUT_HIGH2		mco2		NULL
+	LEAF	""	T3_OUTPUT_LOW2		mco2		NULL
+	LEAF	""	T3_ALT_INPUT_CTRL2	alt2		NULL
+	LEAF	""	T3_FLOW_DISABLED2	dgsout2		NULL
+ENDMENU
+MENU	"Ch3 Alarms"	channel3
+	LEAF	""	T3_HRR_HIGH3		hrr3		NULL
+	LEAF	""	T3_HRR_LOW3			hrr3		NULL
+	LEAF	""	T3_HRR_BAD3			hrr3		NULL
+	LEAF	""	T3_PH_HIGH3			ph3			NULL
+	LEAF	""	T3_PH_LOW3			ph3			NULL
+	LEAF	""	T3_PH_BAD3			ph3			NULL
+	LEAF	""	T3_CL_HIGH3			cl3			NULL
+	LEAF	""	T3_CL_LOW3			cl3			NULL
+	LEAF	""	T3_CL_BAD3			cl3			NULL
+	LEAF	""	T3_CL_NO_FLOW3		cl3			NULL
+	LEAF	""	T3_CL_CELL_VOLTAGE3	cl3			NULL
+	LEAF	""	T3_FLOW_HIGH3		flow3		NULL
+	LEAF	""	T3_FLOW_LOW3		flow3		NULL
+	LEAF	""	T3_FLOW_BAD3		flow3		NULL
+	LEAF	""	T3_DSG_HIGH3		dgsout3		NULL
+	LEAF	""	T3_DSG_LOW3			dgsout3		NULL
+	LEAF	""	T3_OUTPUT_OVRD3		mco3		NULL
+	LEAF	""	T3_DSG_OVRD3		dgsout3		NULL
+	LEAF	""	T3_OUTPUT_HIGH3		mco3		NULL
+	LEAF	""	T3_OUTPUT_LOW3		mco3		NULL
+	LEAF	""	T3_ALT_INPUT_CTRL3	alt3		NULL
+	LEAF	""	T3_FLOW_DISABLED3	dgsout3		NULL
+ENDMENU
+MENU	"Outputs"	true
+	MENU	"Analog Outputs"	true
+		LEAF	"Channel 1"	T4_DA_MODE1		ch1da1		select
+		LEAF	"Channel 1"	T4_DA_MODE2		ch1da2		select
+		LEAF	"Channel 1"	T4_DA_MODE3		ch1da3		select
+		LEAF	"Channel 1"	T4_DA_MODE4		ch1da4		select
+		LEAF	"Channel 1"	T4_DA_MODE5		ch1da5		select
+		LEAF	"Channel 1"	T4_DA_MODE6		ch1da6		select
+		LEAF	""			T2_MCO1			mco1		NULL
+		LEAF	""			T2_FEEDRATE1	mco1		NULL
+		LEAF	"Channel 2"	T4_DA_MODE1		ch2da1		select
+		LEAF	"Channel 2"	T4_DA_MODE2		ch2da2		select
+		LEAF	"Channel 2"	T4_DA_MODE3		ch2da3		select
+		LEAF	"Channel 2"	T4_DA_MODE4		ch2da4		select
+		LEAF	"Channel 2"	T4_DA_MODE5		ch2da5		select
+		LEAF	"Channel 2"	T4_DA_MODE6		ch2da6		select
+		LEAF	""			T2_MCO2			mco2		NULL
+		LEAF	""			T2_FEEDRATE2	mco2		NULL
+		LEAF	"Channel 3"	T4_DA_MODE1		ch3da1		select
+		LEAF	"Channel 3"	T4_DA_MODE2		ch3da2		select
+		LEAF	"Channel 3"	T4_DA_MODE3		ch3da3		select
+		LEAF	"Channel 3"	T4_DA_MODE4		ch3da4		select
+		LEAF	"Channel 3"	T4_DA_MODE5		ch3da5		select
+		LEAF	"Channel 3"	T4_DA_MODE6		ch3da6		select
+		LEAF	""			T2_MCO3			mco3		NULL
+		LEAF	""			T2_FEEDRATE3	mco3		NULL
+	ENDMENU
+	MENU	"Relay Outputs"		true
+		LEAF	"r1 alarm all ch"	PC_DO_VAL1		aar1		NULL
+		LEAF	"r1 alarm ch1"		PC_DO_VAL1		a1r1		NULL
+		LEAF	"r1 alarm ch2"		PC_DO_VAL1		a2r1		NULL
+		LEAF	"r1 alarm ch3"		PC_DO_VAL1		a3r1		NULL
+		LEAF	"r2 alarm all ch"	PC_DO_VAL2		aar2		NULL
+		LEAF	"r2 alarm ch1"		PC_DO_VAL2		a1r2		NULL
+		LEAF	"r2 alarm ch2"		PC_DO_VAL2		a2r2		NULL
+		LEAF	"r2 alarm ch3"		PC_DO_VAL2		a3r2		NULL
+		LEAF	"r3 alarm all ch"	PC_DO_VAL3		aar3		NULL
+		LEAF	"r3 alarm ch1"		PC_DO_VAL3		a1r3		NULL
+		LEAF	"r3 alarm ch2"		PC_DO_VAL3		a2r3		NULL
+		LEAF	"r3 alarm ch3"		PC_DO_VAL3		a3r3		NULL
+		LEAF	"r4 alarm all ch"	PC_DO_VAL4		aar4		NULL
+		LEAF	"r4 alarm ch1"		PC_DO_VAL4		a1r4		NULL
+		LEAF	"r4 alarm ch2"		PC_DO_VAL4		a2r4		NULL
+		LEAF	"r4 alarm ch3"		PC_DO_VAL4		a3r4		NULL
+		LEAF	"r5 alarm all ch"	PC_DO_VAL5		aar5		NULL
+		LEAF	"r5 alarm ch1"		PC_DO_VAL5		a1r5		NULL
+		LEAF	"r5 alarm ch2"		PC_DO_VAL5		a2r5		NULL
+		LEAF	"r5 alarm ch3"		PC_DO_VAL5		a3r5		NULL
+		LEAF	"r6 alarm all ch"	PC_DO_VAL6		aar6		NULL
+		LEAF	"r6 alarm ch1"		PC_DO_VAL6		a1r6		NULL
+		LEAF	"r6 alarm ch2"		PC_DO_VAL6		a2r6		NULL
+		LEAF	"r6 alarm ch3"		PC_DO_VAL6		a3r6		NULL
+		LEAF	"r7 alarm all ch"	PC_DO_VAL7		aar7		NULL
+		LEAF	"r7 alarm ch1"		PC_DO_VAL7		a1r7		NULL
+		LEAF	"r7 alarm ch2"		PC_DO_VAL7		a2r7		NULL
+		LEAF	"r7 alarm ch3"		PC_DO_VAL7		a3r7		NULL
+		LEAF	"r8 alarm all ch"	PC_DO_VAL8		aar8		NULL
+		LEAF	"r8 alarm ch1"		PC_DO_VAL8		a1r8		NULL
+		LEAF	"r8 alarm ch2"		PC_DO_VAL8		a2r8		NULL
+		LEAF	"r8 alarm ch3"		PC_DO_VAL8		a3r8		NULL
+	ENDMENU
+ENDMENU
+MENU	"Ch1 Control"	true
+	MENU	"Inputs"	channel1
+		MENU	"Flow"	true
+			LEAF	""					T4_FLOW_UNIT_TYPE1 		flow1				select
+			LEAF	""					T4_FLOW_CAP1	   		flow1				value_in
+			LEAF	""					T2_FLOW_HIGH_PT1   		flow1				value_in
+			LEAF	""					T2_FLOW_LOW_PT1	   		flow1				value_in
+			LEAF	""					T2_FLOW_HYST1	   		flow1				value_in
+			LEAF	""					T4_RINGBUF_SIZE_CH1		flow1				value_in
+		ENDMENU
+		MENU	"HRR"	true
+			LEAF	""					T4_HRR_ID_CH1		technical			select
+			LEAF	""					T2_HRR_HIGH_PT1		true				value_in
+			LEAF	""					T2_HRR_LOW_PT1		true				value_in
+			LEAF	""					T2_HRR_HI_HYST1		true				value_in
+			LEAF	""					T2_HRR_LO_HYST1		true				value_in
+			LEAF	""					T4_TC1				xchlor1				value_in
+			MENU	"Probe Wash"	true
+				LEAF	""					T4_START_DATE_HRR1	hrr_pw_en1			value_in
+				LEAF	""					T4_START_TIME_HRR1	hrr_pw_en1			value_in
+				LEAF	""					T4_WASH_TIME_HRR1	true				value_in
+				LEAF	""					T4_CYCLE_TIME_HRR1	hrr_pw_en1			value_in
+				LEAF	""					T4_HOLD_TIME_HRR1	hrr_pw_en1			value_in
+				LEAF	""					T4_AVG_TIME_HRR1	hrr_pw_en1			value_in
+				LEAF	""					T4_DELAY_TIME_HRR1	hrr_pw_en1			value_in
+			ENDMENU
+		ENDMENU
+		MENU	"pH"	true
+			LEAF	""					T4_PH_ID_CH1		technical		select
+			LEAF	""					T2_PH_HIGH_PT1		ph1				value_in
+			LEAF	""					T2_PH_LOW_PT1		ph1				value_in
+			LEAF	""					T2_PH_HI_HYST1		ph1				value_in
+			LEAF	""					T2_PH_LO_HYST1		ph1				value_in
+			LEAF	""					T4_TC1				phupdwn1		value_in
+			MENU	"Probe Wash"	true
+				LEAF	""					T4_START_DATE_PH1	ph_pw_en1			value_in
+				LEAF	""					T4_START_TIME_PH1	ph_pw_en1			value_in
+				LEAF	""					T4_WASH_TIME_PH1	true				value_in
+				LEAF	""					T4_CYCLE_TIME_PH1	ph_pw_en1			value_in
+				LEAF	""					T4_HOLD_TIME_PH1	ph_pw_en1			value_in
+				LEAF	""					T4_AVG_TIME_PH1		ph_pw_en1			value_in
+				LEAF	""					T4_DELAY_TIME_PH1	ph_pw_en1			value_in
+			ENDMENU
+		ENDMENU
+		MENU	"Chlorine"	true
+			LEAF	""					T4_CL_ID_CH1		technical			select
+			LEAF	""					T2_CL_HIGH_PT1		cl1					value_in
+			LEAF	""					T2_CL_LOW_PT1		cl1					value_in
+			LEAF	""					T2_CL_HI_HYST1		cl1					value_in
+			LEAF	""					T2_CL_LO_HYST1		cl1					value_in
+			LEAF	""					T4_CL_TC1			xchlor1				value_in
+			MENU	"Sample Line Wash"	true
+				LEAF	""					T4_START_DATE_CL1	cl_pw_en1			value_in
+				LEAF	""					T4_START_TIME_CL1	cl_pw_en1			value_in
+				LEAF	""					T4_WASH_TIME_CL1	true				value_in
+				LEAF	""					T4_CYCLE_TIME_CL1	cl_pw_en1			value_in
+				LEAF	""					T4_HOLD_TIME_CL1	cl_pw_en1			value_in
+				LEAF	""					T4_AVG_TIME_CL1		cl_pw_en1			value_in
+				LEAF	""					T4_DELAY_TIME_CL1	cl_pw_en1			value_in
+			ENDMENU
+		ENDMENU
+	ENDMENU
+	LEAF	""					T4_CTRL_TYPE1	true			select
+	MENU	"Primary Input"		mco1
+		LEAF	""					T4_PRI_INPUT_SEL1		technical			select
+		LEAF	""					T2_TARGET1				pri_hrr1			value_in
+		LEAF	""					T2_TARGET1				ph_ctrl1			value_in
+		LEAF	""					T2_CL_TARGET1			pri_cl1				value_in
+		LEAF	""					T2_CTRL_BAND1			pri_hrr1			value_in
+		LEAF	""					T2_CTRL_BAND1			ph_ctrl1			value_in
+		LEAF	""					T2_CL_CTRL_BAND1		pri_cl1				value_in
+		LEAF	""					T4_SENSITIVITY1			pri_hrr1			value_in
+		LEAF	""					T4_SENSITIVITY1			ph_ctrl1			value_in
+		LEAF	""					T4_CL_SENSITIVITY1		pri_cl1				value_in
+		LEAF	""					T2_KI_1					pri_hrr1			value_in
+		LEAF	""					T2_KI_1					ph_ctrl1			value_in
+		LEAF	""					T2_CL_KI_1				pri_cl1				value_in
+		LEAF	""					T2_KD_1					pri_hrr1			value_in
+		LEAF	""					T2_KD_1					ph_ctrl1			value_in
+		LEAF	""					T2_CL_KD_1				pri_cl1				value_in
+	ENDMENU
+	MENU	"Alternate Input"		alt_avail1
+		LEAF	""					T4_ALT_INPUT_SEL1		technical			select
+		LEAF	""					T2_TARGET_HI1			alt_hrr1			value_in
+		LEAF	""					T2_CL_TARGET_HI1		alt_cl1				value_in
+		LEAF	""					T2_TARGET_LO1			alt_hrr1			value_in
+		LEAF	""					T2_CL_TARGET_LO1		alt_cl1				value_in
+		LEAF	""					T2_TARGET1				alt_hrr1			value_in
+		LEAF	""					T2_CL_TARGET1			alt_cl1				value_in
+		LEAF	""					T2_CTRL_BAND1			alt_hrr1			value_in
+		LEAF	""					T2_CL_CTRL_BAND1		alt_cl1				value_in
+		LEAF	""					T4_SENSITIVITY1			alt_hrr1			value_in
+		LEAF	""					T4_CL_SENSITIVITY1		alt_cl1				value_in
+		LEAF	""					T2_KI_1					alt_hrr1			value_in
+		LEAF	""					T2_CL_KI_1				alt_cl1				value_in
+		LEAF	""					T2_KD_1					alt_hrr1			value_in
+		LEAF	""					T2_CL_KD_1				alt_cl1				value_in
+	ENDMENU
+	LEAF	""					T4_TINTEGRAL1		mco1			value_in
+	MENU	"Flow Settings"		dgsout1
+		LEAF	""					T2_KF1				true			value_in
+		LEAF	""					T4_FLOW_AVG_TIME1	true			value_in
+		LEAF	""					T2_MIN_FLOW_CHANGE1	true			value_in
+	ENDMENU
+	MENU	"Output"		mco1
+		LEAF	""					T4_OUTPUT_SEL1			technical			select
+		LEAF	""					T4_CL_CAP1				true				value_in
+		LEAF	""					T4_OUT_UNIT_TYPE1		true				select
+		LEAF	""					T2_MINMCODELTA1			true				value_in
+		MENU	"Output alarms"		true
+			LEAF	""				T2_OUTPUT_HIGH_PT1		true			value_in
+			LEAF	""				T2_OUTPUT_LOW_PT1		true			value_in
+			LEAF	""				T2_OUTPUT_HYST1			true			value_in
+			LEAF	""				T4_MIN_DOSAGE1			dgsout1			value_in
+			LEAF	""				T4_MAX_DOSAGE1			dgsout1			value_in
+		ENDMENU
+		MENU	"Output overrides"		true
+			LEAF	""				T4_OUTPUT_OVRD_SEL1	true			select
+			LEAF	""				T2_FIXED_OUT_HI1	fixovrd1		value_in
+			LEAF	""				T2_FIXED_OUT_LO1	fixovrd1		value_in
+			LEAF	""				T2_FIXED_OUT_BAD1	true			value_in
+			LEAF	""				T4_DOSAGE_OUT_HI1	dgsovrd1		value_in
+			LEAF	""				T4_DOSAGE_OUT_LO1	dgsovrd1		value_in
+			LEAF	""				T4_DOSAGE_OUT_BAD1	dgsout1			value_in
+		ENDMENU
+	ENDMENU
+ENDMENU
+MENU	"Ch2 Control"	true
+	MENU	"Inputs"	channel2
+		MENU	"Flow"	true
+			LEAF	""					T4_FLOW_UNIT_TYPE2 		flow2				select
+			LEAF	""					T4_FLOW_CAP2	   		flow2				value_in
+			LEAF	""					T2_FLOW_HIGH_PT2   		flow2				value_in
+			LEAF	""					T2_FLOW_LOW_PT2	   		flow2				value_in
+			LEAF	""					T2_FLOW_HYST2	   		flow2				value_in
+			LEAF	""					T4_RINGBUF_SIZE_CH2		flow2				value_in
+		ENDMENU
+		MENU	"HRR"	true
+			LEAF	""					T4_HRR_ID_CH2		technical			select
+			LEAF	""					T2_HRR_HIGH_PT2		true				value_in
+			LEAF	""					T2_HRR_LOW_PT2		true				value_in
+			LEAF	""					T2_HRR_HI_HYST2		true				value_in
+			LEAF	""					T2_HRR_LO_HYST2		true				value_in
+			LEAF	""					T4_TC2				xchlor2				value_in
+			MENU	"Probe Wash"	true
+				LEAF	""					T4_START_DATE_HRR2	hrr_pw_en2			value_in
+				LEAF	""					T4_START_TIME_HRR2	hrr_pw_en2			value_in
+				LEAF	""					T4_WASH_TIME_HRR2	true				value_in
+				LEAF	""					T4_CYCLE_TIME_HRR2	hrr_pw_en2			value_in
+				LEAF	""					T4_HOLD_TIME_HRR2	hrr_pw_en2			value_in
+				LEAF	""					T4_AVG_TIME_HRR2	hrr_pw_en2			value_in
+				LEAF	""					T4_DELAY_TIME_HRR2	hrr_pw_en2			value_in
+			ENDMENU
+		ENDMENU
+		MENU	"pH"	true
+			LEAF	""					T4_PH_ID_CH2		technical			select
+			LEAF	""					T2_PH_HIGH_PT2		ph2				value_in
+			LEAF	""					T2_PH_LOW_PT2		ph2				value_in
+			LEAF	""					T2_PH_HI_HYST2		ph2				value_in
+			LEAF	""					T2_PH_LO_HYST2		ph2				value_in
+			LEAF	""					T4_TC2				phupdwn2		value_in
+			MENU	"Probe Wash"	true
+				LEAF	""					T4_START_DATE_PH2	ph_pw_en2			value_in
+				LEAF	""					T4_START_TIME_PH2	ph_pw_en2			value_in
+				LEAF	""					T4_WASH_TIME_PH2	true				value_in
+				LEAF	""					T4_CYCLE_TIME_PH2	ph_pw_en2			value_in
+				LEAF	""					T4_HOLD_TIME_PH2	ph_pw_en2			value_in
+				LEAF	""					T4_AVG_TIME_PH2		ph_pw_en2			value_in
+				LEAF	""					T4_DELAY_TIME_PH2	ph_pw_en2			value_in
+			ENDMENU
+		ENDMENU
+		MENU	"Chlorine"	true
+			LEAF	""					T4_CL_ID_CH2		technical			select
+			LEAF	""					T2_CL_HIGH_PT2		cl2					value_in
+			LEAF	""					T2_CL_LOW_PT2		cl2					value_in
+			LEAF	""					T2_CL_HI_HYST2		cl2					value_in
+			LEAF	""					T2_CL_LO_HYST2		cl2					value_in
+			LEAF	""					T4_CL_TC2			xchlor2				value_in
+			MENU	"Sample Line Wash"	true
+				LEAF	""					T4_START_DATE_CL2	cl_pw_en2			value_in
+				LEAF	""					T4_START_TIME_CL2	cl_pw_en2			value_in
+				LEAF	""					T4_WASH_TIME_CL2	true				value_in
+				LEAF	""					T4_CYCLE_TIME_CL2	cl_pw_en2			value_in
+				LEAF	""					T4_HOLD_TIME_CL2	cl_pw_en2			value_in
+				LEAF	""					T4_AVG_TIME_CL2		cl_pw_en2			value_in
+				LEAF	""					T4_DELAY_TIME_CL2	cl_pw_en2			value_in
+			ENDMENU
+		ENDMENU
+	ENDMENU
+	LEAF	""					T4_CTRL_TYPE2	true			select
+	MENU	"Primary Input"		mco2
+		LEAF	""					T4_PRI_INPUT_SEL2		technical			select
+		LEAF	""					T2_TARGET2				pri_hrr2			value_in
+		LEAF	""					T2_TARGET2				ph_ctrl2			value_in
+		LEAF	""					T2_CL_TARGET2			pri_cl2				value_in
+		LEAF	""					T2_CTRL_BAND2			pri_hrr2			value_in
+		LEAF	""					T2_CTRL_BAND2			ph_ctrl2			value_in
+		LEAF	""					T2_CL_CTRL_BAND2		pri_cl2				value_in
+		LEAF	""					T4_SENSITIVITY2			pri_hrr2			value_in
+		LEAF	""					T4_SENSITIVITY2			ph_ctrl2			value_in
+		LEAF	""					T4_CL_SENSITIVITY2		pri_cl2				value_in
+		LEAF	""					T2_KI_2					pri_hrr2			value_in
+		LEAF	""					T2_KI_2					ph_ctrl2			value_in
+		LEAF	""					T2_CL_KI_2				pri_cl2				value_in
+		LEAF	""					T2_KD_2					pri_hrr2			value_in
+		LEAF	""					T2_KD_2					ph_ctrl2			value_in
+		LEAF	""					T2_CL_KD_2				pri_cl2				value_in
+	ENDMENU
+	MENU	"Alternate Input"		alt_avail2
+		LEAF	""					T4_ALT_INPUT_SEL2		technical			select
+		LEAF	""					T2_TARGET_HI2			alt_hrr2			value_in
+		LEAF	""					T2_CL_TARGET_HI2		alt_cl2				value_in
+		LEAF	""					T2_TARGET_LO2			alt_hrr2			value_in
+		LEAF	""					T2_CL_TARGET_LO2		alt_cl2				value_in
+		LEAF	""					T2_TARGET2				alt_hrr2			value_in
+		LEAF	""					T2_CL_TARGET2			alt_cl2				value_in
+		LEAF	""					T2_CTRL_BAND2			alt_hrr2			value_in
+		LEAF	""					T2_CL_CTRL_BAND2		alt_cl2				value_in
+		LEAF	""					T4_SENSITIVITY2			alt_hrr2			value_in
+		LEAF	""					T4_CL_SENSITIVITY2		alt_cl2				value_in
+		LEAF	""					T2_KI_2					alt_hrr2			value_in
+		LEAF	""					T2_CL_KI_2				alt_cl2				value_in
+		LEAF	""					T2_KD_2					alt_hrr2			value_in
+		LEAF	""					T2_CL_KD_2				alt_cl2				value_in
+	ENDMENU
+	LEAF	""					T4_TINTEGRAL2		mco2			value_in
+	MENU	"Flow Settings"		dgsout2
+		LEAF	""					T2_KF2				true			value_in
+		LEAF	""					T4_FLOW_AVG_TIME2	true			value_in
+		LEAF	""					T2_MIN_FLOW_CHANGE2	true			value_in
+	ENDMENU
+	MENU	"Output"		mco2
+		LEAF	""					T4_OUTPUT_SEL2			technical			select
+		LEAF	""					T4_CL_CAP2				true				value_in
+		LEAF	""					T4_OUT_UNIT_TYPE2		true				select
+		LEAF	""					T2_MINMCODELTA2			true				value_in
+		MENU	"Output alarms"		true
+			LEAF	""				T2_OUTPUT_HIGH_PT2		true			value_in
+			LEAF	""				T2_OUTPUT_LOW_PT2		true			value_in
+			LEAF	""				T2_OUTPUT_HYST2			true			value_in
+			LEAF	""				T4_MIN_DOSAGE2			dgsout2			value_in
+			LEAF	""				T4_MAX_DOSAGE2			dgsout2			value_in
+		ENDMENU
+		MENU	"Output overrides"		true
+			LEAF	""				T4_OUTPUT_OVRD_SEL2	true			select
+			LEAF	""				T2_FIXED_OUT_HI2	fixovrd2		value_in
+			LEAF	""				T2_FIXED_OUT_LO2	fixovrd2		value_in
+			LEAF	""				T2_FIXED_OUT_BAD2	true			value_in
+			LEAF	""				T4_DOSAGE_OUT_HI2	dgsovrd2		value_in
+			LEAF	""				T4_DOSAGE_OUT_LO2	dgsovrd2		value_in
+			LEAF	""				T4_DOSAGE_OUT_BAD2	dgsout2			value_in
+		ENDMENU
+	ENDMENU
+ENDMENU
+MENU	"Ch3 Control"	true
+	MENU	"Inputs"	channel3
+		MENU	"Flow"	true
+			LEAF	""					T4_FLOW_UNIT_TYPE3 		flow3				select
+			LEAF	""					T4_FLOW_CAP3	   		flow3				value_in
+			LEAF	""					T2_FLOW_HIGH_PT3   		flow3				value_in
+			LEAF	""					T2_FLOW_LOW_PT3	   		flow3				value_in
+			LEAF	""					T2_FLOW_HYST3	   		flow3				value_in
+			LEAF	""					T4_RINGBUF_SIZE_CH3		flow3				value_in
+		ENDMENU
+		MENU	"HRR"	true
+			LEAF	""					T4_HRR_ID_CH3		technical			select
+			LEAF	""					T2_HRR_HIGH_PT3		true				value_in
+			LEAF	""					T2_HRR_LOW_PT3		true				value_in
+			LEAF	""					T2_HRR_HI_HYST3		true				value_in
+			LEAF	""					T2_HRR_LO_HYST3		true				value_in
+			LEAF	""					T4_TC3				xchlor3				value_in
+			MENU	"Probe Wash"	true
+				LEAF	""					T4_START_DATE_HRR3	hrr_pw_en3			value_in
+				LEAF	""					T4_START_TIME_HRR3	hrr_pw_en3			value_in
+				LEAF	""					T4_WASH_TIME_HRR3	true				value_in
+				LEAF	""					T4_CYCLE_TIME_HRR3	hrr_pw_en3			value_in
+				LEAF	""					T4_HOLD_TIME_HRR3	hrr_pw_en3			value_in
+				LEAF	""					T4_AVG_TIME_HRR3	hrr_pw_en3			value_in
+				LEAF	""					T4_DELAY_TIME_HRR3	hrr_pw_en3			value_in
+			ENDMENU
+		ENDMENU
+		MENU	"pH"	true
+			LEAF	""					T4_PH_ID_CH3		technical			select
+			LEAF	""					T2_PH_HIGH_PT3		ph3				value_in
+			LEAF	""					T2_PH_LOW_PT3		ph3				value_in
+			LEAF	""					T2_PH_HI_HYST3		ph3				value_in
+			LEAF	""					T2_PH_LO_HYST3		ph3				value_in
+			LEAF	""					T4_TC3				phupdwn3		value_in
+			MENU	"Probe Wash"	true
+				LEAF	""					T4_START_DATE_PH3	ph_pw_en3			value_in
+				LEAF	""					T4_START_TIME_PH3	ph_pw_en3			value_in
+				LEAF	""					T4_WASH_TIME_PH3	true				value_in
+				LEAF	""					T4_CYCLE_TIME_PH3	ph_pw_en3			value_in
+				LEAF	""					T4_HOLD_TIME_PH3	ph_pw_en3			value_in
+				LEAF	""					T4_AVG_TIME_PH3		ph_pw_en3			value_in
+				LEAF	""					T4_DELAY_TIME_PH3	ph_pw_en3			value_in
+			ENDMENU
+		ENDMENU
+		MENU	"Chlorine"	true
+			LEAF	""					T4_CL_ID_CH3		technical			select
+			LEAF	""					T2_CL_HIGH_PT3		cl3					value_in
+			LEAF	""					T2_CL_LOW_PT3		cl3					value_in
+			LEAF	""					T2_CL_HI_HYST3		cl3					value_in
+			LEAF	""					T2_CL_LO_HYST3		cl3					value_in
+			LEAF	""					T4_CL_TC3			xchlor3				value_in
+			MENU	"Sample Line Wash"	true
+				LEAF	""					T4_START_DATE_CL3	cl_pw_en3			value_in
+				LEAF	""					T4_START_TIME_CL3	cl_pw_en3			value_in
+				LEAF	""					T4_WASH_TIME_CL3	true				value_in
+				LEAF	""					T4_CYCLE_TIME_CL3	cl_pw_en3			value_in
+				LEAF	""					T4_HOLD_TIME_CL3	cl_pw_en3			value_in
+				LEAF	""					T4_AVG_TIME_CL3		cl_pw_en3			value_in
+				LEAF	""					T4_DELAY_TIME_CL3	cl_pw_en3			value_in
+			ENDMENU
+		ENDMENU
+	ENDMENU
+	LEAF	""					T4_CTRL_TYPE3	true			select
+	MENU	"Primary Input"		mco3
+		LEAF	""					T4_PRI_INPUT_SEL3		technical			select
+		LEAF	""					T2_TARGET3				pri_hrr3			value_in
+		LEAF	""					T2_TARGET3				ph_ctrl3			value_in
+		LEAF	""					T2_CL_TARGET3			pri_cl3				value_in
+		LEAF	""					T2_CTRL_BAND3			pri_hrr3			value_in
+		LEAF	""					T2_CTRL_BAND3			ph_ctrl3			value_in
+		LEAF	""					T2_CL_CTRL_BAND3		pri_cl3				value_in
+		LEAF	""					T4_SENSITIVITY3			pri_hrr3			value_in
+		LEAF	""					T4_SENSITIVITY3			ph_ctrl3			value_in
+		LEAF	""					T4_CL_SENSITIVITY3		pri_cl3				value_in
+		LEAF	""					T2_KI_3					pri_hrr3			value_in
+		LEAF	""					T2_KI_3					ph_ctrl3			value_in
+		LEAF	""					T2_CL_KI_3				pri_cl3				value_in
+		LEAF	""					T2_KD_3					pri_hrr3			value_in
+		LEAF	""					T2_KD_3					ph_ctrl3			value_in
+		LEAF	""					T2_CL_KD_3				pri_cl3				value_in
+	ENDMENU
+	MENU	"Alternate Input"		alt_avail3
+		LEAF	""					T4_ALT_INPUT_SEL3		technical			select
+		LEAF	""					T2_TARGET_HI3			alt_hrr3			value_in
+		LEAF	""					T2_CL_TARGET_HI3		alt_cl3				value_in
+		LEAF	""					T2_TARGET_LO3			alt_hrr3			value_in
+		LEAF	""					T2_CL_TARGET_LO3		alt_cl3				value_in
+		LEAF	""					T2_TARGET3				alt_hrr3			value_in
+		LEAF	""					T2_CL_TARGET3			alt_cl3				value_in
+		LEAF	""					T2_CTRL_BAND3			alt_hrr3			value_in
+		LEAF	""					T2_CL_CTRL_BAND3		alt_cl3				value_in
+		LEAF	""					T4_SENSITIVITY3			alt_hrr3			value_in
+		LEAF	""					T4_CL_SENSITIVITY3		alt_cl3				value_in
+		LEAF	""					T2_KI_3					alt_hrr3			value_in
+		LEAF	""					T2_CL_KI_3				alt_cl3				value_in
+		LEAF	""					T2_KD_3					alt_hrr3			value_in
+		LEAF	""					T2_CL_KD_3				alt_cl3				value_in
+	ENDMENU
+	LEAF	""					T4_TINTEGRAL3		mco3			value_in
+	MENU	"Flow Settings"		dgsout3
+		LEAF	""					T2_KF3				true			value_in
+		LEAF	""					T4_FLOW_AVG_TIME3	true			value_in
+		LEAF	""					T2_MIN_FLOW_CHANGE3	true			value_in
+	ENDMENU
+	MENU	"Output"		mco3
+		LEAF	""					T4_OUTPUT_SEL3			technical			select
+		LEAF	""					T4_CL_CAP3				true				value_in
+		LEAF	""					T4_OUT_UNIT_TYPE3		true				select
+		LEAF	""					T2_MINMCODELTA3			true				value_in
+		MENU	"Output alarms"		true
+			LEAF	""				T2_OUTPUT_HIGH_PT3		true			value_in
+			LEAF	""				T2_OUTPUT_LOW_PT3		true			value_in
+			LEAF	""				T2_OUTPUT_HYST3			true			value_in
+			LEAF	""				T4_MIN_DOSAGE3			dgsout3			value_in
+			LEAF	""				T4_MAX_DOSAGE3			dgsout3			value_in
+		ENDMENU
+		MENU	"Output overrides"		true
+			LEAF	""				T4_OUTPUT_OVRD_SEL3	true			select
+			LEAF	""				T2_FIXED_OUT_HI3	fixovrd3		value_in
+			LEAF	""				T2_FIXED_OUT_LO3	fixovrd3		value_in
+			LEAF	""				T2_FIXED_OUT_BAD3	true			value_in
+			LEAF	""				T4_DOSAGE_OUT_HI3	dgsovrd3		value_in
+			LEAF	""				T4_DOSAGE_OUT_LO3	dgsovrd3		value_in
+			LEAF	""				T4_DOSAGE_OUT_BAD3	dgsout3			value_in
+		ENDMENU
+	ENDMENU
+ENDMENU

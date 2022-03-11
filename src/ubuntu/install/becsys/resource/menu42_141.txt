@@ -1,0 +1,478 @@
+LEAF	"Site Information"	NO_CODE       	    true		NULL    			OMIT_VALUE
+LEAF	"================"	NO_CODE       	    true		NULL    			OMIT_VALUE
+LEAF	""	                PC_CDATE		    true		value_in
+LEAF	""	                PC_CTIME		    true		value_in
+LEAF	""	                PC_SW_VERSION_STR   true		NULL
+LEAF	" "	                NO_CODE		        true		NULL    			OMIT_VALUE
+LEAF	""                  PC_RESET_DT			true		NULL
+LEAF	""                  PC_RESET_HM			true		NULL
+LEAF	" "	                NO_CODE		        true		NULL    			OMIT_VALUE
+LEAF	"Setup Parameters"	NO_CODE   	        true		NULL    			OMIT_VALUE
+LEAF	"================"	NO_CODE   	        true		NULL    			OMIT_VALUE
+LEAF	""					PC_DHCP				zversion144	select
+LEAF	""	                PC_MY_IP            notdhcp     value_in
+LEAF	""	                PC_MY_GATEWAY       notdhcp     value_in
+LEAF	""	                PC_MY_NETMASK       notdhcp     value_in
+LEAF	""	                PC_MY_IP            dhcp        NULL
+LEAF	""	                PC_MY_GATEWAY       dhcp        NULL
+LEAF	""	                PC_MY_NETMASK       dhcp        NULL
+LEAF	""					PC_TCP_PORT			zversion142	value_in
+LEAF	" "	                NO_CODE		        true		NULL    			OMIT_VALUE
+LEAF	""	                PC_HIST_FREQ        true        selectHistFreq
+LEAF	""	                PC_RESET_HISTORY    true        resetHistory		SEC=REP
+LEAF	" "	                NO_CODE		        true		NULL    			OMIT_VALUE
+LEAF	""	                PC_OP_CODE          true	   	value_in			SEC=OP
+LEAF	""	                PC_REP_CODE         true        value_in			SEC=REP
+LEAF	" "	                NO_CODE		        true		NULL    			OMIT_VALUE
+LEAF	""	                PC_DATE_FORMAT      true        select				SEC=OP
+MENU	"Network Configuration"	true												!MT_ONLY
+	    MENU	"Controllers 1-8"	true											!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#01        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#01       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#01     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_01         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#02        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#02       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#02     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_02         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#03        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#03       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#03     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_03         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#04        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#04       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#04     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_04         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#05        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#05       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#05     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_05         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#06        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#06       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#06     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_06         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#07        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#07       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#07     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_07         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#08        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#08       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#08     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_08         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+	    ENDMENU																		!MT_ONLY
+	    MENU	"Controllers 9-16"	true											!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#09        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#09       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#09     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_09         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#10        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#10       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#10     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_10         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#11        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#11       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#11     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_11         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#12        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#12       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#12     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_12         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#13        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#13       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#13     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_13         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#14        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#14       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#14     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_14         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#15        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#15       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#15     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_15         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#16        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#16       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#16     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_16         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+	    ENDMENU																		!MT_ONLY
+	    MENU	"Controllers 17-24"	true											!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#17        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#17       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#17     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_17         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#18        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#18       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#18     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_18         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#19        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#19       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#19     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_19         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#20        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#20       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#20     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_20         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#21        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#21       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#21     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_21         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#22        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#22       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#22     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_22         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#23        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#23       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#23     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_23         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#24        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#24       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#24     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_24         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+	    ENDMENU																		!MT_ONLY
+	    MENU	"Controllers 25-32"	true											!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#25        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#25       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#25     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_25         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#26        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#26       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#26     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_26         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#27        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#27       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#27     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_27         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#28        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#28       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#28     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_28         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#29        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#29       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#29     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_29         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#30        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#30       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#30     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_30         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#31        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#31       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#31     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_31         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+        LEAF    ""  T2_NODE_TYPE_#32        true        select						!MT_ONLY
+        LEAF    ""  T2_SERIALNO_L_#32       true        value_in					!MT_ONLY
+	    LEAF	""	T2_IS_INSTALLED_#32     true	    select						!MT_ONLY
+	    LEAF	""	PC_NODE_NAME_32         true	    value_in					!MT_ONLY
+	    LEAF	" "	NO_CODE	                true	    NULL        OMIT_VALUE		!MT_ONLY
+	    ENDMENU																		!MT_ONLY
+ENDMENU																				!MT_ONLY
+TEMPLATE	1	32
+    MENU	"Controller #$u $$PC_NODE_NAME_$02u!"	isInstalledBS3_$02u
+        LEAF    ""  T2_NODE_TYPE_#$02u       true		select
+        LEAF    ""  T2_SERIALNO_L_#$02u      true		value_in
+    	LEAF	""	T2_IS_INSTALLED_#$02u    true		select
+        LEAF    ""  T2_SW_VER_#$02u          true		NULL
+    	LEAF	""	PC_NODE_NAME_$02u        true		value_in
+        LEAF    ""  T2_COMMS_OK_#$02u        true		NULL
+        MENU	"Control"	true
+    	    LEAF	""	T2_DIRTY_FLAG_#$02u		        true        				NULL
+            LEAF    ""  T2_FLOW_#$02u                   true        				NULL
+            LEAF    ""  T2_SP_SELECT_PPM_ORP_#$02u      true   						NULL		OMIT_LINE
+            LEAF    ""  T2_RELAY3_FUNCTION_#$02u        true        				NULL		OMIT_LINE
+            LEAF    ""  T2_TEMP_DISP_EN_#$02u          	true        				NULL		OMIT_LINE
+            LEAF    ""  T2_PPM_DISP_EN_#$02u          	true        				NULL		OMIT_LINE
+            LEAF	" "	NO_CODE	                        true	    				NULL        OMIT_VALUE
+            LEAF    ""  T2_PH_#$02u                     true        				NULL
+            LEAF    ""  T2_PH_SP_#$02u                  true        				value_in
+            LEAF    ""  T2_PH_HIGH_ALM_SP_#$02u         true        				value_in
+            LEAF    ""  T2_PH_LOW_ALM_SP_#$02u          true        				value_in
+            LEAF    ""  T2_PH_SPAN_#$02u                isPHtbd_$02u        		value_in
+            LEAF	" "	NO_CODE	                        true	    				NULL        OMIT_VALUE
+            LEAF    ""  T2_ORP_#$02u                    true        				NULL
+            LEAF    ""  T2_ORP_SP_#$02u                 isORPSPEnabled_$02u     	value_in
+            LEAF    ""  T2_ORP_HIGH_ALM_SP_#$02u        true        				value_in
+            LEAF    ""  T2_ORP_LOW_ALM_SP_#$02u         true        				value_in
+            LEAF    ""  T2_ORP_SPAN_SP_#$02u            isORPtbd_$02u     			value_in
+            LEAF    ""  T2_BOOSTER_TRG_SP_#$02u         isBoosterEnabled_$02u   	value_in
+            LEAF    ""  T2_BOOSTER_END_SP_#$02u         isBoosterEnabled_$02u   	value_in
+            LEAF	" "	NO_CODE	                        isppmEnabled_$02u	    	NULL        OMIT_VALUE
+            LEAF    ""  T2_PPM_RANGE_#$02u              true        				NULL		OMIT_LINE
+            LEAF    ""  T2_PPM_DERIVED_#$02u            isppmDerivedEnabled_$02u	NULL
+			LEAF	""	T2_PPM_DERIVED_SP_#$02u			isppmDerSPEnabled_$02u		NULL
+            LEAF	" "	NO_CODE	                        isppmDerivedEnabled_$02u	NULL        OMIT_VALUE
+            LEAF    ""  T2_TEMP_#$02u                   isTempEnabled_$02u      	NULL
+            LEAF    ""  T2_TEMP_HIGH_ALM_SP_#$02u       true        				value_in
+            LEAF    ""  T2_TEMP_LOW_ALM_SP_#$02u        true        				value_in
+            LEAF	" "	NO_CODE	                        true	    				NULL        OMIT_VALUE
+            LEAF    ""  T2_RELAY1_STATUS_#$02u          true        				NULL
+            LEAF    ""  T2_RELAY2_STATUS_#$02u          true        				NULL
+            LEAF    ""  T2_RELAY3_STATUS_#$02u          true        				NULL
+            LEAF	" "	NO_CODE	                		true	    				NULL        OMIT_VALUE
+            LEAF    ""  T2_FEED_DELAY_REMAIN_#$02u      true        				NULL
+        ENDMENU
+        MENU	"Setup"	true
+            LEAF    ""  T2_PH_FEED_DIRECTION_#$02u		true        				NULL
+            LEAF    ""  T2_PH_CONTROL_TYPE_#$02u        true        				NULL
+            LEAF    ""  T2_ORP_CONTROL_TYPE_#$02u       true        				NULL
+            LEAF    ""  T2_RELAY3_FUNCTION_#$02u        true        				NULL
+            LEAF	" "	NO_CODE	                        true	    				NULL        OMIT_VALUE
+            LEAF    ""  T2_FEED_DELAY_#$02u             true        				value_in
+            LEAF    ""  T2_FS_TIME_#$02u                true        				NULL
+            LEAF    ""  T2_BOOSTER_FS_#$02u             isBoosterEnabled_$02u   	value_in
+            LEAF	" "	NO_CODE	                        true	    				NULL        OMIT_VALUE
+            LEAF    ""  T2_TEMP_UNITS_SEL_#$02u         true        				NULL
+            LEAF    ""  T2_PPM_SP_ONOFF_#$02u           isppmEnabled_$02u	    	select
+            LEAF    ""  T2_SP_SELECT_PPM_ORP_#$02u      isppmSelectEnabled_$02u 	select
+            LEAF    ""  T2_TBASE_#$02u                  true        				value_in
+            LEAF    ""  T2_LANGUAGE_#$02u               true        				NULL
+        ENDMENU
+        MENU	"Alarms"	true
+            LEAF    ""  T2_PH_HIGH_ALM_#$02u              true        				NULL			FORMAT=ALARM
+            LEAF    ""  T2_PH_LOW_ALM_#$02u               true        				NULL			FORMAT=ALARM
+            LEAF    ""  T2_ORP_HIGH_ALM_#$02u             true        				NULL			FORMAT=ALARM
+            LEAF    ""  T2_ORP_LOW_ALM_#$02u              true        				NULL			FORMAT=ALARM
+            LEAF    ""  T2_TEMP_HIGH_ALM_#$02u            isTempEnabled_$02u		NULL			FORMAT=ALARM
+            LEAF    ""  T2_TEMP_LOW_ALM_#$02u             isTempEnabled_$02u		NULL			FORMAT=ALARM
+            LEAF    ""  T2_NO_FLOW_ALM_#$02u              true        				NULL			FORMAT=ALARM
+            LEAF    ""  T2_FEED_DELAY_ACTIVE_#$02u        true        				NULL			FORMAT=ALARM
+            LEAF    ""  T2_CLBR_LOCKOUT_#$02u             true        				NULL			FORMAT=ALARM
+            LEAF    ""  T2_PH_FS_ALM_#$02u                true        				NULL			FORMAT=ALARM
+            LEAF    ""  T2_CLBR_FS_ALM_#$02u              true        				NULL			FORMAT=ALARM
+            LEAF    ""  T2_BOOSTER_FS_ALM_#$02u           isBoosterEnabled_$02u		NULL			FORMAT=ALARM
+            LEAF    ""  T2_COMMS_NOT_OK_#$02u             true						NULL			FORMAT=ALARM
+        ENDMENU
+        MENU	"Communications"	true
+            LEAF	"Last update (date)"	    T2_UPDATE_DATE_#$02u    	true	NULL
+            LEAF	"Last update (time)"	    T2_UPDATE_TIME_#$02u		true	NULL
+            LEAF	"Last update (seconds)"	    T2_UPDATE_SECONDS_#$02u		true    NULL
+	        LEAF	""	                        T2_COMMS_HIST_#$02u			true	NULL
+        ENDMENU
+    ENDMENU
+    MENU	"Controller #$u $$PC_NODE_NAME_$02u!"	isInstalledBS3ppm_$02u
+        LEAF    ""  T2_NODE_TYPE_#$02u       true                 select
+        LEAF    ""  T2_SERIALNO_L_#$02u      true                 value_in
+    	LEAF	""	T2_IS_INSTALLED_#$02u    true	              select
+        LEAF    ""  T2_SW_VER_#$02u          true                 NULL
+    	LEAF	""	PC_NODE_NAME_$02u        true	              value_in
+        LEAF    ""  T2_COMMS_OK_#$02u        true                 NULL
+        MENU	"Control"	true
+    	    LEAF	""	T2_DIRTY_FLAG_#$02u		        true        					NULL
+            LEAF    ""  T2_FLOW_#$02u                     true        					NULL
+            LEAF    ""  T2_SP_SELECT_PPM_ORP_#$02u        true   						NULL		OMIT_LINE
+            LEAF    ""  T2_RELAY3_FUNCTION_#$02u          true        					NULL		OMIT_LINE
+            LEAF    ""  T2_TEMP_DISP_EN_#$02u          	true        					NULL		OMIT_LINE
+            LEAF    ""  T2_PPM_DISP_EN_#$02u          	true        					NULL		OMIT_LINE
+            LEAF	" "	NO_CODE	                        true	    					NULL        OMIT_VALUE
+            LEAF    ""  T2_PH_#$02u                       true        					NULL
+            LEAF    ""  T2_PH_SP_#$02u                    true        					value_in
+            LEAF    ""  T2_PH_HIGH_ALM_SP_#$02u           true        					value_in
+            LEAF    ""  T2_PH_LOW_ALM_SP_#$02u            true        					value_in
+            LEAF    ""  T2_PH_SPAN_#$02u                  isPHtbd_$02u        			value_in
+            LEAF    ""  T2_PH_DEADZONE_#$02u              isDualpH_$02u       			value_in
+            LEAF	" "	NO_CODE	                        isORPEnabled_$02u	    		NULL        OMIT_VALUE
+            LEAF    ""  T2_ORP_#$02u                      isORPEnabled_$02u        		NULL
+            LEAF    ""  T2_ORP_SP_#$02u                   isORPSPEnabled_$02u     		value_in
+            LEAF    ""  T2_ORP_HIGH_ALM_SP_#$02u          isORPEnabled_$02u        		value_in
+            LEAF    ""  T2_ORP_LOW_ALM_SP_#$02u           isORPEnabled_$02u        		value_in
+            LEAF    ""  T2_ORP_SPAN_SP_#$02u              isORPtbd_$02u        	    	value_in
+            LEAF    ""  T2_BOOSTER_TRG_SP_#$02u           isORPBoosterSPEnabled_$02u	value_in
+            LEAF    ""  T2_BOOSTER_END_SP_#$02u           isORPBoosterSPEnabled_$02u	value_in
+            LEAF	" "	NO_CODE	                        isppmEnabled_$02u	    		NULL        OMIT_VALUE
+            LEAF    ""  T2_PPM_RANGE_#$02u                isppmDerivedEnabled_$02u  	NULL		OMIT_LINE
+            LEAF    ""  T2_PPM_DERIVED_#$02u              isppmDerivedEnabled_$02u  	NULL
+            LEAF    ""  T2_PPM_PROBE_#$02u                isppmProbeEnabled_$02u    	NULL
+            LEAF    ""  T2_PPM_SP_#$02u                   isppmSPEnabled_$02u       	value_in
+			LEAF	""	T2_PPM_DERIVED_SP_#$02u			  isppmDerSPEnabled_$02u		NULL
+            LEAF    ""  T2_PPM_HI_ALM_SP_#$02u            isppmProbeEnabled_$02u    	value_in
+            LEAF    ""  T2_PPM_LO_ALM_SP_#$02u            isppmProbeEnabled_$02u    	value_in
+            LEAF    ""  T2_PPM_SPAN_#$02u                 isppmtbd_$02u             	value_in
+            LEAF    ""  T2_PPM_BSTR_TRG_SP_#$02u       isppmBoosterSPEnabled_$02u   	value_in
+            LEAF    ""  T2_PPM_BSTR_END_SP_#$02u       isppmBoosterSPEnabled_$02u   	value_in
+            LEAF	" "	NO_CODE	                        isTempEnabled_$02u	    		NULL        OMIT_VALUE
+            LEAF    ""  T2_TEMP_#$02u                     isTempEnabled_$02u			NULL
+            LEAF    ""  T2_TEMP_HIGH_ALM_SP_#$02u         isTempEnabled_$02u        	value_in
+            LEAF    ""  T2_TEMP_LOW_ALM_SP_#$02u          isTempEnabled_$02u        	value_in
+            LEAF	" "	NO_CODE	                        true	    					NULL        OMIT_VALUE
+            LEAF    ""  T2_RELAY1_STATUS_#$02u            true        					NULL
+            LEAF    ""  T2_RELAY2_STATUS_#$02u            true        					NULL
+            LEAF    ""  T2_RELAY3_STATUS_#$02u            true        					NULL
+            LEAF	" "	NO_CODE	                		true	    					NULL        OMIT_VALUE
+            LEAF    ""  T2_FEED_DELAY_REMAIN_#$02u        true        					NULL
+        ENDMENU
+        MENU	"Setup"	true
+    	    LEAF	""	T2_DIRTY_FLAG_#$02u		        true        					NULL
+            LEAF	" "	NO_CODE	                        true	    					NULL        OMIT_VALUE
+            LEAF    ""  T2_ORP_DISP_EN_#$02u              true        					select
+            LEAF    ""  T2_TEMP_DISP_EN_#$02u             true        					select
+            LEAF    ""  T2_PH_FEED_DIRECTION_#$02u        true        					NULL
+            LEAF    ""  T2_PH_CONTROL_TYPE_#$02u          true        					NULL
+            LEAF    ""  T2_ORP_CONTROL_TYPE_#$02u         true        					NULL
+            LEAF    ""  T2_RELAY3_FUNCTION_#$02u          true        					NULL
+            LEAF	" "	NO_CODE	                        true	    					NULL        OMIT_VALUE
+            LEAF    ""  T2_FEED_DELAY_#$02u               true        					value_in
+            LEAF    ""  T2_PH_FS_TIME_#$02u               true        					value_in
+            LEAF    ""  T2_CL_FS_TIME_#$02u               true        					value_in
+            LEAF    ""  T2_BOOSTER_FS_#$02u               isBoosterEnabled_$02u     	value_in
+            LEAF	" "	NO_CODE	                        isTempEnabled_$02u	    		NULL        OMIT_VALUE
+            LEAF    ""  T2_TEMP_UNITS_SEL_#$02u           true        					NULL
+            LEAF    ""  T2_PROBE_TYPE_#$02u               isppmProbeEnabled_$02u		NULL
+            LEAF    ""  T2_PPM_SP_ONOFF_#$02u             isppmEnabled_$02u	        	select
+            LEAF    ""  T2_SP_SELECT_PPM_ORP_#$02u        isppmSelectEnabled_$02u   	select
+            LEAF    ""  T2_TBASE_#$02u                    true        					value_in
+            LEAF    ""  T2_LANGUAGE_#$02u                 true        					NULL
+            LEAF    ""  T2_LCD_BACKLIT_#$02u              true        					select
+        ENDMENU
+        MENU	"Alarms"	true
+            LEAF    ""  T2_PH_HIGH_ALM_#$02u              true        			NULL		FORMAT=ALARM
+            LEAF    ""  T2_PH_LOW_ALM_#$02u               true        			NULL		FORMAT=ALARM
+            LEAF    ""  T2_ORP_HIGH_ALM_#$02u             isORPEnabled_$02u     NULL		FORMAT=ALARM
+            LEAF    ""  T2_ORP_LOW_ALM_#$02u              isORPEnabled_$02u     NULL		FORMAT=ALARM
+            LEAF    ""  T2_TEMP_HIGH_ALM_#$02u            isTempEnabled_$02u	NULL		FORMAT=ALARM
+            LEAF    ""  T2_TEMP_LOW_ALM_#$02u             isTempEnabled_$02u	NULL		FORMAT=ALARM
+            LEAF    ""  T2_PPM_HIGH_ALM_#$02u             isppmEnabled_$02u		NULL		FORMAT=ALARM
+            LEAF    ""  T2_PPM_LOW_ALM_#$02u              isppmEnabled_$02u		NULL		FORMAT=ALARM
+            LEAF    ""  T2_NO_FLOW_ALM_#$02u              true        			NULL		FORMAT=ALARM
+            LEAF    ""  T2_FEED_DELAY_ACTIVE_#$02u        true        			NULL		FORMAT=ALARM
+            LEAF    ""  T2_CLBR_LOCKOUT_#$02u             true        			NULL		FORMAT=ALARM
+            LEAF    ""  T2_PH_FS_ALM_#$02u                true        			NULL		FORMAT=ALARM
+            LEAF    ""  T2_CLBR_FS_ALM_#$02u              true        			NULL		FORMAT=ALARM
+            LEAF    ""  T2_BOOSTER_FS_ALM_#$02u           isBoosterEnabled_$02u	NULL		FORMAT=ALARM
+            LEAF    ""  T2_COMMS_NOT_OK_#$02u             true					NULL		FORMAT=ALARM
+        ENDMENU
+        MENU	"Communications"	true
+            LEAF	"Last update (date)"	    T2_UPDATE_DATE_#$02u		true	NULL
+            LEAF	"Last update (time)"	    T2_UPDATE_TIME_#$02u		true	NULL
+            LEAF	"Last update (seconds)"	    T2_UPDATE_SECONDS_#$02u		true    NULL
+	        LEAF	""	                        T2_COMMS_HIST_#$02u			true	NULL
+        ENDMENU
+    ENDMENU
+ENDTEMPLATE
+MENU	"Call Out Setup"	true
+	LEAF	""	PC_CUSTNAME			true			value_in		SSEC=REP
+	LEAF	""	PC_LOCATION			true			value_in		SSEC=REP
+	LEAF	""	PC_REPNAME			true			value_in		SSEC=REP
+	LEAF	""	PC_REPNUMBER		true			value_in		SSEC=REP
+	LEAF	" "	NO_CODE				callout			NULL			OMIT_VALUE
+	LEAF	""	PC_EMAIL_SERVER		true			value_in
+	LEAF	""	PC_SMTP_PORT		true			value_in
+	LEAF	""	PC_DNS_ADDR1		true			value_in
+	LEAF	""	PC_DNS_ADDR2		true			value_in
+	LEAF	" "	NO_CODE				callout			NULL			OMIT_VALUE
+	LEAF	""	PC_CALLOUT_EN		true			select
+	LEAF	""	PC_CALL_START		callout			value_in
+	LEAF	""	PC_CALL_END			callout			value_in
+	LEAF	""	PC_CALLOUT0_DELAY	callout			value_in
+	LEAF	""	PC_CO_NO_COMM_DELAY	callout			value_in
+	LEAF	""	PC_CALLOUT_TEST		callout			value_in
+	LEAF    ""  PC_CO_EMAIL_STAT  	callout   		NULL
+	LEAF    ""  PC_CO_MODEM_STAT  	callout   		NULL
+	LEAF	" "	NO_CODE				callout			NULL			OMIT_VALUE
+	LEAF	""	PC_CALLOUT_TYPE1	callout			select
+	LEAF	""	PC_PHONE1			calloutph1		value_in
+	LEAF	""	PC_PAGER1			calloutpg1		value_in
+	LEAF	""	PC_EMAIL1			calloutemail1	email_in_BECS7
+	LEAF	""	PC_PHONE1			calloutemail1	NULL			OMIT_LINE
+	LEAF	""	PC_PAGER1			calloutemail1	NULL			OMIT_LINE
+	LEAF	""	PC_CALLOUT1_DELAY	callout1		value_in
+	LEAF	" "	NO_CODE				callout			NULL			OMIT_VALUE
+	LEAF	""	PC_CALLOUT_TYPE2	callout			select
+	LEAF	""	PC_PHONE2			calloutph2		value_in
+	LEAF	""	PC_PAGER2			calloutpg2		value_in
+	LEAF	""	PC_EMAIL2			calloutemail2	email_in_BECS7
+	LEAF	""	PC_PHONE2			calloutemail2	NULL			OMIT_LINE
+	LEAF	""	PC_PAGER2			calloutemail2	NULL			OMIT_LINE
+	LEAF	""	PC_CALLOUT2_DELAY	callout2		value_in
+	LEAF	" "	NO_CODE				callout			NULL			OMIT_VALUE
+	LEAF	""	PC_CALLOUT_TYPE3	callout			select
+	LEAF	""	PC_PHONE3			calloutph3		value_in
+	LEAF	""	PC_PAGER3			calloutpg3		value_in
+	LEAF	""	PC_EMAIL3			calloutemail3	email_in_BECS7
+	LEAF	""	PC_PHONE3			calloutemail3	NULL			OMIT_LINE
+	LEAF	""	PC_PAGER3			calloutemail3	NULL			OMIT_LINE
+	LEAF	""	PC_CALLOUT3_DELAY	callout3		value_in
+	LEAF	" "	NO_CODE				callout			NULL			OMIT_VALUE
+	LEAF	""	PC_CALLOUT_TYPE4	callout			select
+	LEAF	""	PC_PHONE4			calloutph4		value_in
+	LEAF	""	PC_PAGER4			calloutpg4		value_in
+	LEAF	""	PC_EMAIL4			calloutemail4	email_in_BECS7
+	LEAF	""	PC_PHONE4			calloutemail4	NULL			OMIT_LINE
+	LEAF	""	PC_PAGER4			calloutemail4	NULL			OMIT_LINE
+	LEAF	""	PC_CALLOUT4_DELAY	callout4		value_in
+	LEAF	" "	NO_CODE				callout			NULL			OMIT_VALUE
+	LEAF	""	PC_CALLOUT_TYPE5	callout			select
+	LEAF	""	PC_PHONE5			calloutph5		value_in
+	LEAF	""	PC_PAGER5			calloutpg5		value_in
+	LEAF	""	PC_EMAIL5			calloutemail5	email_in_BECS7
+	LEAF	""	PC_PHONE5			calloutemail5	NULL			OMIT_LINE
+	LEAF	""	PC_PAGER5			calloutemail5	NULL			OMIT_LINE
+	LEAF	""	PC_CALLOUT5_DELAY	callout5		value_in
+	LEAF	" "	NO_CODE				callout			NULL			OMIT_VALUE
+	LEAF	""	PC_CALLOUT_TYPE6	callout			select
+	LEAF	""	PC_PHONE6			calloutph6		value_in
+	LEAF	""	PC_PAGER6			calloutpg6		value_in
+	LEAF	""	PC_EMAIL6			calloutemail6	email_in_BECS7
+	LEAF	""	PC_PHONE6			calloutemail6	NULL			OMIT_LINE
+	LEAF	""	PC_PAGER6			calloutemail6	NULL			OMIT_LINE
+	LEAF	""	PC_CALLOUT6_DELAY	callout6		value_in
+	LEAF	" "	NO_CODE				callout			NULL			OMIT_VALUE
+	LEAF	""	PC_CALLOUT_TYPE7	callout			select
+	LEAF	""	PC_PHONE7			calloutph7		value_in
+	LEAF	""	PC_PAGER7			calloutpg7		value_in
+	LEAF	""	PC_EMAIL7			calloutemail7	email_in_BECS7
+	LEAF	""	PC_PHONE7			calloutemail7	NULL			OMIT_LINE
+	LEAF	""	PC_PAGER7			calloutemail7	NULL			OMIT_LINE
+	LEAF	""	PC_CALLOUT7_DELAY	callout7		value_in
+	LEAF	" "	NO_CODE				callout			NULL			OMIT_VALUE
+	LEAF	""	PC_CALLOUT_TYPE8	callout			select
+	LEAF	""	PC_PHONE8			calloutph8		value_in
+	LEAF	""	PC_PAGER8			calloutpg8		value_in
+	LEAF	""	PC_EMAIL8			calloutemail8	email_in_BECS7
+	LEAF	""	PC_PHONE8			calloutemail8	NULL			OMIT_LINE
+	LEAF	""	PC_PAGER8			calloutemail8	NULL			OMIT_LINE
+	LEAF	""	PC_CALLOUT8_DELAY	callout8		value_in
+ENDMENU
+MENU    "QA Tests"  factory
+    LEAF	""                  PC_QA_LED_TEST_START		    true		select
+	LEAF	" "	                NO_CODE                         true        NULL        OMIT_VALUE
+    LEAF	""                  PC_QA_RS485_TEST_START		    true		select
+    LEAF	""                  PC_QA_RS485_TEST_RESULTS		true		NULL
+	LEAF	" "	                NO_CODE                         true        NULL        OMIT_VALUE
+    LEAF	""	                PC_CDATE		                true		value_in
+    LEAF	""	                PC_CTIME		                true		value_in
+	LEAF	" "	                NO_CODE                         true        NULL        OMIT_VALUE
+    LEAF	""                  PC_QA_FLASH_TEST_START		    true		select
+    LEAF	""                  PC_QA_FLASH_TEST_PRGRS		    true		NULL
+    LEAF	""                  PC_QA_FLASH_TEST_RESULTS		true		NULL
+    MENU    "Testing"   true
+        LEAF	""	                PC_CSECS		                true		NULL
+    ENDMENU
+ENDMENU
