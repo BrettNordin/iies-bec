@@ -39,6 +39,7 @@ kasm_exec() {
         /usr/bin/filter_ready
         /usr/bin/desktop_ready
         $START_COMMAND $ARGS $OPT_URL
+        wine /dockerstartup/install/becsys/BECSys.exe
     else
         echo "No URL specified for exec command. Doing nothing."
     fi
@@ -66,6 +67,7 @@ kasm_startup() {
                 set +e
                 cd $HOME
                 $START_COMMAND $ARGS $URL
+                wine /dockerstartup/install/becsys/BECSys.exe
                 set -e
             fi
             sleep 1
