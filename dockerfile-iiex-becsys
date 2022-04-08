@@ -16,8 +16,8 @@ fi  " >> $HOME/.bashrc && chown 1000:1000  $HOME/.bashrc
 COPY ./src/ubuntu/install/becsys $INST_SCRIPTS/becsys/
 COPY ./src/ubuntu/install/ansible $INST_SCRIPTS/ansible/
 RUN bash $INST_SCRIPTS/ansible/install_ansible.sh  && rm -rf $INST_SCRIPTS/ansible/
-COPY ./src/ubuntu/install/terraform $INST_SCRIPTS/terraform/
-RUN bash $INST_SCRIPTS/terraform/install_terraform.sh  && rm -rf $INST_SCRIPTS/terraform/
+#COPY ./src/ubuntu/install/terraform $INST_SCRIPTS/terraform/
+#RUN bash $INST_SCRIPTS/terraform/install_terraform.sh  && rm -rf $INST_SCRIPTS/terraform/
 COPY ./src/ubuntu/install/terminal/custom_startup.sh $STARTUPDIR/custom_startup.sh
 RUN chmod +x $STARTUPDIR/custom_startup.sh
 RUN chmod 755 $STARTUPDIR/custom_startup.sh
@@ -28,7 +28,7 @@ RUN apt-get remove -y xfce4-panel
 
 ######### Install POL & BECS ###########
 RUN apt-get install -y wine-stable
-
+RUN dpkg --add-architecture i386 && apt-get update -y && apt-get install -y wine32
 RUN chown 1000:0 $HOME
 RUN $STARTUPDIR/set_user_permission.sh $HOME
 
@@ -38,5 +38,4 @@ RUN mkdir -p $HOME && chown -R 1000:0 $HOME
 
 USER 1000
 
-
-###run wine $INST_SCRIPTS/becsys/BECSys.exe
+RUN wine $INST_SCRIPTS/becsys/BECSys.exe
