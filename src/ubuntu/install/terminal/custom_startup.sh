@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-WINEPREFIX=/home/kasm-user/.wine32 WINEARCH=win32 wineboot
-env WINEPREFIX=/home/kasm-user/.wine32 winetricks -q jet40 
-env WINEPREFIX=/home/kasm-user/.wine32 winetricks -q corefonts 
 set -ex
 START_COMMAND="xfce4-terminal"
 PGREP="xfce4-terminal "
@@ -42,6 +39,9 @@ kasm_exec() {
         /usr/bin/filter_ready
         /usr/bin/desktop_ready
         $START_COMMAND $ARGS $OPT_URL
+        WINEPREFIX=/home/kasm-user/.wine32 WINEARCH=win32 wineboot
+        env WINEPREFIX=/home/kasm-user/.wine32 winetricks -q jet40 
+        env WINEPREFIX=/home/kasm-user/.wine32 winetricks -q corefonts 
         wine /dockerstartup/install/becsys/BECSys.exe
     else
         echo "No URL specified for exec command. Doing nothing."
@@ -70,6 +70,9 @@ kasm_startup() {
                 set +e
                 cd $HOME
                 $START_COMMAND $ARGS $URL
+                WINEPREFIX=/home/kasm-user/.wine32 WINEARCH=win32 wineboot
+                env WINEPREFIX=/home/kasm-user/.wine32 winetricks -q jet40 
+                env WINEPREFIX=/home/kasm-user/.wine32 winetricks -q corefonts 
                 wine /dockerstartup/install/becsys/BECSys.exe
                 set -e
             fi
