@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+WINEPREFIX=/home/kasm-user/.wine32 WINEARCH=win32 wineboot
+env WINEPREFIX=/home/kasm-user/.wine32 winetricks -q jet40 
+env WINEPREFIX=/home/kasm-user/.wine32 winetricks -q corefonts 
 set -ex
 START_COMMAND="xfce4-terminal"
 PGREP="xfce4-terminal "
