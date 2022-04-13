@@ -1,0 +1,10 @@
+MENU    "QA Tests"  true
+    LEAF	""                  PC_QA_LED_TEST_START		    true		select
+	LEAF	" "	                NO_CODE                         true        NULL        OMIT_VALUE
+    LEAF	""                  PC_QA_RS485_TEST_START		    true		select
+    LEAF	""                  PC_QA_RS485_TEST_RESULTS		true		NULL
+	LEAF	" "	                NO_CODE                         true        NULL        OMIT_VALUE
+    LEAF	""	                PC_CDATE		                true		value_in
+    LEAF	""	                PC_CTIME		                true		value_in
+	LEAF	" "	                NO_CODE                         true        NULL        OMIT_VALUE
+ENDMENU

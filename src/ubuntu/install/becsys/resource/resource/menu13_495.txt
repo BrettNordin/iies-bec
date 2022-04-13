@@ -1,0 +1,168 @@
+LEAF	""	T2_TEMP		opt_C1		NULL
+LEAF	""	T2_PH		true		NULL
+LEAF	""	T2_ORP		true		NULL
+LEAF	""	T2_CL		not_opt_B1	NULL
+LEAF	""	PC_CDATE	true		value_in
+LEAF	""	PC_CTIME	true		value_in
+LEAF	""	T4_OP_CODE	operator	value_in
+MENU	"Alarm Setpoints"		true
+	LEAF	""	T2_PH_HIGH_PT		true			value_in
+	LEAF	""	T2_PH_LOW_PT		true			value_in
+	LEAF	""	T2_ORP_HIGH_PT		true			value_in
+	LEAF	""	T2_ORP_LOW_PT		true			value_in
+	LEAF	""	T2_TEMP_HIGH_PT		opt_C1			value_in
+	LEAF	""	T2_TEMP_LOW_PT		opt_C1			value_in
+ENDMENU
+MENU	"Alarms"		true
+	LEAF	""	T4_NUM_ALARMS		true		NULL	FORMAT=ALARM
+	LEAF	""	T3_NO_FLOW_ALM		true		NULL	FORMAT=ALARM
+	LEAF	""	T3_PH_HIGH_ALM		true		NULL	FORMAT=ALARM
+	LEAF	""	T3_PH_LOW_ALM		true		NULL	FORMAT=ALARM
+	LEAF	""	T3_PHUP_LIMIT_ALM	true		NULL	FORMAT=ALARM
+	LEAF	""	T3_PHDN_LIMIT_ALM	true		NULL	FORMAT=ALARM
+	LEAF	""	T3_ORP_HIGH_ALM		true		NULL	FORMAT=ALARM
+	LEAF	""	T3_ORP_LOW_ALM		true		NULL	FORMAT=ALARM
+	LEAF	""	T3_ORPCL_LIMIT_ALM	true		NULL	FORMAT=ALARM
+	LEAF	""	T3_TEMP_HIGH_ALM	true		NULL	FORMAT=ALARM
+	LEAF	""	T3_TEMP_LOW_ALM		true		NULL	FORMAT=ALARM
+ENDMENU
+MENU	"Sensor Wash"	opt_C2
+	LEAF	""	PC_ETSET1			true		value_in
+	LEAF	""	PC_CWKDAY			true		NULL
+	LEAF	""	PC_ETIWD11			true		sel_wd
+	LEAF	""	PC_ETITM11			true		value_in
+	LEAF	""	PC_ETIWD12			true		sel_wd
+	LEAF	""	PC_ETITM12			true		value_in
+	LEAF	""	PC_ETIWD13			true		sel_wd
+	LEAF	""	PC_ETITM13			true		value_in
+	LEAF	""	PC_ETIWD14			true		sel_wd
+	LEAF	""	PC_ETITM14			true		value_in
+ENDMENU
+MENU	"Diagnostics"	rep
+	MENU	"Version"		true
+		LEAF	""					PC_PROG_VER		true		NULL
+		LEAF	"Factory Defaults"	NO_CODE			true		factory_dflt	OMIT_VALUE
+	ENDMENU
+	MENU	"Reset Analysis"	stranco
+		LEAF	""	PC_DT_RESET		true		NULL
+		LEAF	""	PC_HM_RESET		true		NULL
+		LEAF	""	PC_CD_RESET		true		NULL
+		LEAF	""	T2_CY_SLOPE		cyanuric	NULL
+		LEAF	""	T4_CY_XOFFSET	cyanuric	NULL
+	ENDMENU
+	MENU	"Software Calibration"	true
+		LEAF	""					T2_PH			true		NULL
+		LEAF	"pH calibration"	T2_PH_OFFSET	true		value_in			OMIT_VALUE	S:T2_PH
+		LEAF	""					T2_ORP			true		NULL
+		LEAF	"ORP slope"			T2_ORP_SLOPE	true		value_in			OMIT_VALUE	S:T2_ORP
+		LEAF	"ORP zero point"	T2_ORP_OFFSET	true		recal0pt		OMIT_VALUE
+		LEAF	""					T2_TEMP			opt_C1		NULL
+		LEAF	"temp slope"		T2_TEMP_SLOPE	opt_C1		value_in			OMIT_VALUE	S:T2_TEMP
+		LEAF	"temp zero point"	T2_TEMP_OFFSET	opt_C1		recal0pt		OMIT_VALUE
+		LEAF	""					T4_TEMP_UNITS	opt_C1		select
+	ENDMENU
+	MENU	"Hardware Calibration"	true
+		LEAF	""	T3_CLTEMP_OPTION	opt_A8	select
+		LEAF	""	PC_C_TYPE			true	NULL
+		LEAF	""	PC_COMMBAUD			true	select
+		MENU	"Input Averaging"	stranco
+			LEAF	""	T3_RING_AVERAGING	true		select
+			LEAF	""	PC_RAW1				true		NULL
+			LEAF	""	T4_RAW_PH_AVG		true		NULL
+			LEAF	""	T4_PHBUF_MAX		true		value_in
+			LEAF	""	PC_RAW2				true		NULL
+			LEAF	""	T4_RAW_ORP_AVG		true		NULL
+			LEAF	""	T4_ORPBUF_MAX		true		value_in
+			LEAF	""	PC_RAW3				opt_C1		NULL
+			LEAF	""	T4_RAW_CL_AVG		opt_C1		NULL
+			LEAF	""	T4_CLBUF_MAX		not_opt_B1	value_in
+			LEAF	""	PC_RAW4				opt_C1		NULL
+			LEAF	""	T4_RAW_TEMP_AVG		opt_C1		NULL
+			LEAF	""	T4_TEMPBUF_MAX		opt_C1		value_in
+		ENDMENU
+	ENDMENU
+ENDMENU
+MENU	"Configuration"	rep
+	MENU	"Set Points"	true
+		LEAF	""	T2_PHDN_FEEDPT	pHdn_avail	value_in
+		LEAF	""	T2_PHUP_FEEDPT	pHup_avail	value_in
+		LEAF	""	T2_ORP_FEEDPT	useORP		value_in
+	ENDMENU
+	MENU	"Relay Modes"	true
+		LEAF	""	T4_PHDN_MODE		pHdn_avail	select
+		LEAF	""	T4_PHUP_MODE		pHup_avail	select
+		LEAF	""	T4_PROBE_WASH_MODE	opt_C2		select
+		LEAF	""	T4_PPM_MODE			true		select
+		LEAF	""	T4_ALARM_MODE		true		select
+	ENDMENU
+	MENU	"Control Values"	true
+		MENU	"pH Controls"	true
+			LEAF	""	T3_PROP_PH			true		select
+			LEAF	""	T2_PHUP_SPAN		pHup_prop	value_in
+			LEAF	""	T4_PHUP_TBPCYCLE	pHup_prop	value_in
+			LEAF	""	T2_PHDN_SPAN		pHdn_prop	value_in
+			LEAF	""	T4_PHDN_TBPCYCLE	pHdn_prop	value_in
+			LEAF	""	T4_PHDN_LIMIT		pHdn_avail	value_in
+			LEAF	""	T4_PHUP_LIMIT		pHup_avail	value_in
+		ENDMENU
+		MENU	"ORP Controls"	opt_B1
+			LEAF	""	T3_PROP_ORP			ORP_used		select
+			LEAF	""	T2_ORP_SPAN			ORP_prop		value_in
+			LEAF	""	T4_ORPCL_TBPCYCLE	ORP_prop		value_in
+			LEAF	""	T4_PPM_LIMIT		true			value_in
+		ENDMENU
+	ENDMENU
+	MENU	"Control Status"	true
+		LEAF	""	T4_PHDN_LED			pHdn_avail		NULL
+		LEAF	""	T4_PHDN_ELAPSED		pHdn_avail		NULL
+		LEAF	""	T3_RESTART_PHDN		pHdn_avail		restart
+		LEAF	""	T3_PHDN_LIMIT_ALM	true			NULL
+		LEAF	""	T4_PHUP_LED			pHup_avail		NULL
+		LEAF	""	T4_PHUP_ELAPSED		pHup_avail		NULL
+		LEAF	""	T3_RESTART_PHUP		pHup_avail		restart
+		LEAF	""	T3_PHUP_LIMIT_ALM	true			NULL
+		LEAF	""	T4_ORPCL_LED		true			NULL
+		LEAF	""	T4_ORPCL_ELAPSED	true			NULL
+		LEAF	""	T3_RESTART_ORPCL	true			restart
+		LEAF	""	T3_ORPCL_LIMIT_ALM	true			NULL
+	ENDMENU
+	MENU	"Novice Setup"	true
+		LEAF	""	T3_PH_NOVICE_SETPT	true		select
+		LEAF	""	T3_PH_NOVICE_MODE	true		select
+		LEAF	""	T3_PH_NOVICE_RDG	true		select
+		LEAF	""	T3_ORP_NOVICE_SETPT	true		select
+		LEAF	""	T3_ORP_NOVICE_MODE	true		select
+		LEAF	""	T3_ORP_NOVICE_RDG	true		select
+	ENDMENU
+	MENU	"Data Logging"	true
+		LEAF	""	PC_HI_FREQ		true	select
+		LEAF	""	PC_LO_FREQ		true	select
+	ENDMENU
+ENDMENU
+MENU	"Rep Startup"	rep
+	LEAF	""	PC_CDATE		true		value_in
+	LEAF	""	PC_CTIME		true		value_in
+	LEAF	""	PC_SYS_ID		true		value_in
+	LEAF	""	PC_CUSTNAME		true		value_in
+	LEAF	""	PC_LOCATION		true		value_in
+	LEAF	""	PC_REPNUMBER	true		value_in
+	LEAF	""	T4_START_DATE	true		value_in
+	LEAF	""	T4_REP_CODE		rep			value_in
+	LEAF	""	T3_MGR_CTRL_VALS_EN	 true	select
+	LEAF	""	T4_RELAY1SEL	true		NULL
+	LEAF	""	T4_RELAY2SEL	true		select
+	LEAF	""	T4_RELAY3SEL	true		NULL
+	LEAF	""	T2_PHDN_FEEDPT	pHdn_avail	value_in
+	LEAF	""	T2_PHUP_FEEDPT	pHup_avail	value_in
+	LEAF	""	T2_ORP_FEEDPT	useORP		value_in
+	LEAF	""	T3_CYANURIC		not_opt_C1	select
+	LEAF	""	T2_CY_SLOPE		cyanuric	value_in
+	LEAF	""	T3_PROP_PH		true		select
+	LEAF	""	T3_PROP_ORP		ORP_used	select
+	LEAF	""	T2_PH_HIGH_PT	true		value_in
+	LEAF	""	T2_PH_LOW_PT	true		value_in
+	LEAF	""	T2_ORP_HIGH_PT	true		value_in
+	LEAF	""	T2_ORP_LOW_PT	true		value_in
+	LEAF	""	T2_TEMP_HIGH_PT	opt_C1		value_in
+	LEAF	""	T2_TEMP_LOW_PT	opt_C1		value_in
+ENDMENU

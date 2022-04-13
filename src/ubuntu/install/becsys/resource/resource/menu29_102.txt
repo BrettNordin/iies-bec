@@ -1,0 +1,533 @@
+LEAF	""	PC_CDATE		true				value_in					!MT_ONLY
+LEAF	""	PC_CTIME		true				value_in					!MT_ONLY
+LEAF	""	PC_BW_TIMER_EN	true				NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T3_TURBIDITY	true				NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	PC_PH_INV_MODE	true				NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	PC_CL_INV_MODE	true				NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	PC_SRG_LVL_MODE	true				NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T3_FLOW_RATE	true				NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T3_STRAINER_OUT	true				NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T3_ALARM_RELAY	true				NULL		FORMAT=ALARM	!MT_ONLY
+LEAF	""	T3_SYSFLOW		true				NULL						!MT_ONLY
+LEAF	""	T2_MAIN1		true				NULL						!MT_ONLY
+LEAF	""	T2_MAIN2		true				NULL						!MT_ONLY
+LEAF	""	T2_MAINCOND		true				NULL						!MT_ONLY
+LEAF	""	T2_MAINTEMP		true				NULL						!MT_ONLY
+LEAF	""	PC2_AUXIN1		turbidity_input		NULL						!MT_ONLY
+LEAF	""	PC2_AUXIN2		ph_inv_420ma_sens	NULL						!MT_ONLY
+LEAF	""	PC2_AUXIN3		cl_inv_420ma_sens	NULL						!MT_ONLY
+LEAF	""	PC2_AUXIN4		srg_420ma_sens		NULL						!MT_ONLY
+LEAF	""	T2_FILTER_DIFF	true				NULL						!MT_ONLY
+LEAF	""	T4_FLOW_RATE 	flow_enabled		NULL						!MT_ONLY
+LEAF	""	T4_FLOW_VOL_2 	flow_enabled		NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T4_FLOW_VOL_3 	flow_enabled		NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T4_FLOW_VOL_4 	flow_enabled		NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T4_FLOW_VOL_5 	flow_enabled		NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T4_FLOW_VOL_1 	flow_enabled		NULL						!MT_ONLY
+LEAF	""	T2_PSI3 		strainer_out		NULL						!MT_ONLY
+LEAF	""	PC_BW_LAST_DATE		bwdateset		NULL						!MT_ONLY
+LEAF	""	PC_BW_LAST_TIME		bwdateset		NULL						!MT_ONLY
+LEAF	""	T4_BW_END_TRIG_TYPE	bwdateset		NULL						!MT_ONLY
+LEAF	""	T4_BW_TRIGGER_TYPE	bwdateset		NULL						!MT_ONLY
+LEAF	""	PC_SYSTYPE			true			NULL						!SR_ONLY
+LEAF	""	PC_PROG_VER			true			NULL						!SR_ONLY
+LEAF	""	PC_SYS_ID			true			NULL						!SR_ONLY
+LEAF	""	PC_CUSTNAME			true			NULL						!SR_ONLY
+LEAF	""	PC_LOCATION			true			NULL						!SR_ONLY
+LEAF	""	PC_CDATE			true			NULL						!SR_ONLY
+LEAF	""	PC_CTIME			true			NULL						!SR_ONLY
+LEAF	""	PC_DATE_FORMAT		true			NULL						!SR_ONLY
+LEAF	""	T4_US_METRIC_UNITS	true			NULL						!SR_ONLY
+LEAF	""	PC_N_LORES			true			NULL						!SR_ONLY
+LEAF	""	PC_DT_RESET			true			NULL						!SR_ONLY
+LEAF	""	PC_HM_RESET			true			NULL						!SR_ONLY
+MENU	"Alarms"	true
+	LEAF	""	PC_POLYMER_RELAY		true				NULL		OMIT_LINE
+	LEAF	""	T3_STRAINER_OUT			true				NULL		OMIT_LINE
+	LEAF	""	PC_PH_INV_MODE			true				NULL		OMIT_LINE
+	LEAF	""	PC_CL_INV_MODE			true				NULL		OMIT_LINE
+	LEAF	""	PC_SRG_LVL_MODE			true				NULL		OMIT_LINE
+	LEAF	""	T3_TURBIDITY			true				NULL		OMIT_LINE
+	LEAF	""	T3_FLOW_RATE			true				NULL		OMIT_LINE
+	LEAF	""	PC_AUTOFILL_RELAY		true				NULL		OMIT_LINE
+	LEAF	""	T3_MAIN1_HIGH_ALM		true				NULL	FORMAT=ALARM
+	LEAF	""	T3_MAIN1_LOW_ALM		true				NULL	FORMAT=ALARM
+	LEAF	""	T3_MAIN2_HIGH_ALM		true				NULL	FORMAT=ALARM
+	LEAF	""	T3_MAIN2_LOW_ALM		true				NULL	FORMAT=ALARM
+	LEAF	""	T3_MAINCOND_HIGH_ALM	true				NULL	FORMAT=ALARM
+	LEAF	""	T3_MAINCOND_LOW_ALM		true				NULL	FORMAT=ALARM
+	LEAF	""	T3_MAINTEMP_HIGH_ALM	true				NULL	FORMAT=ALARM
+	LEAF	""	T3_MAINTEMP_LOW_ALM		true				NULL	FORMAT=ALARM
+	LEAF	""	T3_AQI_HIGH_ALM			true				NULL	FORMAT=ALARM
+	LEAF	""	T3_AQI_LOW_ALM			true				NULL	FORMAT=ALARM
+	LEAF	""	T3_FS1_ALARM			true				NULL	FORMAT=ALARM
+	LEAF	""	T3_FS2_ALARM			true				NULL	FORMAT=ALARM
+	LEAF	""	T3_FS3_ALARM			true				NULL	FORMAT=ALARM
+	LEAF	""	T3_FS7_ALARM			true				NULL	FORMAT=ALARM
+	LEAF	""	T3_FS10_ALARM			true				NULL	FORMAT=ALARM
+	LEAF	""	T3_FS11_ALARM			true				NULL	FORMAT=ALARM
+	LEAF	""	T4_BW_FREQ_FS_TRIG		bffs_active			NULL
+	LEAF	""	T4_BW_FS_TRIG_TYPE		bffs_active			NULL
+	LEAF	""	T3_FS12_ALARM			polymer_feed		NULL	FORMAT=ALARM
+	LEAF	""	T3_BW_PIT_ALARM			true				NULL	FORMAT=ALARM
+	LEAF	""	T3_PSI3_HIGH_ALM		strainer_out		NULL	FORMAT=ALARM
+	LEAF	""	T3_HIGH_STRAINER_EO		strainer_out		NULL	FORMAT=ALARM
+	LEAF	""	T3_NO_FLOW_ALM			true				NULL	FORMAT=ALARM
+	LEAF	""	T3_AUX1_HIGH_ALM		turbidity_input		NULL	FORMAT=ALARM
+	LEAF	""	T3_AUX2_LOW_ALM			ph_inv_420ma_sens	NULL	FORMAT=ALARM
+	LEAF	""	T3_AUX3_LOW_ALM			cl_inv_420ma_sens	NULL	FORMAT=ALARM
+	LEAF	""	T3_AUX4_HIGH_ALM		srg_420ma_sens		NULL	FORMAT=ALARM
+	LEAF	""	T3_AUX4_LOW_ALM			srg_420ma_sens		NULL	FORMAT=ALARM
+	LEAF	""	T3_AUX6_LOW_ALM			true				NULL	FORMAT=ALARM
+	LEAF	""	T3_FILTER_DIFF_ALM		true				NULL	FORMAT=ALARM
+	LEAF	""	T3_AUTOFILL_FS			autofill_feed		NULL	FORMAT=ALARM
+	LEAF	""	T3_BATTERY_LOW			true				NULL	FORMAT=ALARM
+	LEAF	""	T3_BAD_PREAMP1			true				NULL	FORMAT=ALARM
+ENDMENU
+MENU	"Set Points"	true	!MT_ONLY
+	MENU	"Feed Set Points"			true
+		LEAF	""	PC_POLYMER_RELAY	true				NULL		OMIT_LINE
+		LEAF	""	PC_AUTOFILL_RELAY	true				NULL		OMIT_LINE
+		LEAF	""	T2_FEEDPT_PH1		true				value_in
+		LEAF	""	T2_AQI_REFERENCE	true				value_in	SSEC=rep
+		LEAF	""	T2_FEEDPT_HTR		true				value_in
+		LEAF	""	PC_HTR1_ALT_SETPT	true				value_in
+		LEAF	""	T2_FEEDPT_POLYHIGH	polymer_feed		value_in
+		LEAF	""	T2_FEEDPT_POLYLOW	polymer_feed		value_in
+		LEAF	""	T2_FEEDPT_AUTOFILL	autofill_feed		value_in
+	ENDMENU
+	MENU	"Alarm Set Points"			true
+		LEAF	""	T3_TURBIDITY		true				NULL		OMIT_LINE
+		LEAF	""	PC_PH_INV_MODE		true				NULL		OMIT_LINE
+		LEAF	""	PC_CL_INV_MODE		true				NULL		OMIT_LINE
+		LEAF	""	PC_SRG_LVL_MODE		true				NULL		OMIT_LINE
+		LEAF	""	T3_STRAINER_OUT		true				NULL		OMIT_LINE
+		LEAF	""	T2_MAIN1_HIGH		true				value_in
+		LEAF	""	T2_MAIN1_LOW		true				value_in
+		LEAF	""	T2_MAIN2_HIGH		true				value_in
+		LEAF	""	T2_MAIN2_LOW		true				value_in
+		LEAF	""	T2_MAINCOND_HIGH	true				value_in
+		LEAF	""	T2_MAINCOND_LOW		true				value_in
+		LEAF	""	T2_MAINTEMP_HIGH	true				value_in
+		LEAF	""	T2_MAINTEMP_LOW		true				value_in
+		LEAF	""	T2_AQI_HIGH_PT		true				value_in	SSEC=rep
+		LEAF	""	T2_AQI_LOW_PT		true				value_in	SSEC=rep
+		LEAF	""	T2_FILTER_DIFF_HIGH	true				value_in
+		LEAF	""	PC2_AUXIN1_HIGH_ALM	turbidity_input		value_in
+		LEAF	""	PC2_AUXIN2_LOW_ALM	ph_inv_420ma_sens	value_in
+		LEAF	""	PC2_AUXIN3_LOW_ALM	cl_inv_420ma_sens	value_in
+		LEAF	""	PC2_AUXIN4_LOW_ALM	srg_420ma_sens		value_in
+		LEAF	""	PC2_AUXIN4_HIGH_ALM	srg_420ma_sens		value_in
+		LEAF	""	T2_PSI3_HIGH		strainer_out		value_in
+	ENDMENU
+ENDMENU
+MENU	"Relay Settings"		true
+	LEAF	""	PC_USAGE_RELAY1	true			NULL
+	LEAF	""	PC_DO_MODE1		zrelay1_mode		select
+	LEAF	""	T4_RELAYSTAT1	zrelay1_mode		NULL
+	LEAF	""	PC_DO_VAL1		zrelay1_mode_not	NULL
+	LEAF	" "	NO_CODE			true			NULL	OMIT_VALUE
+	LEAF	""	PC_USAGE_RELAY2	true			NULL
+	LEAF	""	PC_DO_MODE2		zrelay2_mode		select
+	LEAF	""	T4_RELAYSTAT2	zrelay2_mode		NULL
+	LEAF	""	PC_DO_VAL2		zrelay2_mode_not	NULL
+	LEAF	" "	NO_CODE			true			NULL	OMIT_VALUE
+	LEAF	""	PC_USAGE_RELAY3	true			NULL
+	LEAF	""	PC_DO_MODE3		zrelay3_mode		NULL
+	LEAF	""	T4_RELAYSTAT3	zrelay3_mode		NULL
+	LEAF	""	PC_DO_VAL3		zrelay3_mode_not	NULL
+	LEAF	" "	NO_CODE			true			NULL	OMIT_VALUE
+	LEAF	""	PC_USAGE_RELAY4	true			NULL
+	LEAF	""	PC_DO_MODE4		zrelay4_mode		NULL
+	LEAF	""	T4_RELAYSTAT4	zrelay4_mode		NULL
+	LEAF	""	PC_DO_VAL4		zrelay4_mode_not	NULL
+	LEAF	" "	NO_CODE			true			NULL	OMIT_VALUE
+	LEAF	""	PC_USAGE_RELAY5	true			NULL
+	LEAF	""	PC_DO_MODE5		zrelay5_mode		select
+	LEAF	""	T4_RELAYSTAT5	zrelay5_mode		NULL
+	LEAF	""	PC_DO_VAL5		zrelay5_mode_not	NULL
+	LEAF	" "	NO_CODE			true			NULL	OMIT_VALUE
+	LEAF	""	PC_USAGE_RELAY6	true			NULL
+	LEAF	""	PC_DO_MODE6		zrelay6_mode		select
+	LEAF	""	T4_RELAYSTAT6	zrelay6_mode		NULL
+	LEAF	""	PC_DO_VAL6		zrelay6_mode_not	NULL
+	LEAF	" "	NO_CODE			true			NULL	OMIT_VALUE
+	LEAF	""	PC_USAGE_RELAY7	true			NULL
+	LEAF	""	PC_DO_MODE7		zrelay7_mode		select
+	LEAF	""	T4_RELAYSTAT7	zrelay7_mode		NULL
+	LEAF	""	PC_DO_VAL7		zrelay7_mode_not	NULL
+	LEAF	" "	NO_CODE			true			NULL	OMIT_VALUE
+	LEAF	""	PC_USAGE_RELAY8	true			NULL
+	LEAF	""	PC_DO_MODE8		zrelay8_mode		select
+	LEAF	""	T4_RELAYSTAT8	zrelay8_mode		NULL
+	LEAF	""	PC_DO_VAL8		zrelay8_mode_not	NULL
+	LEAF	" "	NO_CODE			true			NULL	OMIT_VALUE
+	LEAF	""	T3_EMERGENCY_OFF true			NULL
+ENDMENU
+MENU	"Backwash Active Triggers"	true
+	LEAF	""	T4_BW_TURB_TRIGGER_EN	true					NULL	OMIT_LINE
+	LEAF	""	T4_TURB_END_BW_EN		true					NULL	OMIT_LINE
+	LEAF	""	PC_BW_TIMER_EN			true					NULL	OMIT_LINE
+	LEAF	""	T4_BW_PSI_TRIGGER_EN	true					NULL	OMIT_LINE
+	LEAF	""	T4_BW_FLOW_TRIGGER_EN	true					NULL	OMIT_LINE
+	LEAF	""	T4_BW_VOL_TRIGGER_EN	true					NULL	OMIT_LINE
+	LEAF	""	PC_BW_TIMER_EN			true					NULL	OMIT_LINE
+	LEAF	""	T2_BW_TURB_TRIGGER_PT	bw_turb_trigstart_en	value_in
+	LEAF	""	PC2_AUXIN1				bw_turb_trigstart_en	NULL
+	LEAF	""	T2_BW_PSI_TRIGGER_PT	bw_psi_trigger_en		value_in
+	LEAF	""	T2_FILTER_DIFF			bw_psi_trigger_en		NULL
+	LEAF	""	T2_BW_FLOW_TRIGGER_PT 	bw_flow_trigger_en		value_in
+	LEAF	""	T4_FLOW_RATE 			bw_flow_trigger_en		NULL
+	LEAF	""	T4_BW_VOL_TRIG_INC_3	bw_vol_trigger_en		NULL	OMIT_LINE
+	LEAF	""	T4_BW_VOL_TRIG_INC_2 	bw_vol_trigger_en		value_in
+	LEAF	""	PC_BW_TIMER_EN			true					NULL	OMIT_LINE
+	MENU	"Timers"	bw_timer_en
+		LEAF	""	PC_ETIWD21		true	sel_wd
+		LEAF	""	PC_ETITM21		true	value_in
+		LEAF	""	PC_ETIWD22		true	sel_wd
+		LEAF	""	PC_ETITM22		true	value_in
+		LEAF	""	PC_ETIWD23		true	sel_wd
+		LEAF	""	PC_ETITM23		true	value_in
+		LEAF	""	PC_ETIWD24		true	sel_wd
+		LEAF	""	PC_ETITM24		true	value_in
+	ENDMENU
+ENDMENU
+MENU	"Advanced Programming"	true
+	MENU	"Preamp Inputs"	true
+		MENU	"pH Setup"	true
+			LEAF	""	T2_MAIN1_HIGH	true	value_in
+			LEAF	""	T2_MAIN1_LOW	true	value_in
+		ENDMENU
+		MENU	"ORP Setup"	true
+			LEAF	""	T2_MAIN2_HIGH	true	value_in
+			LEAF	""	T2_MAIN2_LOW	true	value_in
+		ENDMENU
+		MENU	"TDS Setup"	true
+			LEAF	""	T2_MAINCOND_HIGH	true	value_in
+			LEAF	""	T2_MAINCOND_LOW		true	value_in
+		ENDMENU
+		MENU	"Temperature Setup"	true
+			LEAF	""	T2_MAINTEMP_HIGH	true	value_in
+			LEAF	""	T2_MAINTEMP_LOW		true	value_in
+		ENDMENU
+		MENU	"Input Averaging"	true	SEC=rep
+			LEAF	""	T4_COND_RINGBUF_MAX	true	value_in
+			LEAF	""	T4_GEN_RINGBUF_MAX	true	value_in
+		ENDMENU
+		MENU	"AQI"	true
+			LEAF	""	T2_AQI_HIGH_PT		true	value_in	SSEC=rep
+			LEAF	""	T2_AQI_LOW_PT		true	value_in	SSEC=rep
+		ENDMENU
+	ENDMENU
+	MENU	"Other Inputs"	true
+		MENU	"Filter Pressure"	true
+			LEAF	""	T2_FILTER_DIFF_HIGH		true	value_in
+			LEAF	""	T2_FILTER_DIFF			true		NULL
+			LEAF	""	PC_FILTER_PRES_SCALE	true	value_in	SEC=rep
+		ENDMENU
+		MENU	"Turbidity"	turbrep
+			LEAF	""	T3_TURBIDITY		true				select		SSEC=rep
+			LEAF	""	PC2_AUXIN1_HIGH_ALM	turbidity_input		value_in
+			LEAF	""	PC2_AUXIN1			turbidity_input		NULL
+			LEAF	""	PC_TURB_SCALE		turbidity_input		value_in	SSEC=rep
+		ENDMENU
+		MENU	"pH Inv"	ph_inv_rep
+			LEAF	""	PC_PH_INV_MODE		true				select		SSEC=rep
+			LEAF	""	PC4_AUXIN2_USAGE	ph_inv_420ma_sens	select		SSEC=rep
+			LEAF	""	PC2_AUXIN2_LOW_ALM	ph_inv_420ma_sens	value_in
+			LEAF	""	PC2_AUXIN2			ph_inv_420ma_sens	NULL
+			LEAF	""	PC_PH_INV_SCALE		ph_inv_420ma_sens	value_in	SSEC=rep
+		ENDMENU
+		MENU	"Chlorine Inv"	cl_inv_rep
+			LEAF	""	PC_CL_INV_MODE		true				select		SSEC=rep
+			LEAF	""	PC4_AUXIN3_USAGE	cl_inv_420ma_sens	select		SSEC=rep
+			LEAF	""	PC2_AUXIN3_LOW_ALM	cl_inv_420ma_sens	value_in
+			LEAF	""	PC2_AUXIN3			cl_inv_420ma_sens	NULL
+			LEAF	""	PC_CL_INV_SCALE		cl_inv_420ma_sens	value_in	SSEC=rep
+		ENDMENU
+		MENU	"Surge Pit Level"	srg_rep
+			LEAF	""	PC_SRG_LVL_MODE		true				select		SSEC=rep
+			LEAF	""	PC2_AUXIN4_LOW_ALM	srg_420ma_sens		value_in
+			LEAF	""	PC2_AUXIN4_HIGH_ALM	srg_420ma_sens		value_in
+			LEAF	""	PC2_AUXIN4			srg_420ma_sens		NULL
+			LEAF	""	PC_SURGE_SCALE		srg_420ma_sens		value_in	SSEC=rep
+		ENDMENU
+		MENU	"Strainer Out"	true	strainer_rep
+			LEAF	""	T3_STRAINER_OUT		true			select		SSEC=rep
+			LEAF	""	T2_PSI3_HIGH		strainer_out	value_in
+			LEAF	""	T2_PSI3				strainer_out	NULL
+		ENDMENU
+	ENDMENU
+	MENU	"Relay Outputs"	true
+		MENU	"pH Control"	true
+			LEAF	""	T4_CTRL_STYLE_PH1	true		select
+			LEAF	""	T2_FEEDPT_PH1		true		value_in
+			LEAF	""	T2_MAIN1			true		NULL
+			LEAF	""	T4_FEEDLIMIT_PH1	true		value_in
+			LEAF	""	T4_FEEDDIR_PH1		true		select
+			LEAF	""	T2_SPAN_PH1			ctrl1_tbp	value_in
+			LEAF	""	T4_TBP_PERIOD_PH1	ctrl1_tbp	value_in
+		ENDMENU
+		MENU	"ORP Control"	true
+			LEAF	""	T4_CTRL_STYLE_HRR1	true		select
+			LEAF	""	T2_AQI_REFERENCE	true		value_in	SSEC=rep
+			LEAF	""	T2_MAIN2			true		NULL
+			LEAF	""	T4_PH_LOCKOUT		true		select	SSEC=manager
+			LEAF	""	T4_FEEDLIMIT_HRR1	true		value_in
+			LEAF	""	T2_SPAN_HRR1		ctrl2_tbp	value_in
+			LEAF	""	T4_TBP_PERIOD_HRR1	ctrl2_tbp	value_in
+		ENDMENU
+		MENU	"Temperature Control"	true
+			LEAF	""	T2_FEEDPT_HTR			true		value_in
+			LEAF	""	T2_MAINTEMP				true		NULL
+			LEAF	""	T4_FEEDLIMIT_HTR		true		value_in
+			LEAF	""	PC_HTR1_RC_DUR	   		true		value_in
+			MENU	"Alternate Temperature"		true
+				LEAF	""	PC_HTR1_ALT_SETPT		true	value_in
+				LEAF	""	PC_ETIWD31		true	sel_wd
+				LEAF	""	PC_ETITM31		true	value_in
+				LEAF	""	PC_ETDUR31		true	value_in
+				LEAF	""	PC_ETIWD32		true	sel_wd
+				LEAF	""	PC_ETITM32		true	value_in
+				LEAF	""	PC_ETDUR32		true	value_in
+				LEAF	""	PC_ETIWD33		true	sel_wd
+				LEAF	""	PC_ETITM33		true	value_in
+				LEAF	""	PC_ETDUR33		true	value_in
+				LEAF	""	PC_ETIWD34		true	sel_wd
+				LEAF	""	PC_ETITM34		true	value_in
+				LEAF	""	PC_ETDUR34		true	value_in
+			ENDMENU
+		ENDMENU
+		MENU	"Sensor Wash"	sensorwashrep
+			LEAF	""	PC_USAGE_RELAY7		true		NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY8		true		NULL	OMIT_LINE
+			LEAF	""	PC_PROBEWASH_RELAY	true		select	SSEC=rep
+			LEAF	""	PC_SWASH_WD1	sensor_wash		sel_wd
+			LEAF	""	PC_SWASH_HM1	sensor_wash		value_in
+			LEAF	""	PC_SWASH_DUR1	sensor_wash		value_in
+			LEAF	""	PC_SWASH_WD2	sensor_wash		sel_wd
+			LEAF	""	PC_SWASH_HM2	sensor_wash		value_in
+			LEAF	""	PC_SWASH_DUR2	sensor_wash		value_in
+			LEAF	""	PC_SWASH_WD3	sensor_wash		sel_wd
+			LEAF	""	PC_SWASH_HM3	sensor_wash		value_in
+			LEAF	""	PC_SWASH_DUR3	sensor_wash		value_in
+			LEAF	""	PC_SWASH_WD4	sensor_wash		sel_wd
+			LEAF	""	PC_SWASH_HM4	sensor_wash		value_in
+			LEAF	""	PC_SWASH_DUR4	sensor_wash		value_in
+		ENDMENU
+		MENU	"ORP Enhancer"	enh_feedrep
+			LEAF	""	PC_USAGE_RELAY7		true		NULL		OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY8		true		NULL		OMIT_LINE
+			LEAF	""	PC_ENH_RELAY		true		select		SSEC=rep
+			LEAF	""	T4_ENH_WAIT_DUR		enh_feed	value_in	SSEC=manager
+			LEAF	""	T4_ENH_REPEAT_FREQ	enh_feed	value_in	SSEC=manager
+			LEAF	""	T4_ENH_FEEDER_SEL	enh_feed	select		SSEC=manager
+			LEAF	""	T2_ENH_FEEDER_SET	enh_feed	value_in	SSEC=manager
+			LEAF	""	T4_ENH_DOSAGE		enh_feed	select		SSEC=manager
+			LEAF	""	T6_GAL				enh_feed	value_in	SSEC=manager
+		ENDMENU
+		MENU	"Autofill"	autofillrep
+			LEAF	""	PC_USAGE_RELAY7			true				NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY8			true				NULL	OMIT_LINE
+			LEAF	""	PC_AUTOFILL_RELAY		true				select	SSEC=rep
+			LEAF	""	T2_FEEDPT_AUTOFILL		autofill_feed		value_in
+			LEAF	""	PC2_AUXIN4				autofill_feed		NULL
+			LEAF	""	T2_HYST_AUTOFILL		autofill_feed		value_in	SSEC=rep
+			LEAF	""	T4_FEEDLIMIT_AUTOFILL	autofill_feed		value_in
+		ENDMENU
+		MENU	"Polymer Control"	polyrep
+			LEAF	""	PC_USAGE_RELAY7		true		NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY8		true		NULL	OMIT_LINE
+			LEAF	""	PC_POLYMER_RELAY	true			select		SSEC=rep
+			LEAF	""	T2_FEEDPT_POLYHIGH	polymer_feed	value_in
+			LEAF	""	T2_FEEDPT_POLYLOW 	polymer_feed	value_in
+			LEAF	""	PC2_AUXIN1			polymer_feed	NULL
+			LEAF	""	T4_POLY_ON_DUR		polymer_feed	value_in	SSEC=FACTORY
+			LEAF	""	T4_POLY_FEEDLIMIT	polymer_feed	value_in
+		ENDMENU
+		MENU	"Filter Backwash"	true
+			LEAF	""	PC_BW_LAST_DATE			bwdateset	NULL
+			LEAF	""	PC_BW_LAST_TIME			bwdateset	NULL
+			LEAF	""	T4_BW_END_TRIG_TYPE		bwdateset	NULL
+			LEAF	""	T4_BW_TRIGGER_TYPE		bwdateset	NULL
+			LEAF	""	PC_BW_NUM_FILTERS		true		value_in
+			LEAF	""	T4_BW_FREQ_FS_DUR		true		value_in
+			LEAF	""	PC_BW_MTR_DW_CNT		true		value_in	SEC=rep
+			LEAF	""	PC_BW_PRES_PMP_DELAY	true		value_in
+			MENU	"Filter Timing"		true
+				LEAF	""	PC_BW_NUM_FILTERS		true		NULL		OMIT_LINE
+				LEAF	""	PC_BW_FLTR1_ON_DUR		true		value_in
+				LEAF	""	PC_BW_FLTR1_DWELL_DUR	true		value_in
+				LEAF	""	PC_BW_FLTR2_ON_DUR		zfilter2		value_in
+				LEAF	""	PC_BW_FLTR2_DWELL_DUR	zfilter2		value_in
+				LEAF	""	PC_BW_FLTR3_ON_DUR		zfilter3		value_in
+				LEAF	""	PC_BW_FLTR3_DWELL_DUR	zfilter3		value_in
+				LEAF	""	PC_BW_FLTR4_ON_DUR		zfilter4		value_in
+				LEAF	""	PC_BW_FLTR4_DWELL_DUR	zfilter4		value_in
+				LEAF	""	PC_BW_FLTR5_ON_DUR		zfilter5		value_in
+				LEAF	""	PC_BW_FLTR5_DWELL_DUR	zfilter5		value_in
+				LEAF	""	PC_BW_FLTR6_ON_DUR		zfilter6		value_in
+				LEAF	""	PC_BW_FLTR6_DWELL_DUR	zfilter6		value_in
+				LEAF	""	PC_BW_FLTR7_ON_DUR		zfilter7		value_in
+				LEAF	""	PC_BW_FLTR7_DWELL_DUR	zfilter7		value_in
+				LEAF	""	PC_BW_FLTR8_ON_DUR		zfilter8		value_in
+				LEAF	""	PC_BW_FLTR8_DWELL_DUR	zfilter8		value_in
+			ENDMENU
+			MENU	"Turbidity Settings"		turbidity_input
+				LEAF	""	T4_BW_TURB_TRIGGER_EN	true					select
+				LEAF	""	T2_BW_TURB_TRIGGER_PT	bw_turb_trigstart_en	value_in
+				LEAF	""	T4_BW_TURB_START_DUR	bw_turb_trigstart_en	value_in
+				LEAF	""	T4_TURB_END_BW_EN		true					select
+				LEAF	""	T2_TURB_END_BW_TRIG_PT	bw_turb_trigstop_en		value_in
+				LEAF	""	T4_TURB_END_BW_DUR		bw_turb_trigstop_en		value_in
+			ENDMENU
+			MENU	"Timer Settings"		true
+				LEAF	""	PC_BW_TIMER_EN	true			select
+				LEAF	""	PC_ETIWD21		bw_timer_en		sel_wd
+				LEAF	""	PC_ETITM21		bw_timer_en		value_in
+				LEAF	""	PC_ETIWD22		bw_timer_en		sel_wd
+				LEAF	""	PC_ETITM22		bw_timer_en		value_in
+				LEAF	""	PC_ETIWD23		bw_timer_en		sel_wd
+				LEAF	""	PC_ETITM23		bw_timer_en		value_in
+				LEAF	""	PC_ETIWD24		bw_timer_en		sel_wd
+				LEAF	""	PC_ETITM24		bw_timer_en		value_in
+			ENDMENU
+			MENU	"Pressure Settings"		true
+				LEAF	""	T4_BW_PSI_TRIGGER_EN		true		select
+				LEAF	""	T2_BW_PSI_TRIGGER_PT		bw_psi_trigger_en	value_in
+			ENDMENU
+			MENU	"Flow Rate Settings"		flow_enabled
+				LEAF	""	T4_BW_FLOW_TRIGGER_EN		true		select
+				LEAF	""	T2_BW_FLOW_TRIGGER_PT		bw_flow_trigger_en	value_in
+			ENDMENU
+			MENU	"Flow Volume Settings"		flow_enabled
+				LEAF	""	T4_BW_VOL_TRIGGER_EN		true	select
+				LEAF	""	T4_BW_VOL_TRIG_INC_3		bw_vol_trigger_en	NULL	OMIT_LINE
+				LEAF	""	T4_BW_VOL_TRIG_INC_2		bw_vol_trigger_en	value_in
+			ENDMENU
+			MENU	"Inhibit BW Start"		true
+				LEAF	""	PC_BW_INHIBIT_EN			true	select
+				LEAF	""	PC_BW_INHIBIT_START			bw_inhibit_en	value_in
+				LEAF	""	PC_BW_INHIBIT_END			bw_inhibit_en	value_in
+			ENDMENU
+		ENDMENU
+	ENDMENU
+	MENU	"Energy Saver"	true
+		LEAF	""	PC_RC_NRG_EN		true				select
+		LEAF	""	PC_RC_NRG_DUR		energysaver			value_in
+		LEAF	""	T4_NRG_SDELAY_DUR	energysaver			value_in
+		LEAF	""	PC_ETIWD11			true				sel_wd
+		LEAF	""	PC_ETITM11			true				value_in
+		LEAF	""	PC_ETDUR11			true				value_in
+		LEAF	""	PC_ETIWD12			true				sel_wd
+		LEAF	""	PC_ETITM12			true				value_in
+		LEAF	""	PC_ETDUR12			true				value_in
+		LEAF	""	PC_ETIWD13			true				sel_wd
+		LEAF	""	PC_ETITM13			true				value_in
+		LEAF	""	PC_ETDUR13			true				value_in
+		LEAF	""	PC_ETIWD14			true				sel_wd
+		LEAF	""	PC_ETITM14			true				value_in
+		LEAF	""	PC_ETDUR14			true				value_in
+	ENDMENU
+	MENU	"Calculations"	true
+		MENU	"LSI"	true
+			LEAF	""	T4_LSI_DATE		dsg_rec		NULL
+			LEAF	""	T4_LSI			dsg_rec		NULL
+			LEAF	""	T4_RSI			dsg_rec		NULL
+			LEAF	""	T4_CA			dsg_rec		NULL
+			LEAF	""	T4_TA			dsg_rec		NULL
+			LEAF	""	T4_TDS			tds_dsg_rec	NULL
+			LEAF	""	T2_TEMP_INSTNS	dsg_rec		NULL
+			LEAF	""	T2_PH_INSTNS	dsg_rec		NULL
+			MENU	"Enter Other Parameters"	true
+				LEAF	""	T3_TDS				true	select
+				LEAF	""	T6_GAL				true	value_in
+			ENDMENU
+		ENDMENU
+		MENU	"Dosage"	dsg_rec
+				LEAF	"Recommendations"	NO_CODE			isNotBalanced	NULL	OMIT_VALUE
+				LEAF	"Pool is balanced"	NO_CODE			isBalanced		NULL	OMIT_VALUE
+				LEAF	""					T4_TA_MRTC_DSG	mrtc_dsg		NULL
+				LEAF	""					T4_TA_BCBNT_DSG	bcbnt_dsg		NULL
+				LEAF	"OR"				NO_CODE			dsg_or	NULL	OMIT_VALUE
+				LEAF	""					T4_CA_CACL_DSG	cacl_dsg		NULL
+		ENDMENU
+	ENDMENU
+	MENU	"System Configuration"	true
+		LEAF	""	PC_CDATE		true		value_in	!MT_ONLY
+		LEAF	""	PC_CTIME		true		value_in	!MT_ONLY
+		LEAF	""	PC_CUSTNAME		true		value_in	!MT_ONLY
+		LEAF	""	PC_LOCATION		true		value_in	!MT_ONLY
+		LEAF	""	PC_SYS_ID		true		value_in	!MT_ONLY
+		LEAF	""	T4_US_METRIC_UNITS	true	select		!MT_ONLY
+		LEAF	""	PC_DATE_FORMAT		true	select		!MT_ONLY
+		MENU	"Communication Setup"	true
+			MENU	"Baud Rates"	true
+				LEAF	""	PC_COMMBAUD		true	select
+				LEAF	""	PC_MODEMBAUD	true	select
+			ENDMENU
+			MENU	"Call Out Setup"	true
+				LEAF	""	PC_CALLOUT_EN		true		select
+				LEAF	""	PC_CALL_START		callout		value_in
+				LEAF	""	PC_CALL_END			callout		value_in
+				LEAF	""	PC_CALLOUT0_DELAY	callout		value_in
+				LEAF	""	PC_PHONE1			callout		value_in
+				LEAF	""	PC_CALLOUT_TYPE1	callout		select
+				LEAF	""	PC_CALLOUT1_DELAY	callout		value_in
+				LEAF	""	PC_PHONE2			callout		value_in
+				LEAF	""	PC_CALLOUT_TYPE2	callout		select
+				LEAF	""	PC_CALLOUT2_DELAY	callout		value_in
+				LEAF	""	PC_PHONE3			callout		value_in
+				LEAF	""	PC_CALLOUT_TYPE3	callout		select
+				LEAF	""	PC_CALLOUT3_DELAY	callout		value_in
+				LEAF	""	PC_PHONE4			callout		value_in
+				LEAF	""	PC_CALLOUT_TYPE4	callout		select
+				LEAF	""	PC_CALLOUT4_DELAY	callout		value_in
+				LEAF	""	PC_PHONE5			callout		value_in
+				LEAF	""	PC_CALLOUT_TYPE5	callout		select
+				LEAF	""	PC_CALLOUT5_DELAY	callout		value_in
+				LEAF	""	PC_PHONE6			callout		value_in
+				LEAF	""	PC_CALLOUT_TYPE6	callout		select
+				LEAF	""	PC_CALLOUT6_DELAY	callout		value_in
+				LEAF	""	PC_PHONE7			callout		value_in
+				LEAF	""	PC_CALLOUT_TYPE7	callout		select
+				LEAF	""	PC_CALLOUT7_DELAY	callout		value_in
+				LEAF	""	PC_PHONE8			callout		value_in
+				LEAF	""	PC_CALLOUT_TYPE8	callout		select
+				LEAF	""	PC_CALLOUT8_DELAY	callout		value_in
+				LEAF	""	PC_PHONE9			callout		value_in
+				LEAF	""	PC_CALLOUT_TYPE9	callout		select
+				LEAF	""	PC_CALLOUT9_DELAY	callout		value_in
+				LEAF	""	PC_PHONE10			callout		value_in
+				LEAF	""	PC_CALLOUT_TYPE10	callout		select
+				LEAF	""	PC_CALLOUT10_DELAY	callout		value_in
+				LEAF	""	PC_PHONE11			callout		value_in
+				LEAF	""	PC_CALLOUT_TYPE11	callout		select
+				LEAF	""	PC_CALLOUT11_DELAY	callout		value_in
+				LEAF	""	PC_PHONE12			callout		value_in
+				LEAF	""	PC_CALLOUT_TYPE12	callout		select
+				LEAF	""	PC_CALLOUT12_DELAY	callout		value_in
+			ENDMENU
+		ENDMENU
+		MENU	"Data Logging"	true
+			LEAF	""	PC_N_LORES		true	select	SSEC=rep
+		ENDMENU
+		MENU	"User Setup"	true 	SEC=manager	!MT_ONLY
+			MENU	"Operator Access Codes"	true
+				LEAF	""	T4_OP1_CODE		true		value_in
+				LEAF	""	T4_OP2_CODE		true		value_in
+				LEAF	""	T4_OP3_CODE		true		value_in
+				LEAF	""	T4_OP4_CODE		true		value_in
+				LEAF	""	T4_OP5_CODE		true		value_in
+				LEAF	""	T4_OP6_CODE		true		value_in
+			ENDMENU
+			MENU	"Manager Access Codes"	true	SEC=rep
+				LEAF	""	T4_MGR1_CODE	true	value_in
+				LEAF	""	T4_MGR2_CODE	true	value_in
+			ENDMENU
+			MENU	"Rep Access Code"	true	SEC=rep
+				LEAF	""	T4_REP_CODE		true	value_in
+			ENDMENU
+		ENDMENU
+	ENDMENU
+ENDMENU

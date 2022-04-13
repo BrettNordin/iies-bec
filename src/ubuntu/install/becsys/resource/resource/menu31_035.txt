@@ -1,0 +1,394 @@
+LEAF	""			T4_CHEM_SELECT		true			NULL		OMIT_LINE		!MT_ONLY
+LEAF	""			T3_SHOW_CL			true			NULL		OMIT_LINE		!MT_ONLY
+LEAF	""			PC_CDATE			true		   	value_in					!MT_ONLY
+LEAF	""			PC_CTIME			true		   	value_in					!MT_ONLY
+LEAF	""			T3_SYSFLOW			true		   	NULL						!MT_ONLY
+LEAF	""			T2_PH				true		   	NULL						!MT_ONLY
+LEAF	""			T2_HRR				true		   	NULL						!MT_ONLY
+LEAF	"Chlorine"	T2_CL				showcl		   	NULL						!MT_ONLY
+LEAF	"Bromine"	T2_CL				showbr		   	NULL						!MT_ONLY
+LEAF	""			T2_TEMP				true		   	NULL						!MT_ONLY
+LEAF	""			T4_LAG_TIME			true		   	NULL						!MT_ONLY
+LEAF	""			PC_NUM_ALARMS		true		   	NULL	FORMAT=ALARM		!MT_ONLY
+LEAF	""			PC_SYSTYPE			true			NULL						!SR_ONLY
+LEAF	""			PC_PROG_VER			true			NULL						!SR_ONLY
+LEAF	""			PC_SYS_ID			true			NULL						!SR_ONLY
+LEAF	""			PC_CUSTNAME			true			NULL						!SR_ONLY
+LEAF	""			PC_LOCATION			true			NULL						!SR_ONLY
+LEAF	""			PC_CDATE			true			NULL						!SR_ONLY
+LEAF	""			PC_CTIME			true			NULL						!SR_ONLY
+LEAF	""			PC_DATE_FORMAT		true			NULL						!SR_ONLY
+LEAF	""			PC_US_METRIC_UNITS	true			NULL						!SR_ONLY
+LEAF	""			PC_N_LORES			true			NULL						!SR_ONLY
+LEAF	""			PC_DT_RESET			true			NULL						!SR_ONLY
+LEAF	""			PC_HM_RESET			true			NULL						!SR_ONLY
+MENU	"Alarms"	true
+	LEAF	""					T4_CHEM_SELECT	true	NULL		OMIT_LINE		!MT_ONLY
+	LEAF	""					T3_PH_HIGH				true		NULL	FORMAT=ALARM
+	LEAF	""					T3_PH_LOW				true		NULL	FORMAT=ALARM
+	LEAF	""					T3_PH_FS_ALARM			true		NULL	FORMAT=ALARM
+	LEAF	""					T3_HRR_HIGH				true		NULL	FORMAT=ALARM
+	LEAF	""					T3_HRR_LOW				true		NULL	FORMAT=ALARM
+	LEAF	""					T3_HRR_FS_ALARM			true		NULL	FORMAT=ALARM
+	LEAF	"Cl Relay Locked"	T3_CL_RELAY_LOCKED		chlorine	NULL	FORMAT=ALARM
+	LEAF	"Cl High"			T3_CL_HIGH				chlorine	NULL	FORMAT=ALARM
+	LEAF	"Cl Low"			T3_CL_LOW				chlorine	NULL	FORMAT=ALARM
+	LEAF	"Br Relay Locked"	T3_CL_RELAY_LOCKED		bromine		NULL	FORMAT=ALARM
+	LEAF	"Br High"			T3_CL_HIGH				bromine		NULL	FORMAT=ALARM
+	LEAF	"Br Low"			T3_CL_LOW				bromine		NULL	FORMAT=ALARM
+	LEAF	""					T3_TEMP_HIGH			true		NULL	FORMAT=ALARM
+	LEAF	""					T3_TEMP_LOW				true		NULL	FORMAT=ALARM
+	LEAF	""					T3_LOW_SANITATION_ALARM	true		NULL	FORMAT=ALARM
+	LEAF	""					T3_HIGH_DEMAND_ALARM	true		NULL	FORMAT=ALARM
+	LEAF	""					T3_LAG_TIME_ALARM		true		NULL	FORMAT=ALARM
+	LEAF	""					T3_NO_FLOW_ALM			true		NULL	FORMAT=ALARM
+ENDMENU
+MENU	"Hydrolyser Maintenance"	hyd_maint
+	LEAF	""	T3_HYD_AG_RUNTIME	hyd_ag_runtime		NULL	OMIT_VALUE
+	LEAF	""	T3_HYD_ROC_RUNTIME	hyd_roc_runtime		NULL	OMIT_VALUE
+	LEAF	""	T3_HYD_GAC_RUNTIME	hyd_gac_runtime		NULL	OMIT_VALUE
+	LEAF	""	T3_HYD_FIL_RUNTIME	hyd_fil_runtime		NULL	OMIT_VALUE
+	LEAF	""	T3_HYD_BP_RUNTIME	hyd_bp_runtime		NULL	OMIT_VALUE
+	LEAF	""	T3_HYD_GS_RUNTIME	hyd_gs_runtime		NULL	OMIT_VALUE
+	LEAF	""	T3_HYD_GP_RUNTIME	hyd_gp_runtime		NULL	OMIT_VALUE
+ENDMENU
+MENU	"Set Points"	true
+	MENU	"Feed Set Points"	true
+		LEAF	""	T4_CHEM_SELECT	true	NULL		OMIT_LINE		!MT_ONLY
+		LEAF	""	T3_MIN_CL_EN	true	NULL		OMIT_LINE		!MT_ONLY
+		LEAF	""	T7_AOT_MODE		true	NULL		OMIT_LINE		!MT_ONLY
+		LEAF	""					T2_PH_FEEDPT		true			value_in
+		LEAF	""					T2_HRR_FEEDPT		rep				value_in
+		LEAF	""					T2_CL_LS_FEEDPT		not_aot		 	value_in
+		LEAF	""					T2_CL_LS_AOT_FEEDPT	aot_mode		value_in
+		LEAF	""					T2_CL_HD_FEEDPT		true			value_in
+		LEAF	"Min Cl Set Point"	T2_CL_FEEDPT		min_cl			value_in
+		LEAF	"Min Br Set Point"	T2_CL_FEEDPT		min_br			value_in
+	ENDMENU
+	MENU	"Alarm Set Points"	true
+		LEAF	""	T4_CHEM_SELECT	true	NULL		OMIT_LINE		!MT_ONLY
+		LEAF	""					T2_PH_HIGH_PT			true		value_in
+		LEAF	""					T2_PH_LOW_PT			true		value_in
+		LEAF	""					T2_HRR_HIGH_PT			true		value_in
+		LEAF	""					T2_HRR_LOW_PT			true		value_in
+		LEAF	"Cl High Alarm pt"	T2_CL_HIGH_PT			chlorine	value_in
+		LEAF	"Cl Low Alarm pt"	T2_CL_LOW_PT			chlorine	value_in
+		LEAF	"Br High Alarm pt"	T2_CL_HIGH_PT			bromine		value_in
+		LEAF	"Br Low Alarm pt"	T2_CL_LOW_PT			bromine		value_in
+		LEAF	""					T2_TEMP_HIGH_PT			true		value_in
+		LEAF	""					T2_TEMP_LOW_PT			true		value_in
+	ENDMENU
+ENDMENU
+MENU	"Relay Settings"		true
+	LEAF	""	PC_USAGE_RELAY1	true	NULL
+	LEAF	""	PC_DO_MODE1		true	select
+	LEAF	""	PC_DO_STAT1		true	NULL
+	LEAF	" "	NO_CODE			true	NULL	OMIT_VALUE
+	LEAF	""	PC_USAGE_RELAY2	true	NULL
+	LEAF	""	PC_DO_MODE2		true	select
+	LEAF	""	PC_DO_STAT2		true	NULL
+	LEAF	" "	NO_CODE			true	NULL	OMIT_VALUE
+	LEAF	""	PC_USAGE_RELAY3	true	NULL
+	LEAF	""	PC_DO_MODE3		true	select
+	LEAF	""	PC_DO_STAT3		true	NULL
+	LEAF	" "	NO_CODE			true	NULL	OMIT_VALUE
+	LEAF	""	PC_USAGE_RELAY4	true	NULL
+	LEAF	""	PC_DO_MODE4		true	select
+	LEAF	""	PC_DO_STAT4		true	NULL
+ENDMENU
+MENU	"Main Menu"	true
+	MENU	"Control Settings"	true
+		MENU	"pH Setup"	true
+			LEAF	""	T2_PH_HIGH_PT		true		value_in
+			LEAF	""	T2_PH_LOW_PT		true		value_in
+			LEAF	""	T2_PH_DIFF			true		value_in		SSEC=factory
+			LEAF	""	T4_PH_SCALE			true		select			SEC=factory
+			LEAF	""	T4_PH_CTRL_STYLE	true		select			SSEC=rep
+			LEAF	""	T2_PH_FEEDPT		true		value_in
+			LEAF	""	T4_PH_FS_PT			true		value_in
+			LEAF	""	T4_PH_FEEDDIR		true		select			SSEC=rep
+			LEAF	""	T2_PH_TBP_SPAN		ctrl1_tbp	value_in
+			LEAF	""	T4_PH_TBP_PERIOD	ctrl1_tbp	value_in
+			LEAF	""	T4_PH_LOCKOUT		true		select
+		ENDMENU
+		MENU	"ORP Setup"	true
+			LEAF	""	T2_HRR_HIGH_PT		true		value_in
+			LEAF	""	T2_HRR_LOW_PT		true		value_in
+			LEAF	""	T2_HRR_DIFF			true		value_in		SSEC=factory
+			LEAF	""	T2_HRR_FEEDPT		true		value_in
+			LEAF	""	T4_HRR_FS_PT		true		value_in
+			LEAF	""	T2_HRR_TBP_SPAN		true		value_in
+			LEAF	""	T4_HRR_TBP_PERIOD	true		value_in
+			MENU	"ORP Span Compensation Setup"	true
+				LEAF	""	T2_SPAN_COMP_INC		true		value_in		SSEC=rep
+				LEAF	""	T2_SPAN_COMP_MAX		true		value_in		SSEC=rep
+				LEAF	""	T4_SPAN_COMP_LAG_MULT	true		value_in		SSEC=rep
+				LEAF	""	T4_SPAN_COMP_MULT		true		value_in		SSEC=rep
+			ENDMENU
+		ENDMENU
+		MENU	"Cl Setup"	chlorine
+			LEAF	""	T7_AOT_MODE	true	NULL		OMIT_LINE		!MT_ONLY
+			LEAF	""					T4_CHEM_SELECT		true				select
+			LEAF	""					T4_CL_HOCL_MULT		true				NULL		SEC=factory
+			LEAF	"Cl High Alarm pt"	T2_CL_HIGH_PT		true				value_in
+			LEAF	"Cl Low Alarm pt"	T2_CL_LOW_PT		true				value_in
+			LEAF	"Cl Alarm Hyst"		T2_CL_ALM_DIFF		true				value_in
+			LEAF	""					T2_CL_DIFF 			true				value_in
+			LEAF	""					T4_CL_SCALE			true				select		SEC=factory
+			LEAF	""					T3_SHOW_CL			true				select		SSEC=rep
+			LEAF	""					T3_ALLOW_CL_CAL		true				select
+			LEAF	""					T4_INTERLOCK_DUR	true				value_in	SSEC=factory
+			LEAF	""					T2_CL_LS_FEEDPT		not_aot		 		value_in
+			LEAF	""					T2_CL_LS_AOT_FEEDPT	aot_mode			value_in
+			LEAF	""					T2_CL_HD_FEEDPT		true				value_in
+			LEAF	"Min Cl Option"		T3_MIN_CL_EN		aot_mode			select
+			LEAF	"Min Cl Set Point"	T2_CL_FEEDPT		min_cl				value_in
+			LEAF	""					T4_CL_FEEDER_SEL	true				select		SSEC=rep
+			MENU	"Slurry w/pump"			slurry
+				LEAF	""	T2_CL_FEEDER_LBS	true	value_in		SSEC=rep
+				LEAF	""	T2_CL_FEEDER_GAL	true	value_in		SSEC=rep
+				LEAF	""	T2_CL_FEEDER_GPD	true	value_in		SSEC=rep
+				LEAF	""	T2_CL_FEEDER_SET	true	value_in		SSEC=rep
+			ENDMENU
+			LEAF	"" T2_CL_FEEDER_LBSPERDAY	alt_cl_pump		value_in		SSEC=rep
+		ENDMENU
+		MENU	"Br Setup"	bromine
+			LEAF	""	T7_AOT_MODE	true	NULL		OMIT_LINE		!MT_ONLY
+			LEAF	""					T4_CHEM_SELECT		true				select
+			LEAF	""					T4_CL_HOCL_MULT		true				NULL		SEC=factory
+			LEAF	"Br High Alarm pt"	T2_CL_HIGH_PT		true				value_in
+			LEAF	"Br Low Alarm pt"	T2_CL_LOW_PT		true				value_in
+			LEAF	"Br Alarm Hyst"		T2_CL_ALM_DIFF		true				value_in
+			LEAF	""					T2_CL_DIFF 			true				value_in
+			LEAF	""					T4_CL_SCALE			true				select		SEC=factory
+			LEAF	""					T3_SHOW_CL			true				select		SSEC=rep
+			LEAF	""					T3_ALLOW_CL_CAL		true				select
+			LEAF	""					T4_INTERLOCK_DUR	true				value_in	SSEC=factory
+			LEAF	""					T2_CL_LS_FEEDPT		not_aot		 		value_in
+			LEAF	""					T2_CL_LS_AOT_FEEDPT	aot_mode			value_in
+			LEAF	""					T2_CL_HD_FEEDPT		true				value_in
+			LEAF	"Min Br Option"		T3_MIN_CL_EN		aot_mode			select
+			LEAF	"Min Br Set Point"	T2_CL_FEEDPT		min_br				value_in
+			LEAF	""					T4_CL_FEEDER_SEL	true				select		SSEC=rep
+			MENU	"Slurry w/pump"			slurry
+				LEAF	""	T2_CL_FEEDER_LBS	true	value_in		SSEC=rep
+				LEAF	""	T2_CL_FEEDER_GAL	true	value_in		SSEC=rep
+				LEAF	""	T2_CL_FEEDER_GPD	true	value_in		SSEC=rep
+				LEAF	""	T2_CL_FEEDER_SET	true	value_in		SSEC=rep
+			ENDMENU
+			LEAF	"" T2_CL_FEEDER_LBSPERDAY	alt_cl_pump		value_in		SSEC=rep
+		ENDMENU
+		MENU	"Temperature Setup"	true
+			LEAF	""	T2_TEMP_HIGH_PT		true	value_in
+			LEAF	""	T2_TEMP_LOW_PT		true	value_in
+		ENDMENU
+		MENU	"ORP Enhancer Setup"			true
+			MENU	"Factor Table Setup"		true	SEC=factory
+				MENU	"Enhancer Dosage Factors" 	true
+					LEAF	""	T4_ENH_DOSAGE0		true	   value_in
+					LEAF	""	T4_ENH_DOSAGE1		true	   value_in
+					LEAF	""	T4_ENH_DOSAGE2		true	   value_in
+					LEAF	""	T4_ENH_DOSAGE3		true	   value_in
+					LEAF	""	T4_ENH_DOSAGE4		true	   value_in
+				ENDMENU
+				MENU	"Enhancer Repeat Cycles" 	true
+					LEAF	""	T4_ENH_CYCLES0		true	   value_in
+					LEAF	""	T4_ENH_CYCLES1		true	   value_in
+					LEAF	""	T4_ENH_CYCLES2		true	   value_in
+					LEAF	""	T4_ENH_CYCLES3		true	   value_in
+					LEAF	""	T4_ENH_CYCLES4		true	   value_in
+				ENDMENU
+				LEAF	""	T4_ENH_CYCLE		true	   value_in
+			ENDMENU
+			LEAF	""	T4_ENH_FEEDER_SEL	true			select
+			LEAF	""	T2_ENH_FEEDER_GPD	other_enh_pump	value_in
+			LEAF	""	T2_ENH_FEEDER_SET	true			value_in
+		ENDMENU
+		MENU	"ORP Ensurance Setup"		true
+			LEAF	""	T4_ENS_VAR			factory	   		value_in
+			LEAF	""	T4_ENS_FEEDER_SEL	true			select
+			LEAF	""	T2_ENS_FEEDER_GPD	other_ens_pump	value_in
+			LEAF	""	T2_ENS_FEEDER_SET	true			value_in
+			LEAF	""	T4_ENS_START		true			value_in
+		ENDMENU
+		MENU	"Hydrolyser Setup"		aot_mode
+			MENU	"Hydrolyser Targets"	true	SEC=factory
+				LEAF	""	T4_HYD_DOSAGE0		true	   value_in
+				LEAF	""	T4_HYD_DOSAGE1		true	   value_in
+				LEAF	""	T4_HYD_DOSAGE2		true	   value_in
+				LEAF	""	T4_HYD_DOSAGE3		true	   value_in
+				LEAF	""	T4_HYD_DOSAGE4		true	   value_in
+				LEAF	""	T4_HYD_DOSAGE5		true	   value_in
+			ENDMENU
+			LEAF	""	T4_HYD_CL_AVE_PERIOD	true			value_in	SSEC=rep
+			LEAF	""	T2_CIRC_RATE			true			value_in	SSEC=rep
+			LEAF	""	T2_HYD_FEEDER_GPH		true			value_in
+			LEAF	""	T2_HYD_FEEDER_SET		true			value_in
+			LEAF	""	T4_HYD_REACTANT_SEL		true			select
+			LEAF	""	T3_HYD_RUNNING			true			select
+			MENU	"Hydrolyser Component Maint."		true
+				LEAF	""	T4_HYD_AG_LIFE		true			value_in	SSEC=factory
+				LEAF	""	T4_HYD_AG_NOTIFY	true			value_in	SSEC=factory
+				LEAF	""	T4_HYD_AG_RUNTIME	true			NULL
+				LEAF	""	T4_HYD_ROC_LIFE		true			value_in	SSEC=factory
+				LEAF	""	T4_HYD_ROC_NOTIFY	true			value_in	SSEC=factory
+				LEAF	""	T4_HYD_ROC_RUNTIME	true			NULL
+				LEAF	""	T4_HYD_GAC_LIFE		true			value_in	SSEC=factory
+				LEAF	""	T4_HYD_GAC_NOTIFY	true			value_in	SSEC=factory
+				LEAF	""	T4_HYD_GAC_RUNTIME	true			NULL
+				LEAF	""	T4_HYD_FIL_LIFE		true			value_in	SSEC=factory
+				LEAF	""	T4_HYD_FIL_NOTIFY	true			value_in	SSEC=factory
+				LEAF	""	T4_HYD_FIL_RUNTIME	true			NULL
+				LEAF	""	T4_HYD_BP_LIFE		true			value_in	SSEC=factory
+				LEAF	""	T4_HYD_BP_NOTIFY	true			value_in	SSEC=factory
+				LEAF	""	T4_HYD_BP_RUNTIME	true			NULL
+				LEAF	""	T4_HYD_GS_LIFE		true			value_in	SSEC=factory
+				LEAF	""	T4_HYD_GS_NOTIFY	true			value_in	SSEC=factory
+				LEAF	""	T4_HYD_GS_RUNTIME	true			NULL
+				LEAF	""	T4_HYD_GP_LIFE		true			value_in	SSEC=factory
+				LEAF	""	T4_HYD_GP_NOTIFY	true			value_in	SSEC=factory
+				LEAF	""	T4_HYD_GP_RUNTIME	true			NULL
+			ENDMENU
+		ENDMENU
+		MENU	"Cleanliness Determination"		true
+			LEAF	""	T4_CLEAN_START		true		value_in	SSEC=rep
+		ENDMENU
+		MENU	"Lag Time"		true
+			LEAF	""	T4_LAG_AVERAGE	true				NULL
+		ENDMENU
+		MENU	"Flow Restored Feed Delay"		true
+			LEAF	""	T3_NO_FLOW_DELAY_EN		true			select
+			LEAF	""	T4_NO_FLOW_DELAY		noflowdelay		value_in
+		ENDMENU
+	ENDMENU
+	MENU	"LSI and Dosages Calculations"	true
+		MENU	"LSI"	lsigood
+			LEAF	""	T4_LSI_DATE		true		NULL
+			LEAF	""	T4_LSI			true		NULL
+			LEAF	""	T4_RSI			true		NULL
+			LEAF	""	T4_CA			true		NULL
+			LEAF	""	T4_TA			true		NULL
+			LEAF	""	T4_TDS			tds_dsg_rec	NULL
+		ENDMENU
+		MENU	"Dosage"	lsigood
+				LEAF	"Recommendations"	NO_CODE			isNotBalanced	NULL	OMIT_VALUE
+				LEAF	"Pool is balanced"	NO_CODE			isBalanced		NULL	OMIT_VALUE
+				LEAF	""					T4_TA_BCBNT_DSG	bcbnt_dsg		NULL
+				LEAF	""					T4_TA_MRTC_DSG	mrtc_dsg		NULL
+				LEAF	"OR"				NO_CODE			lsi_or			NULL	OMIT_VALUE
+				LEAF	""					T4_CA_CACL_DSG	cacl_dsg		NULL
+		ENDMENU
+		MENU	"Settings"	true
+			LEAF	""	T3_TDS				true	select
+			LEAF	""	T6_GAL				true	value_in	SSEC=rep	!MT_ONLY
+		ENDMENU
+	ENDMENU
+	MENU	"Installation Startup"	true	SEC=rep
+		LEAF	""	T4_ECS_MODE			true	NULL
+		LEAF	""	T6_GAL				true	value_in
+	ENDMENU
+	MENU	"System Configuration"	true
+		MENU	"Communication Setup"	true
+			MENU	"Baud Rates"	true
+				LEAF	""	PC_COMMBAUD		true	select
+				LEAF	""	PC_MODEMBAUD	true	select
+			ENDMENU
+			MENU	"Call Out Setup"	true
+				LEAF	""	PC_CALLOUT_EN		true			select
+				LEAF	""	PC_CALL_START		callout_en		value_in
+				LEAF	""	PC_CALL_END			callout_en		value_in
+				LEAF	""	PC_CALLOUT0_DELAY	callout_en		value_in
+				LEAF	""	PC_PHONE1			callout_ph1		value_in
+				LEAF	""	PC_CALLOUT_TYPE1	callout_en		select
+				LEAF	""	PC_CALLOUT1_DELAY	callout_ph1		value_in
+				LEAF	""	PC_PHONE2			callout_ph2		value_in
+				LEAF	""	PC_CALLOUT_TYPE2	callout_en		select
+				LEAF	""	PC_CALLOUT2_DELAY	callout_ph2		value_in
+				LEAF	""	PC_PHONE3			callout_ph3		value_in
+				LEAF	""	PC_CALLOUT_TYPE3	callout_en		select
+				LEAF	""	PC_CALLOUT3_DELAY	callout_ph3		value_in
+				LEAF	""	PC_PHONE4			callout_ph4		value_in
+				LEAF	""	PC_CALLOUT_TYPE4	callout_en		select
+				LEAF	""	PC_CALLOUT4_DELAY	callout_ph4		value_in
+				LEAF	""	PC_PHONE5			callout_ph5		value_in
+				LEAF	""	PC_CALLOUT_TYPE5	callout_en		select
+				LEAF	""	PC_CALLOUT5_DELAY	callout_ph5		value_in
+				LEAF	""	PC_PHONE6			callout_ph6		value_in
+				LEAF	""	PC_CALLOUT_TYPE6	callout_en		select
+				LEAF	""	PC_CALLOUT6_DELAY	callout_ph6		value_in	
+				LEAF	""	PC_PHONE7			callout_ph7		value_in
+				LEAF	""	PC_CALLOUT_TYPE7	callout_en		select
+				LEAF	""	PC_CALLOUT7_DELAY	callout_ph7		value_in	
+				LEAF	""	PC_PHONE8			callout_ph8		value_in
+				LEAF	""	PC_CALLOUT_TYPE8	callout_en		select
+				LEAF	""	PC_CALLOUT8_DELAY	callout_ph8		value_in	
+				LEAF	""	PC_PHONE9			callout_ph9		value_in
+				LEAF	""	PC_CALLOUT_TYPE9	callout_en		select
+				LEAF	""	PC_CALLOUT9_DELAY	callout_ph9		value_in	
+				LEAF	""	PC_PHONE10			callout_ph10	value_in
+				LEAF	""	PC_CALLOUT_TYPE10	callout_en		select
+				LEAF	""	PC_CALLOUT10_DELAY	callout_ph10	value_in	
+				LEAF	""	PC_PHONE11			callout_ph11	value_in
+				LEAF	""	PC_CALLOUT_TYPE11	callout_en		select
+				LEAF	""	PC_CALLOUT11_DELAY	callout_ph11	value_in	
+				LEAF	""	PC_PHONE12			callout_ph12	value_in
+				LEAF	""	PC_CALLOUT_TYPE12	callout_en		select
+				LEAF	""	PC_CALLOUT12_DELAY	callout_ph12	value_in	
+			ENDMENU
+		ENDMENU
+		MENU	"Datalog Frequency"		true	!MT_ONLY
+			LEAF	""	PC_N_LORES		true		select		SSEC=rep
+		ENDMENU
+		MENU	"Date, Time and Units"	true	!MT_ONLY
+			LEAF	""	PC_US_METRIC_UNITS	true	select
+			LEAF	""	PC_DATE_FORMAT		true	select
+			LEAF	""	PC_CDATE		true		value_in
+			LEAF	""	PC_CTIME		true		value_in
+		ENDMENU
+		MENU	"Name and Location"		true		!MT_ONLY
+			LEAF	""	PC_CUSTNAME		true		value_in	SSEC=rep
+			LEAF	""	PC_LOCATION		true		value_in	SSEC=rep
+			LEAF	""	PC_SYS_ID		true		value_in	SSEC=rep
+		ENDMENU
+		MENU	"User Setup"	rep		!MT_ONLY
+			MENU	"Operator Access Codes"	true
+				LEAF	""	T4_OP1_CODE		true		value_in
+				LEAF	""	T4_OP2_CODE		true		value_in
+				LEAF	""	T4_OP3_CODE		true		value_in
+				LEAF	""	T4_OP4_CODE		true		value_in
+				LEAF	""	T4_OP5_CODE		true		value_in
+				LEAF	""	T4_OP6_CODE		true		value_in
+			ENDMENU
+			MENU	"Rep Access Code"	true
+				LEAF	""	T4_REP_CODE		true	value_in
+			ENDMENU
+		ENDMENU
+		MENU	"Analog Outputs Setup"	true
+			LEAF	""	T4_D2A_CHANNELS		true	select	SSEC=rep
+			MENU	"Analog Out 1"	da_chan_1n2
+				LEAF	""	PC_DA_USAGE1		true		NULL
+				LEAF	""	T4_D2A_CHAN1SEL		recorder1	select
+				LEAF	""	T2_D2A_HIGH1		recorder1	value_in
+				LEAF	""	T2_D2A_LOW1			recorder1	value_in
+			ENDMENU
+			MENU	"Analog Out 2"	da_chan_1n2
+				LEAF	""	PC_DA_USAGE2		true		NULL
+				LEAF	""	T4_D2A_CHAN2SEL		recorder2	select
+				LEAF	""	T2_D2A_HIGH2		recorder2	value_in
+				LEAF	""	T2_D2A_LOW2			recorder2	value_in
+			ENDMENU
+			MENU	"Analog Out 3"	da_chan_3n4
+				LEAF	""	PC_DA_USAGE3		true		NULL
+				LEAF	""	T4_D2A_CHAN3SEL		recorder3	select
+				LEAF	""	T2_D2A_HIGH3		recorder3	value_in
+				LEAF	""	T2_D2A_LOW3			recorder3	value_in
+			ENDMENU
+			MENU	"Analog Out 4"	da_chan_3n4
+				LEAF	""	PC_DA_USAGE4		true		NULL
+				LEAF	""	T4_D2A_CHAN4SEL		recorder4	select
+				LEAF	""	T2_D2A_HIGH4		recorder4	value_in
+				LEAF	""	T2_D2A_LOW4			recorder4	value_in
+			ENDMENU
+		ENDMENU
+	ENDMENU
+ENDMENU

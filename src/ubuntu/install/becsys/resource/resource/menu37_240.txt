@@ -1,0 +1,2425 @@
+LEAF	""	T3_SHOW_PH				true				NULL		OMIT_LINE		!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T3_SHOW_ORP				true				NULL		OMIT_LINE		!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T5_PPM_S_TYPE			true				NULL		OMIT_LINE		!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T3_TOTALCL_EN			true				NULL		OMIT_LINE		!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T5_PH_INV_S_TYPE		true				NULL		OMIT_LINE		!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T5_CL_INV_S_TYPE		true				NULL		OMIT_LINE		!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T3_FLOW_RATE			true				NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T3_TEMP_ENABLE			true				NULL		OMIT_LINE		!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T3_TDS_ENABLE			true				NULL		OMIT_LINE		!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T3_TURBIDITY_ENABLE		true				NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T5_FILTER_PRES_S_TYPE	true				NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T5_FILTER2_PRES_S_TYPE	true				NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T5_RECIRC_EFF_S_TYPE	true				NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T3_SHOW_EFFLUENT		true				NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T3_SHOW_INFLUENT		true				NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T3_SHOW_RECIRC_EFF		true				NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T5_BW_PIT_LVL_S_TYPE	true				NULL		OMIT_LINE		!MT_ONLY	!BACKWASH_ONLY
+LEAF	""	T5_SRG_LVL_S_TYPE		true				NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T5_STRAINER_S_TYPE		true				NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	PC_PRODUCT_TYPE			true				NULL						!MT_ONLY
+LEAF	""	PC_PROG_VER				true				NULL						!MT_ONLY
+LEAF	""	PC_SERIAL_NUM			true				NULL						!MT_ONLY
+LEAF	""	PC_CDATE				true				value_in   SSEC=T5_PERM_SYSCONF					!MT_ONLY
+LEAF	""	PC_CTIME				true				value_in   SSEC=T5_PERM_SYSCONF					!MT_ONLY
+LEAF	""	T3_ALARM_RELAY		true				NULL		FORMAT=ALARM	!MT_ONLY
+LEAF	" "	NO_CODE				true				NULL		OMIT_VALUE		!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T3_SYSFLOW			true				NULL						!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T2_PH				show_ph				NULL						!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T2_ORP				show_orp			NULL						!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T2_CL				show_clbr			NULL						!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T2_TOTALCL			show_totalppm		NULL						!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T2_COMBCL			show_combppm		NULL						!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T2_COND				show_tds			NULL						!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T2_TEMP				show_temp			NULL						!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T2_ALK				show_alk_val		NULL						!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T3_ALK_EXPIRED		show_alk_exp		NULL						!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	" "	NO_CODE				true				NULL		OMIT_VALUE		!MT_ONLY
+LEAF	""	T2_TURBIDITY		turbidity_input		NULL						!MT_ONLY
+LEAF	""	T2_FILTER_IN		show_filter_inf		NULL						!MT_ONLY
+LEAF	""	T2_FILTER_OUT		show_filter_eff		NULL						!MT_ONLY
+LEAF	""	T4_FILTER_DIFF		diff_pres			NULL						!MT_ONLY
+LEAF	""	T2_RECIRC_EFF		show_pump_eff		NULL						!MT_ONLY
+LEAF	""	T2_STRAINER			vac_ma				NULL						!MT_ONLY
+LEAF	""	T2_SURGE			srg_ma_sens			NULL						!MT_ONLY
+LEAF	""	T2_BW_PIT_LVL		show_bw_pit			NULL						!MT_ONLY	!BACKWASH_ONLY
+LEAF	" "	NO_CODE				true				NULL		OMIT_VALUE		!MT_ONLY	
+LEAF	""	T2_PH_INV_LVL		ph_inv_420ma_sens	NULL						!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T2_CL_INV_LVL		cl_inv_420ma_sens	NULL						!MT_ONLY	!CHEMISTRY_ONLY
+LEAF	""	T4_FLOW_RATE 		flow_enabled		NULL						!MT_ONLY
+LEAF	""	T5_SHOW_FLWRT1 		flow_enabled		NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T4_FLOW_VOL_2 		vol_enabled1		NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T4_FLOW_VOL_3 		vol_enabled1		NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T4_FLOW_VOL_4 		vol_enabled1		NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T4_FLOW_VOL_5 		vol_enabled1		NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	T4_FLOW_VOL_1 		vol_enabled1		NULL						!MT_ONLY
+LEAF	""	T4_FLOW_RATE2 		flow_enabled2		NULL						!MT_ONLY
+LEAF	""	T5_SHOW_FLWRT2 		flow_enabled2		NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	PC_FLOW_VOL2 		vol_enabled2		NULL						!MT_ONLY
+LEAF	""	T4_FLOW_RATE3 		flow_enabled3		NULL						!MT_ONLY
+LEAF	""	T5_SHOW_FLWRT3 		flow_enabled3		NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	PC_FLOW_VOL3 		vol_enabled3		NULL						!MT_ONLY
+LEAF	""	T4_FLOW_RATE4 		flow_enabled4		NULL						!MT_ONLY
+LEAF	""	T5_SHOW_FLWRT4 		flow_enabled4		NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	PC_FLOW_VOL4 		vol_enabled4		NULL						!MT_ONLY
+LEAF	""	T4_FLOW_RATE5 		flow_enabled5		NULL						!MT_ONLY
+LEAF	""	T5_SHOW_FLWRT5 		flow_enabled5		NULL		OMIT_LINE		!MT_ONLY
+LEAF	""	PC_FLOW_VOL5 		vol_enabled5		NULL						!MT_ONLY
+LEAF	""	PC_SYSTYPE			true				NULL						!SR_ONLY
+LEAF	""	PC_PROG_VER			true				NULL						!SR_ONLY
+LEAF	""	PC_SYS_ID			true				NULL						!SR_ONLY
+LEAF	""	PC_PRODUCT_TYPE		true				NULL						!SR_ONLY
+LEAF	""	PC_SERIAL_NUM		true				NULL						!SR_ONLY
+LEAF	""	PC_CUSTNAME			true				NULL						!SR_ONLY
+LEAF	""	PC_LOCATION			true				NULL						!SR_ONLY
+LEAF	""	PC_CDATE			true				NULL						!SR_ONLY
+LEAF	""	PC_CTIME			true				NULL						!SR_ONLY
+LEAF	""	PC_DATE_FORMAT		true				NULL						!SR_ONLY
+LEAF	""	T5_US_METRIC_UNITS	true				NULL						!SR_ONLY
+LEAF	""	PC_DT_RESET			true				NULL						!SR_ONLY
+LEAF	""	PC_HM_RESET			true				NULL						!SR_ONLY
+MENU	"Active Controls"			true															!MT_ONLY
+	LEAF	""	PC_CDATE			true				value_in	SSEC=T5_PERM_SYSCONF			!MT_ONLY
+	LEAF	""	PC_CTIME			true				value_in	SSEC=T5_PERM_SYSCONF			!MT_ONLY
+	LEAF	""	T3_ALARM_RELAY		true				NULL	FORMAT=ALARM						!MT_ONLY
+	LEAF	" "	NO_CODE				true				NULL										!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_PH				show_ph				NULL										!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_PH1		phfeed240			value_in	SSEC=T5_PERM_SETPOINTS			!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_PH_HIGH			show_ph				value_in	SSEC=T5_PERM_ALARMS				!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_PH_LOW			show_ph				value_in	SSEC=T5_PERM_ALARMS				!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_ALK				alk_control			NULL										!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_ALK_SETPT_HIGH	alk_control			value_in	SSEC=T5_PERM_SETPOINTS			!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_ALK_SETPT_LOW	alk_control			value_in	SSEC=T5_PERM_SETPOINTS			!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T5_ALK_CTRL_DIR		alk_control			NULL										!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	" "	NO_CODE				show_ph				NULL		SSEC=T5_PERM_ALARMS				!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_ORP				show_orp			NULL										!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_ORP		orp_orp_ctrl160		value_in	SSEC=T5_PERM_SETPOINTS						!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_ORP		orp_calc_ppm_ctrl	NULL													!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_ORP_ALT	orp_orp_alt_active160	value_in	SSEC=T5_PERM_SETPOINTS					!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_ORP_ALT	orp_calc_ppm_alt_active		NULL											!CHEMISTRY_ONLY
+	LEAF	""	T2_BRKT_ORP_LOW		bracketedorp		value_in	SSEC=T5_PERM_SETPOINTS			!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_BRKT_ORP_HIGH	bracketedorp		value_in	SSEC=T5_PERM_SETPOINTS			!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_ORP_HIGH			show_orp			value_in	SSEC=T5_PERM_ALARMS				!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_ORP_LOW			show_orp			value_in	SSEC=T5_PERM_ALARMS				!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	" "	NO_CODE				show_orp			NULL										!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_CL				show_clbr			NULL										!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_PPM		cl_pri_cl_ctrl		value_in	SSEC=T5_PERM_SETPOINTS						!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_PPM_ALT	cl_alt_active		value_in	SSEC=T5_PERM_SETPOINTS						!CHEMISTRY_ONLY
+	LEAF	""	T2_BRKT_PPM_LOW		bracketedppm		value_in	SSEC=T5_PERM_SETPOINTS			!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_BRKT_PPM_HIGH	bracketedppm		value_in	SSEC=T5_PERM_SETPOINTS			!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_CL_HIGH			show_clbr			value_in	SSEC=T5_PERM_ALARMS				!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_CL_LOW			show_clbr			value_in	SSEC=T5_PERM_ALARMS				!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	" "	NO_CODE				show_clbr			NULL										!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_TEMP				show_temp			NULL										!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_HTR		heater_temp_ctrl	value_in	SSEC=T5_PERM_SETPOINTS			!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_HTR_ALT	heater_temp_ctrl	value_in	SSEC=T5_PERM_SETPOINTS			!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_TEMP_HIGH		show_temp			value_in	SSEC=T5_PERM_ALARMS				!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T2_TEMP_LOW			show_temp			value_in	SSEC=T5_PERM_ALARMS				!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	" "	NO_CODE				show_temp			NULL										!MT_ONLY
+	LEAF	""	T2_TURBIDITY		turbidity_input		NULL										!MT_ONLY
+	LEAF	""	T5_POLYMER_MODE			true			NULL						OMIT_LINE		!MT_ONLY
+	LEAF	""	T2_FEEDPT_POLYHIGH		polymer_turb_feed		value_in	SSEC=T5_PERM_SETPOINTS	!MT_ONLY
+	LEAF	""	T2_FEEDPT_POLYLOW 		polymer_turb_feed		value_in	SSEC=T5_PERM_SETPOINTS	!MT_ONLY
+	LEAF	""	T2_TURBIDITY_HIGH	turbidity_input		value_in	SSEC=T5_PERM_ALARMS				!MT_ONLY
+	LEAF	" "	NO_CODE				turbidity_input		NULL										!MT_ONLY
+	LEAF	""	T4_FLOW_RATE 		flow_enabled		NULL										!MT_ONLY
+	LEAF	""	T4_FLOW_RATE_LOW	flow_enabled		value_in	SSEC=T5_PERM_ALARMS				!MT_ONLY
+	LEAF	""	T4_FLOW_VOL_2 		vol_enabled1		NULL		OMIT_LINE						!MT_ONLY
+	LEAF	""	T4_FLOW_VOL_3 		vol_enabled1		NULL		OMIT_LINE						!MT_ONLY
+	LEAF	""	T4_FLOW_VOL_4 		vol_enabled1		NULL		OMIT_LINE						!MT_ONLY
+	LEAF	""	T4_FLOW_VOL_5 		vol_enabled1		NULL		OMIT_LINE						!MT_ONLY
+	LEAF	""	T4_FLOW_VOL_1 		vol_enabled1		NULL										!MT_ONLY
+	LEAF	""	T4_FLOW_RATE2 		flow_enabled2		NULL										!MT_ONLY
+	LEAF	""	T5_SHOW_FLWRT2 		flow_enabled2		NULL		OMIT_LINE						!MT_ONLY
+	LEAF	""	PC_FLOW_VOL2 		vol_enabled2		NULL										!MT_ONLY
+	LEAF	""	T4_FLOW_RATE3 		flow_enabled3		NULL										!MT_ONLY
+	LEAF	""	T5_SHOW_FLWRT3 		flow_enabled3		NULL		OMIT_LINE						!MT_ONLY
+	LEAF	""	PC_FLOW_VOL3 		vol_enabled3		NULL										!MT_ONLY
+	LEAF	""	T4_FLOW_RATE4 		flow_enabled4		NULL										!MT_ONLY
+	LEAF	""	T5_SHOW_FLWRT4 		flow_enabled4		NULL		OMIT_LINE						!MT_ONLY
+	LEAF	""	PC_FLOW_VOL4 		vol_enabled4		NULL										!MT_ONLY
+	LEAF	""	T4_FLOW_RATE5 		flow_enabled5		NULL										!MT_ONLY
+	LEAF	""	T5_SHOW_FLWRT5 		flow_enabled5		NULL		OMIT_LINE						!MT_ONLY
+	LEAF	""	PC_FLOW_VOL5 		vol_enabled5		NULL										!MT_ONLY
+	LEAF	" "	NO_CODE						vfd			NULL										!MT_ONLY
+	LEAF	""	T2_VFD_OUTPUT 				vfd	   		NULL										!MT_ONLY
+	LEAF	""	T4_VFD_AUTO_SETPOINT		vfd_input_ok		value_in	SSEC=T5_PERM_SETPOINTS	!MT_ONLY
+ENDMENU
+MENU	"Alarms"	true
+	LEAF	""	T3_SHOW_PH				true					NULL	OMIT_LINE		!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T3_SHOW_ORP				true					NULL	OMIT_LINE		!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T3_TOTALCL_EN			true					NULL	OMIT_LINE		!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T5_RECIRC_EFF_S_TYPE	true					NULL	OMIT_LINE		!MT_ONLY
+	LEAF	""	T3_SHOW_RECIRC_EFF		true					NULL	OMIT_LINE		!MT_ONLY
+	LEAF	""	T5_PPM_S_TYPE			true					NULL	OMIT_LINE					!CHEMISTRY_ONLY
+	LEAF	""	PC_SUPERCHLOR_RELAY		true					NULL	OMIT_LINE					!CHEMISTRY_ONLY
+	LEAF	""	T3_NO_FLOW_DELAY_EN		true					NULL	OMIT_LINE					!CHEMISTRY_ONLY
+	LEAF	""	T5_PH_INV_S_TYPE		true					NULL	OMIT_LINE					!CHEMISTRY_ONLY
+	LEAF	""	T5_CL_INV_S_TYPE		true					NULL	OMIT_LINE					!CHEMISTRY_ONLY
+	LEAF	""	T3_FLOW_RATE			true					NULL	OMIT_LINE
+	LEAF	""	PC_HEATER_RELAY			true					NULL	OMIT_LINE
+	LEAF	""	T3_TEMP_ENABLE			true					NULL	OMIT_LINE					!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_HIGH_PH			ph_high_alm_120			NULL	FORMAT=ALARM				!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_LOW_PH			ph_low_alm_120 			NULL	FORMAT=ALARM				!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_HIGH_ORP			orp_high_alm_120		NULL	FORMAT=ALARM				!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_LOW_ORP			orp_low_alm_120			NULL	FORMAT=ALARM				!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_HIGH_CL			cl_high_alm				NULL	FORMAT=ALARM				!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_LOW_CL			cl_low_alm				NULL	FORMAT=ALARM				!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_HIGH_TOTALCL		totalcl_high_alm		NULL	FORMAT=ALARM				!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_LOW_TOTALCL		totalcl_low_alm			NULL	FORMAT=ALARM				!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_HIGH_COMBCL		combcl_high_alm			NULL	FORMAT=ALARM				!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_HIGH_COND		cond_high_alm			NULL	FORMAT=ALARM				!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_LOW_COND			cond_low_alm			NULL	FORMAT=ALARM				!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_HIGH_TEMP		temp_high_alm			NULL	FORMAT=ALARM				!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_LOW_TEMP			temp_low_alm			NULL	FORMAT=ALARM				!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_HIGH_ALK			alk_high_alm			NULL	FORMAT=ALARM				!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_LOW_ALK			alk_low_alm				NULL	FORMAT=ALARM				!CHEMISTRY_ONLY
+	LEAF	" "	NO_CODE				true				NULL		OMIT_VALUE			!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_HIGH_TURBIDITY	turbidity_high_alm		NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_HIGH_FILTER_IN	fltr_inf_high_alm_110	NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_LOW_FILTER_IN	fltr_inf_low_alm_110	NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_HIGH_FILTER_OUT	fltr_eff_high_alm_110	NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_LOW_FILTER_OUT	fltr_eff_low_alm_110	NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_HIGH_FILTER_DIFF	fltr_diff_high_alm_110	NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_HIGH_RECIRC_EFF	pump_eff_high_alm		NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_LOW_RECIRC_EFF	pump_eff_low_alm		NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_HIGH_STRAINER	strainer_high_alm		NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_HIGH_STRAINERW	strainer_warning		NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_HIGH_SURGE		surge_high_alm			NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_LOW_SURGE		surge_low_alm			NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_HI_SURGE_SAFETY	safety_surge			NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_HIGH_BW_PIT		bw_pit_alm				NULL	FORMAT=ALARM				!BACKWASH_ONLY
+	LEAF	" "	NO_CODE					true				NULL		OMIT_VALUE		!MT_ONLY
+	LEAF	""	T3_PH_LOCKOUT			phfeed240				NULL	FORMAT=ALARM				!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_FS_PH			phfeeddownfs240		NULL	FORMAT=ALARM					!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_FS_PH_CO2		phfeeddownfsco2		NULL	FORMAT=ALARM					!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_FS_PH2			phfeedupfs			NULL	FORMAT=ALARM					!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_FS_CL			clfeedfs			NULL	FORMAT=ALARM					!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_FS_HTR			heaterfs			NULL	FORMAT=ALARM					!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_FS_CHILLER		chillerfs			NULL	FORMAT=ALARM					!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_FS_SCHLOR		superchlor_feed		NULL	FORMAT=ALARM					!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_FS_TDS			tds_ctrlfs			NULL	FORMAT=ALARM					!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_FS_BW_DUR		bw_pit_alm			NULL	FORMAT=ALARM					!BACKWASH_ONLY
+	LEAF	""	T3_ALM_FS_BW_VALVE		bw_vlv_actuator		NULL	FORMAT=ALARM					!BACKWASH_ONLY
+	LEAF	""	T3_ALM_FS_BW_BFFS		bw_avail	   		NULL	FORMAT=ALARM					!BACKWASH_ONLY
+	LEAF	""	T3_ALM_FS_BW_PIT		bw_pit_alm	   		NULL	FORMAT=ALARM					!BACKWASH_ONLY
+	LEAF	""	T5_BW_FREQ_FS_TRIG		bffs_active			NULL									!BACKWASH_ONLY
+	LEAF	""	T5_BW_FS_TRIG_TYPE		isNonZero			NULL									!BACKWASH_ONLY
+	LEAF	""	T3_ALM_FS_PRECOAT		bw_precoat	   		NULL	FORMAT=ALARM					!BACKWASH_ONLY
+	LEAF	""	T3_ALM_FS_TRNDWN		turndown_fs_enable	NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_FS_ALK_ACID_EMPTY show_alk			NULL	FORMAT=ALARM					!CHEMISTRY_ONLY
+	LEAF	" "	NO_CODE					true				NULL		OMIT_VALUE		!MT_ONLY
+	LEAF	""	T3_ALM_EO_BW_VALVE		bw_vlv_actuator		NULL	FORMAT=ALARM					!BACKWASH_ONLY
+	LEAF	""	T3_ALM_EO_LOW_SURGE		surge_eo			NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_EO_SURGE_SAFETY	safety_surge_eo_alm	NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_EO_HI_SURGE		surge_hi_eo_alm		NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_EO_STRAINER_HI	strainer_eo			NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_EO_PRECOAT		bw_precoat			NULL	FORMAT=ALARM					!BACKWASH_ONLY
+	LEAF	" "	NO_CODE					true				NULL		OMIT_VALUE		!MT_ONLY
+	LEAF	""	T3_ALM_LOW_PH_INV_LVL	ph_sensor_installed	NULL	FORMAT=ALARM					!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_LOW_CL_INV_LVL	cl_sensor_installed	NULL	FORMAT=ALARM					!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_NO_FLOW			true				NULL	FORMAT=ALARM					!CHEMISTRY_ONLY
+	LEAF	""	T3_ALM_LOW_FLOW			low_flow_alm		NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_LOW_FLOW2		low_flow_alm2		NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_LOW_FLOW3		low_flow_alm3		NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_LOW_FLOW4		low_flow_alm4		NULL	FORMAT=ALARM
+	LEAF	""	T3_ALM_LOW_FLOW5		low_flow_alm5		NULL	FORMAT=ALARM
+	LEAF	""	T3_NO_FLOW_DELAY		noflowdelay			NULL	FORMAT=ALARM
+	LEAF	""	T4_NO_FLOW_DELAY_LEFT	noflowdelay			NULL
+	LEAF	""	T3_ALM_LOW_BATTERY		true				NULL	FORMAT=ALARM
+	LEAF	""	T3_OOR_VFD				vfd_flowrate		NULL	FORMAT=ALARM
+	LEAF	" "	NO_CODE					true				NULL		OMIT_VALUE		!MT_ONLY
+	LEAF	"Reset Failsafes"	T3_RESTART_FS	true	s930_restartFS	SEC=T5_PERM_FAILSAFES	OMIT_VALUE	!MT_ONLY
+ENDMENU
+MENU	"Calibrations"	technical													!MT_ONLY
+	LEAF	""	T2_PH				show_ph				value_in	SSEC=REP		!MT_ONLY		!CHEMISTRY_ONLY
+	LEAF	""	T2_ORP				show_orp			value_in	SSEC=REP		!MT_ONLY		!CHEMISTRY_ONLY
+	LEAF	""	T2_CL				show_clbr			value_in	SSEC=REP		!MT_ONLY		!CHEMISTRY_ONLY
+	LEAF	""	T2_TOTALCL			show_totalppm		value_in	SSEC=REP		!MT_ONLY		!CHEMISTRY_ONLY
+	LEAF	""	T2_COND				show_tds			value_in	SSEC=REP		!MT_ONLY		!CHEMISTRY_ONLY
+	LEAF	""	T2_TEMP				show_temp			value_in	SSEC=REP		!MT_ONLY		!CHEMISTRY_ONLY
+	LEAF	""	T2_ALK				show_alk_val		value_in	SSEC=REP		!MT_ONLY		!CHEMISTRY_ONLY
+	LEAF	""	T3_ALK_EXPIRED		show_alk_exp		NULL						!MT_ONLY		!CHEMISTRY_ONLY
+	LEAF	" "	NO_CODE				true				NULL		OMIT_VALUE		!MT_ONLY		!CHEMISTRY_ONLY
+	LEAF	""	T2_TURBIDITY		turbidity_input		value_in	SSEC=REP		!MT_ONLY
+	LEAF	""	T2_FILTER_IN		inf_ma				value_in	SSEC=REP		!MT_ONLY
+	LEAF	""	T2_FILTER_OUT		eff_ma				value_in	SSEC=REP		!MT_ONLY
+	LEAF	""	T2_RECIRC_EFF		pump_eff_ma			value_in	SSEC=REP		!MT_ONLY
+	LEAF	""	T2_STRAINER			vac_ma				value_in	SSEC=REP		!MT_ONLY
+	LEAF	""	T2_SURGE			srg_ma_sens			value_in	SSEC=REP		!MT_ONLY
+	LEAF	""	T2_BW_PIT_LVL		show_bw_pit			value_in	SSEC=REP		!MT_ONLY		!BACKWASH_ONLY
+	LEAF	" "	NO_CODE				true				NULL		OMIT_VALUE		!MT_ONLY		!CHEMISTRY_ONLY
+	LEAF	""	T2_PH_INV_LVL		ph_inv_420ma_sens	value_in	SSEC=REP		!MT_ONLY		!CHEMISTRY_ONLY
+	LEAF	""	T2_CL_INV_LVL		cl_inv_420ma_sens	value_in	SSEC=REP		!MT_ONLY		!CHEMISTRY_ONLY
+	LEAF	" "	NO_CODE				true				NULL		OMIT_VALUE		!MT_ONLY		!CHEMISTRY_ONLY
+	LEAF	""	T4_FLOW_RATE2		flow_enabled2		value_in	SSEC=REP		!MT_ONLY		!CHEMISTRY_ONLY
+	LEAF	""	T4_FLOW_RATE3		flow_enabled3		value_in	SSEC=REP		!MT_ONLY		!CHEMISTRY_ONLY
+	LEAF	""	T4_FLOW_RATE4		flow_enabled4		value_in	SSEC=REP		!MT_ONLY		!CHEMISTRY_ONLY
+ENDMENU
+MENU	"Feed Set Points"	true	!MT_ONLY
+	LEAF	""	PC_PH1_RELAY				true				NULL		OMIT_LINE				!CHEMISTRY_ONLY
+	LEAF	""	PC_PH2_RELAY				true				NULL		OMIT_LINE				!CHEMISTRY_ONLY
+	LEAF	""	PC_PH_CO2_RELAY				true				NULL		OMIT_LINE				!CHEMISTRY_ONLY
+	LEAF	""	PC_SUPERCHLOR_RELAY			true				NULL		OMIT_LINE				!CHEMISTRY_ONLY
+	LEAF	""	T5_SCHLOR_CTRL_SRC			true				NULL		OMIT_LINE				!CHEMISTRY_ONLY
+	LEAF	""	PC_DECHLOR_RELAY			true				NULL		OMIT_LINE				!CHEMISTRY_ONLY
+	LEAF	""	T5_DCHLOR_CTRL_SRC			true				NULL		OMIT_LINE				!CHEMISTRY_ONLY
+	LEAF	""	PC_OZONE_RELAY				true				NULL		OMIT_LINE				!CHEMISTRY_ONLY
+	LEAF	""	T5_OZONE_CTRL_SRC			true				NULL		OMIT_LINE				!CHEMISTRY_ONLY
+	LEAF	""	PC_CL_BOOSTER_RELAY			true				NULL		OMIT_LINE				!CHEMISTRY_ONLY
+	LEAF	""	T5_BOOSTER_CTRL_SRC			true				NULL		OMIT_LINE				!CHEMISTRY_ONLY
+	LEAF	""	PC_HEATER_RELAY				true				NULL		OMIT_LINE
+	LEAF	""	PC_POLYMER_RELAY			true				NULL		OMIT_LINE
+	LEAF	""	PC_TDS_RELAY				true				NULL		OMIT_LINE				!CHEMISTRY_ONLY
+	LEAF	""	PC_AUTOFILL_RELAY			true				NULL		OMIT_LINE
+	LEAF	""	T3_AUTOFILL_ALT_EN			true				NULL		OMIT_LINE				
+	LEAF	""	T5_CL_PRI_CTRL_SRC			true				NULL		OMIT_LINE				!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_PH1				phfeed240  			value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_ALK_SETPT_HIGH			alk_control			value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_ALK_SETPT_LOW			alk_control			value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_ORP				orp_orp_ctrl160		value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_ORP				orp_calc_ppm_ctrl	NULL								!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_ORP_ALT			orp_orp_alt_active160	value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_ORP_ALT			orp_calc_ppm_alt_active		NULL						!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_PPM				cl_pri_cl_ctrl		value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_PPM_ALT			cl_alt_active		value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_BOOSTER_TG_ORP	booster_orp			value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_BOOSTER_TG_ORP	booster_orp_ppm_calc	NULL							!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_BOOSTER_ORP		booster_orp			value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_BOOSTER_ORP		booster_orp_ppm_calc	NULL							!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_BOOSTER_TG_PPM	booster_ppm_ctrl	value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_BOOSTER_PPM		booster_cl 			value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_SCHLOR_ORP		superchlor_orp		value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_SCHLOR_PPM		superchlor_ppm		value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_DCHLOR_ORP		dechlor_orp			value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_DCHLOR_PPM		dechlor_ppm			value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_OZONE_ORP			ozone_orp			value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_OZONE_PPM			ozone_cl			value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_HTR				htr_ctrl_fp			value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_HTR_ALT			htr_ctrl_alt		value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_CHILLER			chiller_ctrl_fp		value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T2_FEEDPT_CHILLER_ALT		chiller_ctrl_alt	value_in	SSEC=T5_PERM_SETPOINTS	!CHEMISTRY_ONLY
+	LEAF	""	T5_POLYMER_MODE				true				NULL								OMIT_LINE		
+	LEAF	""	T2_FEEDPT_POLYHIGH			polymer_turb_feed	value_in	SSEC=T5_PERM_SETPOINTS
+	LEAF	""	T2_FEEDPT_POLYLOW 			polymer_turb_feed	value_in	SSEC=T5_PERM_SETPOINTS
+	LEAF	""	T2_FEEDPT_AUTOFILL			autofill_ma			value_in	SSEC=T5_PERM_SETPOINTS
+	LEAF	""	T2_FEEDPT_AUTOFILL_ALT		alt_autofill_feed	value_in	SSEC=T5_PERM_SETPOINTS	
+	LEAF	""	T2_FEEDPT_TDS				tds_ctrl_en			NULL								!CHEMISTRY_ONLY
+	LEAF	""	T4_VFD_AUTO_SETPOINT		vfd_input_ok		value_in	SSEC=T5_PERM_SETPOINTS
+ENDMENU
+MENU	"Alarm Set Points"			true
+	LEAF	""	T3_SHOW_PH				true				NULL		OMIT_LINE		!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T3_SHOW_ORP				true				NULL		OMIT_LINE		!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T5_ALK_ENABLE			true				NULL		OMIT_LINE		!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T3_TOTALCL_EN			true				NULL		OMIT_LINE		!MT_ONLY	!CHEMISTRY_ONLY
+	LEAF	""	T5_RECIRC_EFF_S_TYPE	true				NULL		OMIT_LINE		!MT_ONLY
+	LEAF	""	T3_SHOW_RECIRC_EFF		true				NULL		OMIT_LINE		!MT_ONLY
+	LEAF	""	T5_PPM_S_TYPE		true				NULL		OMIT_LINE						!CHEMISTRY_ONLY
+	LEAF	""	T5_PH_INV_S_TYPE	true				NULL		OMIT_LINE						!CHEMISTRY_ONLY
+	LEAF	""	T5_CL_INV_S_TYPE	true				NULL		OMIT_LINE						!CHEMISTRY_ONLY
+	LEAF	""	T5_STRAINER_S_TYPE	true				NULL		OMIT_LINE
+	LEAF	""	T3_TDS_ENABLE		true				NULL		OMIT_LINE						!CHEMISTRY_ONLY
+	LEAF	""	T3_TEMP_ENABLE		true				NULL		OMIT_LINE						!CHEMISTRY_ONLY
+	LEAF	""	T3_FLOW_RATE		true				NULL		OMIT_LINE
+	LEAF	""	T2_PH_HIGH			show_ph				value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+	LEAF	""	T2_PH_LOW			show_ph				value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+	LEAF	""	T2_ORP_HIGH			show_orp			value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+	LEAF	""	T2_ORP_LOW			show_orp			value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+	LEAF	""	T2_CL_HIGH			show_clbr			value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+	LEAF	""	T2_CL_LOW			show_clbr			value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+	LEAF	""	T2_TOTALCL_HIGH		show_totalppm		value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+	LEAF	""	T2_TOTALCL_LOW		show_totalppm		value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+	LEAF	""	T2_COMBCL_HIGH		show_combppm		value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+	LEAF	""	T2_COND_HIGH		show_tds			value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+	LEAF	""	T2_COND_LOW			show_tds			value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+	LEAF	""	T2_TEMP_HIGH		show_temp			value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+	LEAF	""	T2_TEMP_LOW			show_temp			value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+	LEAF	""	T2_ALK_HIGH			show_alk			value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+	LEAF	""	T2_ALK_LOW			show_alk			value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+	LEAF	""	T4_FLOW_RATE_LOW	flow_enabled		value_in	SSEC=T5_PERM_ALARMS				
+	LEAF	""	T4_FLOW_RATE2_LOW	flow_enabled2		value_in	SSEC=T5_PERM_ALARMS
+	LEAF	""	T4_FLOW_RATE3_LOW	flow_enabled3		value_in	SSEC=T5_PERM_ALARMS
+	LEAF	""	T4_FLOW_RATE4_LOW	flow_enabled4		value_in	SSEC=T5_PERM_ALARMS
+	LEAF	""	T4_FLOW_RATE5_LOW	flow_enabled5		value_in	SSEC=T5_PERM_ALARMS
+	LEAF	""	T2_PH_INV_LVL_LOW	ph_inv_420ma_sens	value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+	LEAF	""	T2_CL_INV_LVL_LOW	cl_inv_420ma_sens	value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+	LEAF	""	T2_FILTER_IN_HIGH	view_influent_110	value_in	SSEC=T5_PERM_ALARMS
+	LEAF	""	T2_FILTER_IN_LOW	view_influent_110	value_in	SSEC=T5_PERM_ALARMS
+	LEAF	""	T2_FILTER_OUT_HIGH	view_effluent_110	value_in	SSEC=T5_PERM_ALARMS
+	LEAF	""	T2_FILTER_OUT_LOW	view_effluent_110	value_in	SSEC=T5_PERM_ALARMS
+	LEAF	""	T4_FILTER_DIFF_HIGH	diff_pres			value_in	SSEC=T5_PERM_ALARMS
+	LEAF	""	T2_RECIRC_EFF_HIGH	view_pump_eff		value_in	SSEC=T5_PERM_ALARMS
+	LEAF	""	T2_RECIRC_EFF_LOW	view_pump_eff		value_in	SSEC=T5_PERM_ALARMS
+	LEAF	""	T2_STRAINER_HIGH	vac_ma				value_in	SSEC=T5_PERM_ALARMS
+	LEAF	""	T2_STRAINER_LOW		vac_ma				value_in	SSEC=T5_PERM_ALARMS
+	LEAF	""	T2_TURBIDITY_HIGH	turbidity_input		value_in	SSEC=T5_PERM_ALARMS
+	LEAF	""	T2_SURGE_HIGH		srg_ma_sens		value_in	SSEC=T5_PERM_ALARMS
+	LEAF	""	T2_SURGE_LOW		srg_ma_sens		value_in	SSEC=T5_PERM_ALARMS
+	LEAF	""	T2_BW_PIT_LVL_HIGH	bwpit_420ma_sens	value_in	SSEC=T5_PERM_ALARMS				!BACKWASH_ONLY
+	LEAF	""	T2_BW_PIT_LVL_LOW	bwpit_420ma_sens	value_in	SSEC=T5_PERM_ALARMS				!BACKWASH_ONLY
+ENDMENU
+MENU	"Relay Settings"		true
+	LEAF	""	T3_EXP_RELAY_BOX1		true			NULL	OMIT_LINE
+	LEAF	""	T3_EXP_RELAY_BOX2		true			NULL	OMIT_LINE
+	LEAF	""	T3_EXP_RELAY_BOX3		true			NULL	OMIT_LINE
+	LEAF	""	PC_USAGE_RELAY1	true				NULL
+	LEAF	""	PC_DO_MODE1		zrelay01_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_DO_STAT1		zrelay01_mode		NULL
+	LEAF	""	PC_DO_VAL1		zrelay01_mode_not	NULL
+	LEAF	""	PC_DO_VSTAT1	zrelay01_manualtimer	NULL
+	LEAF	" "	NO_CODE			true				NULL	OMIT_VALUE
+	LEAF	""	PC_USAGE_RELAY2	true				NULL
+	LEAF	""	PC_DO_MODE2		zrelay02_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_DO_STAT2		zrelay02_mode		NULL
+	LEAF	""	PC_DO_VAL2		zrelay02_mode_not	NULL
+	LEAF	""	PC_DO_VSTAT2	zrelay02_manualtimer	NULL
+	LEAF	" "	NO_CODE			true				NULL	OMIT_VALUE
+	LEAF	""	PC_USAGE_RELAY3	true				NULL
+	LEAF	""	PC_DO_MODE3		zrelay03_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_DO_STAT3		zrelay03_mode		NULL
+	LEAF	""	PC_DO_VAL3		zrelay03_mode_not	NULL
+	LEAF	""	PC_DO_VSTAT3	zrelay03_manualtimer	NULL
+	LEAF	" "	NO_CODE			true				NULL	OMIT_VALUE
+	LEAF	""	PC_USAGE_RELAY4	true				NULL
+	LEAF	""	PC_DO_MODE4		zrelay04_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_DO_STAT4		zrelay04_mode		NULL
+	LEAF	""	PC_DO_VAL4		zrelay04_mode_not	NULL
+	LEAF	""	PC_DO_VSTAT4	zrelay04_manualtimer	NULL
+	LEAF	" "	NO_CODE			true				NULL	OMIT_VALUE								!BECSYS7BW_ONLY
+	LEAF	""	PC_USAGE_RELAY5	true				NULL											!BECSYS7BW_ONLY
+	LEAF	""	PC_DO_MODE5		zrelay05_mode		select_domode		SSEC=T5_PERM_RELAYS			!BECSYS7BW_ONLY
+	LEAF	""	PC_DO_STAT5		zrelay05_mode		NULL											!BECSYS7BW_ONLY
+	LEAF	""	PC_DO_VAL5		zrelay05_mode_not	NULL											!BECSYS7BW_ONLY
+	LEAF	""	PC_DO_VSTAT5	zrelay05_manualtimer	NULL										!BECSYS7BW_ONLY
+	LEAF	" "	NO_CODE			true				NULL	OMIT_VALUE								!BECSYS7BW_ONLY
+	LEAF	""	PC_USAGE_RELAY6	true				NULL											!BECSYS7BW_ONLY
+	LEAF	""	PC_DO_MODE6		zrelay06_mode		select_domode		SSEC=T5_PERM_RELAYS			!BECSYS7BW_ONLY
+	LEAF	""	PC_DO_STAT6		zrelay06_mode		NULL											!BECSYS7BW_ONLY
+	LEAF	""	PC_DO_VAL6		zrelay06_mode_not	NULL											!BECSYS7BW_ONLY
+	LEAF	""	PC_DO_VSTAT6	zrelay06_manualtimer	NULL										!BECSYS7BW_ONLY
+	LEAF	" "	NO_CODE			true				NULL	OMIT_VALUE								!BECSYS7_ONLY
+	LEAF	""	PC_USAGE_RELAY7	true				NULL											!BECSYS7_ONLY
+	LEAF	""	PC_DO_MODE7		zrelay07_mode		select_domode		SSEC=T5_PERM_RELAYS			!BECSYS7_ONLY
+	LEAF	""	PC_DO_STAT7		zrelay07_mode		NULL											!BECSYS7_ONLY
+	LEAF	""	PC_DO_VAL7		zrelay07_mode_not	NULL											!BECSYS7_ONLY
+	LEAF	""	PC_DO_VSTAT7	zrelay07_manualtimer	NULL										!BECSYS7_ONLY
+	LEAF	" "	NO_CODE			true				NULL	OMIT_VALUE								!BECSYS7_ONLY
+	LEAF	""	PC_USAGE_RELAY8	true				NULL											!BECSYS7_ONLY
+	LEAF	""	PC_DO_MODE8		zrelay08_mode		select_domode		SSEC=T5_PERM_RELAYS			!BECSYS7_ONLY
+	LEAF	""	PC_DO_STAT8		zrelay08_mode		NULL											!BECSYS7_ONLY
+	LEAF	""	PC_DO_VAL8		zrelay08_mode_not	NULL											!BECSYS7_ONLY
+	LEAF	""	PC_DO_VSTAT8	zrelay08_manualtimer	NULL										!BECSYS7_ONLY
+	LEAF	" "	NO_CODE			true				NULL	OMIT_VALUE								!BECSYS7_ONLY
+	LEAF	""	PC_USAGE_RELAY9	true				NULL											!BECSYS7_ONLY
+	LEAF	""	PC_DO_MODE9		zrelay09_mode		select_domode		SSEC=T5_PERM_RELAYS			!BECSYS7_ONLY
+	LEAF	""	PC_DO_STAT9		zrelay09_mode		NULL											!BECSYS7_ONLY
+	LEAF	""	PC_DO_VAL9		zrelay09_mode_not	NULL											!BECSYS7_ONLY
+	LEAF	""	PC_DO_VSTAT9	zrelay09_manualtimer	NULL										!BECSYS7_ONLY
+	LEAF	" "	NO_CODE			true				NULL	OMIT_VALUE								
+	LEAF	""	PC_EXP1_RELAY_USAGE1	exp1				NULL									
+	LEAF	""	PC_EXP1_DO_MODE1		zrelay10_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_EXP1_DO_STAT1		zrelay10_mode		NULL
+	LEAF	""	PC_EXP1_DO_VAL1			zrelay10_mode_not	NULL
+	LEAF	""	PC_EXP1_DO_VSTAT1	zrelay10_manualtimer	NULL
+	LEAF	" "	NO_CODE					exp1				NULL	OMIT_VALUE
+	LEAF	""	PC_EXP1_RELAY_USAGE2	exp1				NULL
+	LEAF	""	PC_EXP1_DO_MODE2		zrelay11_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_EXP1_DO_STAT2		zrelay11_mode		NULL
+	LEAF	""	PC_EXP1_DO_VAL2			zrelay11_mode_not	NULL
+	LEAF	""	PC_EXP1_DO_VSTAT2	zrelay11_manualtimer	NULL
+	LEAF	" "	NO_CODE					exp1				NULL	OMIT_VALUE
+	LEAF	""	PC_EXP1_RELAY_USAGE3	exp1				NULL
+	LEAF	""	PC_EXP1_DO_MODE3		zrelay12_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_EXP1_DO_STAT3		zrelay12_mode		NULL
+	LEAF	""	PC_EXP1_DO_VAL3			zrelay12_mode_not	NULL
+	LEAF	""	PC_EXP1_DO_VSTAT3	zrelay12_manualtimer	NULL
+	LEAF	" "	NO_CODE					exp1				NULL	OMIT_VALUE
+	LEAF	""	PC_EXP1_RELAY_USAGE4	exp1				NULL
+	LEAF	""	PC_EXP1_DO_MODE4		zrelay13_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_EXP1_DO_STAT4		zrelay13_mode		NULL
+	LEAF	""	PC_EXP1_DO_VAL4			zrelay13_mode_not	NULL
+	LEAF	""	PC_EXP1_DO_VSTAT4	zrelay13_manualtimer	NULL
+	LEAF	" "	NO_CODE					exp1				NULL	OMIT_VALUE
+	LEAF	""	PC_EXP1_RELAY_USAGE5	exp1				NULL
+	LEAF	""	PC_EXP1_DO_MODE5		zrelay14_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_EXP1_DO_STAT5		zrelay14_mode		NULL
+	LEAF	""	PC_EXP1_DO_VAL5			zrelay14_mode_not	NULL
+	LEAF	""	PC_EXP1_DO_VSTAT5	zrelay14_manualtimer	NULL
+	LEAF	" "	NO_CODE					exp1				NULL	OMIT_VALUE
+	LEAF	""	PC_EXP2_RELAY_USAGE1	exp2				NULL
+	LEAF	""	PC_EXP2_DO_MODE1		zrelay15_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_EXP2_DO_STAT1		zrelay15_mode		NULL
+	LEAF	""	PC_EXP2_DO_VAL1			zrelay15_mode_not	NULL
+	LEAF	""	PC_EXP2_DO_VSTAT1	zrelay15_manualtimer	NULL
+	LEAF	" "	NO_CODE					exp2				NULL	OMIT_VALUE
+	LEAF	""	PC_EXP2_RELAY_USAGE2	exp2				NULL
+	LEAF	""	PC_EXP2_DO_MODE2		zrelay16_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_EXP2_DO_STAT2		zrelay16_mode		NULL
+	LEAF	""	PC_EXP2_DO_VAL2			zrelay16_mode_not	NULL
+	LEAF	""	PC_EXP2_DO_VSTAT2	zrelay16_manualtimer	NULL
+	LEAF	" "	NO_CODE					exp2				NULL	OMIT_VALUE
+	LEAF	""	PC_EXP2_RELAY_USAGE3	exp2				NULL
+	LEAF	""	PC_EXP2_DO_MODE3		zrelay17_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_EXP2_DO_STAT3		zrelay17_mode		NULL
+	LEAF	""	PC_EXP2_DO_VAL3			zrelay17_mode_not	NULL
+	LEAF	""	PC_EXP2_DO_VSTAT3	zrelay17_manualtimer	NULL
+	LEAF	" "	NO_CODE					exp2				NULL	OMIT_VALUE
+	LEAF	""	PC_EXP2_RELAY_USAGE4	exp2				NULL
+	LEAF	""	PC_EXP2_DO_MODE4		zrelay18_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_EXP2_DO_STAT4		zrelay18_mode		NULL
+	LEAF	""	PC_EXP2_DO_VAL4			zrelay18_mode_not	NULL
+	LEAF	""	PC_EXP2_DO_VSTAT4	zrelay18_manualtimer	NULL
+	LEAF	" "	NO_CODE					exp2				NULL	OMIT_VALUE
+	LEAF	""	PC_EXP2_RELAY_USAGE5	exp2				NULL
+	LEAF	""	PC_EXP2_DO_MODE5		zrelay19_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_EXP2_DO_STAT5		zrelay19_mode		NULL
+	LEAF	""	PC_EXP2_DO_VAL5			zrelay19_mode_not	NULL
+	LEAF	""	PC_EXP2_DO_VSTAT5	zrelay19_manualtimer	NULL
+	LEAF	" "	NO_CODE					exp2				NULL	OMIT_VALUE
+	LEAF	""	PC_EXP3_RELAY_USAGE1	exp3				NULL
+	LEAF	""	PC_EXP3_DO_MODE1		zrelay20_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_EXP3_DO_STAT1		zrelay20_mode		NULL
+	LEAF	""	PC_EXP3_DO_VAL1			zrelay20_mode_not	NULL
+	LEAF	""	PC_EXP3_DO_VSTAT1	zrelay20_manualtimer	NULL
+	LEAF	" "	NO_CODE					exp3				NULL	OMIT_VALUE
+	LEAF	""	PC_EXP3_RELAY_USAGE2	exp3				NULL
+	LEAF	""	PC_EXP3_DO_MODE2		zrelay21_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_EXP3_DO_STAT2		zrelay21_mode		NULL
+	LEAF	""	PC_EXP3_DO_VAL2			zrelay21_mode_not	NULL
+	LEAF	""	PC_EXP3_DO_VSTAT2	zrelay21_manualtimer	NULL
+	LEAF	" "	NO_CODE					exp3				NULL	OMIT_VALUE
+	LEAF	""	PC_EXP3_RELAY_USAGE3	exp3				NULL
+	LEAF	""	PC_EXP3_DO_MODE3		zrelay22_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_EXP3_DO_STAT3		zrelay22_mode		NULL
+	LEAF	""	PC_EXP3_DO_VAL3			zrelay22_mode_not	NULL
+	LEAF	""	PC_EXP3_DO_VSTAT3	zrelay22_manualtimer	NULL
+	LEAF	" "	NO_CODE					exp3				NULL	OMIT_VALUE
+	LEAF	""	PC_EXP3_RELAY_USAGE4	exp3				NULL
+	LEAF	""	PC_EXP3_DO_MODE4		zrelay23_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_EXP3_DO_STAT4		zrelay23_mode		NULL
+	LEAF	""	PC_EXP3_DO_VAL4			zrelay23_mode_not	NULL
+	LEAF	""	PC_EXP3_DO_VSTAT4	zrelay23_manualtimer	NULL
+	LEAF	" "	NO_CODE					exp3				NULL	OMIT_VALUE
+	LEAF	""	PC_EXP3_RELAY_USAGE5	exp3				NULL
+	LEAF	""	PC_EXP3_DO_MODE5		zrelay24_mode		select_domode		SSEC=T5_PERM_RELAYS
+	LEAF	""	PC_EXP3_DO_STAT5		zrelay24_mode		NULL
+	LEAF	""	PC_EXP3_DO_VAL5			zrelay24_mode_not	NULL
+	LEAF	""	PC_EXP3_DO_VSTAT5	zrelay24_manualtimer	NULL
+	LEAF	" "	NO_CODE					exp3				NULL	OMIT_VALUE
+	LEAF	""	T5_VFD_AO_MODE			vfd					select		SSEC=T5_PERM_RELAYS
+	LEAF	""	T4_VFD_MANUAL_SETPOINT	vfd_manual			value_in	SSEC=T5_PERM_RELAYS
+	LEAF	""	T2_VFD_OUTPUT			vfd					NULL
+	LEAF	" "	NO_CODE					vfd					NULL	OMIT_VALUE
+	LEAF	""	T3_EMERGENCY_OFF 		true				toggle_EO	SSEC=rep
+ENDMENU
+MENU	"Backwash Active Triggers"		bw_avail													!BACKWASH_ONLY
+	LEAF	""	T3_BW_TURB_TRIGGER_EN	true					NULL	OMIT_LINE					!BACKWASH_ONLY
+	LEAF	""	T3_TURB_END_BW_EN		true					NULL	OMIT_LINE					!BACKWASH_ONLY
+	LEAF	""	T3_BW_TIMER_EN			true					NULL	OMIT_LINE					!BACKWASH_ONLY
+	LEAF	""	T3_BW_PSI_TRIGGER_EN	true					NULL	OMIT_LINE					!BACKWASH_ONLY
+	LEAF	""	T3_BW_FLOW_TRIGGER_EN	true					NULL	OMIT_LINE					!BACKWASH_ONLY
+	LEAF	""	T3_BW_VOL_TRIGGER_EN	true					NULL	OMIT_LINE					!BACKWASH_ONLY
+	LEAF	""	T2_BW_TRIG_PT_TURB		bw_turb_trigstart_en	value_in	SSEC=T5_PERM_MENUS		!BACKWASH_ONLY
+	LEAF	""	T2_TURBIDITY			bw_turb_trigstart_en	NULL								!BACKWASH_ONLY
+	LEAF	""	T2_BW_TRIG_PT_PSI		bw_psi_trigger_en		value_in	SSEC=T5_PERM_MENUS		!BACKWASH_ONLY
+	LEAF	""	T4_FILTER_DIFF			bw_psi_trigger_en		NULL								!BACKWASH_ONLY
+	LEAF	""	T2_BW_TRIG_PT_FLOW	 	bw_flow_trigger_en160	value_in	SSEC=T5_PERM_MENUS		!BACKWASH_ONLY
+	LEAF	""	T4_FLOW_RATE 			bw_flow_trigger_en160	NULL								!BACKWASH_ONLY
+	LEAF	""	T4_BW_VOL_TRIG_INC_3	bw_vol_trigger_en160	NULL	OMIT_LINE					!BACKWASH_ONLY
+	LEAF	""	T4_BW_VOL_TRIG_INC_2 	bw_vol_trigger_en160	value_in	SSEC=T5_PERM_MENUS		!BACKWASH_ONLY
+	LEAF	""	T4_BW_NEXT_TIME			bw_timer_en				NULL								!BACKWASH_ONLY
+	LEAF	""	T4_BW_NEXT_DATE			bw_timer_en				NULL								!BACKWASH_ONLY
+	MENU	"Timers"	bw_timer_en																	!BACKWASH_ONLY
+		LEAF	""	PC_CWKDAY			true	NULL												!BACKWASH_ONLY
+		LEAF	""	T4_BW_WD1			true	sel_wd			SSEC=T5_PERM_MENUS					!BACKWASH_ONLY
+		LEAF	""	T4_BW_START_HM1		true	value_in		SSEC=T5_PERM_MENUS					!BACKWASH_ONLY
+		LEAF	""	T4_BW_WD2			true	sel_wd			SSEC=T5_PERM_MENUS					!BACKWASH_ONLY
+		LEAF	""	T4_BW_START_HM2		true	value_in		SSEC=T5_PERM_MENUS					!BACKWASH_ONLY
+		LEAF	""	T4_BW_WD3			true	sel_wd			SSEC=T5_PERM_MENUS					!BACKWASH_ONLY
+		LEAF	""	T4_BW_START_HM3		true	value_in		SSEC=T5_PERM_MENUS					!BACKWASH_ONLY
+		LEAF	""	T4_BW_WD4			true	sel_wd			SSEC=T5_PERM_MENUS					!BACKWASH_ONLY
+		LEAF	""	T4_BW_START_HM4		true	value_in		SSEC=T5_PERM_MENUS					!BACKWASH_ONLY
+	ENDMENU																							!BACKWASH_ONLY
+ENDMENU																								!BACKWASH_ONLY
+MENU	"Menu"	true
+	MENU	"Inputs"	true	SEC=T5_PERM_MENUS
+		MENU	"pH Setup"	show_ph_rep																!CHEMISTRY_ONLY
+			LEAF	""	T2_PH				show_ph		NULL					!MT_ONLY			!CHEMISTRY_ONLY
+			LEAF	""	T5_PH_DECPLACES		show_ph		select		SSEC=rep						!CHEMISTRY_ONLY
+			LEAF	""	T2_PH_HIGH			show_ph		value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+			LEAF	""	T2_PH_LOW			show_ph		value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+			LEAF	""	T2_PH_HYST			show_ph		value_in	SSEC=manager					!CHEMISTRY_ONLY
+			LEAF	""	T5_PH_BUF_MAX		show_ph		value_in	SSEC=rep						!CHEMISTRY_ONLY
+			LEAF	""	T3_SHOW_PH			true		select		SSEC=rep						!CHEMISTRY_ONLY
+		ENDMENU																						!CHEMISTRY_ONLY
+		MENU	"ORP Setup"	show_orp_rep															!CHEMISTRY_ONLY
+			LEAF	""	T2_ORP				show_orp	NULL			!MT_ONLY					!CHEMISTRY_ONLY
+			LEAF	""	T2_ORP_HIGH			show_orp	value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+			LEAF	""	T2_ORP_LOW			show_orp	value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+			LEAF	""	T2_ORP_HYST			show_orp	value_in	SSEC=manager					!CHEMISTRY_ONLY
+			LEAF	""	T5_ORP_BUF_MAX		show_orp	value_in	SSEC=rep						!CHEMISTRY_ONLY
+			LEAF	""	T3_SHOW_ORP			true		select		SSEC=rep						!CHEMISTRY_ONLY
+		ENDMENU																						!CHEMISTRY_ONLY
+		MENU	"$$T5_CHEM_SELECT! Inputs Setup"	ppms_rep										!CHEMISTRY_ONLY
+			MENU	"Free $$T5_CHEM_SELECT! Setup"	ppm_rep											!CHEMISTRY_ONLY
+				LEAF	""	T2_CL				show_clbr	NULL				!MT_ONLY			!CHEMISTRY_ONLY
+				LEAF	""	T5_PPM_S_TYPE		true		select		SSEC=rep					!CHEMISTRY_ONLY
+				LEAF	""	T5_PPM_DECPLACES	ppm_probe	select		SEC=rep						!CHEMISTRY_ONLY
+				LEAF	""	T4_INTERLOCK_DUR	ppm_probe	value_in	SSEC=rep					!CHEMISTRY_ONLY
+				LEAF	""	T2_CL_HIGH			show_clbr	value_in	SSEC=T5_PERM_ALARMS			!CHEMISTRY_ONLY
+				LEAF	""	T2_CL_LOW			show_clbr	value_in	SSEC=T5_PERM_ALARMS			!CHEMISTRY_ONLY
+				LEAF	""	T2_CL_ALM_HYST		show_clbr	value_in	SSEC=manager				!CHEMISTRY_ONLY
+				LEAF	""	T5_CL_BUF_MAX		ppm_probe	value_in	SSEC=rep					!CHEMISTRY_ONLY
+			ENDMENU																					!CHEMISTRY_ONLY
+			MENU	"Total $$T5_CHEM_SELECT! Setup"	tppm_rep										!CHEMISTRY_ONLY
+				LEAF	""	T2_TOTALCL			show_totalppm	NULL				!MT_ONLY		!CHEMISTRY_ONLY
+				LEAF	""	T3_TOTALCL_EN		true		select		SSEC=rep					!CHEMISTRY_ONLY
+				LEAF	""	T2_TOTALCL_HIGH		show_totalppm	value_in	SSEC=T5_PERM_ALARMS		!CHEMISTRY_ONLY
+				LEAF	""	T2_TOTALCL_LOW 		show_totalppm	value_in	SSEC=T5_PERM_ALARMS		!CHEMISTRY_ONLY
+				LEAF	""	T2_CL_ALM_HYST		show_totalppm	value_in	SSEC=manager			!CHEMISTRY_ONLY
+				LEAF	""	T5_TOTALCL_BUF_MAX	show_totalppm	value_in	SSEC=rep				!CHEMISTRY_ONLY
+			ENDMENU																					!CHEMISTRY_ONLY
+			MENU	"Combined $$T5_CHEM_SELECT!"	show_combppm									!CHEMISTRY_ONLY
+				LEAF	""	T2_COMBCL			true	NULL				!MT_ONLY				!CHEMISTRY_ONLY
+				LEAF	""	T2_COMBCL_HIGH		true	value_in			SSEC=T5_PERM_ALARMS		!CHEMISTRY_ONLY
+				LEAF	""	T2_CL_ALM_HYST		show_totalppm	value_in	SSEC=manager			!CHEMISTRY_ONLY
+			ENDMENU																					!CHEMISTRY_ONLY
+		ENDMENU																						!CHEMISTRY_ONLY
+		MENU	"TDS Setup"	tds_rep																	!CHEMISTRY_ONLY
+			LEAF	""	T2_COND			show_tds	NULL					!MT_ONLY				!CHEMISTRY_ONLY
+			LEAF	""	T3_TDS_ENABLE	true		select		SEC=rep								!CHEMISTRY_ONLY
+			LEAF	""	T5_COND_UNITS	show_tds	select		SEC=rep								!CHEMISTRY_ONLY
+			LEAF	""	T2_COND_HIGH	show_tds	value_in	SSEC=T5_PERM_ALARMS					!CHEMISTRY_ONLY
+			LEAF	""	T2_COND_LOW		show_tds	value_in	SSEC=T5_PERM_ALARMS					!CHEMISTRY_ONLY
+			LEAF	""	T2_COND_HYST	show_tds	value_in	SSEC=manager						!CHEMISTRY_ONLY
+			LEAF	""	T5_COND_BUF_MAX	show_tds	value_in	SSEC=rep							!CHEMISTRY_ONLY
+		ENDMENU																						!CHEMISTRY_ONLY
+		MENU	"Conductivity Setup"	cond_rep													!CHEMISTRY_ONLY
+			LEAF	""	T2_COND			show_tds	NULL					!MT_ONLY				!CHEMISTRY_ONLY
+			LEAF	""	T3_TDS_ENABLE	true		select		SEC=rep								!CHEMISTRY_ONLY
+			LEAF	""	T5_COND_UNITS	show_tds	select		SEC=rep								!CHEMISTRY_ONLY
+			LEAF	""	T2_COND_HIGH	show_tds	value_in	SSEC=T5_PERM_ALARMS					!CHEMISTRY_ONLY
+			LEAF	""	T2_COND_LOW		show_tds	value_in	SSEC=T5_PERM_ALARMS					!CHEMISTRY_ONLY
+			LEAF	""	T2_COND_HYST	show_tds	value_in	SSEC=manager						!CHEMISTRY_ONLY
+			LEAF	""	T5_COND_BUF_MAX	show_tds	value_in	SSEC=rep							!CHEMISTRY_ONLY
+		ENDMENU																						!CHEMISTRY_ONLY
+		MENU	"Temperature Setup"	temp_rep														!CHEMISTRY_ONLY
+			LEAF	""	T2_TEMP				show_temp	NULL					!MT_ONLY			!CHEMISTRY_ONLY
+			LEAF	""	T3_TEMP_ENABLE		true		select		SEC=REP							!CHEMISTRY_ONLY
+			LEAF	""	T2_TEMP_HIGH		show_temp	value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+			LEAF	""	T2_TEMP_LOW			show_temp	value_in	SSEC=T5_PERM_ALARMS				!CHEMISTRY_ONLY
+			LEAF	""	T2_TEMP_HYST		show_temp	value_in	SSEC=manager					!CHEMISTRY_ONLY
+			LEAF	""	T5_TEMP_BUF_MAX		show_temp	value_in	SSEC=rep						!CHEMISTRY_ONLY
+		ENDMENU																						!CHEMISTRY_ONLY
+		MENU	"Alkalinity Setup"	alk_rep															!CHEMISTRY_ONLY
+			LEAF	""	T2_ALK					show_alk_val	NULL			!MT_ONLY			!CHEMISTRY_ONLY
+			LEAF	""	T3_ALK_EXPIRED			show_alk_exp	NULL								!CHEMISTRY_ONLY
+			LEAF	""	T5_ALK_STATUS			show_alk		NULL								!CHEMISTRY_ONLY
+			LEAF	""	T5_ALK_FAILURE			alk_meas_fail	NULL								!CHEMISTRY_ONLY
+			LEAF	""	T5_ALK_CAL_FAILURE		alk_cal_fail	NULL								!CHEMISTRY_ONLY
+			LEAF	" "	NO_CODE					show_alk		NULL		OMIT_VALUE	!MT_ONLY 	!CHEMISTRY_ONLY
+			LEAF	""	T5_ALK_ENABLE			true			select		SEC=REP					!CHEMISTRY_ONLY
+			LEAF	""	T2_ALK_HIGH				show_alk		value_in	SSEC=T5_PERM_ALARMS		!CHEMISTRY_ONLY
+			LEAF	""	T2_ALK_LOW				show_alk		value_in	SSEC=T5_PERM_ALARMS		!CHEMISTRY_ONLY
+			LEAF	""	T4_ALK_START_TIME		show_alk		value_in							!CHEMISTRY_ONLY
+			LEAF	""	T2_ALK_ACID_LEVEL		show_alk		value_in							!CHEMISTRY_ONLY
+			LEAF	""	T2_ALK_ACID_LEVEL_SETPT	show_alk		value_in							!CHEMISTRY_ONLY
+			LEAF	""	T4_ALK_LAST_TIME		alk_last		NULL								!CHEMISTRY_ONLY
+			LEAF	""	T4_ALK_LAST_DATE		alk_last		NULL								!CHEMISTRY_ONLY
+			LEAF	""	T4_ALK_NEXT_TIME		show_alk		NULL								!CHEMISTRY_ONLY
+			LEAF	""	T4_ALK_NEXT_DATE		show_alk		NULL								!CHEMISTRY_ONLY
+			LEAF	"Start/cancel measurement"	T5_ALK_TRIGGER	alk_trigger		select				!CHEMISTRY_ONLY
+			MENU	"Diagnostics" 	show_alk														!CHEMISTRY_ONLY
+				LEAF	""	T5_ALK_STATE			true	NULL									!CHEMISTRY_ONLY
+				LEAF	""	T2_ALK_CAL_TEMP			true	NULL									!CHEMISTRY_ONLY
+				LEAF	""	T2_ALK					true	NULL									!CHEMISTRY_ONLY
+				LEAF	""	T5_ALK_COUNTER			true	NULL									!CHEMISTRY_ONLY
+				LEAF	""	T6_ALK_CONSTANT			true	NULL									!CHEMISTRY_ONLY
+				LEAF	""	T4_ALK_FLOWRATE			true	NULL									!CHEMISTRY_ONLY
+				LEAF	""	T2_ALK_PH				true	NULL									!CHEMISTRY_ONLY
+				LEAF	""	T2_ALK_PH_OFFSET		true	NULL									!CHEMISTRY_ONLY
+				LEAF	""	T2_ALK_CAL				true	NULL									!CHEMISTRY_ONLY
+				LEAF	""	T4_ALK_CAL_TIME			true	NULL									!CHEMISTRY_ONLY
+				LEAF	""	T4_ALK_CAL_DATE			true	NULL									!CHEMISTRY_ONLY
+				LEAF	""	T4_ALK_STEP_TIMER		true	NULL									!CHEMISTRY_ONLY
+				LEAF	""	T4_ALK_STEP_CNTDWN		true	NULL									!CHEMISTRY_ONLY
+				LEAF	""	T4_ALK_PUMP_SPEED		true	NULL									!CHEMISTRY_ONLY
+				LEAF	""	T4_LAST_ALKPOLL_TIME	true	NULL									!CHEMISTRY_ONLY
+				LEAF	""	T4_LAST_ALKPOLL_DATE	true	NULL									!CHEMISTRY_ONLY
+				LEAF	""	T6_ALK_TOT_NUM_STEPS	true	NULL									!CHEMISTRY_ONLY
+			ENDMENU																					!CHEMISTRY_ONLY
+		ENDMENU																						!CHEMISTRY_ONLY
+		MENU	"Pressure and Vacuum"	presvac_rep
+			MENU	"Filter Inf. Pressure"		inf_rep
+				LEAF	""	T2_FILTER_IN			inf_ma		NULL					!MT_ONLY
+				LEAF	""	T5_FILTER_PRES_S_TYPE	true		select		SSEC=rep
+				LEAF	""	T2_FILTER_PRES_SCALE	inf_ma_pres	value_in	SSEC=rep
+				LEAF	""	T5_FILTER_VAC_UNITS		inf_ma_vac	select		SSEC=rep
+				LEAF	""	T2_FILTER_IN_HIGH		inf_ma	value_in	SSEC=T5_PERM_ALARMS
+				LEAF	""	T2_FILTER_IN_LOW		inf_ma	value_in	SSEC=T5_PERM_ALARMS
+				LEAF	""	T2_FILTER_IN_HYST		inf_ma	value_in	SSEC=manager
+				LEAF	""	T5_FILTER_IN_BUF_MAX	inf_ma	value_in	SSEC=rep
+				LEAF	""	T3_SHOW_INFLUENT		inf_ma	select
+			ENDMENU
+			MENU	"Filter Eff. Pressure"		eff_rep
+				LEAF	""	T2_FILTER_OUT			eff_ma		NULL					!MT_ONLY
+				LEAF	""	T5_FILTER2_PRES_S_TYPE	true		select	SSEC=rep
+				LEAF	""	T2_FILTER2_PRES_SCALE	eff_ma	value_in	SSEC=rep
+				LEAF	""	T2_FILTER_OUT_HIGH		eff_ma	value_in	SSEC=T5_PERM_ALARMS
+				LEAF	""	T2_FILTER_OUT_LOW		eff_ma	value_in	SSEC=T5_PERM_ALARMS
+				LEAF	""	T2_FILTER_OUT_HYST		eff_ma	value_in	SSEC=manager
+				LEAF	""	T5_FILTER_OUT_BUF_MAX	eff_ma	value_in	SSEC=rep
+				LEAF	""	T3_SHOW_EFFLUENT		eff_ma	select
+			ENDMENU
+			MENU	"Filter Diff. Pressure"		diff_pres
+				LEAF	""	T4_FILTER_DIFF			true			NULL						!MT_ONLY
+				LEAF	""	T4_FILTER_DIFF_HIGH		true	value_in	SSEC=T5_PERM_ALARMS
+				LEAF	""	T4_FILTER_DIFF_HYST		true	value_in	SSEC=manager
+			ENDMENU
+			MENU	"Pump Eff. Pressure"		pump_eff_rep
+				LEAF	""	T2_RECIRC_EFF			pump_eff_ma		NULL					!MT_ONLY
+				LEAF	""	T5_RECIRC_EFF_S_TYPE	true		select	SSEC=rep
+				LEAF	""	T2_FILTER2_PRES_SCALE	pump_eff_ma	value_in	SSEC=rep
+				LEAF	""	T2_RECIRC_EFF_HIGH		pump_eff_ma	value_in	SSEC=T5_PERM_ALARMS
+				LEAF	""	T2_RECIRC_EFF_LOW		pump_eff_ma	value_in	SSEC=T5_PERM_ALARMS
+				LEAF	""	T2_RECIRC_EFF_HYST		pump_eff_ma	value_in	SSEC=manager
+				LEAF	""	T5_RECIRC_EFF_BUF_MAX	pump_eff_ma	value_in	SSEC=rep
+				LEAF	""	T3_SHOW_RECIRC_EFF		pump_eff_ma	select
+			ENDMENU
+			MENU	"Strainer Vacuum"	vac_rep
+				LEAF	""	T2_STRAINER				vac_ma			NULL					!MT_ONLY
+				LEAF	""	T5_STRAINER_S_TYPE		true			select		SSEC=rep
+				LEAF	""	T5_STRAINER_UNITS		vac_ma			select		SSEC=rep
+				LEAF	""	T2_STRAINER_HIGH		vac_ma			value_in	SSEC=T5_PERM_ALARMS
+				LEAF	""	T2_STRAINER_LOW			vac_ma			value_in	SSEC=T5_PERM_ALARMS
+				LEAF	""	T2_STRAINER_HYST		vac_ma			value_in	SSEC=manager
+				LEAF	""	T5_STRAINER_BUF_MAX		vac_ma			value_in	SSEC=rep
+			ENDMENU
+			MENU	"Total Dynamic Head"			tdh_avail_127
+				LEAF	""	T4_TDH					tdh_en		NULL					!MT_ONLY
+				LEAF	""	T3_SHOW_TDH				true		select			SEC=rep
+				LEAF	""	T4_TDH_HIGH				tdh_en		value_in		SSEC=T5_PERM_ALARMS
+				LEAF	""	T4_TDH_LOW				tdh_en		value_in		SSEC=T5_PERM_ALARMS
+				LEAF	""	T4_TDH_HYST				tdh_en		value_in		SSEC=manager
+			ENDMENU
+		ENDMENU
+		MENU	"Turbidity"	turbrep
+			LEAF	""	T2_TURBIDITY			turbidity_input		NULL					!MT_ONLY
+			LEAF	""	T3_TURBIDITY_ENABLE		true				select		SSEC=rep
+			LEAF	""	T2_TURBIDITY_HIGH		turbidity_input		value_in	SSEC=T5_PERM_ALARMS
+			LEAF	""	T2_TURBIDITY_HYST		turbidity_input		value_in	SSEC=manager
+			LEAF	""	T5_TURBIDITY_BUF_MAX	turbidity_input		value_in	SSEC=rep
+			LEAF	""	T4_TURBIDITY_SCALE		turbidity_input		value_in	SSEC=rep
+		ENDMENU
+		MENU	"pH Inv"	ph_inv_rep																!CHEMISTRY_ONLY
+			LEAF	""	T2_PH_INV_LVL		ph_inv_420ma_sens	NULL					!MT_ONLY	!CHEMISTRY_ONLY
+			LEAF	""	T5_PH_INV_S_TYPE		true				select		SSEC=rep			!CHEMISTRY_ONLY
+			LEAF	""	T5_PH_INV_SENSOR		ph_inv_420ma_sens	select		SSEC=rep			!CHEMISTRY_ONLY
+			LEAF	""	T2_PH_INV_LVL_LOW		ph_inv_420ma_sens	value_in	SSEC=T5_PERM_ALARMS	!CHEMISTRY_ONLY
+			LEAF	""	T2_PH_INV_LVL_HYST		ph_inv_420ma_sens	value_in	SSEC=manager		!CHEMISTRY_ONLY
+			LEAF	""	T5_PH_INV_LVL_BUF_MAX	ph_inv_420ma_sens	value_in	SSEC=rep			!CHEMISTRY_ONLY
+			LEAF	""	T2_PH_INV_LVL_SCALE		ph_inv_420ma_sens	value_in	SSEC=rep			!CHEMISTRY_ONLY
+		ENDMENU																						!CHEMISTRY_ONLY
+		MENU	"Chlorine Inv"	cl_inv_rep															!CHEMISTRY_ONLY
+			LEAF	""	T2_CL_INV_LVL		cl_inv_420ma_sens	NULL					!MT_ONLY	!CHEMISTRY_ONLY
+			LEAF	""	T5_CL_INV_S_TYPE		true				select		SSEC=rep			!CHEMISTRY_ONLY
+			LEAF	""	T5_CL_INV_SENSOR		cl_inv_420ma_sens	select		SSEC=rep			!CHEMISTRY_ONLY
+			LEAF	""	T2_CL_INV_LVL_LOW		cl_inv_420ma_sens	value_in	SSEC=T5_PERM_ALARMS	!CHEMISTRY_ONLY
+			LEAF	""	T2_CL_INV_LVL_HYST		cl_inv_420ma_sens	value_in	SSEC=manager		!CHEMISTRY_ONLY
+			LEAF	""	T5_CL_INV_LVL_BUF_MAX	cl_inv_420ma_sens	value_in	SSEC=rep			!CHEMISTRY_ONLY
+			LEAF	""	T2_CL_INV_LVL_SCALE		cl_inv_420ma_sens	value_in	SSEC=rep			!CHEMISTRY_ONLY
+		ENDMENU																						!CHEMISTRY_ONLY
+		MENU	"Bromine Inv"	br_inv_rep															!CHEMISTRY_ONLY
+			LEAF	""	T2_CL_INV_LVL		cl_inv_420ma_sens	NULL					!MT_ONLY	!CHEMISTRY_ONLY
+			LEAF	""	T5_CL_INV_S_TYPE		true				select		SSEC=rep			!CHEMISTRY_ONLY
+			LEAF	""	T5_CL_INV_SENSOR		cl_inv_420ma_sens	select		SSEC=rep			!CHEMISTRY_ONLY
+			LEAF	""	T2_CL_INV_LVL_LOW		cl_inv_420ma_sens	value_in	SSEC=T5_PERM_ALARMS	!CHEMISTRY_ONLY
+			LEAF	""	T2_CL_INV_LVL_HYST		cl_inv_420ma_sens	value_in	SSEC=manager		!CHEMISTRY_ONLY
+			LEAF	""	T5_CL_INV_LVL_BUF_MAX	cl_inv_420ma_sens	value_in	SSEC=rep			!CHEMISTRY_ONLY
+			LEAF	""	T2_CL_INV_LVL_SCALE		cl_inv_420ma_sens	value_in	SSEC=rep			!CHEMISTRY_ONLY
+		ENDMENU																						!CHEMISTRY_ONLY
+		MENU	"$$PC_SURGE_LABEL! Level"	srg_rep
+			LEAF	""	T2_SURGE			srg_ma_sens		NULL					!MT_ONLY
+			LEAF	""	T5_SRG_LVL_S_TYPE	true				select		SSEC=rep
+			LEAF	""	T2_SURGE_HIGH		srg_ma_sens		value_in		SSEC=T5_PERM_ALARMS
+			LEAF	""	T2_SURGE_LOW		srg_ma_sens		value_in		SSEC=T5_PERM_ALARMS
+			LEAF	""	T2_SURGE_HYST		srg_ma_sens		value_in		SSEC=manager
+			LEAF	""	T5_SURGE_BUF_MAX	srg_ma_sens		value_in	SSEC=rep
+			LEAF	""	T2_SURGE_SCALE		srg_ma_sens		value_in	SSEC=rep
+			LEAF	""	T2_SURGE_EU_OFFSET	srg_ma_sens		value_in	SSEC=rep
+			LEAF	""	PC_SURGE_LABEL		srg_ma_sens		value_in	SEC=rep
+			LEAF	""	T3_SURGE_SAFETY_EO_EN	srg_ma_sens		select
+		ENDMENU
+		MENU	"High $$PC_SURGE_LABEL! safety"	srg_safety_rep
+			LEAF	""	T5_SURGE_SAFETY_SNS_TYPE	true			select		SSEC=rep
+			LEAF	""	T4_SRG_SAFETY_DELAY		safety_surge		value_in
+			LEAF	""	T3_SURGE_SAFETY_EO_EN	safety_surge		select
+		ENDMENU
+		MENU	"Backwash Pit Level"	bwpit_rep														!BACKWASH_ONLY
+			LEAF	""	T2_BW_PIT_LVL			bwpit_420ma_sens	NULL					!MT_ONLY	!BACKWASH_ONLY
+			LEAF	""	T5_BW_PIT_LVL_S_TYPE	true				select		SSEC=rep				!BACKWASH_ONLY
+			LEAF	""	T2_BW_PIT_LVL_HIGH		bwpit_420ma_sens		value_in	SSEC=T5_PERM_ALARMS	!BACKWASH_ONLY
+			LEAF	""	T2_BW_PIT_LVL_LOW		bwpit_420ma_sens		value_in	SSEC=T5_PERM_ALARMS	!BACKWASH_ONLY
+			LEAF	""	T5_BW_PIT_LVL_BUF_MAX	bwpit_420ma_sens		value_in	SSEC=rep			!BACKWASH_ONLY
+			LEAF	""	T2_BW_PIT_LVL_SCALE		bwpit_420ma_sens		value_in	SSEC=rep			!BACKWASH_ONLY
+		ENDMENU																							!BACKWASH_ONLY
+		MENU	"Valve Diff. Pressure"	bw_fltr_3way_rep												!BACKWASH_ONLY
+			LEAF	""	T5_BW_VLV_DIFF_S_TYPE	true			select									!BACKWASH_ONLY
+		ENDMENU																							!BACKWASH_ONLY
+		MENU	"Flow Rates"		flow_rates_rep
+			LEAF	""	T5_VOL_RESET			vols_reset		select		SEC=rep				!MT_ONLY
+			MENU	"$$PC_FLOW_RATE1_LBL!"			flow_rate_rep
+				LEAF	""	T4_FLOW_RATE 			flow_enabled	NULL
+				LEAF	""	T3_FLOW_RATE			true			select		SEC=rep
+				LEAF	""	PC_FLOW_RATE1_LBL		flow_enabled	value_in	SSEC=rep
+				LEAF	""	T5_SHOW_FLWRT1			flow_enabled	select		SSEC=rep
+				LEAF	""	T4_FLOWRATE_MAX			flow_enabled	value_in	SSEC=rep
+				LEAF	""	T3_NOCHEM4LOWFLOW		flow_enabled	select		SSEC=rep
+				LEAF	""	T6_FLOWRATE_KFACTOR		flow_enabled	value_in	SSEC=rep
+				LEAF	""	T5_FLOW_RATE_SCALE		flow_enabled	select		SSEC=rep
+				LEAF	""	T4_FLOW_RATE_LOW		flow_enabled	value_in	SSEC=T5_PERM_ALARMS
+				LEAF	""	T4_FLOW_RATE_HYST		flow_enabled	value_in	SSEC=manager
+				LEAF	""	T5_FLW_MTR_BUFF_MAX		flow_enabled	value_in	SSEC=rep
+				LEAF	""	T5_FLW_MTR1_SENS		flow_enabled	value_in	SSEC=rep
+			ENDMENU
+			MENU	"$$PC_FLOW_RATE2_LBL!"			flow_enabled2
+				LEAF	""	T4_FLOW_RATE2 			true			NULL
+				LEAF	""	PC_FLOW_RATE2_LBL		true			value_in	SSEC=rep
+				LEAF	""	T5_SHOW_FLWRT2			true			select		SSEC=rep
+				LEAF	""	T4_FLOWRATE2_MAX		true			value_in	SSEC=rep
+				LEAF	""	T3_NOCHEM4LOWFLOW2		true			select		SSEC=rep
+				LEAF	""	T5_FLOW_RATE2_SCALE		true			select		SSEC=rep
+				LEAF	""	T4_FLOW_RATE2_LOW		true			value_in	SSEC=T5_PERM_ALARMS
+				LEAF	""	T4_FLOW_RATE2_HYST		true			value_in	SSEC=manager
+				LEAF	""	T5_FLW_MTR2_BUFF_MAX	true			value_in	SSEC=rep
+				LEAF	""	T5_FLW_MTR2_SENS		true			value_in	SSEC=rep
+			ENDMENU
+			MENU	"$$PC_FLOW_RATE3_LBL!"			flow_enabled3
+				LEAF	""	T4_FLOW_RATE3 			true			NULL
+				LEAF	""	PC_FLOW_RATE3_LBL		true			value_in	SSEC=rep
+				LEAF	""	T5_SHOW_FLWRT3			true			select		SSEC=rep
+				LEAF	""	T4_FLOWRATE3_MAX		true			value_in	SSEC=rep
+				LEAF	""	T3_NOCHEM4LOWFLOW3		true			select		SSEC=rep
+				LEAF	""	T5_FLOW_RATE3_SCALE		true			select		SSEC=rep
+				LEAF	""	T4_FLOW_RATE3_LOW		true			value_in	SSEC=T5_PERM_ALARMS
+				LEAF	""	T4_FLOW_RATE3_HYST		true			value_in	SSEC=manager
+				LEAF	""	T5_FLW_MTR3_BUFF_MAX	true			value_in	SSEC=rep
+				LEAF	""	T5_FLW_MTR3_SENS		true			value_in	SSEC=rep
+			ENDMENU
+			MENU	"$$PC_FLOW_RATE4_LBL!"			flow_enabled4
+				LEAF	""	T4_FLOW_RATE4 			true			NULL
+				LEAF	""	PC_FLOW_RATE4_LBL		true			value_in	SSEC=rep
+				LEAF	""	T5_SHOW_FLWRT4			true			select		SSEC=rep
+				LEAF	""	T4_FLOWRATE4_MAX		true			value_in	SSEC=rep
+				LEAF	""	T3_NOCHEM4LOWFLOW4		true			select		SSEC=rep
+				LEAF	""	T5_FLOW_RATE4_SCALE		true			select		SSEC=rep
+				LEAF	""	T4_FLOW_RATE4_LOW		true			value_in	SSEC=T5_PERM_ALARMS
+				LEAF	""	T4_FLOW_RATE4_HYST		true			value_in	SSEC=manager
+				LEAF	""	T5_FLW_MTR4_BUFF_MAX	true			value_in	SSEC=rep
+				LEAF	""	T5_FLW_MTR4_SENS		true			value_in	SSEC=rep
+			ENDMENU
+			MENU	"$$PC_FLOW_RATE5_LBL!"			flow_rate5_rep
+				LEAF	""	T4_FLOW_RATE5 			flow_enabled5	NULL
+				LEAF	""	T5_COMB_FLOWRATE_SRC	true			select		SSEC=rep
+				LEAF	""	PC_FLOW_RATE5_LBL		flow_enabled5	value_in	SSEC=rep
+				LEAF	""	T5_SHOW_FLWRT5			flow_enabled5	select		SSEC=rep
+				LEAF	""	T4_FLOWRATE5_MAX		flow_enabled5	NULL
+				LEAF	""	T3_NOCHEM4LOWFLOW5		flow_enabled5	select		SSEC=rep
+				LEAF	""	T5_FLOW_RATE5_SCALE		flow_enabled5	select		SSEC=rep
+				LEAF	""	T4_FLOW_RATE5_LOW		flow_enabled5	value_in	SSEC=T5_PERM_ALARMS
+				LEAF	""	T4_FLOW_RATE5_HYST		flow_enabled5	value_in	SSEC=manager
+				LEAF	""	T5_FLW_MTR5_BUFF_MAX	flow_enabled5	value_in	SSEC=rep
+				LEAF	""	T5_FLW_MTR5_SENS		flow_enabled5	value_in	SSEC=rep
+			ENDMENU
+		ENDMENU
+		MENU	"BW Valve Diff"		bw_fltr_3way_rep													!BACKWASH_ONLY
+			LEAF	""	T5_BW_VLV_DIFF_S_TYPE		true	select										!BACKWASH_ONLY
+		ENDMENU																							!BACKWASH_ONLY
+		MENU	"Reassign input(s)"		technical
+			LEAF	""	T5_PH_INV_LVL_SRC			true		NULL	OMIT_LINE						!CHEMISTRY_ONLY
+			LEAF	""	T5_CL_INV_LVL_SRC			true		NULL	OMIT_LINE						!CHEMISTRY_ONLY
+			LEAF	""	T5_TURBIDITY_SRC			true		NULL	OMIT_LINE
+			LEAF	""	T5_SURGE_SRC				true		NULL	OMIT_LINE
+			LEAF	""	T5_BW_PIT_LVL_SRC			true		NULL	OMIT_LINE						!BACKWASH_ONLY
+			LEAF	""	T5_FILTER_IN_SRC			true		NULL	OMIT_LINE
+			LEAF	""	T5_FILTER_OUT_SRC			true		NULL	OMIT_LINE
+			LEAF	""	T5_STRAINER_SRC				true		NULL	OMIT_LINE
+			LEAF	""	T5_BW_PIT_LO_SRC			true		NULL	OMIT_LINE						!BACKWASH_ONLY
+			LEAF	""	T5_BW_VLV_DIFF_SRC			true		NULL	OMIT_LINE						!BACKWASH_ONLY
+			LEAF	""	T5_BW_DIFF_TRIG_SRC			true		NULL	OMIT_LINE						!BACKWASH_ONLY
+			LEAF	""	T5_AUTOFILL1_SRC			true		NULL	OMIT_LINE
+			LEAF	""	T5_AUTOFILL2_SRC			true		NULL	OMIT_LINE
+			LEAF	""	T5_TOTALCL_SRC				true		NULL	OMIT_LINE						!CHEMISTRY_ONLY
+			LEAF	""	T5_RECIRC_EFF_SRC			true		NULL	OMIT_LINE
+			LEAF	""	T5_FLOW_RATE2_SRC			true		NULL	OMIT_LINE
+			LEAF	""	T5_FLOW_RATE3_SRC			true		NULL	OMIT_LINE
+			LEAF	""	T5_FLOW_RATE4_SRC			true		NULL	OMIT_LINE
+			LEAF	""	T5_SURGE_SAFETY_SRC			true		NULL	OMIT_LINE
+			LEAF	"pH Inv"	PC_AI_USAGE06		true	select										!BECSYS7_ONLY
+			LEAF	"Cl Inv"	PC_AI_USAGE07		true	select										!BECSYS7_ONLY
+			LEAF	"Turb"		PC_AI_USAGE08		true	select										!BECSYS7_ONLY
+			LEAF	"Surge"		PC_AI_USAGE09		true	select										!BECSYS7_ONLY
+			LEAF	"Filter1"	PC_AI_USAGE11		true	select										!BECSYS7_ONLY
+			LEAF	"Filter2"	PC_AI_USAGE13		true	select										!BECSYS7_ONLY
+			LEAF	"BW Pit1"	PC_AI_USAGE10		true	select										!BECSYS7_ONLY
+			LEAF	"BW Pit2"	PC_AI_USAGE12		true	select										!BECSYS7_ONLY
+			LEAF	"Strainer"	PC_AI_USAGE14		true	select										!BECSYS7_ONLY
+			LEAF	"VlvDiff"	PC_AI_USAGE15		true	select										!BECSYS7_ONLY
+			LEAF	"pH Inv"	PC_AI_USAGE05		true				select							!BECSYS5_ONLY
+			LEAF	"Cl Inv"	PC_AI_USAGE06		true				select							!BECSYS5_ONLY
+			LEAF	"CH3"		PC_AI_USAGE07		b5_std_inputboard	select							!BECSYS5_ONLY
+			LEAF	"CH4"		PC_AI_USAGE08		b5_std_inputboard	select							!BECSYS5_ONLY
+			LEAF	"Filter1"	PC_AI_USAGE01		true	select										!BECSYS6_ONLY
+			LEAF	"Filter2"	PC_AI_USAGE02		true	select										!BECSYS6_ONLY
+			LEAF	"BW Pit1"	PC_AI_USAGE03		true	select										!BECSYS6_ONLY
+			LEAF	"BW Pit2"	PC_AI_USAGE04		true	select										!BECSYS6_ONLY
+			LEAF	"VlvDiff"	PC_AI_USAGE05		true	select										!BECSYS6_ONLY
+		ENDMENU
+	ENDMENU
+	MENU	"Control Outputs"	true	SEC=T5_PERM_MENUS
+		MENU	"pH Control"	phfeed_rep																!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY1			true		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY2			true		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY3			true		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY4			true		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX1		true		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX2		true		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX3		true		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE1	exp1		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE2	exp1		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE3	exp1		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE4	exp1		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE5	exp1		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE1	exp2		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE2	exp2		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE3	exp2		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE4	exp2		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE5	exp2		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE1	exp3		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE2	exp3		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE3	exp3		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE4	exp3		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE5	exp3		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	T5_PH_DECPLACES			true		NULL	OMIT_LINE				!MT_ONLY	!CHEMISTRY_ONLY
+			LEAF	""	PC_PH1_RELAY			true		select	SSEC=rep							!CHEMISTRY_ONLY
+			LEAF	""	PC_PH_CO2_RELAY			true		select	SSEC=rep							!CHEMISTRY_ONLY
+			LEAF	""	PC_PH2_RELAY			true		select	SSEC=rep							!CHEMISTRY_ONLY
+			LEAF	""	T5_CTRL_STYLE_PH		phfeed240	select										!CHEMISTRY_ONLY
+			LEAF	""	T2_PH					phfeed240	NULL										!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_PH1			phfeed240	value_in									!CHEMISTRY_ONLY
+			LEAF	""	T2_SPAN_PH1				ctrl1_tbp240	value_in								!CHEMISTRY_ONLY
+			LEAF	""	T4_TBP_PERIOD_PH1		ctrl1_tbp240	value_in								!CHEMISTRY_ONLY
+			LEAF	""	T4_TBP_MIN_ONTIME_PH	ctrl1_tbp240	value_in	SSEC=rep					!CHEMISTRY_ONLY
+			LEAF	""	T2_HYST_PH_FEED			phfeed240	value_in									!CHEMISTRY_ONLY
+			LEAF	""	T2_PH_DEADBAND			dualph		value_in									!CHEMISTRY_ONLY
+			LEAF	""	T4_FEEDLIMIT_PH1		phfeed240	value_in									!CHEMISTRY_ONLY
+		ENDMENU																							!CHEMISTRY_ONLY
+		MENU	"$$T5_CHEM_SELECT! Control"	ppm_feed_rep												!CHEMISTRY_ONLY
+			LEAF	""	T5_PPM_S_TYPE			true			NULL		OMIT_LINE		!MT_ONLY	!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY1			true		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY2			true		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY3			true		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY4			true		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX1		true		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX2		true		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX3		true		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE1	exp1		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE2	exp1		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE3	exp1		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE4	exp1		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE5	exp1		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE1	exp2		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE2	exp2		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE3	exp2		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE4	exp2		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE5	exp2		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE1	exp3		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE2	exp3		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE3	exp3		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE4	exp3		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE5	exp3		NULL		OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_CL1_RELAY			true		select		SSEC=rep							!CHEMISTRY_ONLY
+			LEAF	""	T5_CHEM_SELECT			true					select								!CHEMISTRY_ONLY
+			LEAF	""	T5_CL_PRI_CTRL_SRC		clfeed_ppm_avail 		select								!CHEMISTRY_ONLY
+			LEAF	""	T5_CTRL_STYLE_ORP		clfeed					select								!CHEMISTRY_ONLY
+			LEAF	""	T2_ORP					orp_input_clfeed		NULL								!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_ORP			orp_orp_ctrl160			value_in							!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_ORP			orp_calc_ppm_ctrl		NULL								!CHEMISTRY_ONLY
+			LEAF	""	T2_HYST_CL_FEED_ORP		orp_input_clfeed		value_in	SSEC=rep				!CHEMISTRY_ONLY
+			LEAF	""	T2_CL					cl_pri_cl_ctrl			NULL								!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_PPM			cl_pri_cl_ctrl			value_in							!CHEMISTRY_ONLY
+			LEAF	""	T2_HYST_CL_FEED_PPM		cl_pri_cl				value_in	SSEC=rep				!CHEMISTRY_ONLY
+			LEAF	""	T2_SPAN_ORP1			orp_input_clfeed_tbp	value_in							!CHEMISTRY_ONLY
+			LEAF	""	T2_SPAN_PPM				cl_pri_cl_tbp			value_in							!CHEMISTRY_ONLY
+			LEAF	""	T4_TBP_PERIOD_ORP1		ctrl2_tbp				value_in							!CHEMISTRY_ONLY
+			LEAF	""	T4_TBP_MIN_ONTIME_ORP	ctrl2_tbp				value_in	SSEC=rep				!CHEMISTRY_ONLY
+			LEAF	""	T4_FEEDLIMIT_ORP1		clfeed					value_in							!CHEMISTRY_ONLY
+			MENU	"Alternate Set Point"				clfeed											!CHEMISTRY_ONLY
+				LEAF	""	PC_CWKDAY					true			NULL							!CHEMISTRY_ONLY
+				LEAF	""	T4_ORP1_WD1					true			sel_wd							!CHEMISTRY_ONLY
+				LEAF	""	T4_ORP1_START_HM1			altorp1			value_in						!CHEMISTRY_ONLY
+				LEAF	""	T4_ORP1_END_HM1				altorp1			value_in						!CHEMISTRY_ONLY
+				LEAF	" "	NO_CODE						altorp1			NULL	OMIT_VALUE				!CHEMISTRY_ONLY
+				LEAF	""	T4_ORP1_WD2					altorp12		sel_wd							!CHEMISTRY_ONLY
+				LEAF	""	T4_ORP1_START_HM2			altorp2			value_in						!CHEMISTRY_ONLY
+				LEAF	""	T4_ORP1_END_HM2				altorp2			value_in						!CHEMISTRY_ONLY
+				LEAF	" "	NO_CODE						altorp23		NULL	OMIT_VALUE				!CHEMISTRY_ONLY
+				LEAF	""	T4_ORP1_WD3					altorp2			sel_wd							!CHEMISTRY_ONLY
+				LEAF	""	T4_ORP1_START_HM3			altorp3			value_in						!CHEMISTRY_ONLY
+				LEAF	""	T4_ORP1_END_HM3				altorp3			value_in						!CHEMISTRY_ONLY
+				LEAF	" "	NO_CODE						altorp3			NULL	OMIT_VALUE				!CHEMISTRY_ONLY
+				LEAF	""	T4_ORP1_WD4					altorp34		sel_wd							!CHEMISTRY_ONLY
+				LEAF	""	T4_ORP1_START_HM4			altorp4			value_in						!CHEMISTRY_ONLY
+				LEAF	""	T4_ORP1_END_HM4				altorp4			value_in						!CHEMISTRY_ONLY
+				LEAF	" "	NO_CODE						altorp4			NULL	OMIT_VALUE				!CHEMISTRY_ONLY
+				LEAF	""	T2_FEEDPT_ORP_ALT		orp_orp_alt_active160		value_in				!CHEMISTRY_ONLY
+				LEAF	""	T2_FEEDPT_ORP_ALT		orp_calc_ppm_alt_active		NULL					!CHEMISTRY_ONLY
+				LEAF	""	T2_FEEDPT_PPM_ALT		cl_alt_active				value_in				!CHEMISTRY_ONLY
+			ENDMENU																						!CHEMISTRY_ONLY
+			MENU	"Bracketed ORP"		cl_pri_cl														!CHEMISTRY_ONLY
+				LEAF	"Bracketed ORP option"	T3_MIN_CL_EN		true		select					!CHEMISTRY_ONLY
+				LEAF	""	T2_BRKT_ORP_LOW		bracketed	value_in									!CHEMISTRY_ONLY
+				LEAF	""	T2_BRKT_ORP_HIGH	bracketed	value_in									!CHEMISTRY_ONLY
+			ENDMENU																						!CHEMISTRY_ONLY
+			MENU	"Bracketed ppm"		orp_pri_cl														!CHEMISTRY_ONLY
+				LEAF	"Bracketed ppm option"	T3_MIN_CL_EN		true		select					!CHEMISTRY_ONLY
+				LEAF	""	T2_BRKT_PPM_LOW		bracketed	value_in									!CHEMISTRY_ONLY
+				LEAF	""	T2_BRKT_PPM_HIGH	bracketed	value_in									!CHEMISTRY_ONLY
+			ENDMENU																						!CHEMISTRY_ONLY
+		ENDMENU																							!CHEMISTRY_ONLY
+		MENU	"Heater Control"	heater_rep															
+			LEAF	""	PC_USAGE_RELAY1			true		NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY2			true		NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY3			true		NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY4			true		NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY5			true		NULL	OMIT_LINE							!BECSYS7BW_ONLY
+			LEAF	""	PC_USAGE_RELAY6			true		NULL	OMIT_LINE							!BECSYS7BW_ONLY
+			LEAF	""	PC_USAGE_RELAY7			true		NULL	OMIT_LINE							!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY8			true		NULL	OMIT_LINE							!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY9			true		NULL	OMIT_LINE							!BECSYS7_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX1		true		NULL	OMIT_LINE
+			LEAF	""	T3_EXP_RELAY_BOX2		true		NULL	OMIT_LINE
+			LEAF	""	T3_EXP_RELAY_BOX3		true		NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE1	exp1		NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE2	exp1		NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE3	exp1		NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE4	exp1		NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE5	exp1		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE1	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE2	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE3	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE4	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE5	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE1	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE2	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE3	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE4	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE5	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_HEATER_RELAY		true					select		SSEC=rep
+			LEAF	""	T3_TEMP_CTRL		heater_temp				select		SSEC=rep				!CHEMISTRY_ONLY
+			LEAF	""	T2_TEMP				heater_temp_ctrl		NULL								!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_HTR		htr_ctrl_fp				value_in							!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_HTR_ALT	htr_ctrl_alt			value_in							!CHEMISTRY_ONLY
+			LEAF	""	T2_HYST_HTR			heater_temp_ctrl		value_in	SSEC=rep				!CHEMISTRY_ONLY
+			LEAF	""	T4_FEEDLIMIT_HTR	heater_temp_ctrl		value_in							!CHEMISTRY_ONLY
+			LEAF	""	T4_HEATER_FLOWRATE	heater_flowrate_160		value_in	SSEC=rep
+			LEAF	""	T5_HTR_FLOWRATE_SRC	heater_flow_rates		select		SSEC=rep
+			LEAF	""	T4_HTR1_RC_DUR		recirc_heater			value_in	SSEC=rep
+			MENU	"Alternate Set Point"			heater_temp_ctrl									!CHEMISTRY_ONLY
+				LEAF	""	PC_CWKDAY				true		NULL									!CHEMISTRY_ONLY
+				LEAF	" "	NO_CODE					true		NULL	OMIT_VALUE						!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_WD1			true		sel_wd									!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_START_HM1	altheater1	value_in								!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_END_HM1		altheater1	value_in								!CHEMISTRY_ONLY
+				LEAF	" "	NO_CODE					altheater12	NULL	OMIT_VALUE						!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_WD2			altheater12	sel_wd									!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_START_HM2	altheater2	value_in								!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_END_HM2		altheater2	value_in								!CHEMISTRY_ONLY
+				LEAF	" "	NO_CODE					altheater23	NULL	OMIT_VALUE						!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_WD3			altheater23	sel_wd									!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_START_HM3	altheater3	value_in								!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_END_HM3		altheater3	value_in								!CHEMISTRY_ONLY
+				LEAF	" "	NO_CODE					altheater34	NULL	OMIT_VALUE						!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_WD4			altheater34	sel_wd									!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_START_HM4	altheater4	value_in								!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_END_HM4		altheater4	value_in								!CHEMISTRY_ONLY
+			ENDMENU																						!CHEMISTRY_ONLY
+		ENDMENU																							
+		MENU	"Chiller Control"	chiller_ctrl_rep													!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY1			true		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY2			true		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY3			true		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY4			true		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY5			true		NULL	OMIT_LINE							!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY6			true		NULL	OMIT_LINE							!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY7			true		NULL	OMIT_LINE							!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY8			true		NULL	OMIT_LINE							!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY9			true		NULL	OMIT_LINE							!BECSYS7_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX1		true		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX2		true		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX3		true		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE1	exp1		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE2	exp1		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE3	exp1		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE4	exp1		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE5	exp1		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE1	exp2		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE2	exp2		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE3	exp2		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE4	exp2		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE5	exp2		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE1	exp3		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE2	exp3		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE3	exp3		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE4	exp3		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE5	exp3		NULL	OMIT_LINE							!CHEMISTRY_ONLY
+			LEAF	""	PC_CHILLER_RELAY		true				select		SSEC=rep				!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_CHILLER		chiller_ctrl_fp		value_in							!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_CHILLER_ALT	chiller_ctrl_alt	value_in							!CHEMISTRY_ONLY
+			LEAF	""	T2_HYST_CHILLER			chiller_ctrl		value_in	SSEC=rep				!CHEMISTRY_ONLY
+			LEAF	""	T4_FEEDLIMIT_CHILLER	chiller_ctrl		value_in							!CHEMISTRY_ONLY
+			LEAF	""	T5_TEMP_CTRL_PRIORITY	dual_temp_ctrl		select		SSEC=rep				!CHEMISTRY_ONLY
+			MENU	"Alternate Set Point"			chiller_ctrl										!CHEMISTRY_ONLY
+				LEAF	""	PC_CWKDAY				true		NULL									!CHEMISTRY_ONLY
+				LEAF	" "	NO_CODE					true		NULL	OMIT_VALUE						!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_WD1			true		sel_wd									!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_START_HM1	altheater1	value_in								!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_END_HM1		altheater1	value_in								!CHEMISTRY_ONLY
+				LEAF	" "	NO_CODE					altheater12	NULL	OMIT_VALUE						!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_WD2			altheater12	sel_wd									!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_START_HM2	altheater2	value_in								!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_END_HM2		altheater2	value_in								!CHEMISTRY_ONLY
+				LEAF	" "	NO_CODE					altheater23	NULL	OMIT_VALUE						!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_WD3			altheater23	sel_wd									!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_START_HM3	altheater3	value_in								!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_END_HM3		altheater3	value_in								!CHEMISTRY_ONLY
+				LEAF	" "	NO_CODE					altheater34	NULL	OMIT_VALUE						!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_WD4			altheater34	sel_wd									!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_START_HM4	altheater4	value_in								!CHEMISTRY_ONLY
+				LEAF	""	T4_HTR_ALT_END_HM4		altheater4	value_in								!CHEMISTRY_ONLY
+			ENDMENU																						!CHEMISTRY_ONLY
+		ENDMENU																							!CHEMISTRY_ONLY
+		MENU	"Alkalinity Control" alk_controlrep														!CHEMISTRY_ONLY
+			LEAF	""	T5_ALK_CTRL_TYPE		true			select		SSEC=rep					!CHEMISTRY_ONLY
+			LEAF	""	T2_ALK_SETPT_HIGH		alk_control		value_in								!CHEMISTRY_ONLY
+			LEAF	""	T2_ALK_SETPT_LOW		alk_control		value_in								!CHEMISTRY_ONLY
+			LEAF	""	T5_ALK_CTRL_DIR			alk_control		NULL									!CHEMISTRY_ONLY
+		ENDMENU																							!CHEMISTRY_ONLY
+		MENU	"$$PC_PROBEWASH_LABEL!"	sensorwashrep
+			LEAF	""	PC_USAGE_RELAY1			true		NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY2			true		NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY3			true		NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY4			true		NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY5			true		NULL	OMIT_LINE		!BECSYS7BW_ONLY
+			LEAF	""	PC_USAGE_RELAY6			true		NULL	OMIT_LINE		!BECSYS7BW_ONLY
+			LEAF	""	PC_USAGE_RELAY7			true		NULL	OMIT_LINE		!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY8			true		NULL	OMIT_LINE		!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY9			true		NULL	OMIT_LINE		!BECSYS7_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX1		true		NULL	OMIT_LINE
+			LEAF	""	T3_EXP_RELAY_BOX2		true		NULL	OMIT_LINE
+			LEAF	""	T3_EXP_RELAY_BOX3		true		NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE1	exp1		NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE2	exp1		NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE3	exp1		NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE4	exp1		NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE5	exp1		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE1	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE2	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE3	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE4	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE5	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE1	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE2	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE3	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE4	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE5	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_PROBEWASH_RELAY	true			select	SSEC=rep
+			LEAF	""	T4_SWASH_DUR		sensor_wash		value_in
+			LEAF	""	PC_CWKDAY			sensor_wash		NULL
+			LEAF	" "	NO_CODE				sensor_wash		NULL	OMIT_VALUE
+			LEAF	""	T4_SWASH_WD1		sensor_wash		sel_wd
+			LEAF	""	T4_SWASH_START_HM1	sensor_wash1	value_in
+			LEAF	""	T4_SWASH_END_HM1	sensor_wash1	value_in
+			LEAF	""	T5_SWASH_CYCLES1	swash_cycles1	value_in
+			LEAF	" "	NO_CODE				sensor_wash		NULL	OMIT_VALUE
+			LEAF	""	T4_SWASH_WD2		sensor_wash		sel_wd
+			LEAF	""	T4_SWASH_START_HM2	sensor_wash2	value_in
+			LEAF	""	T4_SWASH_END_HM2	sensor_wash2	value_in
+			LEAF	""	T5_SWASH_CYCLES2	swash_cycles2	value_in
+			LEAF	" "	NO_CODE				sensor_wash		NULL	OMIT_VALUE
+			LEAF	""	T4_SWASH_WD3		sensor_wash		sel_wd
+			LEAF	""	T4_SWASH_START_HM3	sensor_wash3	value_in
+			LEAF	""	T4_SWASH_END_HM3	sensor_wash3	value_in
+			LEAF	""	T5_SWASH_CYCLES3	swash_cycles3	value_in
+			LEAF	" "	NO_CODE				sensor_wash		NULL	OMIT_VALUE
+			LEAF	""	T4_SWASH_WD4		sensor_wash		sel_wd
+			LEAF	""	T4_SWASH_START_HM4	sensor_wash4	value_in
+			LEAF	""	T4_SWASH_END_HM4	sensor_wash4	value_in
+			LEAF	""	T5_SWASH_CYCLES4	swash_cycles4	value_in
+			LEAF	""	PC_PROBEWASH_LABEL	sensor_wash		value_in	SEC=rep
+			LEAF	""	T4_SWASH_LAST_DATE	swash_last_date		NULL
+			LEAF	""	T4_SWASH_LAST_TIME	swash_last_date		NULL
+			LEAF	""	T4_SWASH_NEXT_DATE	swash_next_date		NULL
+			LEAF	""	T4_SWASH_NEXT_TIME	swash_next_date		NULL
+		ENDMENU
+		MENU	"$$PC_ENZYME_LABEL!"	enzyme_rep
+			LEAF	""	PC_USAGE_RELAY1			true		NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY2			true		NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY3			true		NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY4			true		NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY5			true		NULL	OMIT_LINE		!BECSYS7BW_ONLY
+			LEAF	""	PC_USAGE_RELAY6			true		NULL	OMIT_LINE		!BECSYS7BW_ONLY
+			LEAF	""	PC_USAGE_RELAY7			true		NULL	OMIT_LINE		!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY8			true		NULL	OMIT_LINE		!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY9			true		NULL	OMIT_LINE		!BECSYS7_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX1		true		NULL	OMIT_LINE
+			LEAF	""	T3_EXP_RELAY_BOX2		true		NULL	OMIT_LINE
+			LEAF	""	T3_EXP_RELAY_BOX3		true		NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE1	exp1		NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE2	exp1		NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE3	exp1		NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE4	exp1		NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE5	exp1		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE1	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE2	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE3	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE4	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE5	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE1	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE2	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE3	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE4	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE5	exp3		NULL	OMIT_LINE
+			LEAF	""	T4_ENZYME_END_HM		true		NULL	OMIT_LINE
+			LEAF	""	PC_ENZYME_RELAY			true			select	SSEC=rep
+			LEAF	""	T4_ENZYME_START_HM		enzyme_feed		value_in
+			LEAF	""	T4_ENZYME_END_HM		enzyme_feed		value_in
+			LEAF	""	T5_ENZYME_CYCLES		enzyme_cycles	value_in
+			LEAF	""	T4_ENZYME_DUR			enzyme_feed		value_in
+			LEAF	""	PC_ENZYME_LABEL			enzyme_feed		value_in	SEC=rep
+			LEAF	""	T4_ENZYME_LAST_DATE		enzyme_last_date		NULL
+			LEAF	""	T4_ENZYME_LAST_TIME		enzyme_last_date		NULL
+			LEAF	""	T4_ENZYME_NEXT_DATE		enzyme_next_date		NULL
+			LEAF	""	T4_ENZYME_NEXT_TIME		enzyme_next_date		NULL
+		ENDMENU
+		MENU	"SuperChlor"	superchlorrep																	!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY1			true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY2			true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY3			true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY4			true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX1		true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX2		true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX3		true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE1	exp1		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE2	exp1		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE3	exp1		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE4	exp1		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE5	exp1		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE1	exp2		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE2	exp2		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE3	exp2		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE4	exp2		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE5	exp2		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE1	exp3		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE2	exp3		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE3	exp3		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE4	exp3		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE5	exp3		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_SUPERCHLOR_RELAY		true				select		SSEC=rep						!CHEMISTRY_ONLY
+			LEAF	""	T5_SCHLOR_CTRL_SRC		superchlor_ppm_src	select		SSEC=rep						!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_SCHLOR_ORP	superchlor_orp		value_in									!CHEMISTRY_ONLY
+			LEAF	""	T2_ORP					superchlor_orp		NULL										!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_SCHLOR_PPM	superchlor_ppm		value_in									!CHEMISTRY_ONLY
+			LEAF	""	T2_CL					superchlor_ppm		NULL										!CHEMISTRY_ONLY
+			LEAF	""	T4_FEEDLIMIT_SCHLOR		superchlor_feed		value_in									!CHEMISTRY_ONLY
+			LEAF	""	PC_CWKDAY				superchlor_feed		NULL										!CHEMISTRY_ONLY
+			LEAF	" "	NO_CODE					superchlor_feed		NULL	OMIT_VALUE							!CHEMISTRY_ONLY
+			LEAF	""	T4_SCHLOR_WD1			superchlor_feed		sel_wd										!CHEMISTRY_ONLY
+			LEAF	""	T4_SCHLOR_START_HM1		superchlor_feed1	value_in									!CHEMISTRY_ONLY
+			LEAF	" "	NO_CODE					superchlor_feed		NULL	OMIT_VALUE							!CHEMISTRY_ONLY
+			LEAF	""	T4_SCHLOR_WD2			superchlor_feed		sel_wd										!CHEMISTRY_ONLY
+			LEAF	""	T4_SCHLOR_START_HM2		superchlor_feed2	value_in									!CHEMISTRY_ONLY
+			LEAF	" "	NO_CODE					superchlor_feed		NULL	OMIT_VALUE							!CHEMISTRY_ONLY
+			LEAF	""	T4_SCHLOR_WD3			superchlor_feed		sel_wd										!CHEMISTRY_ONLY
+			LEAF	""	T4_SCHLOR_START_HM3		superchlor_feed3	value_in									!CHEMISTRY_ONLY
+			LEAF	" "	NO_CODE					superchlor_feed		NULL	OMIT_VALUE							!CHEMISTRY_ONLY
+			LEAF	""	T4_SCHLOR_WD4			superchlor_feed		sel_wd										!CHEMISTRY_ONLY
+			LEAF	""	T4_SCHLOR_START_HM4		superchlor_feed4	value_in									!CHEMISTRY_ONLY
+		ENDMENU																									!CHEMISTRY_ONLY
+		MENU	"DeChlor"	dechlorrep																			!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY1			true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY2			true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY3			true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY4			true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX1		true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX2		true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX3		true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE1	exp1		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE2	exp1		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE3	exp1		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE4	exp1		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE5	exp1		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE1	exp2		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE2	exp2		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE3	exp2		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE4	exp2		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE5	exp2		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE1	exp3		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE2	exp3		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE3	exp3		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE4	exp3		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE5	exp3		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_DECHLOR_RELAY		true			select	SSEC=rep								!CHEMISTRY_ONLY
+			LEAF	""	T5_DCHLOR_CTRL_SRC		dechlor_ppm_src	select	SSEC=rep								!CHEMISTRY_ONLY
+			LEAF	""	T3_DCHLOR_FOLLOW_SCHLOR	dechlor_feed	select											!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_DCHLOR_ORP	dechlor_orp		value_in										!CHEMISTRY_ONLY
+			LEAF	""	T2_ORP					dechlor_orp		NULL											!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_DCHLOR_PPM	dechlor_ppm		value_in										!CHEMISTRY_ONLY
+			LEAF	""	T2_CL					dechlor_ppm		NULL											!CHEMISTRY_ONLY
+			LEAF	""	T4_FEEDLIMIT_DCHLOR		dechlor_feed	value_in										!CHEMISTRY_ONLY
+			LEAF	""	PC_CWKDAY				dechlor_feed		NULL										!CHEMISTRY_ONLY
+			LEAF	" "	NO_CODE					dechlor_feed	NULL	OMIT_VALUE								!CHEMISTRY_ONLY
+			LEAF	""	T4_DCHLOR_WD1			dechlor_feed	sel_wd											!CHEMISTRY_ONLY
+			LEAF	""	T4_DCHLOR_START_HM1		dechlor_feed1	value_in										!CHEMISTRY_ONLY
+			LEAF	" "	NO_CODE					dechlor_feed	NULL	OMIT_VALUE								!CHEMISTRY_ONLY
+			LEAF	""	T4_DCHLOR_WD2			dechlor_feed	sel_wd											!CHEMISTRY_ONLY
+			LEAF	""	T4_DCHLOR_START_HM2		dechlor_feed2	value_in										!CHEMISTRY_ONLY
+			LEAF	" "	NO_CODE					dechlor_feed	NULL	OMIT_VALUE								!CHEMISTRY_ONLY
+			LEAF	""	T4_DCHLOR_WD3			dechlor_feed	sel_wd											!CHEMISTRY_ONLY
+			LEAF	""	T4_DCHLOR_START_HM3		dechlor_feed3	value_in										!CHEMISTRY_ONLY
+			LEAF	" "	NO_CODE					dechlor_feed	NULL	OMIT_VALUE								!CHEMISTRY_ONLY
+			LEAF	""	T4_DCHLOR_WD4			dechlor_feed	sel_wd											!CHEMISTRY_ONLY
+			LEAF	""	T4_DCHLOR_START_HM4		dechlor_feed4	value_in										!CHEMISTRY_ONLY
+		ENDMENU																									!CHEMISTRY_ONLY
+		MENU	"$$PC_OZONE_LABEL!"		ozone_feedrep
+			LEAF	""	PC_USAGE_RELAY1			true		NULL	OMIT_LINE									
+			LEAF	""	PC_USAGE_RELAY2			true		NULL	OMIT_LINE									
+			LEAF	""	PC_USAGE_RELAY3			true		NULL	OMIT_LINE									
+			LEAF	""	PC_USAGE_RELAY4			true		NULL	OMIT_LINE									
+			LEAF	""	PC_USAGE_RELAY5			true		NULL	OMIT_LINE									!BECSYS7BW_ONLY			
+			LEAF	""	PC_USAGE_RELAY6			true		NULL	OMIT_LINE									!BECSYS7BW_ONLY			
+			LEAF	""	PC_USAGE_RELAY7			true		NULL	OMIT_LINE									!BECSYS7_ONLY			
+			LEAF	""	PC_USAGE_RELAY8			true		NULL	OMIT_LINE									!BECSYS7_ONLY			
+			LEAF	""	PC_USAGE_RELAY9			true		NULL	OMIT_LINE									!BECSYS7_ONLY			
+			LEAF	""	T3_EXP_RELAY_BOX1		true		NULL	OMIT_LINE
+			LEAF	""	T3_EXP_RELAY_BOX2		true		NULL	OMIT_LINE	
+			LEAF	""	T3_EXP_RELAY_BOX3		true		NULL	OMIT_LINE	
+			LEAF	""	PC_EXP1_RELAY_USAGE1	exp1		NULL	OMIT_LINE	
+			LEAF	""	PC_EXP1_RELAY_USAGE2	exp1		NULL	OMIT_LINE	
+			LEAF	""	PC_EXP1_RELAY_USAGE3	exp1		NULL	OMIT_LINE	
+			LEAF	""	PC_EXP1_RELAY_USAGE4	exp1		NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE5	exp1		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE1	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE2	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE3	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE4	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE5	exp2		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE1	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE2	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE3	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE4	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE5	exp3		NULL	OMIT_LINE
+			LEAF	""	PC_OZONE_RELAY			true		select		SSEC=rep
+			LEAF	""	T5_OZONE_CTRL_SRC		ozone_ppm	select												!CHEMISTRY_ONLY
+			LEAF	""	T2_ORP					ozone_orp	NULL												!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_OZONE_ORP		ozone_orp	value_in											!CHEMISTRY_ONLY
+			LEAF	""	T2_HYST_OZONE_ORP		ozone_orp	value_in											!CHEMISTRY_ONLY
+			LEAF	""	T2_CL					ozone_cl	NULL												!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_OZONE_PPM		ozone_cl	value_in											!CHEMISTRY_ONLY
+			LEAF	""	T2_HYST_OZONE_PPM		ozone_cl	value_in											!CHEMISTRY_ONLY
+			LEAF	""	T4_OZONE_FLOWRATE		ozone_flowrate		value_in	SSEC=rep
+			LEAF	""	T5_OZONE_FLOWRATE_SRC	ozone_flow_rates		select		SSEC=rep
+			LEAF	""	T4_OZONE_RC_DUR			recirc_ozone	value_in
+			LEAF	""	PC_OZONE_LABEL			ozone_feed		value_in	SEC=rep
+		ENDMENU
+		MENU	"$$PC_CL_BOOSTER_LABEL!"	booster_rep															!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY1			true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY2			true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY3			true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_USAGE_RELAY4			true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX1		true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX2		true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX3		true		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE1	exp1		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE2	exp1		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE3	exp1		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE4	exp1		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE5	exp1		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE1	exp2		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE2	exp2		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE3	exp2		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE4	exp2		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE5	exp2		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE1	exp3		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE2	exp3		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE3	exp3		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE4	exp3		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE5	exp3		NULL	OMIT_LINE									!CHEMISTRY_ONLY
+			LEAF	""	PC_CL_BOOSTER_RELAY		true						select		SSEC=rep				!CHEMISTRY_ONLY
+			LEAF	""	T5_BOOSTER_CTRL_SRC			booster_ppm_avail		select								!CHEMISTRY_ONLY
+			LEAF	""	T2_ORP						booster_orp				NULL								!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_BOOSTER_ORP		booster_orp				value_in							!CHEMISTRY_ONLY
+			LEAF	""	T2_ORP						booster_orp_ppm_calc	NULL								!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_BOOSTER_ORP		booster_orp_ppm_calc	NULL								!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_BOOSTER_TG_ORP	booster_orp				value_in							!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_BOOSTER_TG_ORP	booster_orp_ppm_calc	NULL								!CHEMISTRY_ONLY
+			LEAF	""	T2_HYST_BOOSTER_ORP			booster_orp_hyst		value_in							!CHEMISTRY_ONLY
+			LEAF	""	T2_CL						booster_ppm_ctrl		NULL								!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_BOOSTER_TG_PPM	booster_ppm_ctrl		value_in							!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_BOOSTER_PPM		booster_ppm_ctrl		value_in							!CHEMISTRY_ONLY
+			LEAF	""	T2_HYST_BOOSTER_PPM			booster_ppm_ctrl		value_in							!CHEMISTRY_ONLY
+			LEAF	""	PC_CL_BOOSTER_LABEL			booster_ppm_avail		value_in	SEC=rep					!CHEMISTRY_ONLY
+			LEAF	""	T4_FEEDLIMIT_BOOSTER		booster_ppm_avail		value_in							!CHEMISTRY_ONLY
+		ENDMENU																									!CHEMISTRY_ONLY
+		MENU	"Polymer Control"	polyrep2
+			LEAF	""	PC_USAGE_RELAY1			true			NULL		OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY2			true			NULL		OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY3			true			NULL		OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY4			true			NULL		OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY5			true			NULL		OMIT_LINE			!BECSYS7BW_ONLY
+			LEAF	""	PC_USAGE_RELAY6			true			NULL		OMIT_LINE			!BECSYS7BW_ONLY
+			LEAF	""	PC_USAGE_RELAY7			true			NULL		OMIT_LINE			!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY8			true			NULL		OMIT_LINE			!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY9			true			NULL		OMIT_LINE			!BECSYS7_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX1		true			NULL		OMIT_LINE
+			LEAF	""	T3_EXP_RELAY_BOX2		true			NULL		OMIT_LINE			
+			LEAF	""	T3_EXP_RELAY_BOX3		true			NULL		OMIT_LINE			
+			LEAF	""	PC_EXP1_RELAY_USAGE1	exp1			NULL		OMIT_LINE			
+			LEAF	""	PC_EXP1_RELAY_USAGE2	exp1			NULL		OMIT_LINE			
+			LEAF	""	PC_EXP1_RELAY_USAGE3	exp1			NULL		OMIT_LINE			
+			LEAF	""	PC_EXP1_RELAY_USAGE4	exp1			NULL		OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE5	exp1			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE1	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE2	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE3	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE4	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE5	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE1	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE2	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE3	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE4	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE5	exp3			NULL		OMIT_LINE
+			LEAF	""	T3_TURBIDITY_ENABLE		true			NULL		OMIT_LINE
+			LEAF	""	PC_POLYMER_RELAY		true					select		SSEC=rep
+			LEAF	""	T5_POLYMER_MODE			polymer_relay			select		SSEC=rep
+			LEAF	""	T2_FEEDPT_POLYHIGH		polymer_turb_feed		value_in
+			LEAF	""	T2_FEEDPT_POLYLOW 		polymer_turb_feed		value_in
+			LEAF	""	T2_TURBIDITY			polymer_turb_feed		NULL
+			LEAF	""	T4_POLYFEED_DUR 		polymer_turb_feed		value_in
+			LEAF	""	T4_POLYMER_START_HM 	polymer_timer_feed		value_in
+			LEAF	""	T4_POLYMER_END_HM	 	polymer_timer_feed		value_in
+			LEAF	""	T5_POLYMER_CYCLES 		polymer_timer_feed		value_in
+			LEAF	""	T4_POLY_ON_DUR 			polymer_relay			value_in
+			LEAF	""	T4_POLYMER_LAST_DATE	polymer_last_date		NULL
+			LEAF	""	T4_POLYMER_LAST_TIME	polymer_last_date		NULL
+			LEAF	""	T4_POLYMER_NEXT_DATE	polymer_next_date		NULL
+			LEAF	""	T4_POLYMER_NEXT_TIME	polymer_next_date		NULL
+		ENDMENU
+		MENU	"Filter Backwash"	bw_avail_rep										!BACKWASH_ONLY
+			LEAF	""	PC_USAGE_RELAY1			true		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_USAGE_RELAY2			true		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_USAGE_RELAY3			true		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_USAGE_RELAY4			true		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_USAGE_RELAY5			true		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_USAGE_RELAY6			true		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_USAGE_RELAY7			true		NULL	OMIT_LINE			!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY8			true		NULL	OMIT_LINE			!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY9			true		NULL	OMIT_LINE			!BECSYS7_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX1		true		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX2		true		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX3		true		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE1	exp1		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE2	exp1		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE3	exp1		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE4	exp1		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_EXP1_RELAY_USAGE5	exp1		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE1	exp2		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE2	exp2		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE3	exp2		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE4	exp2		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_EXP2_RELAY_USAGE5	exp2		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE1	exp3		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE2	exp3		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE3	exp3		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE4	exp3		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	PC_EXP3_RELAY_USAGE5	exp3		NULL	OMIT_LINE			!BACKWASH_ONLY
+			LEAF	""	T4_BW_LAST_DATE			bwdateset	NULL						!BACKWASH_ONLY
+			LEAF	""	T4_BW_LAST_TIME			bwdateset	NULL						!BACKWASH_ONLY
+			LEAF	""	T5_BW_END_TRIG_TYPE		bwdateset	NULL						!BACKWASH_ONLY
+			LEAF	""	T5_BW_TRIGGER_TYPE		bwdateset	NULL						!BACKWASH_ONLY
+			LEAF	""	T4_BW_FREQ_FS_DUR		bw_avail	value_in					!BACKWASH_ONLY
+			MENU	"Valve Setup"		bw_disabled															!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY1				true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY2				true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY3				true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY4				true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY5				true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY6				true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY7				true					NULL		OMIT_LINE		!BECSYS7_ONLY
+				LEAF	""	PC_USAGE_RELAY8				true					NULL		OMIT_LINE		!BECSYS7_ONLY
+				LEAF	""	PC_USAGE_RELAY9				true					NULL		OMIT_LINE		!BECSYS7_ONLY
+				LEAF	""	T3_EXP_RELAY_BOX1			true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	T3_EXP_RELAY_BOX2			true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	T3_EXP_RELAY_BOX3			true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE1		exp1					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE2		exp1					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE3		exp1					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE4		exp1					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE5		exp1					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE1		exp2					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE2		exp2					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE3		exp2					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE4		exp2					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE5		exp2					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE1		exp3					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE2		exp3					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE3		exp3					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE4		exp3					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE5		exp3					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	T7_NEMATO					true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_BW_FILTER01_RELAY		bw_fltr01_relay_rep		select		SSEC=rep		!BACKWASH_ONLY
+				LEAF	""	T5_BW_FLTR_VALVE_TYPE		true					select		SSEC=rep		!BACKWASH_ONLY
+			ENDMENU																							!BACKWASH_ONLY
+			MENU	"Backwash Timing"		bw_vlv_type_atlas												!BACKWASH_ONLY
+				LEAF	""	T5_BW_FLTR_VALVE_TYPE		true					select		SSEC=rep		!BACKWASH_ONLY
+				LEAF	"Wash Duration"		T4_BW_FLTR01_ON_DUR		true			value_in	SSEC=rep	!BACKWASH_ONLY
+				LEAF	"Rinse Duration"	T4_BW_FLTR03_ON_DUR		true			value_in	SSEC=rep	!BACKWASH_ONLY
+				LEAF	"Ack. Timeout"		T4_BW_FLTR04_ON_DUR		true			value_in	SSEC=rep	!BACKWASH_ONLY
+			ENDMENU																							!BACKWASH_ONLY
+			MENU	"Bump Timing"		bw_vlv_type_atlas													!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY1				true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY2				true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY3				true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY4				true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY5				true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY6				true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY7				true					NULL		OMIT_LINE		!BECSYS7_ONLY
+				LEAF	""	PC_USAGE_RELAY8				true					NULL		OMIT_LINE		!BECSYS7_ONLY
+				LEAF	""	PC_USAGE_RELAY9				true					NULL		OMIT_LINE		!BECSYS7_ONLY
+				LEAF	""	T3_EXP_RELAY_BOX1		true		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	T3_EXP_RELAY_BOX2		true		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	T3_EXP_RELAY_BOX3		true		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE1	exp1		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE2	exp1		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE3	exp1		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE4	exp1		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE5	exp1		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE1	exp2		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE2	exp2		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE3	exp2		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE4	exp2		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE5	exp2		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE1	exp3		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE2	exp3		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE3	exp3		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE4	exp3		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE5	exp3		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_REGEN_ACCEL01_RELAY	true		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	"Bump Duration"		T4_BW_FLTR02_ON_DUR		true			value_in	SSEC=rep	!BACKWASH_ONLY
+				LEAF	"Bump Event 1 Day(s)"		T4_BW_WD1			bw_timer_en		sel_wd				!BACKWASH_ONLY
+				LEAF	"Bump Event 1 Trig Time"	T4_BW_START_HM1		bw_timer_en		value_in			!BACKWASH_ONLY
+				LEAF	"Bump Event 2 Day(s)"		T4_BW_WD2			bw_timer_en		sel_wd				!BACKWASH_ONLY
+				LEAF	"Bump Event 2 Trig Time"	T4_BW_START_HM2		bw_timer_en		value_in			!BACKWASH_ONLY
+				LEAF	"Bump Event 3 Day(s)"		T4_BW_WD3			bw_timer_en		sel_wd				!BACKWASH_ONLY
+				LEAF	"Bump Event 3 Trig Time"	T4_BW_START_HM3		bw_timer_en		value_in			!BACKWASH_ONLY
+				LEAF	"Bump Event 4 Day(s)"		T4_BW_WD4			bw_timer_en		sel_wd				!BACKWASH_ONLY
+				LEAF	"Bump Event 4 Trig Time"	T4_BW_START_HM4		bw_timer_en		value_in			!BACKWASH_ONLY
+			ENDMENU																							!BACKWASH_ONLY
+			MENU	"Precoat Setup"		bw_vlv_type_atlas													!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY1				true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY2				true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY3				true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY4				true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY5				true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY6				true					NULL		OMIT_LINE		!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY7				true					NULL		OMIT_LINE		!BECSYS7_ONLY 
+				LEAF	""	PC_USAGE_RELAY8				true					NULL		OMIT_LINE		!BECSYS7_ONLY 
+				LEAF	""	PC_USAGE_RELAY9				true					NULL		OMIT_LINE		!BECSYS7_ONLY 
+				LEAF	""	T3_EXP_RELAY_BOX1		true		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	T3_EXP_RELAY_BOX2		true		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	T3_EXP_RELAY_BOX3		true		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE1	exp1		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE2	exp1		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE3	exp1		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE4	exp1		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE5	exp1		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE1	exp2		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE2	exp2		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE3	exp2		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE4	exp2		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE5	exp2		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE1	exp3		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE2	exp3		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE3	exp3		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE4	exp3		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE5	exp3		NULL	OMIT_LINE							!BACKWASH_ONLY
+				LEAF	""	PC_PRECOAT1_RELAY		bw_precoat_vlv_type		select		SSEC=rep			!BACKWASH_ONLY
+				LEAF	""	PC_PRECOAT2_RELAY		bw_precoat_vlv_type		select		SSEC=rep			!BACKWASH_ONLY
+				LEAF	""	T5_PRECOAT_VALVE_TYPE		true					select		SSEC=rep		!BACKWASH_ONLY
+				LEAF	""	T4_BW_PRECOATVLV_TIMEOUT	bw_precoat_act			value_in					!BACKWASH_ONLY
+				LEAF	""	T4_BW_PRECOATVLV_DELAY		bw_precoat_3way			value_in					!BACKWASH_ONLY
+				LEAF	""	T5_VFD_PRECOAT_SP_TYPE		bw_precoat_vfd			select						!BACKWASH_ONLY
+				LEAF	""	T4_VFD_PRECOAT_SP			bw_precoat_vfd			value_in					!BACKWASH_ONLY
+				LEAF	""	T4_PRECOAT_TIME				bw_precoat				value_in					!BACKWASH_ONLY
+			ENDMENU																							!BACKWASH_ONLY
+			MENU	"Valve Setup"		bw_vlv_type_pressure																!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY1				true					NULL		OMIT_LINE						!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY2				true					NULL		OMIT_LINE						!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY3				true					NULL		OMIT_LINE						!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY4				true					NULL		OMIT_LINE						!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY5				true					NULL		OMIT_LINE						!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY6				true					NULL		OMIT_LINE						!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY7				true					NULL		OMIT_LINE						!BECSYS7_ONLY
+				LEAF	""	PC_USAGE_RELAY8				true					NULL		OMIT_LINE						!BECSYS7_ONLY
+				LEAF	""	PC_USAGE_RELAY9				true					NULL		OMIT_LINE						!BECSYS7_ONLY
+				LEAF	""	T3_EXP_RELAY_BOX1		true		NULL	OMIT_LINE											!BACKWASH_ONLY
+				LEAF	""	T3_EXP_RELAY_BOX2		true		NULL	OMIT_LINE											!BACKWASH_ONLY
+				LEAF	""	T3_EXP_RELAY_BOX3		true		NULL	OMIT_LINE											!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE1	exp1		NULL	OMIT_LINE											!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE2	exp1		NULL	OMIT_LINE											!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE3	exp1		NULL	OMIT_LINE											!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE4	exp1		NULL	OMIT_LINE											!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE5	exp1		NULL	OMIT_LINE											!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE1	exp2		NULL	OMIT_LINE											!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE2	exp2		NULL	OMIT_LINE											!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE3	exp2		NULL	OMIT_LINE											!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE4	exp2		NULL	OMIT_LINE											!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE5	exp2		NULL	OMIT_LINE											!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE1	exp3		NULL	OMIT_LINE											!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE2	exp3		NULL	OMIT_LINE											!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE3	exp3		NULL	OMIT_LINE											!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE4	exp3		NULL	OMIT_LINE											!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE5	exp3		NULL	OMIT_LINE											!BACKWASH_ONLY
+				LEAF	""	PC_BW_FILTER01_RELAY		bw_fltr01_relay_rep		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	PC_BW_FILTER02_RELAY		bw_fltr02_relay_rep		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	PC_BW_FILTER03_RELAY		bw_fltr03_relay_rep		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	PC_BW_FILTER04_RELAY		bw_fltr04_relay_rep		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	PC_BW_FILTER05_RELAY		bw_fltr05_relay_rep		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	PC_BW_FILTER06_RELAY		bw_fltr06_relay_rep		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	PC_BW_FILTER07_RELAY		bw_fltr07_relay_rep		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	PC_BW_FILTER08_RELAY		bw_fltr08_relay_rep		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	PC_BW_FILTER09_RELAY		bw_fltr09_relay_rep		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	PC_BW_FILTER10_RELAY		bw_fltr10_relay_rep		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	PC_BW_FILTER11_RELAY		bw_fltr11_relay_rep		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	PC_BW_FILTER12_RELAY		bw_fltr12_relay_rep		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	PC_BW_FILTER13_RELAY		bw_fltr13_relay_rep		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	PC_BW_FILTER14_RELAY		bw_fltr14_relay_rep		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	PC_BW_FILTER15_RELAY		bw_fltr15_relay_rep		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	PC_BW_FILTER16_RELAY		bw_fltr16_relay_rep		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	" "	NO_CODE						bw_isolate_relay_rep	NULL		OMIT_VALUE		!MT_ONLY		!BACKWASH_ONLY
+				LEAF	""	PC_BW_ISOLATE_RELAY			bw_isolate1_relay_rep	select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	PC_BW_ISOLATE2_RELAY		bw_isolate2_relay_rep	select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	PC_BW_ISOLATE3_RELAY		bw_isolate3_relay_rep	select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	PC_BW_ISOLATE4_RELAY		bw_isolate4_relay_rep	select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	" "	NO_CODE						true					NULL		OMIT_VALUE		!MT_ONLY		!BACKWASH_ONLY
+				LEAF	""	T5_BW_FLTR_VALVE_TYPE		true					select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR_VALVE_TIMEOUT	bw_fltr_act				value_in									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR_VALVE_DELAY		bw_fltr_3way			value_in									!BACKWASH_ONLY
+				LEAF	" "	NO_CODE						bw_pri_valve_rep		NULL		OMIT_VALUE		!MT_ONLY		!BACKWASH_ONLY
+				LEAF	""	PC_BW_PRIVALVE_RELAY		bw_pri_valve_rep		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	T5_BW_PRI_VALVE_TYPE		bw_pri_valve			select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	""	T4_BW_PRI_VALVE_TIMEOUT		bw_pri_valve_act		value_in									!BACKWASH_ONLY
+				LEAF	""	T4_BW_PRI_VALVE_DELAY		bw_pri_valve_3way		value_in									!BACKWASH_ONLY
+				LEAF	" "	NO_CODE						bw_turb_valve_rep		NULL		OMIT_VALUE		!MT_ONLY		!BACKWASH_ONLY
+				LEAF	""	PC_BW_TURB_VALVE_RELAY		bw_turb_valve_rep		select		SSEC=rep						!BACKWASH_ONLY
+				LEAF	" "	NO_CODE						bw_turb_valve_rep		NULL		OMIT_VALUE		!MT_ONLY		!BACKWASH_ONLY
+				LEAF	""	T3_BW_VALVE_RECIRC_OFF		recirc					select		SSEC=rep						!BACKWASH_ONLY
+			ENDMENU																											!BACKWASH_ONLY
+			MENU	"Filter Timing"		bw_vlv_type_pressure																!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR01_ON_DUR		true			value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR01_DWELL_DUR	true			value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T5_COPY_FILTER1			zfilter02		select		SSEC=rep					!MT_ONLY		!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR02_ON_DUR		zfilter02		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR02_DWELL_DUR	zfilter02		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR03_ON_DUR		zfilter03		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR03_DWELL_DUR	zfilter03		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR04_ON_DUR		zfilter04		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR04_DWELL_DUR	zfilter04		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR05_ON_DUR		zfilter05		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR05_DWELL_DUR	zfilter05		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR06_ON_DUR		zfilter06		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR06_DWELL_DUR	zfilter06		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR07_ON_DUR		zfilter07		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR07_DWELL_DUR	zfilter07		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR08_ON_DUR		zfilter08		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR08_DWELL_DUR	zfilter08		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR09_ON_DUR		zfilter09		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR09_DWELL_DUR	zfilter09		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR10_ON_DUR		zfilter10		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR10_DWELL_DUR	zfilter10		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR11_ON_DUR		zfilter11		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR11_DWELL_DUR	zfilter11		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR12_ON_DUR		zfilter12		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR12_DWELL_DUR	zfilter12		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR13_ON_DUR		zfilter13		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR13_DWELL_DUR	zfilter13		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR14_ON_DUR		zfilter14		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR14_DWELL_DUR	zfilter14		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR15_ON_DUR		zfilter15		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR15_DWELL_DUR	zfilter15		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR16_ON_DUR		zfilter16		value_in	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T4_BW_FLTR16_DWELL_DUR	zfilter16		value_in	SSEC=rep									!BACKWASH_ONLY
+			ENDMENU																											!BACKWASH_ONLY
+			MENU	"Triggers"		bw_vlv_type_pressure																	!BACKWASH_ONLY
+				MENU	"Turbidity Settings"		bw_turbidity															!BACKWASH_ONLY
+					LEAF	""	T3_BW_TURB_TRIGGER_EN	true	select														!BACKWASH_ONLY
+					LEAF	""	T2_BW_TRIG_PT_TURB		bw_turb_trigstart_en	value_in									!BACKWASH_ONLY
+					LEAF	""	T4_BW_TURB_START_DUR	bw_turb_trigstart_en	value_in									!BACKWASH_ONLY
+					LEAF	""	T3_TURB_END_BW_EN		true	select														!BACKWASH_ONLY
+					LEAF	""	T2_BW_TRIG_PT_TURB_END	bw_turb_trigstop_en		value_in									!BACKWASH_ONLY
+					LEAF	""	T4_BW_TURB_END_DUR		bw_turb_trigstop_en		value_in									!BACKWASH_ONLY
+				ENDMENU																										!BACKWASH_ONLY
+				MENU	"Timer Settings"			bw_avail																!BACKWASH_ONLY
+					LEAF	""	T3_BW_TIMER_EN		true			select													!BACKWASH_ONLY
+					LEAF	""	PC_CWKDAY			bw_timer_en		NULL													!BACKWASH_ONLY
+					LEAF	""	T4_BW_WD1			bw_timer_en		sel_wd													!BACKWASH_ONLY
+					LEAF	""	T4_BW_START_HM1		bw_timer_en		value_in												!BACKWASH_ONLY
+					LEAF	""	T4_BW_WD2			bw_timer_en		sel_wd													!BACKWASH_ONLY
+					LEAF	""	T4_BW_START_HM2		bw_timer_en		value_in												!BACKWASH_ONLY
+					LEAF	""	T4_BW_WD3			bw_timer_en		sel_wd													!BACKWASH_ONLY
+					LEAF	""	T4_BW_START_HM3		bw_timer_en		value_in												!BACKWASH_ONLY
+					LEAF	""	T4_BW_WD4			bw_timer_en		sel_wd													!BACKWASH_ONLY
+					LEAF	""	T4_BW_START_HM4		bw_timer_en		value_in												!BACKWASH_ONLY
+				ENDMENU																										!BACKWASH_ONLY
+				MENU	"Pressure Settings"		bw_psi_trig																	!BACKWASH_ONLY
+					LEAF	""	T5_BW_DIFF_TRIG_S_TYPE		true				select										!BACKWASH_ONLY
+					LEAF	""	T2_BW_TRIG_PT_PSI			bw_psi_ma_trig_en	value_in									!BACKWASH_ONLY
+					LEAF	""	T4_BW_PSI_START_DUR			bw_psi_trig_en		value_in									!BACKWASH_ONLY
+				ENDMENU																										!BACKWASH_ONLY
+				MENU	"Flow Rate Settings"		bw_flows																!BACKWASH_ONLY
+					LEAF	""	T3_BW_FLOW_TRIGGER_EN		true				select										!BACKWASH_ONLY
+					LEAF	""	T5_BW_TRIG_FLOWRATE_SRC		true				select										!BACKWASH_ONLY
+					LEAF	""	T2_BW_TRIG_PT_FLOW			bw_flow_trigger_en160	value_in								!BACKWASH_ONLY
+					LEAF	""	T4_BW_FLOW_START_DUR		bw_flow_trigger_en160	value_in								!BACKWASH_ONLY
+				ENDMENU																										!BACKWASH_ONLY
+				MENU	"Flow Volume Settings"		bw_flows																!BACKWASH_ONLY
+					LEAF	""	T3_BW_VOL_TRIGGER_EN		true	select													!BACKWASH_ONLY
+					LEAF	""	T5_BW_TRIG_FLOWRATE_SRC		true	select													!BACKWASH_ONLY
+					LEAF	""	T4_BW_VOL_TRIG_INC_3		bw_vol_trigger_en160	NULL	OMIT_LINE						!BACKWASH_ONLY
+					LEAF	""	T4_BW_VOL_TRIG_INC_2		bw_vol_trigger_en160	value_in								!BACKWASH_ONLY
+				ENDMENU																										!BACKWASH_ONLY
+			ENDMENU																											!BACKWASH_ONLY
+			MENU	"High BW Pit"		bw_vlv_type_psi_pit																	!BACKWASH_ONLY
+				LEAF	""	T5_BW_HI_PIT_ACTION			bw_pit_action		select											!BACKWASH_ONLY
+				LEAF	""	T4_FEEDLIMIT_BW				true				value_in										!BACKWASH_ONLY
+				LEAF	""	T2_BW_PIT_LVL_HIGH			bwpit_420ma_sens	value_in										!BACKWASH_ONLY
+				LEAF	""	T2_BW_PIT_LVL_LOW 			bwpit_420ma_sens	value_in										!BACKWASH_ONLY
+			ENDMENU																											!BACKWASH_ONLY
+			MENU	"Inhibit BW Start"		bw_avail																		!BACKWASH_ONLY
+				LEAF	""	T3_BW_INHIBIT_EN			true	select														!BACKWASH_ONLY
+				LEAF	""	T4_BW_INHIBIT_START			bw_inhibit_en	value_in											!BACKWASH_ONLY
+				LEAF	""	T4_BW_INHIBIT_END			bw_inhibit_en	value_in											!BACKWASH_ONLY
+			ENDMENU																											!BACKWASH_ONLY
+			MENU	"$$PC_BWACCESS_LABEL!"		bw_prespump_rep																!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY1				true			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY2				true			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY3				true			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY4				true			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY5				true			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY6				true			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_USAGE_RELAY7				true			NULL	OMIT_LINE									!BECSYS7_ONLY
+				LEAF	""	PC_USAGE_RELAY8				true			NULL	OMIT_LINE									!BECSYS7_ONLY
+				LEAF	""	PC_USAGE_RELAY9				true			NULL	OMIT_LINE									!BECSYS7_ONLY
+				LEAF	""	T3_EXP_RELAY_BOX1			true			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	T3_EXP_RELAY_BOX2			true			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	T3_EXP_RELAY_BOX3			true			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE1		exp1			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE2		exp1			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE3		exp1			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE4		exp1			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_EXP1_RELAY_USAGE5		exp1			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE1		exp2			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE2		exp2			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE3		exp2			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE4		exp2			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_EXP2_RELAY_USAGE5		exp2			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE1		exp3			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE2		exp3			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE3		exp3			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE4		exp3			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_EXP3_RELAY_USAGE5		exp3			NULL	OMIT_LINE									!BACKWASH_ONLY
+				LEAF	""	PC_BW_PRESPUMP_RELAY		true			select	SSEC=rep									!BACKWASH_ONLY
+				LEAF	""	T3_BW_PRES_PMP_BWIP			bw_prespump		select												!BACKWASH_ONLY
+				LEAF	""	T4_BW_PRES_PMP_DELAY		bw_prespump		value_in											!BACKWASH_ONLY
+				LEAF	""	T4_BW_PRES_PMP_PST_DELAY	bw_prespump		value_in											!BACKWASH_ONLY
+			ENDMENU																											!BACKWASH_ONLY
+		ENDMENU																												!BACKWASH_ONLY
+		MENU	"Autofill"	autofill106rep
+			LEAF	""	PC_USAGE_RELAY1			true			NULL		OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY2			true			NULL		OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY3			true			NULL		OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY4			true			NULL		OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY5			true			NULL		OMIT_LINE										!BECSYS7BW_ONLY
+			LEAF	""	PC_USAGE_RELAY6			true			NULL		OMIT_LINE										!BECSYS7BW_ONLY
+			LEAF	""	PC_USAGE_RELAY7			true			NULL		OMIT_LINE										!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY8			true			NULL		OMIT_LINE										!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY9			true			NULL		OMIT_LINE										!BECSYS7_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX1		true			NULL		OMIT_LINE
+			LEAF	""	T3_EXP_RELAY_BOX2		true			NULL		OMIT_LINE
+			LEAF	""	T3_EXP_RELAY_BOX3		true			NULL		OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE1	exp1			NULL		OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE2	exp1			NULL		OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE3	exp1			NULL		OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE4	exp1			NULL		OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE5	exp1			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE1	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE2	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE3	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE4	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE5	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE1	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE2	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE3	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE4	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE5	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_AUTOFILL_RELAY		true			select		SSEC=rep
+			LEAF	""	T5_AUTOFILL_S_TYPE		autofill_feed	select		SSEC=rep
+			LEAF	""	T2_FEEDPT_AUTOFILL		autofill_ma		value_in
+			LEAF	""	T2_SURGE				autofill_ma		NULL
+			LEAF	""	T2_AUTOFILL_LVL			show_autofill_lvl	NULL
+			LEAF	""	T5_SHOW_AUTOFILL_LVL	autofill_ma		select
+			LEAF	""	T2_HYST_AUTOFILL		autofill_ma		value_in	SSEC=rep
+			LEAF	""	T4_AUTOFILL_START_DUR	autofill_feed	value_in
+			LEAF	""	T4_AUTOFILL_END_DUR		autofill_feed	value_in
+			LEAF	""	T4_AUTOFILL_INH_START	autofill_feed	value_in
+			LEAF	""	T4_AUTOFILL_INH_END		autofill_feed	value_in
+			LEAF	""	T3_AUTOFILL_NO_FLOW		autofill_feed	select		SSEC=rep	
+			LEAF	""	T3_AUTOFILL_BACKWASH	autofill_feed	select		SSEC=rep
+			LEAF	""	T4_FEEDLIMIT_AUTOFILL	autofill_feed	value_in
+			MENU	"Autofill chemfeed lockout"	autofill_feed
+				LEAF	""	T3_FILL_CHMFD_LKOUT		autofill_feed		select		SSEC=rep
+				LEAF	""	T4_FILL_CHMFD_PRE_DELAY	chemfeed_lockout	value_in	SSEC=rep
+				LEAF	""	T4_FILL_CHMFD_PST_DELAY	chemfeed_lockout	value_in	SSEC=rep
+			ENDMENU
+			MENU	"Alt. set point"	autofill_ma
+				LEAF	""	T3_AUTOFILL_ALT_EN			true					select
+				LEAF	""	T2_FEEDPT_AUTOFILL_ALT		alt_autofill_feed		value_in
+				LEAF	""	T4_AUTOFILL_ALT_START		alt_autofill_feed		value_in
+				LEAF	""	T4_AUTOFILL_ALT_END			alt_autofill_feed		value_in
+			ENDMENU
+		ENDMENU
+		MENU	"Manual Fill Safety Valve"	fill_saftey_rep
+			LEAF	""	PC_USAGE_RELAY1			true			NULL		OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY2			true			NULL		OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY3			true			NULL		OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY4			true			NULL		OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY5			true			NULL		OMIT_LINE										!BECSYS7BW_ONLY
+			LEAF	""	PC_USAGE_RELAY6			true			NULL		OMIT_LINE										!BECSYS7BW_ONLY
+			LEAF	""	PC_USAGE_RELAY7			true			NULL		OMIT_LINE										!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY8			true			NULL		OMIT_LINE										!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY9			true			NULL		OMIT_LINE										!BECSYS7_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX1		true			NULL		OMIT_LINE
+			LEAF	""	T3_EXP_RELAY_BOX2		true			NULL		OMIT_LINE
+			LEAF	""	T3_EXP_RELAY_BOX3		true			NULL		OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE1	exp1			NULL		OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE2	exp1			NULL		OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE3	exp1			NULL		OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE4	exp1			NULL		OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE5	exp1			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE1	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE2	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE3	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE4	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE5	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE1	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE2	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE3	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE4	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE5	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_MANFILL_SAFETY_RELAY		true			select		SSEC=rep
+		ENDMENU
+		MENU	"Bleed Valve"	bleedvlv_ctrl_rep														
+			LEAF	""	PC_USAGE_RELAY1			true			NULL	OMIT_LINE						
+			LEAF	""	PC_USAGE_RELAY2			true			NULL	OMIT_LINE						
+			LEAF	""	PC_USAGE_RELAY3			true			NULL	OMIT_LINE						
+			LEAF	""	PC_USAGE_RELAY4			true			NULL	OMIT_LINE						
+			LEAF	""	PC_USAGE_RELAY5			true			NULL	OMIT_LINE						!BECSYS7BW_ONLY
+			LEAF	""	PC_USAGE_RELAY6			true			NULL	OMIT_LINE						!BECSYS7BW_ONLY
+			LEAF	""	PC_USAGE_RELAY7			true			NULL	OMIT_LINE						!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY8			true			NULL	OMIT_LINE						!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY9			true			NULL	OMIT_LINE						!BECSYS7_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX1		true			NULL	OMIT_LINE						
+			LEAF	""	T3_EXP_RELAY_BOX2		true			NULL	OMIT_LINE									
+			LEAF	""	T3_EXP_RELAY_BOX3		true			NULL	OMIT_LINE									
+			LEAF	""	PC_EXP1_RELAY_USAGE1	exp1			NULL	OMIT_LINE									
+			LEAF	""	PC_EXP1_RELAY_USAGE2	exp1			NULL	OMIT_LINE									
+			LEAF	""	PC_EXP1_RELAY_USAGE3	exp1			NULL	OMIT_LINE						
+			LEAF	""	PC_EXP1_RELAY_USAGE4	exp1			NULL	OMIT_LINE						
+			LEAF	""	PC_EXP1_RELAY_USAGE5	exp1			NULL	OMIT_LINE						
+			LEAF	""	PC_EXP2_RELAY_USAGE1	exp2			NULL	OMIT_LINE						
+			LEAF	""	PC_EXP2_RELAY_USAGE2	exp2			NULL	OMIT_LINE						
+			LEAF	""	PC_EXP2_RELAY_USAGE3	exp2			NULL	OMIT_LINE						
+			LEAF	""	PC_EXP2_RELAY_USAGE4	exp2			NULL	OMIT_LINE						
+			LEAF	""	PC_EXP2_RELAY_USAGE5	exp2			NULL	OMIT_LINE						
+			LEAF	""	PC_EXP3_RELAY_USAGE1	exp3			NULL	OMIT_LINE						
+			LEAF	""	PC_EXP3_RELAY_USAGE2	exp3			NULL	OMIT_LINE						
+			LEAF	""	PC_EXP3_RELAY_USAGE3	exp3			NULL	OMIT_LINE						
+			LEAF	""	PC_EXP3_RELAY_USAGE4	exp3			NULL	OMIT_LINE						
+			LEAF	""	PC_EXP3_RELAY_USAGE5	exp3			NULL	OMIT_LINE						
+			LEAF	""	PC_TDS_RELAY			bleedvlv_avail	select	SSEC=rep						
+			LEAF	""	T2_MAKEUPWATER_TDS		tds_ctrl_en		value_in								!CHEMISTRY_ONLY
+			LEAF	""	T5_POOL_TDS_CYCLE		tds_ctrl_en		value_in								!CHEMISTRY_ONLY
+			LEAF	""	T5_BLEED_TDS_CTRL_EN	bleedvlv_tds	select									!CHEMISTRY_ONLY
+			LEAF	""	T3_BLEED_HI_SURGE_EN	bleedvlv_hi_srg	select
+			LEAF	""	T2_FEEDPT_TDS			tds_ctrl_en		NULL									!CHEMISTRY_ONLY
+			LEAF	""	T2_COND					tds_ctrl_en		NULL									!CHEMISTRY_ONLY
+			LEAF	""	T2_HYST_TDS				tds_ctrl_en		value_in	SSEC=rep					!CHEMISTRY_ONLY
+			LEAF	""	T4_FEEDLIMIT_TDS		tds_ctrl_en		value_in								!CHEMISTRY_ONLY
+		ENDMENU
+		MENU	"UV Turndown"	uv_turndown_rep
+			LEAF	""	PC_USAGE_RELAY1			true			NULL		OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY2			true			NULL		OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY3			true			NULL		OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY4			true			NULL		OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY5			true			NULL		OMIT_LINE										!BECSYS7BW_ONLY
+			LEAF	""	PC_USAGE_RELAY6			true			NULL		OMIT_LINE										!BECSYS7BW_ONLY
+			LEAF	""	PC_USAGE_RELAY7			true			NULL		OMIT_LINE										!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY8			true			NULL		OMIT_LINE										!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY9			true			NULL		OMIT_LINE										!BECSYS7_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX1		true			NULL		OMIT_LINE
+			LEAF	""	T3_EXP_RELAY_BOX2		true			NULL		OMIT_LINE
+			LEAF	""	T3_EXP_RELAY_BOX3		true			NULL		OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE1	exp1			NULL		OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE2	exp1			NULL		OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE3	exp1			NULL		OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE4	exp1			NULL		OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE5	exp1			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE1	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE2	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE3	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE4	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE5	exp2			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE1	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE2	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE3	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE4	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE5	exp3			NULL		OMIT_LINE
+			LEAF	""	PC_UV_RELAY				true			select		SSEC=rep
+			LEAF	""	T2_COMBCL				uv_combcl		NULL					!CHEMISTRY_ONLY
+			LEAF	""	T2_FEEDPT_UV_COMBCL		uv_combcl		value_in				!CHEMISTRY_ONLY
+			LEAF	""	T4_UV_START_DELAY		uv_combcl		value_in				!CHEMISTRY_ONLY
+			LEAF	""	T4_UV_FLOWRATE			uv_flowrate		value_in	SSEC=rep
+			LEAF	""	T5_UV_FLOWRATE_SRC		uv_flow_rates	select		SSEC=rep
+			LEAF	""	T4_UV_RC_DUR			uv_recirc		value_in	SSEC=rep
+		ENDMENU
+		MENU	"Recirculation Pump"	recirc_rep
+			LEAF	""	PC_USAGE_RELAY1			true			NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY2			true			NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY3			true			NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY4			true			NULL	OMIT_LINE
+			LEAF	""	PC_USAGE_RELAY5			true			NULL	OMIT_LINE						!BECSYS7BW_ONLY
+			LEAF	""	PC_USAGE_RELAY6			true			NULL	OMIT_LINE						!BECSYS7BW_ONLY
+			LEAF	""	PC_USAGE_RELAY7			true			NULL	OMIT_LINE						!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY8			true			NULL	OMIT_LINE						!BECSYS7_ONLY
+			LEAF	""	PC_USAGE_RELAY9			true			NULL	OMIT_LINE						!BECSYS7_ONLY
+			LEAF	""	T3_EXP_RELAY_BOX1		true			NULL	OMIT_LINE
+			LEAF	""	T3_EXP_RELAY_BOX2		true			NULL	OMIT_LINE
+			LEAF	""	T3_EXP_RELAY_BOX3		true			NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE1	exp1			NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE2	exp1			NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE3	exp1			NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE4	exp1			NULL	OMIT_LINE
+			LEAF	""	PC_EXP1_RELAY_USAGE5	exp1			NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE1	exp2			NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE2	exp2			NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE3	exp2			NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE4	exp2			NULL	OMIT_LINE
+			LEAF	""	PC_EXP2_RELAY_USAGE5	exp2			NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE1	exp3			NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE2	exp3			NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE3	exp3			NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE4	exp3			NULL	OMIT_LINE
+			LEAF	""	PC_EXP3_RELAY_USAGE5	exp3			NULL	OMIT_LINE
+			LEAF	""	PC_RECIRC_RELAY			true			select	SSEC=rep
+			LEAF	""	T4_RECIRC_START_DELAY	recirc			value_in	SSEC=rep
+			LEAF	""	T4_HTR1_RC_DUR			recirc_heater	value_in	SSEC=rep
+			LEAF	""	T4_OZONE_RC_DUR			recirc_ozone	value_in	SSEC=rep
+			LEAF	""	T4_UV_RC_DUR			uv_recirc		value_in	SSEC=rep
+			MENU	"VFD Control"	vfd
+				LEAF	""	T2_VFD_OUTPUT 			true	   		NULL
+				LEAF	""	T5_VFD_CTRL_SRC			true			NULL
+				LEAF	""	T5_VFD_FLOWRATE_SRC		vfd_flowrates230	select
+				LEAF	""	T4_VFD_FLOWRATE_MAX		vfd_flowrate160	value_in	SSEC=rep
+				LEAF	""	T2_VFD_RAMPUP			true			value_in	SSEC=rep
+				LEAF	""	T2_VFD_RAMPDOWN			true			value_in	SSEC=rep
+				LEAF	""	T4_VFD_OOR_DELAY		vfd_flowrate160	value_in
+				LEAF	""	T4_VFD_AUTO_SETPOINT	vfd_input_ok	value_in
+				LEAF	""	T2_VFD_BW_OUTPUT		vfd_input_ok	value_in
+				LEAF	""	T2_VFD_MIN_OUTPUT		vfd_input_ok	value_in	SSEC=rep
+				LEAF	""	T4_VFD_DEADBAND			vfd_flowrate160	value_in	SSEC=rep
+				LEAF	""	T3_VFD_AUTOTUNE			vfd_flowrate160	NULL
+				LEAF	""	T4_VFD_DEADTIME			vfd_flowrate160	value_in	SSEC=rep
+				LEAF	""	T4_VFD_PROP_BAND		vfd_flowrate160	value_in	SSEC=rep
+				LEAF	""	T4_VFD_KP				vfd_flowrate160	value_in	SSEC=rep
+				LEAF	""	T4_VFD_KI				vfd_flowrate160 value_in	SSEC=rep
+				LEAF	""	T4_VFD_KD				vfd_flowrate160	value_in	SSEC=rep
+				MENU	"Scheduled Turndowns"	vfd_input_ok
+					LEAF	""	T3_CNCL_TRNDWN_ON_ALM	vfd_input_alarms	select
+					LEAF	""	T5_HTR_TNDN_MODE		htr_min_flow		select
+					LEAF	""	T5_OZONE_TNDN_MODE		ozone_min_flow		select
+					LEAF	""	T5_UV_TNDN_MODE			uv_min_flow			select
+					LEAF	" "	NO_CODE					vfd_input_alarms	NULL	OMIT_VALUE
+					LEAF	""	PC_CWKDAY				true			NULL
+					LEAF	""	T4_VFD_STDWN_WD1		true			sel_wd
+					LEAF	""	T4_VFD_STDWN_START_HM1	vfd_strndwn1	value_in
+					LEAF	""	T4_VFD_STDWN_END_HM1	vfd_strndwn1	value_in
+					LEAF	""	T5_VFD_SP_TYPE_STD1		vfd_160strndwnflow1	select
+					LEAF	""	T4_VFD_STURNDOWN_SP1	vfd_strndwn1	value_in
+					LEAF	""	PC_STDWN_LABEL1			vfd_strndwn1	value_in
+					LEAF	" "	NO_CODE					vfd_strndwn1	NULL	OMIT_VALUE
+					LEAF	""	T4_VFD_STDWN_WD2		true			sel_wd
+					LEAF	""	T4_VFD_STDWN_START_HM2	vfd_strndwn2	value_in
+					LEAF	""	T4_VFD_STDWN_END_HM2	vfd_strndwn2	value_in
+					LEAF	""	T5_VFD_SP_TYPE_STD2		vfd_160strndwnflow2	select
+					LEAF	""	T4_VFD_STURNDOWN_SP2	vfd_strndwn2	value_in
+					LEAF	""	PC_STDWN_LABEL2			vfd_strndwn2	value_in
+					LEAF	" "	NO_CODE					vfd_strndwn2	NULL	OMIT_VALUE
+					LEAF	""	T4_VFD_STDWN_WD3		true			sel_wd
+					LEAF	""	T4_VFD_STDWN_START_HM3	vfd_strndwn3	value_in
+					LEAF	""	T4_VFD_STDWN_END_HM3	vfd_strndwn3	value_in
+					LEAF	""	T5_VFD_SP_TYPE_STD3		vfd_160strndwnflow3	select
+					LEAF	""	T4_VFD_STURNDOWN_SP3	vfd_strndwn3	value_in
+					LEAF	""	PC_STDWN_LABEL3			vfd_strndwn3	value_in
+					LEAF	" "	NO_CODE					vfd_strndwn3	NULL	OMIT_VALUE
+					LEAF	""	T4_VFD_STDWN_WD4		true			sel_wd
+					LEAF	""	T4_VFD_STDWN_START_HM4	vfd_strndwn4	value_in
+					LEAF	""	T4_VFD_STDWN_END_HM4	vfd_strndwn4	value_in
+					LEAF	""	T5_VFD_SP_TYPE_STD4		vfd_160strndwnflow4	select
+					LEAF	""	T4_VFD_STURNDOWN_SP4	vfd_strndwn4	value_in
+					LEAF	""	PC_STDWN_LABEL4			vfd_strndwn4	value_in
+				ENDMENU
+				MENU	"Manual Turndowns"	vfd_input_ok
+					LEAF	""	T4_VFD_MTURNDOWN_DUR1	true			value_in
+					LEAF	""	T5_VFD_SP_TYPE_MTD1		vfd_160mtrndwnflow1	select
+					LEAF	""	T4_VFD_MTURNDOWN_SP1	vfd_mtrndwn1	value_in
+					LEAF	""	PC_MTDWN_LABEL1			vfd_mtrndwn1	value_in
+					LEAF	" "	NO_CODE					vfd_mtrndwn1	NULL	OMIT_VALUE
+					LEAF	""	T4_VFD_MTURNDOWN_DUR2	true			value_in
+					LEAF	""	T5_VFD_SP_TYPE_MTD2		vfd_160mtrndwnflow2	select
+					LEAF	""	T4_VFD_MTURNDOWN_SP2	vfd_mtrndwn2	value_in
+					LEAF	""	PC_MTDWN_LABEL2			vfd_mtrndwn2	value_in
+					LEAF	" "	NO_CODE					vfd_mtrndwn2	NULL	OMIT_VALUE
+					LEAF	""	T4_VFD_MTURNDOWN_DUR3	true			value_in
+					LEAF	""	T5_VFD_SP_TYPE_MTD3		vfd_160mtrndwnflow3	select
+					LEAF	""	T4_VFD_MTURNDOWN_SP3	vfd_mtrndwn3	value_in
+					LEAF	""	PC_MTDWN_LABEL3			vfd_mtrndwn3	value_in
+					LEAF	" "	NO_CODE					vfd_mtrndwn3	NULL	OMIT_VALUE
+					LEAF	""	T4_VFD_MTURNDOWN_DUR4	true			value_in
+					LEAF	""	T5_VFD_SP_TYPE_MTD4		vfd_160mtrndwnflow4	select
+					LEAF	""	T4_VFD_MTURNDOWN_SP4	vfd_mtrndwn4	value_in
+					LEAF	""	PC_MTDWN_LABEL4			vfd_mtrndwn4	value_in
+				ENDMENU
+			ENDMENU
+		ENDMENU
+	ENDMENU
+	MENU	"Control Options"	true	SEC=T5_PERM_MENUS
+		MENU	"pH lockout of sanitizer feed"	true								!CHEMISTRY_ONLY
+			LEAF	""	T5_PH_LOCKOUT		true		select						!CHEMISTRY_ONLY
+		ENDMENU																		!CHEMISTRY_ONLY
+		MENU	"Power Saver"	recirc
+			LEAF	""	T3_RC_NRG_EN		true				select
+			LEAF	""	T4_RC_NRG_DUR		powersaver			value_in
+			LEAF	""	T4_NRG_SAMPLE_DUR	powersaver			value_in
+			LEAF	""	T4_NRG_SDELAY_DUR	powersaver			value_in
+			LEAF	""	PC_CWKDAY			powersaver			NULL
+			LEAF	""	T4_PS_WD1			powersaver			sel_wd
+			LEAF	""	T4_PS_START_HM1		powersaver1			value_in
+			LEAF	""	T4_PS_END_HM1		powersaver1			value_in
+			LEAF	""	T4_PS_WD2			powersaver			sel_wd
+			LEAF	""	T4_PS_START_HM2		powersaver2			value_in
+			LEAF	""	T4_PS_END_HM2		powersaver2			value_in
+			LEAF	""	T4_PS_WD3			powersaver			sel_wd
+			LEAF	""	T4_PS_START_HM3		powersaver3			value_in
+			LEAF	""	T4_PS_END_HM3		powersaver3			value_in
+			LEAF	""	T4_PS_WD4			powersaver			sel_wd
+			LEAF	""	T4_PS_START_HM4		powersaver4			value_in
+			LEAF	""	T4_PS_END_HM4		powersaver4			value_in
+		ENDMENU
+		MENU	"Flow Restored Feed Delay"	true
+			LEAF	""	T3_NO_FLOW_DELAY_EN	true		select
+			LEAF	""	T4_NO_FLOW_DELAY	noflowdelay	value_in
+		ENDMENU
+	ENDMENU
+	MENU	"Test Kit Readings"	true																!CHEMISTRY_ONLY
+		LEAF	""	T2_PH_TESTKIT			pH_testkit		NULL
+		LEAF	""	T4_PH_TESTKIT_DATE		pH_testkit		NULL
+		LEAF	""	T4_PH_TESTKIT_TIME		pH_testkit		NULL
+		LEAF	" "	NO_CODE					pH_testkit		NULL	OMIT_VALUE
+		LEAF	""	T2_F_CL_TESTKIT			fcl_testkit		NULL
+		LEAF	""	T4_F_CL_TESTKIT_DATE	fcl_testkit		NULL
+		LEAF	""	T4_F_CL_TESTKIT_TIME	fcl_testkit		NULL
+		LEAF	" "	NO_CODE					fcl_testkit		NULL	OMIT_VALUE
+		LEAF	""	T2_T_CL_TESTKIT			tcl_testkit		NULL
+		LEAF	""	T4_T_CL_TESTKIT_DATE	tcl_testkit		NULL
+		LEAF	""	T4_T_CL_TESTKIT_TIME	tcl_testkit		NULL
+		LEAF	" "	NO_CODE					fcl_testkit		NULL	OMIT_VALUE
+		LEAF	""	T2_TEMP_TESTKIT			temp_testkit	NULL
+		LEAF	""	T4_TEMP_TESTKIT_DATE	temp_testkit	NULL
+		LEAF	""	T4_TEMP_TESTKIT_TIME	temp_testkit	NULL
+		LEAF	" "	NO_CODE					temp_testkit	NULL	OMIT_VALUE
+		LEAF	""	T4_TDS_TESTKIT			tds_testkit		NULL
+		LEAF	""	T4_TDS_TESTKIT_DATE		tds_testkit		NULL
+		LEAF	""	T4_TDS_TESTKIT_TIME		tds_testkit		NULL
+		LEAF	" "	NO_CODE					tds_testkit		NULL	OMIT_VALUE
+		LEAF	""	T4_ALK_TESTKIT			alk_testkit		NULL
+		LEAF	""	T4_ALK_TESTKIT_DATE		alk_testkit		NULL
+		LEAF	""	T4_ALK_TESTKIT_TIME		alk_testkit		NULL
+		LEAF	" "	NO_CODE					alk_testkit		NULL	OMIT_VALUE
+		LEAF	""	T4_CA_TESTKIT			ca_testkit		NULL
+		LEAF	""	T4_CA_TESTKIT_DATE		ca_testkit		NULL
+		LEAF	""	T4_CA_TESTKIT_TIME		ca_testkit		NULL
+		LEAF	" "	NO_CODE					ca_testkit		NULL	OMIT_VALUE
+		LEAF	""	T4_CY_TESTKIT			cy_testkit		NULL
+		LEAF	""	T4_CY_TESTKIT_DATE		cy_testkit		NULL
+		LEAF	""	T4_CY_TESTKIT_TIME		cy_testkit		NULL
+		LEAF	" "	NO_CODE					cy_testkit		NULL	OMIT_VALUE
+		MENU	"LSI & RSI"	true																	!CHEMISTRY_ONLY
+			LEAF	""	T4_LSI_DATE		dsg_rec		NULL											!CHEMISTRY_ONLY
+			LEAF	""	T4_LSI			dsg_rec		LSICalc		SSEC=T5_PERM_CALC					!CHEMISTRY_ONLY
+			LEAF	""	T4_RSI			dsg_rec		LSICalc		SSEC=T5_PERM_CALC					!CHEMISTRY_ONLY
+			LEAF	""	T4_CA			true		LSICalc		SSEC=T5_PERM_CALC					!CHEMISTRY_ONLY
+			LEAF	""	T4_TA			true		LSICalc		SSEC=T5_PERM_CALC					!CHEMISTRY_ONLY
+			LEAF	""	T4_TDS			true		LSICalc		SSEC=T5_PERM_CALC					!CHEMISTRY_ONLY
+			LEAF	""	T2_TEMP_INSTNS	dsg_rec		NULL											!CHEMISTRY_ONLY
+			LEAF	""	T2_PH_INSTNS	dsg_rec		NULL											!CHEMISTRY_ONLY
+			LEAF	" "	NO_CODE			dsg_rec		NULL	OMIT_VALUE								!CHEMISTRY_ONLY
+			MENU	"Other Parameters"	true	SEC=T5_PERM_CALC									!CHEMISTRY_ONLY
+				LEAF	""	T6_GAL				true	value_in									!CHEMISTRY_ONLY
+				LEAF	""	T3_TDS_LSI			true	select										!CHEMISTRY_ONLY
+				LEAF	""	T3_DISP_LSI			true	select										!CHEMISTRY_ONLY
+			ENDMENU																					!CHEMISTRY_ONLY
+		ENDMENU																						!CHEMISTRY_ONLY
+	ENDMENU																							!CHEMISTRY_ONLY
+	MENU	"System Configuration"		true	SEC=T5_PERM_SYSCONF
+		MENU	"System Info"	true
+			LEAF	""	PC_PRODUCT_TYPE		true			NULL
+			LEAF	""	PC_SERIAL_NUM		true			NULL
+			LEAF	""	PC_PROG_VER			true			NULL
+			LEAF	""	PC_LINK_DATE		true			NULL
+			LEAF	" "	NO_CODE				true			NULL	OMIT_VALUE
+			LEAF	""	PC_ETHER_SW_VER		true			NULL
+			LEAF	""	T3_MODBUS			true			NULL
+			LEAF	""	T6_IP_ADDRESS		true			NULL
+			LEAF	""	T6_IP_NETMASK		true			NULL
+			LEAF	""	T6_IP_GATEWAY		true			NULL
+			LEAF	" "	NO_CODE				true			NULL	OMIT_VALUE
+			LEAF    ""  T5_CO_EMAIL_STAT  	true   			NULL
+			LEAF    ""  T5_CO_MODEM_STAT  	true   			NULL
+			LEAF    ""  T5_EZCONNECT_STATUS	true   			NULL
+		ENDMENU
+		MENU	"Communication Setup"	true
+			MENU	"EZConnect"		ezconnect_avail
+				LEAF	""	T5_EZCONNECT_STATUS		true			NULL			OMIT_LINE
+				LEAF	""	T5_EZANALYTICS	true	select
+			ENDMENU
+			MENU	"Ethernet Setup"	true
+				LEAF	""	T3_DHCP					true		select
+				LEAF	""	T6_IP_ADDRESS			notdhcp		ip_address_in
+				LEAF	""	T6_IP_NETMASK			notdhcp		ip_address_in
+				LEAF	""	T6_IP_GATEWAY			notdhcp		ip_address_in
+				LEAF	""	T6_IP_DNS1				notdhcp		ip_address_in
+				LEAF	""	T6_IP_DNS2				notdhcp		ip_address_in
+				LEAF	""	T6_IP_ADDRESS			dhcp		NULL
+				LEAF	""	T6_IP_NETMASK			dhcp		NULL
+				LEAF	""	T6_IP_GATEWAY			dhcp		NULL
+				LEAF	""	T6_IP_DNS1				dhcp		NULL
+				LEAF	""	T6_IP_DNS2				dhcp		NULL
+			ENDMENU
+			MENU	"SMTP Setup"	true
+				LEAF	""	T5_EZCONNECT_STATUS		true			NULL			OMIT_LINE
+				LEAF	""	T3_EZMAIL				ezmail_avail	select
+				LEAF	""	PC_EMAIL_SERVER			not_ezmail		value_in
+				LEAF	""	T4_SMTP_PORT			not_ezmail		value_in
+				LEAF	""	PC_EMAIL_SENDERN		true			NULL			OMIT_LINE
+				LEAF	""	PC_EMAIL_SENDERD		true			NULL			OMIT_LINE
+				LEAF	""	PC_SENDEREMAIL			true			email_in_BECS7
+				LEAF	""	T3_SMTP_AUTH			not_ezmail		select
+				LEAF	""	PC_SMTP_LOGIN_NAME		smtp_auth220	value_in
+				LEAF	""	PC_SMTP_LOGIN_PW		smtp_auth220	value_in
+				LEAF	""	T5_SMTP_ENCRYPTION_TYPE	not_ezmail		select
+			ENDMENU
+			MENU	"Call Out Setup"	callout_inst
+				LEAF	""	PC_CALLOUT_EN		true				select
+				LEAF	""	PC_CALL_START		callout				value_in
+				LEAF	""	PC_CALL_END			callout				value_in
+				LEAF	""	PC_CALLOUT0_DELAY	callout				value_in
+				LEAF	""	T5_CALLOUT_TEST		callout				select
+				LEAF	" "	NO_CODE				callout				NULL		OMIT_VALUE
+				LEAF	""	PC_CALLOUT_TYPE1	callout				select
+				LEAF	""	PC_PHONE1			callout200email1	NULL		OMIT_LINE
+				LEAF	""	PC_PAGER1			callout200email1	NULL		OMIT_LINE
+				LEAF	""	PC_PHONE1			calloutph1			value_in
+				LEAF	""	PC_PAGER1			calloutpg1			value_in
+				LEAF	""	PC_EMAIL1			callout200email1	email_in_BECS7
+				LEAF	""	PC_CALLOUT1_DELAY	callout1			value_in
+				LEAF	""	T5_CO_STATE1		callout1			NULL
+				LEAF	""	T5_CO_STATUS1		callout1			NULL
+				LEAF	" "	NO_CODE				callout				NULL		OMIT_VALUE
+				LEAF	""	PC_CALLOUT_TYPE2	callout				select
+				LEAF	""	PC_PHONE2			callout200email2	NULL		OMIT_LINE
+				LEAF	""	PC_PAGER2			callout200email2	NULL		OMIT_LINE
+				LEAF	""	PC_PHONE2			calloutph2			value_in
+				LEAF	""	PC_PAGER2			calloutpg2			value_in
+				LEAF	""	PC_EMAIL2			callout200email2	email_in_BECS7
+				LEAF	""	PC_CALLOUT2_DELAY	callout2			value_in
+				LEAF	""	T5_CO_STATE2		callout2			NULL
+				LEAF	""	T5_CO_STATUS2		callout2			NULL
+				LEAF	" "	NO_CODE				callout				NULL		OMIT_VALUE
+				LEAF	""	PC_CALLOUT_TYPE3	callout				select
+				LEAF	""	PC_PHONE3			callout200email3	NULL		OMIT_LINE
+				LEAF	""	PC_PAGER3			callout200email3	NULL		OMIT_LINE
+				LEAF	""	PC_PHONE3			calloutph3			value_in
+				LEAF	""	PC_PAGER3			calloutpg3			value_in
+				LEAF	""	PC_EMAIL3			callout200email3	email_in_BECS7
+				LEAF	""	PC_CALLOUT3_DELAY	callout3			value_in
+				LEAF	""	T5_CO_STATE3		callout3			NULL
+				LEAF	""	T5_CO_STATUS3		callout3			NULL
+				LEAF	" "	NO_CODE				callout				NULL		OMIT_VALUE
+				LEAF	""	PC_CALLOUT_TYPE4	callout				select
+				LEAF	""	PC_PHONE4			callout200email4	NULL		OMIT_LINE
+				LEAF	""	PC_PAGER4			callout200email4	NULL		OMIT_LINE
+				LEAF	""	PC_PHONE4			calloutph4			value_in
+				LEAF	""	PC_PAGER4			calloutpg4			value_in
+				LEAF	""	PC_EMAIL4			callout200email4	email_in_BECS7
+				LEAF	""	PC_CALLOUT4_DELAY	callout4			value_in
+				LEAF	""	T5_CO_STATE4		callout4			NULL
+				LEAF	""	T5_CO_STATUS4		callout4			NULL
+				LEAF	" "	NO_CODE				callout				NULL		OMIT_VALUE
+				LEAF	""	PC_CALLOUT_TYPE5	callout				select
+				LEAF	""	PC_PHONE5			callout200email5	NULL		OMIT_LINE
+				LEAF	""	PC_PAGER5			callout200email5	NULL		OMIT_LINE
+				LEAF	""	PC_PHONE5			calloutph5			value_in
+				LEAF	""	PC_PAGER5			calloutpg5			value_in
+				LEAF	""	PC_EMAIL5			callout200email5	email_in_BECS7
+				LEAF	""	PC_CALLOUT5_DELAY	callout5			value_in
+				LEAF	""	T5_CO_STATE5		callout5			NULL
+				LEAF	""	T5_CO_STATUS5		callout5			NULL
+				LEAF	" "	NO_CODE				callout				NULL		OMIT_VALUE
+				LEAF	""	PC_CALLOUT_TYPE6	callout				select
+				LEAF	""	PC_PHONE6			callout200email6	NULL		OMIT_LINE
+				LEAF	""	PC_PAGER6			callout200email6	NULL		OMIT_LINE
+				LEAF	""	PC_PHONE6			calloutph6			value_in
+				LEAF	""	PC_PAGER6			calloutpg6			value_in
+				LEAF	""	PC_EMAIL6			callout200email6	email_in_BECS7
+				LEAF	""	PC_CALLOUT6_DELAY	callout6			value_in
+				LEAF	""	T5_CO_STATE6		callout6			NULL
+				LEAF	""	T5_CO_STATUS6		callout6			NULL
+				LEAF	" "	NO_CODE				callout				NULL		OMIT_VALUE
+				LEAF	""	PC_CALLOUT_TYPE7	callout				select
+				LEAF	""	PC_PHONE7			callout200email7	NULL		OMIT_LINE
+				LEAF	""	PC_PAGER7			callout200email7	NULL		OMIT_LINE
+				LEAF	""	PC_PHONE7			calloutph7			value_in
+				LEAF	""	PC_PAGER7			calloutpg7			value_in
+				LEAF	""	PC_EMAIL7			callout200email7	email_in_BECS7
+				LEAF	""	PC_CALLOUT7_DELAY	callout7			value_in
+				LEAF	""	T5_CO_STATE7		callout7			NULL
+				LEAF	""	T5_CO_STATUS7		callout7			NULL
+				LEAF	" "	NO_CODE				callout				NULL		OMIT_VALUE
+				LEAF	""	PC_CALLOUT_TYPE8	callout				select
+				LEAF	""	PC_PHONE8			callout200email8	NULL		OMIT_LINE
+				LEAF	""	PC_PAGER8			callout200email8	NULL		OMIT_LINE
+				LEAF	""	PC_PHONE8			calloutph8			value_in
+				LEAF	""	PC_PAGER8			calloutpg8			value_in
+				LEAF	""	PC_EMAIL8			callout200email8	email_in_BECS7
+				LEAF	""	PC_CALLOUT8_DELAY	callout8			value_in
+				LEAF	""	T5_CO_STATE8		callout8			NULL
+				LEAF	""	T5_CO_STATUS8		callout8			NULL
+			ENDMENU
+			MENU	"RS485 Network Setup"	true
+				LEAF	""	T3_EXP_RELAY_BOX1		true	select	SSEC=REP
+				LEAF	""	T3_EXP_RELAY_BOX2		true	select	SSEC=REP
+				LEAF	""	T3_EXP_RELAY_BOX3		true	select	SSEC=REP
+			ENDMENU
+		ENDMENU
+		MENU	"Date, Time & Units"	true
+			LEAF	""	PC_CDATE			true	value_in
+			LEAF	""	PC_CTIME			true	value_in
+			LEAF	""	T5_US_METRIC_UNITS	true	select
+			LEAF	""	PC_DATE_FORMAT		true	select
+		ENDMENU
+		MENU	"Name and Location"		true
+			LEAF	""	PC_CUSTNAME			true	value_in	SSEC=REP
+			LEAF	""	PC_LOCATION			true	value_in	SSEC=REP
+			LEAF	""	PC_REPNAME			true	value_in	SSEC=REP
+			LEAF	""	PC_REPNUMBER		true	value_in	SSEC=REP
+			LEAF	""	PC_SYS_ID			true	value_in	SSEC=REP
+			LEAF	""	T3_DISPINFO			true	select		SSEC=REP
+		ENDMENU
+		MENU	"User Setup"	true 	SEC=manager
+			MENU	"Operator Access Codes"	true				!MT_ONLY
+				LEAF	""	T4_OP1_CODE		true		value_in
+				LEAF	""	T4_OP2_CODE		true		value_in
+				LEAF	""	T4_OP3_CODE		true		value_in
+				LEAF	""	T4_OP4_CODE		true		value_in
+				LEAF	""	T4_OP5_CODE		true		value_in
+				LEAF	""	T4_OP6_CODE		true		value_in
+			ENDMENU
+			MENU	"Manager Access Codes"	true	SEC=rep		!MT_ONLY
+				LEAF	""	T4_MGR1_CODE	true	value_in
+				LEAF	""	T4_MGR2_CODE	true	value_in
+			ENDMENU
+			MENU	"Rep Access Code"		true	SEC=rep		!MT_ONLY
+				LEAF	""	T4_REP_CODE		true	value_in
+			ENDMENU
+			MENU	"User Permisions"	true
+				LEAF	""	T5_PERM_CAL			true		select	SSEC=REP
+				LEAF	""	T5_PERM_ALARMS		true		select	SSEC=REP
+				LEAF	""	T5_PERM_SETPOINTS	true		select	SSEC=REP
+				LEAF	""	T5_PERM_MENUS		true		select	SSEC=REP
+				LEAF	""	T5_PERM_CALC		true		select	SSEC=REP				!CHEMISTRY_ONLY
+				LEAF	""	T5_PERM_SYSCONF		true		select	SSEC=REP
+				LEAF	""	T5_PERM_EMERGOFF	true		select	SSEC=REP
+				LEAF	""	T5_PERM_FAILSAFES	true		select	SSEC=REP
+				LEAF	""	T5_PERM_BACKWASH	true		select	SSEC=REP				!BACKWASH_ONLY
+				LEAF	""	T5_PERM_RELAYS		true		select	SSEC=REP
+			ENDMENU
+		ENDMENU
+		MENU	"Factory Defaults"	true	SEC=rep		!MT_ONLY
+			MENU	"Inputs"	true
+				LEAF	"All Inputs"			NO_CODE		true			FD_INPUTS			OMIT_VALUE
+				LEAF	"pH Setup"				NO_CODE		true			FD_INPUTPH			OMIT_VALUE	!CHEMISTRY_ONLY
+				LEAF	"ORP Setup"				NO_CODE		true			FD_INPUTORP			OMIT_VALUE	!CHEMISTRY_ONLY
+				LEAF	"Free $$T5_CHEM_SELECT!"	NO_CODE	true			FD_INPUTCL			OMIT_VALUE	!CHEMISTRY_ONLY
+				LEAF	"Total $$T5_CHEM_SELECT!"	NO_CODE	true			FD_INPUTTOTALCL		OMIT_VALUE	!CHEMISTRY_ONLY
+				LEAF	"Comb. $$T5_CHEM_SELECT!"	NO_CODE	true			FD_INPUTCOMBCL		OMIT_VALUE	!CHEMISTRY_ONLY
+				LEAF	"Cond Setup"			NO_CODE		cond			FD_INPUTCOND		OMIT_VALUE	!CHEMISTRY_ONLY
+				LEAF	"TDS Setup"				NO_CODE		tds				FD_INPUTCOND		OMIT_VALUE	!CHEMISTRY_ONLY
+				LEAF	"Temperature Setup"		NO_CODE		true			FD_INPUTTEMP		OMIT_VALUE	!CHEMISTRY_ONLY
+				LEAF	"Alkalinity Setup"		NO_CODE		true			FD_INPUTALK			OMIT_VALUE	!CHEMISTRY_ONLY
+				LEAF	"pH Inv"				NO_CODE		true			FD_INPUTPHINV		OMIT_VALUE	!CHEMISTRY_ONLY
+				LEAF	"$$T5_CHEM_SELECT! Inv"	NO_CODE		true			FD_INPUTCLINV		OMIT_VALUE	!CHEMISTRY_ONLY
+				LEAF	"Turbidity"				NO_CODE		true			FD_INPUTTURBIDITY	OMIT_VALUE
+				LEAF	"BW Pit"				NO_CODE		true			FD_INPUTBWPIT		OMIT_VALUE	!BACKWASH_ONLY
+				LEAF	"$$PC_SURGE_LABEL!"		NO_CODE		true			FD_INPUTSURGE    	OMIT_VALUE
+				LEAF	"Filter Inf. Presr."	NO_CODE		true			FD_INPUTPRESINF 	OMIT_VALUE
+				LEAF	"Filter Eff. Presr."	NO_CODE		true			FD_INPUTPRESEFF 	OMIT_VALUE
+				LEAF	"Filter Diff. Presr."	NO_CODE		true			FD_INPUTPRESDIFF 	OMIT_VALUE
+				LEAF	"Recirc Eff. Presr."	NO_CODE		true			FD_INPUTPRESPUMPEFF OMIT_VALUE
+				LEAF	"Strainer Vac"			NO_CODE		true			FD_INPUTPRESVAC 	OMIT_VALUE
+				LEAF	"Total Dynamic Head"	NO_CODE		true			FD_INPUTPRESTDH 	OMIT_VALUE
+				LEAF	"Valve Diff. Pres"		NO_CODE		true			FD_INPUTVALVEDIFF	OMIT_VALUE	!BACKWASH_ONLY
+				LEAF	"$$PC_FLOW_RATE1_LBL!"	NO_CODE		true			FD_INPUTFLOWRATE1	OMIT_VALUE
+				LEAF	"$$PC_FLOW_RATE2_LBL!"	NO_CODE		true			FD_INPUTFLOWRATE2	OMIT_VALUE
+				LEAF	"$$PC_FLOW_RATE3_LBL!"	NO_CODE		true			FD_INPUTFLOWRATE3	OMIT_VALUE
+				LEAF	"$$PC_FLOW_RATE4_LBL!"	NO_CODE		true			FD_INPUTFLOWRATE4	OMIT_VALUE
+				LEAF	"$$PC_FLOW_RATE5_LBL!"	NO_CODE		true			FD_INPUTFLOWRATE5	OMIT_VALUE
+			ENDMENU
+			MENU	"Control Outputs"			true
+				LEAF	"All Control Outputs"			NO_CODE		true		 	FD_FEEDS		OMIT_VALUE
+				LEAF	"pH Control"					NO_CODE		true			FD_FEEDPH		OMIT_VALUE		!CHEMISTRY_ONLY
+				LEAF	"Chlorine Control"				NO_CODE		cl_chem			FD_FEEDCL		OMIT_VALUE		!CHEMISTRY_ONLY
+				LEAF	"Bromine Control"				NO_CODE		br_chem			FD_FEEDCL		OMIT_VALUE		!CHEMISTRY_ONLY
+				LEAF	"Heater Control"				NO_CODE		true			FD_FEEDHEATER	OMIT_VALUE
+				LEAF	"Chiller Control"				NO_CODE		true			FD_FEEDCHILLER	OMIT_VALUE
+				LEAF	"Alkalinity Control"			NO_CODE		true			FD_FEEDALK		OMIT_VALUE		!CHEMISTRY_ONLY
+				LEAF	"$$PC_PROBEWASH_LABEL!"			NO_CODE		true			FD_FEEDSWASH	OMIT_VALUE
+				LEAF	"$$PC_ENZYME_LABEL!"			NO_CODE		true			FD_FEEDENZYME	OMIT_VALUE
+				LEAF	"SuperChlor"					NO_CODE		true			FD_FEEDSCHLOR	OMIT_VALUE		!CHEMISTRY_ONLY
+				LEAF	"DeChlor"						NO_CODE		true			FD_FEEDDCHLOR	OMIT_VALUE		!CHEMISTRY_ONLY
+				LEAF	"$$PC_OZONE_LABEL!"				NO_CODE		true			FD_FEEDOZONE	OMIT_VALUE		!CHEMISTRY_ONLY
+				LEAF	"$$PC_CL_BOOSTER_LABEL!"		NO_CODE		true			FD_FEEDBOOSTER	OMIT_VALUE		!CHEMISTRY_ONLY
+				LEAF	"Filters/BW"					NO_CODE		true			FD_FEEDFILTER  	OMIT_VALUE		!BACKWASH_ONLY
+				LEAF	"Recirc"						NO_CODE		true			FD_FEEDRECIRC	OMIT_VALUE
+				LEAF	"Polymer"						NO_CODE		true			FD_FEEDPOLYMER	OMIT_VALUE
+				LEAF	"Autofill"						NO_CODE		true			FD_FEEDAUTOFILL	OMIT_VALUE
+				LEAF	"Bleed Valve"					NO_CODE		true			FD_FEEDBLEED	OMIT_VALUE
+				LEAF	"Manual fill safety valve"		NO_CODE		true			FD_FEEDMANFILL	OMIT_VALUE
+				LEAF	"Alarm Relay"					NO_CODE		true			FD_FEEDALARM	OMIT_VALUE
+			ENDMENU
+			MENU	"Contol Options"	true
+				LEAF	"pH lockout of sanitizer feed"	NO_CODE		true	FD_OPTIONSLOCKOUT	OMIT_VALUE	!CHEMISTRY_ONLY
+				LEAF	"Flow Restored Feed Delay"		NO_CODE		true	FD_OPTIONSNOFLOW	OMIT_VALUE
+				LEAF	"Powersaver"					NO_CODE		true	FD_OPTIONSENERGYSAVER	OMIT_VALUE
+			ENDMENU
+			MENU	"Calculations"	true																	!CHEMISTRY_ONLY
+				LEAF	"Calculations"			NO_CODE		true	FD_MISCDOSAGE	OMIT_VALUE				!CHEMISTRY_ONLY
+			ENDMENU																							!CHEMISTRY_ONLY
+			MENU	"System Configuration"	true
+				LEAF	"All System Configuration"	NO_CODE	true 	FD_MISC				OMIT_VALUE
+				LEAF	"Communication Setup"	NO_CODE		true	FD_MISCCOMM			OMIT_VALUE
+				LEAF	"Datalog Frequency"		NO_CODE		true	FD_MISCDATALOG		OMIT_VALUE
+				LEAF	"Date, Time and Units"	NO_CODE		true	FD_MISCDATETIME		OMIT_VALUE
+				LEAF	"Name and Location"		NO_CODE		true	FD_MISCNAMELOC		OMIT_VALUE
+				LEAF	"User Permisions"		NO_CODE		true	FD_MISCPERM			OMIT_VALUE
+				LEAF	"Display Settings"		NO_CODE		true	FD_MISCPAGEDELAY	OMIT_VALUE
+			ENDMENU
+			MENU	"4-20mA Outs"	recorderouts
+				LEAF	""	T7_D2A_12			true		NULL		OMIT_LINE
+				LEAF	""	T7_D2A_34			true		NULL		OMIT_LINE
+				LEAF	""	T7_D2A_56			true		NULL		OMIT_LINE
+				LEAF	""	T7_D2A_78			true		NULL		OMIT_LINE
+				LEAF	"4-20mA Out Ch1"			NO_CODE		recorderoutsch12	FD_D2ACH1		OMIT_VALUE
+				LEAF	"4-20mA Out Ch2"			NO_CODE		recorderoutsch12	FD_D2ACH2		OMIT_VALUE
+				LEAF	"4-20mA Out Ch3"			NO_CODE		recorderoutsch34	FD_D2ACH3		OMIT_VALUE
+				LEAF	"4-20mA Out Ch4"			NO_CODE		recorderoutsch34	FD_D2ACH4		OMIT_VALUE
+				LEAF	"4-20mA Out Ch5"			NO_CODE		recorderoutsch56	FD_D2ACH5		OMIT_VALUE	!BECSYS7BW_ONLY
+				LEAF	"4-20mA Out Ch6"			NO_CODE		recorderoutsch56	FD_D2ACH6		OMIT_VALUE	!BECSYS7BW_ONLY
+				LEAF	"4-20mA Out Ch7"			NO_CODE		recorderoutsch78	FD_D2ACH7		OMIT_VALUE	!BECSYS7BW_ONLY
+				LEAF	"4-20mA Out Ch8"			NO_CODE		recorderoutsch78	FD_D2ACH8		OMIT_VALUE	!BECSYS7BW_ONLY
+			ENDMENU
+			LEAF	"All Settings"			NO_CODE		true	FD_EVERYTHING	OMIT_VALUE
+		ENDMENU
+	ENDMENU
+	MENU	"4-20mA Outs"		recorderouts	SEC=T5_PERM_MENUS
+		LEAF	""	T7_D2A_12		true		NULL	OMIT_LINE
+		LEAF	""	T7_D2A_34		true		NULL	OMIT_LINE
+		LEAF	""	T7_D2A_56		true		NULL	OMIT_LINE			!BECSYS7BW_ONLY
+		LEAF	""	T7_D2A_78		true		NULL	OMIT_LINE			!BECSYS7BW_ONLY
+		MENU	"4-20mA Out Ch1"	recorderoutsch12
+				LEAF	""	T5_D2A_USAGE_CH1	true				select
+				LEAF	""	T5_D2A_SOURCE_CH1	recorderch1			select
+				LEAF	""	T2_D2A_VAL_CH1		recorderoutminmax1	NULL
+				LEAF	""	T2_D2A_HIGH_CH1		recorderoutminmax1	value_in
+				LEAF	""	T2_D2A_LOW_CH1		recorderoutminmax1	value_in
+		ENDMENU
+		MENU	"4-20mA Out Ch2"	recorderoutsch12
+				LEAF	""	T5_D2A_USAGE_CH2	true				select
+				LEAF	""	T5_D2A_SOURCE_CH2	recorderch2			select
+				LEAF	""	T2_D2A_VAL_CH2		recorderoutminmax2	NULL
+				LEAF	""	T2_D2A_HIGH_CH2		recorderoutminmax2	value_in
+				LEAF	""	T2_D2A_LOW_CH2		recorderoutminmax2	value_in
+		ENDMENU
+		MENU	"4-20mA Out Ch3"	recorderoutsch34
+				LEAF	""	T5_D2A_USAGE_CH3	true			select
+				LEAF	""	T5_D2A_SOURCE_CH3	recorderch3		select
+				LEAF	""	T2_D2A_VAL_CH3	recorderoutminmax3	NULL
+				LEAF	""	T2_D2A_HIGH_CH3	recorderoutminmax3	value_in
+				LEAF	""	T2_D2A_LOW_CH3	recorderoutminmax3	value_in
+		ENDMENU
+		MENU	"4-20mA Out Ch4"	recorderoutsch34
+				LEAF	""	T5_D2A_USAGE_CH4	true			select
+				LEAF	""	T5_D2A_SOURCE_CH4	recorderch4		select
+				LEAF	""	T2_D2A_VAL_CH4	recorderoutminmax4	NULL
+				LEAF	""	T2_D2A_HIGH_CH4	recorderoutminmax4	value_in
+				LEAF	""	T2_D2A_LOW_CH4	recorderoutminmax4	value_in
+		ENDMENU
+		MENU	"4-20mA Out Ch5"	recorderoutsch56							!BECSYS7BW_ONLY
+				LEAF	""	T5_D2A_USAGE_CH5	true			select			!BECSYS7BW_ONLY
+				LEAF	""	T5_D2A_SOURCE_CH5	recorderch5		select			!BECSYS7BW_ONLY
+				LEAF	""	T2_D2A_VAL_CH5	recorderoutminmax5	NULL			!BECSYS7BW_ONLY
+				LEAF	""	T2_D2A_HIGH_CH5	recorderoutminmax5	value_in		!BECSYS7BW_ONLY
+				LEAF	""	T2_D2A_LOW_CH5	recorderoutminmax5	value_in		!BECSYS7BW_ONLY
+		ENDMENU																	!BECSYS7BW_ONLY
+		MENU	"4-20mA Out Ch6"	recorderoutsch56							!BECSYS7BW_ONLY
+				LEAF	""	T5_D2A_USAGE_CH6	true			select			!BECSYS7BW_ONLY
+				LEAF	""	T5_D2A_SOURCE_CH6	recorderch6		select			!BECSYS7BW_ONLY
+				LEAF	""	T2_D2A_VAL_CH6	recorderoutminmax6	NULL			!BECSYS7BW_ONLY
+				LEAF	""	T2_D2A_HIGH_CH6	recorderoutminmax6	value_in		!BECSYS7BW_ONLY
+				LEAF	""	T2_D2A_LOW_CH6	recorderoutminmax6	value_in		!BECSYS7BW_ONLY
+		ENDMENU																	!BECSYS7BW_ONLY
+		MENU	"4-20mA Out Ch7"	recorderoutsch78							!BECSYS7BW_ONLY
+				LEAF	""	T5_D2A_USAGE_CH7	true			select			!BECSYS7BW_ONLY
+				LEAF	""	T5_D2A_SOURCE_CH7	recorderch7		select			!BECSYS7BW_ONLY
+				LEAF	""	T2_D2A_VAL_CH7	recorderoutminmax7	NULL			!BECSYS7BW_ONLY
+				LEAF	""	T2_D2A_HIGH_CH7	recorderoutminmax7	value_in		!BECSYS7BW_ONLY
+				LEAF	""	T2_D2A_LOW_CH7	recorderoutminmax7	value_in		!BECSYS7BW_ONLY
+		ENDMENU																	!BECSYS7BW_ONLY
+		MENU	"4-20mA Out Ch8"	recorderoutsch78							!BECSYS7BW_ONLY
+				LEAF	""	T5_D2A_USAGE_CH8	true			select			!BECSYS7BW_ONLY
+				LEAF	""	T5_D2A_SOURCE_CH8	recorderch8		select			!BECSYS7BW_ONLY
+				LEAF	""	T2_D2A_VAL_CH8	recorderoutminmax8	NULL			!BECSYS7BW_ONLY
+				LEAF	""	T2_D2A_HIGH_CH8	recorderoutminmax8	value_in		!BECSYS7BW_ONLY
+				LEAF	""	T2_D2A_LOW_CH8	recorderoutminmax8	value_in		!BECSYS7BW_ONLY
+		ENDMENU																	!BECSYS7BW_ONLY
+	ENDMENU																		
+ENDMENU																			
