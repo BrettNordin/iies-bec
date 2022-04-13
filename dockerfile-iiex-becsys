@@ -38,6 +38,7 @@ RUN apt-get install -y winetricks
 ENV HOME /home/kasm-user
 WORKDIR $HOME
 RUN mkdir -p $HOME && chown -R 1000:0 $HOME
+RUN mkdir -p $HOME/data/ && chown -R 1000:0 $HOME/data/
 RUN ln -s /share $HOME/data/
 
 USER 1000

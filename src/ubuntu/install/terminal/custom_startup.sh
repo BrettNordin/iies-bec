@@ -42,6 +42,7 @@ kasm_exec() {
         WINEPREFIX=/home/kasm-user/.wine32 WINEARCH=win32 wineboot
         env WINEPREFIX=/home/kasm-user/.wine32 winetricks -q jet40 
         env WINEPREFIX=/home/kasm-user/.wine32 winetricks -q corefonts 
+        cp -r /dockerstartup/install/becsys /home/kasm-user/Desktop/becsys
         WINEPREFIX=/home/kasm-user/.wine32 wine /dockerstartup/install/becsys/BECSys.exe
     else
         echo "No URL specified for exec command. Doing nothing."
@@ -73,6 +74,7 @@ kasm_startup() {
                 WINEPREFIX=/home/kasm-user/.wine32 WINEARCH=win32 wineboot
                 env WINEPREFIX=/home/kasm-user/.wine32 winetricks -q jet40 
                 env WINEPREFIX=/home/kasm-user/.wine32 winetricks -q corefonts 
+                cp -r /dockerstartup/install/becsys /home/kasm-user/Desktop/becsys
                 WINEPREFIX=/home/kasm-user/.wine32 wine /dockerstartup/install/becsys/BECSys.exe
                 set -e
             fi
